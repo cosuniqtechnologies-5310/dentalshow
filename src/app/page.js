@@ -158,19 +158,47 @@ export default function HomePage() {
                   discover next-gen CAD/CAM innovations, and network with 6,000+ peers at Chennai Trade Centre.
                 </p>
 
-                {/* Event Quick Details Banner */}
-                <div className="countdown-details-strip">
-                  <div className="detail-pill">
-                    <Icon name="calendar" size={14} />
-                    <span><strong>Feb 6 – 7, 2027</strong> · 09:00 AM – 06:00 PM</span>
+                {/* Event Hierarchical Quick Details Grid */}
+                <div className="countdown-details-grid" role="region" aria-label="Event Schedule & Venue">
+                  {/* Tier 1 - Left Column: Event Dates & Timing */}
+                  <div className="detail-grid-card detail-grid-card--date">
+                    <div className="grid-card-icon" aria-hidden="true">
+                      <Icon name="calendar" size={15} />
+                    </div>
+                    <div className="grid-card-body">
+                      <span className="grid-card-label">EVENT DATES</span>
+                      <div className="grid-card-title">Feb 6 – 7, 2027</div>
+                      <span className="grid-card-meta">09:00 AM – 06:00 PM IST</span>
+                    </div>
                   </div>
-                  <div className="detail-pill">
-                    <Icon name="pin" size={14} />
-                    <span>Chennai Trade Centre <em>(New Hall 2, 3 &amp; 3A)</em></span>
+
+                  {/* Tier 1 - Right Column: Venue & Halls */}
+                  <div className="detail-grid-card detail-grid-card--venue">
+                    <div className="grid-card-icon" aria-hidden="true">
+                      <Icon name="pin" size={15} />
+                    </div>
+                    <div className="grid-card-body">
+                      <span className="grid-card-label">EXPO VENUE</span>
+                      <div className="grid-card-title">Chennai Trade Centre</div>
+                      <span className="grid-card-meta">New Hall 2, 3 &amp; 3A</span>
+                    </div>
                   </div>
-                  <div className="detail-pill detail-pill--access">
-                    <Icon name="ticket" size={14} />
-                    <span><strong>Free Visitor Access</strong> for Dental Clinicians</span>
+
+                  {/* Tier 2 - Spanning Highlight: Complimentary Visitor Privilege */}
+                  <div className="detail-grid-card detail-grid-card--access">
+                    <div className="grid-card-icon grid-card-icon--highlight" aria-hidden="true">
+                      <Icon name="ticket" size={16} />
+                    </div>
+                    <div className="grid-card-body">
+                      <div className="grid-card-header-row">
+                        <span className="grid-card-label grid-card-label--highlight">DELEGATE ACCESS</span>
+                        <span className="grid-card-badge">Zero Entry Fee</span>
+                      </div>
+                      <div className="grid-card-title grid-card-title--highlight">Free Visitor Access</div>
+                      <span className="grid-card-meta grid-card-meta--highlight">
+                        Complimentary pass for Dental Clinicians, Faculty &amp; Students
+                      </span>
+                    </div>
                   </div>
                 </div>
 
@@ -276,17 +304,17 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          SECTION 3.4: OUR LEGACY & TIMELINE (Full-Screen Connection Thread)
+          SECTION 3.4: OUR LEGACY & TIMELINE (Light Blue Theme & Connection Thread)
           ============================================================ */}
-      <section className="section section-legacy font-academic timeline-section-fullwidth" id="legacy">
+      <section className="section section-legacy font-modern timeline-section-fullwidth" id="legacy">
         <div className="container-fluid timeline-container-fluid">
           <div className="text-center mb-40">
             <span className="section-eyebrow">OUR LEGACY & TWO DECADE JOURNEY</span>
-            <h2 className="section-main-title text-white">
+            <h2 className="section-main-title">
               A vision born around 2000. A milestone achieved in 2005. A future shaped by innovation.
             </h2>
             <div className="title-zigzag" />
-            <p className="max-w-700 mx-auto section-desc-light">
+            <p className="max-w-700 mx-auto section-desc">
               From the initial trade vision committee around 2000 to South India’s largest dental showcase
               in 2027. Explore our continuous progression across two decades of clinical and trade leadership.
             </p>

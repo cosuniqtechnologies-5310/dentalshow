@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import Icon from "@/components/Icon";
 
 const defaultMilestones = [
@@ -100,7 +101,7 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
     setProgress(0);
 
     progressIntervalRef.current = setInterval(() => {
-      if (isHoveredRef.current) return; // Pause on hover
+      if (isHoveredRef.current) return;
       setProgress((prev) => {
         if (prev + step >= 100) {
           setActiveIndex((current) => (current + 1) % total);
@@ -130,7 +131,6 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
     setProgress(0);
   };
 
-  // Percentage of the horizontal connection thread line that is active
   const threadProgressPercent = total > 1 ? (activeIndex / (total - 1)) * 100 : 0;
 
   return (
@@ -145,56 +145,91 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
       role="region"
       aria-label="Two Decades Timeline"
     >
-      {/* 1. TOP SPOTLIGHT CARD (Active Milestone Narrative & Stats) */}
-      <div className="timeline-spotlight">
-        <div className="timeline-spotlight-inner" key={activeMilestone.year}>
-          <div className="timeline-spotlight-top">
-            <div className="timeline-milestone-pill-wrap">
-              <span className="timeline-milestone-pill">
+      {/* 1. TOP MAIN SHOWCASE: LEFT MASCOT ANIMAL + RIGHT ACTIVE YEAR SPECIAL */}
+      <div className="timeline-showcase-grid">
+        {/* Left Column: Mascot Guide Character */}
+        <div className="timeline-mascot-col">
+          <div className="timeline-mascot-card">
+            {/* Dynamic speech bubble matching active milestone */}
+            <div className="timeline-mascot-bubble" key={`bubble-${activeMilestone.year}`}>
+              <div className="mascot-bubble-kicker">
                 <span className="live-pulse-dot" aria-hidden="true" />
-                <span>{activeMilestone.badge}</span>
-              </span>
-              <span className="timeline-stage-counter">
-                STAGE {activeMilestone.stageNum} OF 0{total}
-              </span>
+                <span>MILESTONE GUIDE</span>
+              </div>
+              <p className="mascot-bubble-title">{activeMilestone.year}</p>
+              <span className="mascot-bubble-sub">{activeMilestone.tabLabel}</span>
+              <div className="mascot-bubble-tail" aria-hidden="true" />
             </div>
 
-            <div className="timeline-autoplay-controls">
-              <button
-                type="button"
-                className="timeline-ctrl-btn"
-                onClick={handlePrev}
-                aria-label="Previous milestone"
-                title="Previous milestone"
-              >
-                ←
-              </button>
-              <button
-                type="button"
-                className="timeline-ctrl-btn timeline-play-btn"
-                onClick={() => setIsPlaying(!isPlaying)}
-                aria-label={isPlaying ? "Pause autoplay" : "Play autoplay"}
-                title={isPlaying ? "Pause autoplay" : "Resume autoplay"}
-              >
-                {isPlaying ? "❚❚" : "▶"}
-              </button>
-              <button
-                type="button"
-                className="timeline-ctrl-btn"
-                onClick={handleNext}
-                aria-label="Next milestone"
-                title="Next milestone"
-              >
-                →
-              </button>
-              <span className="timeline-autoplay-status">
-                {isPlaying ? "AUTO-CYCLING" : "PAUSED"}
-              </span>
+            {/* Mascot Character Image */}
+            <div className="timeline-mascot-art-wrap">
+              <Image
+                src="/images/friendly-beaver-dentist-mascot.png"
+                alt="Dental Show Mascot Guide"
+                width={220}
+                height={310}
+                priority
+                className="timeline-mascot-img"
+              />
+            </div>
+
+            {/* Mascot Pill Badge Underneath */}
+            <div className="timeline-mascot-status-pill">
+              <span className="mascot-status-dot" aria-hidden="true" />
+              <span>Two Decades of Dental Excellence</span>
             </div>
           </div>
+        </div>
 
-          <div className="timeline-spotlight-grid">
-            <div className="timeline-spotlight-main">
+        {/* Right Column: Active Year Special Milestone Card */}
+        <div className="timeline-content-col">
+          <div className="timeline-spotlight-card" key={activeMilestone.year}>
+            <div className="timeline-spotlight-top">
+              <div className="timeline-milestone-pill-wrap">
+                <span className="timeline-milestone-pill">
+                  <span className="live-pulse-dot" aria-hidden="true" />
+                  <span>{activeMilestone.badge}</span>
+                </span>
+                <span className="timeline-stage-counter">
+                  STAGE {activeMilestone.stageNum} OF 0{total}
+                </span>
+              </div>
+
+              <div className="timeline-autoplay-controls">
+                <button
+                  type="button"
+                  className="timeline-ctrl-btn"
+                  onClick={handlePrev}
+                  aria-label="Previous milestone"
+                  title="Previous milestone"
+                >
+                  ←
+                </button>
+                <button
+                  type="button"
+                  className="timeline-ctrl-btn timeline-play-btn"
+                  onClick={() => setIsPlaying(!isPlaying)}
+                  aria-label={isPlaying ? "Pause autoplay" : "Play autoplay"}
+                  title={isPlaying ? "Pause autoplay" : "Resume autoplay"}
+                >
+                  {isPlaying ? "❚❚" : "▶"}
+                </button>
+                <button
+                  type="button"
+                  className="timeline-ctrl-btn"
+                  onClick={handleNext}
+                  aria-label="Next milestone"
+                  title="Next milestone"
+                >
+                  →
+                </button>
+                <span className="timeline-autoplay-status">
+                  {isPlaying ? "AUTO-CYCLING" : "PAUSED"}
+                </span>
+              </div>
+            </div>
+
+            <div className="timeline-spotlight-body">
               <div className="timeline-spotlight-year-headline">
                 <span className="timeline-spotlight-year">{activeMilestone.year}</span>
                 <span className="timeline-spotlight-dot">/</span>
@@ -204,7 +239,7 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
               <p className="timeline-spotlight-text">{activeMilestone.text}</p>
             </div>
 
-            <div className="timeline-spotlight-aside">
+            <div className="timeline-spotlight-footer-grid">
               <div className="timeline-stat-chip">
                 <div className="timeline-stat-icon-wrap">
                   <Icon name={activeMilestone.icon || "sparkle"} size={22} className="timeline-stat-icon" />
@@ -223,88 +258,48 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
                 ))}
               </div>
             </div>
+
+            {/* Continuous Autoplay Progress Bar */}
+            <div className="timeline-progress-track">
+              <div
+                className="timeline-progress-fill"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
           </div>
         </div>
-
-        {/* Continuous Autoplay Progress Bar */}
-        <div className="timeline-progress-track">
-          <div
-            className="timeline-progress-fill"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
       </div>
 
-      {/* 2. MIDDLE HORIZONTAL MILESTONE COLUMNS (Screenshot Layout) */}
-      <div className="timeline-columns-stage">
-        <div className="timeline-columns-grid">
-          {milestones.map((m, idx) => {
-            const isActive = idx === activeIndex;
-            const isPassed = idx < activeIndex;
+      {/* 2. FULL-SCREEN 100VW CONNECTING LINE WITH MID-CONNECTED YEAR PILLS */}
+      <div className="timeline-connected-thread-section">
+        {/* Full-bleed 100vw Horizontal Line */}
+        <div className="timeline-thread-line-100vw" />
 
-            return (
-              <div
-                key={m.year}
-                className={`timeline-column-card ${isActive ? "is-active" : ""} ${isPassed ? "is-passed" : ""}`}
-                onClick={() => handleSelect(idx)}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    handleSelect(idx);
-                  }
-                }}
-                aria-label={`Milestone ${m.year}: ${m.title}`}
-              >
-                <div className="timeline-card-header">
-                  <div className="timeline-card-icon-wrap">
-                    <Icon name={m.icon || "sparkle"} size={18} />
-                  </div>
-                  <span className="timeline-card-year-badge">{m.shortYear || m.year}</span>
-                </div>
-                <h4 className="timeline-card-title">{m.title}</h4>
-                <p className="timeline-card-desc">{m.tagline}</p>
-                <div className="timeline-card-active-indicator">
-                  <span className="timeline-card-active-bar" />
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* 3. FULL-SCREEN CONNECTION THREAD LINE */}
-      <div className="timeline-fullscreen-thread">
-        <div className="timeline-thread-track-wrap">
-          {/* Base Track Line */}
-          <div className="timeline-thread-base-line" />
-          
-          {/* Luminous Active Progress Fill */}
+        <div className="timeline-thread-track-container">
+          {/* Active progress segment on the line */}
           <div
-            className="timeline-thread-active-line"
+            className="timeline-thread-line-active"
             style={{ width: `${threadProgressPercent}%` }}
           />
 
-          {/* Node Checkpoints along the thread */}
-          <div className="timeline-thread-nodes">
+          {/* Year Pills directly connected in the middle */}
+          <div className="timeline-year-pills-row" role="tablist" aria-label="Milestone Years">
             {milestones.map((m, idx) => {
               const isActive = idx === activeIndex;
               const isPassed = idx < activeIndex;
-              const percentPosition = total > 1 ? (idx / (total - 1)) * 100 : 0;
 
               return (
                 <button
                   key={m.year}
                   type="button"
-                  className={`timeline-thread-node-dot ${isActive ? "is-active" : ""} ${isPassed ? "is-passed" : ""}`}
-                  style={{ left: `${percentPosition}%` }}
+                  role="tab"
+                  aria-selected={isActive}
+                  className={`timeline-year-pill-btn ${isActive ? "is-active" : ""} ${isPassed ? "is-passed" : ""}`}
                   onClick={() => handleSelect(idx)}
-                  aria-label={`Jump to ${m.year}`}
                   title={`${m.year}: ${m.title}`}
                 >
-                  <span className="timeline-node-core" />
-                  {isActive && <span className="timeline-node-pulse-ring" />}
+                  <span className="year-pill-number">{m.shortYear || m.year}</span>
+                  <span className="year-pill-label">{m.tabLabel}</span>
                 </button>
               );
             })}
@@ -312,32 +307,7 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
         </div>
       </div>
 
-      {/* 4. BOTTOM LIST OF YEARS AS TABS ("bottom list of year like tab") */}
-      <div className="timeline-bottom-tabs-dock" role="tablist" aria-label="Timeline Year Tabs">
-        {milestones.map((m, idx) => {
-          const isActive = idx === activeIndex;
-          const isPassed = idx < activeIndex;
-
-          return (
-            <button
-              key={m.year}
-              type="button"
-              role="tab"
-              aria-selected={isActive}
-              className={`timeline-year-tab-btn ${isActive ? "is-active" : ""} ${isPassed ? "is-passed" : ""}`}
-              onClick={() => handleSelect(idx)}
-            >
-              <div className="timeline-tab-pip" />
-              <div className="timeline-tab-content">
-                <span className="timeline-tab-year">{m.shortYear || m.year}</span>
-                <span className="timeline-tab-label">{m.tabLabel || m.badge}</span>
-              </div>
-            </button>
-          );
-        })}
-      </div>
-
-      {/* 5. CONTINUOUS LOOP CYCLE THREAD & TICKER (Screenshot Loop Tracks) */}
+      {/* 3. CONTINUOUS LOOP TICKER */}
       <div className="timeline-continuous-loop-wrap">
         <div className="timeline-loop-track-indicator">
           <span className="timeline-loop-arrow-left">‹‹‹</span>

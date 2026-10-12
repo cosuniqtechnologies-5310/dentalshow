@@ -3221,26 +3221,23 @@ button {
    Reference: Concept Extraction / Continuous Progression Timeline
    ========================================================================== */
 
+/* ==========================================================================
+   INTERACTIVE TIMELINE (Light Blue Theme, Mascot & 100VW Mid-Connected Pills)
+   ========================================================================== */
+
 .timeline-section-fullwidth {
-  background: radial-gradient(130% 100% at 50% 0%, #032140 0%, #011326 55%, #010a14 100%) !important;
-  color: #ffffff !important;
+  background: linear-gradient(180deg, #f0f7fc 0%, #e8f3fa 100%) !important;
+  color: #0f172a !important;
   padding: 85px 0 !important;
   position: relative;
   overflow: hidden;
-  border-top: 1px solid rgba(6, 157, 191, 0.25);
-  border-bottom: 1px solid rgba(6, 157, 191, 0.25);
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: none !important;
 }
 
 .timeline-section-fullwidth::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1400px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(6, 157, 191, 0.15) 0%, rgba(4, 119, 191, 0.05) 50%, transparent 70%);
-  pointer-events: none;
+  display: none !important;
 }
 
 .timeline-container-fluid {
@@ -3251,64 +3248,204 @@ button {
 }
 
 .timeline-section-fullwidth .section-eyebrow {
-  color: #069DBF !important;
+  color: #0477BF !important;
   font-weight: 800;
   letter-spacing: 2px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
 
 .timeline-section-fullwidth .section-main-title {
-  color: #ffffff !important;
+  color: #023E73 !important;
   font-size: clamp(2rem, 3.2vw, 2.75rem);
   font-weight: 900;
   letter-spacing: -0.6px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
 
-.timeline-section-fullwidth .section-subtitle {
-  color: #94a3b8 !important;
+.timeline-section-fullwidth .section-desc,
+.timeline-section-fullwidth p {
+  color: #475569 !important;
   font-size: 15.5px;
+  line-height: 1.6;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
 
 .timeline-section-fullwidth .title-zigzag {
-  background-image: radial-gradient(circle at center, #069DBF 1.5px, transparent 1.5px);
+  background-image: radial-gradient(circle at center, #0477BF 1.5px, transparent 1.5px);
 }
 
 .timeline-interactive-mount {
   margin-top: 40px;
 }
 
-/* ==========================================================================
-   INTERACTIVE TIMELINE (Spotlight + Cards + Fullscreen Thread + Year Tabs)
-   ========================================================================== */
-
+/* Timeline Overall Wrapper */
 .interactive-timeline-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 36px;
   width: 100%;
 }
 
-/* 1. Top Spotlight Active Milestone Card */
-.timeline-spotlight {
-  position: relative;
-  background: rgba(2, 42, 80, 0.5);
-  border: 1px solid rgba(6, 157, 191, 0.3);
-  border-radius: 18px;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  transition: all 0.35s ease;
+/* 1. Main Showcase Grid: Left Mascot Guide + Right Active Milestone Card */
+.timeline-showcase-grid {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 28px;
+  align-items: stretch;
+  width: 100%;
 }
 
-.timeline-spotlight-inner {
-  padding: 32px 36px 28px;
-  animation: fadeInMilestone 0.45s ease-out;
+/* Left Column: Mascot Character Presentation */
+.timeline-mascot-col {
+  display: flex;
+  width: 100%;
+}
+
+.timeline-mascot-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 24px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: none !important;
+  position: relative;
+}
+
+.timeline-mascot-bubble {
+  background: #f0f7fc;
+  border: 1.5px solid #bae6fd;
+  border-radius: 14px;
+  padding: 12px 14px;
+  width: 100%;
+  margin-bottom: 14px;
+  position: relative;
+  text-align: center;
+  box-shadow: none !important;
+  animation: mascotBubbleIn 0.35s ease-out;
+}
+
+@keyframes mascotBubbleIn {
+  from {
+    opacity: 0.3;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mascot-bubble-kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  color: #0477BF;
+}
+
+.mascot-bubble-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 15px;
+  font-weight: 800;
+  color: #023E73 !important;
+  margin: 3px 0 1px;
+  line-height: 1.25;
+}
+
+.mascot-bubble-sub {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #069DBF;
+}
+
+.mascot-bubble-tail {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 11px;
+  height: 11px;
+  background: #f0f7fc;
+  border-right: 1.5px solid #bae6fd;
+  border-bottom: 1.5px solid #bae6fd;
+}
+
+.timeline-mascot-art-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+
+.timeline-mascot-img {
+  object-fit: contain;
+  width: auto;
+  height: 100%;
+  filter: drop-shadow(0 8px 16px rgba(2, 62, 115, 0.08));
+}
+
+.timeline-mascot-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 11px;
+  font-weight: 700;
+  color: #475569;
+  margin-top: 10px;
+  box-shadow: none !important;
+}
+
+.mascot-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0477BF;
+}
+
+/* Right Column: Active Milestone Showcase Card */
+.timeline-content-col {
+  display: flex;
+  width: 100%;
+}
+
+.timeline-spotlight-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 32px 36px 0;
+  box-shadow: none !important;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: fadeInMilestone 0.4s ease-out;
 }
 
 @keyframes fadeInMilestone {
   from {
     opacity: 0.3;
-    transform: translateY(8px);
+    transform: translateY(6px);
   }
 
   to {
@@ -3337,20 +3474,21 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 14px;
-  background: rgba(6, 157, 191, 0.18);
-  border: 1px solid rgba(6, 157, 191, 0.4);
+  padding: 5px 14px;
+  background: #f0f7fc;
+  border: 1px solid #bae6fd;
   border-radius: 20px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #38bdf8;
+  color: #023E73;
+  box-shadow: none !important;
 }
 
 .timeline-stage-counter {
-  font-family: 'Inter', monospace;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.2px;
@@ -3362,58 +3500,60 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(0, 0, 0, 0.35);
-  padding: 5px 12px;
+  background: #f8fafc;
+  padding: 4px 10px;
   border-radius: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid #e2e8f0;
+  box-shadow: none !important;
 }
 
 .timeline-ctrl-btn {
-  background: transparent;
-  border: none;
-  color: #94a3b8;
-  font-size: 13px;
-  width: 28px;
-  height: 28px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #023E73;
+  font-size: 12px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
+  box-shadow: none !important;
 }
 
 .timeline-ctrl-btn:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: #023E73;
   color: #ffffff;
+  border-color: #023E73;
 }
 
 .timeline-play-btn {
-  color: #38bdf8;
-  font-size: 11px;
+  color: #0477BF;
+  font-size: 10px;
 }
 
 .timeline-autoplay-status {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 10px;
   font-weight: 800;
-  letter-spacing: 1.1px;
-  color: #cbd5e1;
-  padding-left: 4px;
+  letter-spacing: 1px;
+  color: #64748b;
+  padding-left: 2px;
 }
 
-.timeline-spotlight-grid {
-  display: grid;
-  grid-template-columns: 1.35fr 1fr;
-  gap: 32px;
-  align-items: center;
+.timeline-spotlight-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .timeline-spotlight-year-headline {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
+  gap: 8px;
+  margin-bottom: 4px;
   flex-wrap: wrap;
 }
 
@@ -3421,98 +3561,106 @@ button {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 22px;
   font-weight: 900;
-  color: #38bdf8;
-  letter-spacing: -0.5px;
+  color: #0477BF;
+  letter-spacing: -0.4px;
 }
 
 .timeline-spotlight-dot {
-  color: #64748b;
+  color: #94a3b8;
   font-weight: 900;
 }
 
 .timeline-spotlight-tagline {
-  font-size: 13.5px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 13px;
   font-weight: 700;
-  color: #94a3b8;
+  color: #64748b;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.6px;
 }
 
 .timeline-spotlight-title {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: clamp(23px, 2.4vw, 30px);
+  font-size: clamp(22px, 2.3vw, 28px);
   font-weight: 900;
-  color: #ffffff;
-  margin: 0 0 12px;
-  letter-spacing: -0.6px;
-  line-height: 1.24;
+  color: #0f172a !important;
+  margin: 0 0 10px;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
 }
 
 .timeline-spotlight-text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 15px;
-  line-height: 1.7;
-  color: #cbd5e1;
+  line-height: 1.65;
+  color: #475569 !important;
   margin: 0;
-  max-width: 650px;
+  max-width: 680px;
 }
 
-/* Spotlight Right Aside */
-.timeline-spotlight-aside {
-  display: flex;
-  flex-direction: column;
+.timeline-spotlight-footer-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
   gap: 16px;
+  align-items: center;
+  margin: 24px 0 26px;
 }
 
 .timeline-stat-chip {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 16px 20px;
-  background: rgba(6, 157, 191, 0.12);
-  border: 1px solid rgba(6, 157, 191, 0.35);
-  border-radius: 14px;
+  gap: 14px;
+  padding: 12px 18px;
+  background: #f0f7fc;
+  border: 1px solid #bae6fd;
+  border-radius: 12px;
+  box-shadow: none !important;
 }
 
 .timeline-stat-icon-wrap {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: rgba(6, 157, 191, 0.2);
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #023E73;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: none !important;
 }
 
 .timeline-stat-icon {
-  color: #38bdf8;
+  color: #ffffff;
 }
 
 .timeline-stat-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
 .timeline-stat-text .stat-label {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 10px;
   font-weight: 800;
-  letter-spacing: 1.3px;
+  letter-spacing: 1.1px;
   text-transform: uppercase;
-  color: #94a3b8;
+  color: #0477BF;
 }
 
 .timeline-stat-text .stat-val {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 17px;
-  font-weight: 900;
-  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  color: #023E73;
 }
 
 .timeline-stat-text .stat-sub {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 11.5px;
-  color: #cbd5e1;
+  color: #475569;
+  font-weight: 500;
 }
 
 .timeline-highlight-pills {
@@ -3524,362 +3672,166 @@ button {
 .timeline-highlight-pill {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 11px;
-  font-weight: 700;
-  color: #e2e8f0;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-weight: 600;
+  color: #334155;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   padding: 6px 12px;
   border-radius: 8px;
   white-space: nowrap;
+  box-shadow: none !important;
 }
 
-/* Autoplay Progress Bar */
 .timeline-progress-track {
   height: 4px;
-  background: rgba(255, 255, 255, 0.08);
-  width: 100%;
+  background: #e2e8f0;
+  width: calc(100% + 72px);
+  margin: 0 -36px;
+  box-shadow: none !important;
 }
 
 .timeline-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #0477BF 0%, #069DBF 50%, #38bdf8 100%);
-  box-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
+  background: linear-gradient(90deg, #023E73 0%, #0477BF 60%, #069DBF 100%);
   transition: width 0.05s linear;
+  box-shadow: none !important;
 }
 
-/* 2. Middle Horizontal Milestone Columns (Screenshot Layout) */
-.timeline-columns-stage {
-  width: 100%;
-}
+/* ==========================================================================
+   2. FULL-SCREEN 100VW CONNECTING LINE WITH MID-CONNECTED YEAR PILLS
+   ========================================================================== */
 
-.timeline-columns-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-  width: 100%;
-}
-
-.timeline-column-card {
+.timeline-connected-thread-section {
   position: relative;
-  background: rgba(2, 30, 58, 0.52);
-  border: 1px solid rgba(6, 157, 191, 0.2);
-  border-radius: 14px;
-  padding: 20px 16px;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: left;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.timeline-column-card:hover {
-  transform: translateY(-4px);
-  background: rgba(3, 44, 84, 0.68);
-  border-color: rgba(6, 157, 191, 0.5);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-}
-
-.timeline-column-card.is-active {
-  background: linear-gradient(180deg, rgba(4, 119, 191, 0.28) 0%, rgba(2, 30, 58, 0.85) 100%);
-  border-color: #069DBF;
-  box-shadow: 0 14px 38px rgba(6, 157, 191, 0.3), inset 0 0 16px rgba(6, 157, 191, 0.15);
-  transform: translateY(-3px);
-}
-
-.timeline-column-card.is-passed {
-  border-color: rgba(4, 119, 191, 0.35);
-}
-
-.timeline-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-
-.timeline-card-icon-wrap {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #94a3b8;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 36px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  box-shadow: none !important;
 }
 
-.timeline-column-card:hover .timeline-card-icon-wrap {
-  border-color: #069DBF;
-  color: #38bdf8;
-}
-
-.timeline-column-card.is-active .timeline-card-icon-wrap {
-  background: #069DBF;
-  border-color: #38bdf8;
-  color: #ffffff;
-  box-shadow: 0 0 14px rgba(56, 189, 248, 0.7);
-}
-
-.timeline-card-year-badge {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  padding: 3px 8px;
-  border-radius: 12px;
-  background: rgba(6, 157, 191, 0.12);
-  color: #38bdf8;
-  transition: all 0.3s ease;
-}
-
-.timeline-column-card.is-active .timeline-card-year-badge {
-  background: #38bdf8;
-  color: #011326;
-  font-weight: 900;
-}
-
-.timeline-card-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 13.5px;
-  font-weight: 800;
-  color: #ffffff;
-  margin: 0 0 6px;
-  line-height: 1.3;
-}
-
-.timeline-card-desc {
-  font-size: 11.5px;
-  color: #94a3b8;
-  line-height: 1.45;
-  margin: 0;
-}
-
-.timeline-column-card.is-active .timeline-card-desc {
-  color: #cbd5e1;
-}
-
-.timeline-card-active-indicator {
-  margin-top: 14px;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.timeline-column-card.is-active .timeline-card-active-indicator {
-  background: #38bdf8;
-  box-shadow: 0 0 8px #38bdf8;
-}
-
-/* 3. Full-Screen Connection Thread Line */
-.timeline-fullscreen-thread {
-  position: relative;
+/* 100% VW Horizontal Line that runs edge to edge */
+.timeline-thread-line-100vw {
+  position: absolute;
+  top: 50%;
+  left: 0;
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  padding: 16px 0;
-  overflow: visible;
-}
-
-.timeline-thread-track-wrap {
-  position: relative;
-  width: min(1360px, calc(100% - 40px));
-  margin-inline: auto;
-  height: 28px;
-  display: flex;
-  align-items: center;
-}
-
-.timeline-thread-base-line {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 3px;
-}
-
-.timeline-thread-active-line {
-  position: absolute;
-  left: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #023E73 0%, #0477BF 45%, #069DBF 80%, #38bdf8 100%);
-  box-shadow: 0 0 14px rgba(56, 189, 248, 0.85), 0 0 28px rgba(6, 157, 191, 0.4);
-  border-radius: 4px;
-  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 2px;
+  background: #cbd5e1;
+  transform: translateY(-50%);
   z-index: 1;
 }
 
-.timeline-thread-nodes {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 100%;
-  pointer-events: none;
-}
-
-.timeline-thread-node-dot {
-  pointer-events: auto;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: #021a32;
-  border: 2.5px solid rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
+.timeline-thread-track-container {
+  position: relative;
+  width: min(1360px, calc(100% - 40px));
+  margin: 0 auto;
   z-index: 2;
 }
 
-.timeline-thread-node-dot:hover {
-  transform: translate(-50%, -50%) scale(1.25);
-  border-color: #38bdf8;
-}
-
-.timeline-thread-node-dot.is-passed {
-  background: #0477BF;
-  border-color: #069DBF;
-}
-
-.timeline-thread-node-dot.is-active {
-  width: 24px;
-  height: 24px;
-  background: #38bdf8;
-  border: 3px solid #ffffff;
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.95);
-  z-index: 5;
-}
-
-.timeline-node-core {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #ffffff;
-}
-
-.timeline-node-pulse-ring {
+/* Active Segment on the Connecting Line */
+.timeline-thread-line-active {
   position: absolute;
-  inset: -8px;
-  border-radius: 50%;
-  border: 2px solid #38bdf8;
-  animation: nodeDotPulse 1.6s infinite ease-out;
-  pointer-events: none;
+  top: 50%;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #023E73 0%, #0477BF 70%, #069DBF 100%);
+  transform: translateY(-50%);
+  z-index: 2;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@keyframes nodeDotPulse {
-  0% {
-    transform: scale(0.9);
-    opacity: 0.9;
-  }
-
-  100% {
-    transform: scale(1.8);
-    opacity: 0;
-  }
-}
-
-/* 4. Bottom List of Years as Tabs ("bottom list of year like tab") */
-.timeline-bottom-tabs-dock {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+/* Year Pills Row - Positioned directly on the line */
+.timeline-year-pills-row {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 12px;
   width: 100%;
 }
 
-.timeline-year-tab-btn {
-  background: rgba(2, 30, 58, 0.48);
-  border: 1px solid rgba(6, 157, 191, 0.2);
-  border-radius: 12px;
-  padding: 14px 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-align: left;
-  transition: all 0.25s ease;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.timeline-year-tab-btn:hover {
-  background: rgba(3, 44, 84, 0.65);
-  border-color: rgba(6, 157, 191, 0.45);
-  transform: translateY(-2px);
-}
-
-.timeline-year-tab-btn.is-active {
-  background: linear-gradient(135deg, #023E73 0%, #0477BF 100%);
-  border-color: #069DBF;
-  box-shadow: 0 8px 24px rgba(4, 119, 191, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-}
-
-.timeline-year-tab-btn.is-passed {
-  border-color: rgba(4, 119, 191, 0.35);
-}
-
-.timeline-tab-pip {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
-  flex-shrink: 0;
-  transition: all 0.3s ease;
-}
-
-.timeline-year-tab-btn:hover .timeline-tab-pip {
-  background: #38bdf8;
-}
-
-.timeline-year-tab-btn.is-active .timeline-tab-pip {
-  background: #38bdf8;
-  box-shadow: 0 0 10px #38bdf8;
-  transform: scale(1.3);
-}
-
-.timeline-tab-content {
-  display: flex;
+/* Individual Year Pill Button */
+.timeline-year-pill-btn {
+  position: relative;
+  display: inline-flex;
   flex-direction: column;
-  gap: 2px;
-  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 10px 22px;
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 9999px;
+  /* Real Pill Shape */
+  cursor: pointer;
+  box-shadow: none !important;
+  transition: all 0.25s ease;
+  min-width: 110px;
 }
 
-.timeline-tab-year {
+.timeline-year-pill-btn:hover {
+  border-color: #0477BF;
+  transform: translateY(-2px);
+}
+
+.timeline-year-pill-btn.is-active {
+  background: #023E73 !important;
+  border-color: #023E73 !important;
+  transform: translateY(-2px);
+}
+
+.timeline-year-pill-btn.is-passed {
+  background: #f0f7fc;
+  border-color: #0477BF;
+}
+
+.year-pill-number {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 800;
-  color: #ffffff;
-  letter-spacing: -0.3px;
-  white-space: nowrap;
+  color: #0f172a;
+  line-height: 1.1;
+  letter-spacing: -0.2px;
+  transition: color 0.2s ease;
 }
 
-.timeline-tab-label {
-  font-size: 11.5px;
+.timeline-year-pill-btn.is-active .year-pill-number {
+  color: #ffffff !important;
+}
+
+.timeline-year-pill-btn.is-passed .year-pill-number {
+  color: #023E73;
+}
+
+.year-pill-label {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 11px;
   font-weight: 600;
-  color: #94a3b8;
+  color: #64748b;
+  line-height: 1.2;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  transition: color 0.2s ease;
 }
 
-.timeline-year-tab-btn.is-active .timeline-tab-label {
-  color: #e0f2fe;
+.timeline-year-pill-btn.is-active .year-pill-label {
+  color: #93c5fd !important;
 }
 
-/* 5. Continuous Loop Indicator (Screenshot Looping Arrows) */
+.timeline-year-pill-btn.is-passed .year-pill-label {
+  color: #0477BF;
+}
+
+/* ==========================================================================
+   3. CONTINUOUS EVOLUTION TICKER
+   ========================================================================== */
+
 .timeline-continuous-loop-wrap {
-  margin-top: 12px;
+  margin-top: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3890,23 +3842,25 @@ button {
   align-items: center;
   gap: 14px;
   padding: 10px 24px;
-  background: rgba(2, 24, 48, 0.55);
-  border: 1px dashed rgba(6, 157, 191, 0.3);
+  background: #ffffff;
+  border: 1px dashed #cbd5e1;
   border-radius: 30px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 12px;
-  color: #94a3b8;
-  letter-spacing: 0.5px;
+  color: #475569;
+  letter-spacing: 0.4px;
   text-align: center;
+  box-shadow: none !important;
 }
 
 .timeline-loop-track-indicator strong {
-  color: #38bdf8;
+  color: #023E73;
+  font-weight: 700;
 }
 
 .timeline-loop-arrow-left,
 .timeline-loop-arrow-right {
-  color: #069DBF;
+  color: #0477BF;
   letter-spacing: 2px;
   font-weight: 900;
   animation: pulseArrows 2s infinite ease-in-out;
@@ -3926,43 +3880,73 @@ button {
   }
 }
 
-/* Responsive Media Queries */
-@media (max-width: 1080px) {
-  .timeline-columns-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .timeline-bottom-tabs-dock {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .timeline-spotlight-grid {
+/* Responsive Rules */
+@media (max-width: 992px) {
+  .timeline-showcase-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
+  }
+
+  .timeline-mascot-card {
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .timeline-mascot-art-wrap {
+    height: 180px;
+    width: 140px;
+    flex-shrink: 0;
+  }
+
+  .timeline-spotlight-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .timeline-year-pills-row {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    justify-content: flex-start;
+  }
+
+  .timeline-year-pill-btn {
+    flex-shrink: 0;
   }
 }
 
-@media (max-width: 768px) {
-  .timeline-columns-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 640px) {
+  .timeline-spotlight-card {
+    padding: 24px 20px 0;
   }
 
-  .timeline-bottom-tabs-dock {
-    grid-template-columns: repeat(2, 1fr);
+  .timeline-progress-track {
+    width: calc(100% + 40px);
+    margin: 0 -20px;
   }
 
-  .timeline-fullscreen-thread {
-    display: none;
+  .timeline-mascot-card {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .timeline-spotlight-inner {
-    padding: 24px 20px;
+  .timeline-mascot-art-wrap {
+    height: 200px;
+    width: 100%;
   }
-}
 
-@media (max-width: 480px) {
-  .timeline-bottom-tabs-dock {
-    grid-template-columns: 1fr;
+  .timeline-year-pill-btn {
+    padding: 8px 16px;
+    min-width: 95px;
+  }
+
+  .year-pill-number {
+    font-size: 13.5px;
+  }
+
+  .year-pill-label {
+    font-size: 10px;
   }
 
   .timeline-loop-track-indicator {
@@ -4970,12 +4954,12 @@ button {
 
 .countdown-main-title {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: clamp(1.4rem, 1.9vw, 1.85rem);
+  font-size: clamp(1.75rem, 2.35vw, 2.25rem);
   font-weight: 800;
   color: #0f172a !important;
   margin: 0;
-  line-height: 1.25;
-  letter-spacing: -0.4px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
   text-align: left;
 }
 
@@ -5013,21 +4997,164 @@ button {
   font-weight: 700;
 }
 
-/* Event Details Strip (Clean Modular Badges, Flat & Modern) */
-.countdown-details-strip {
+/* ============================================================
+   Event Details Hierarchical Bento Grid (Flat, Clean, Structured)
+   ============================================================ */
+.countdown-details-grid {
   position: relative;
   z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  margin: 2px 0 0;
+  padding: 0;
+  box-shadow: none !important;
+}
+
+.detail-grid-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.detail-grid-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: none !important;
+}
+
+.grid-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #023E73;
+  flex-shrink: 0;
+  box-shadow: none !important;
+}
+
+.grid-card-icon svg {
+  color: #023E73;
+}
+
+.grid-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.grid-card-header-row {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 8px 10px;
-  background: transparent !important;
-  border: none !important;
-  padding: 0 !important;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.grid-card-label {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #64748b;
+  line-height: 1.2;
+}
+
+.grid-card-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
   margin: 0;
-  flex-wrap: wrap;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+}
+
+.grid-card-meta {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #64748b;
+  line-height: 1.35;
+}
+
+/* Tier 2: Spanning High-Priority Access Privilege */
+.detail-grid-card--access {
+  grid-column: 1 / -1;
+  background: #f0f7fc;
+  border: 1px solid #bae6fd;
+}
+
+.detail-grid-card--access:hover {
+  border-color: #7dd3fc;
+  background: #e9f4fb;
   box-shadow: none !important;
-  align-self: flex-start;
+}
+
+.grid-card-icon--highlight {
+  background: #023E73;
+  color: #ffffff;
+}
+
+.grid-card-icon--highlight svg {
+  color: #ffffff;
+}
+
+.grid-card-label--highlight {
+  color: #0477BF;
+}
+
+.grid-card-title--highlight {
+  color: #023E73;
+  font-size: 14.5px;
+  font-weight: 800;
+}
+
+.grid-card-meta--highlight {
+  color: #334155;
+  font-weight: 500;
+}
+
+.grid-card-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #023E73;
+  background: #ffffff;
+  border: 1px solid #bae6fd;
+  border-radius: 12px;
+  box-shadow: none !important;
+  white-space: nowrap;
+}
+
+@media (max-width: 580px) {
+  .countdown-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fallback detail pill styles */
+.countdown-details-strip {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .detail-pill {
@@ -5038,48 +5165,9 @@ button {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 12.5px;
   font-weight: 500;
   color: #334155;
-  box-shadow: none !important;
-  cursor: default;
-  transition: border-color 0.2s ease;
-}
-
-.detail-pill svg {
-  color: #023E73;
-  flex-shrink: 0;
-}
-
-.detail-pill strong {
-  color: #0f172a;
-  font-weight: 700;
-}
-
-.detail-pill em {
-  color: #475569;
-  font-style: normal;
-  font-weight: 600;
-}
-
-.detail-pill--access {
-  background: #f0f7fc;
-  border: 1px solid #bae6fd;
-  color: #023E73;
-  cursor: default;
-}
-
-.detail-pill--access svg {
-  color: #0477BF;
-}
-
-.detail-pill--access strong {
-  color: #023E73;
-}
-
-.detail-pill-divider {
-  display: none;
 }
 
 /* Dual Action Buttons (Harmonious Theme Colors, Flat & Responsive) */
@@ -5236,10 +5324,13 @@ button {
 }
 
 @keyframes liveDotPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.3);
     opacity: 0.45;
@@ -5359,6 +5450,7 @@ button {
     transform: translateY(-4px);
     opacity: 0.6;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -5370,9 +5462,11 @@ button {
   0% {
     transform: scale(1);
   }
+
   35% {
     transform: scale(1.025);
   }
+
   100% {
     transform: scale(1);
   }
@@ -5449,23 +5543,14 @@ button {
   justify-content: space-between;
   gap: 10px;
   padding: 16px 18px;
-  border-radius: 14px !important;
   background: #ffffff !important;
-  border: 1px solid #e2e8f0 !important;
-  border-top: 3.5px solid var(--card-accent, #023E73) !important;
-  box-shadow: none !important;
   flex: 1;
   position: relative;
   overflow: hidden;
   cursor: default;
+  border: 1px dashed #c9c9c9;
+  border-radius: 20px;
   transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.countdown-features-col .countdown-feature-box:hover {
-  transform: translateY(-2px);
-  box-shadow: none !important;
-  border-color: #cbd5e1 !important;
-  border-top-color: var(--card-accent, #023E73) !important;
 }
 
 /* Card Theme Accents */
@@ -5499,32 +5584,13 @@ button {
 }
 
 .feature-box-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   transition: transform 0.25s ease;
-  color: #ffffff !important;
+  color: #000000 !important;
   box-shadow: none !important;
-}
-
-.countdown-feature-box:hover .feature-box-icon {
-  transform: scale(1.06);
-}
-
-.feature-box-icon.icon-navy {
-  background: linear-gradient(135deg, #023E73 0%, #0477BF 100%);
-}
-
-.feature-box-icon.icon-royal {
-  background: linear-gradient(135deg, #0477BF 0%, #069DBF 100%);
-}
-
-.feature-box-icon.icon-cyan {
-  background: linear-gradient(135deg, #069DBF 0%, #0284c7 100%);
 }
 
 .feature-box-badge {
@@ -5533,11 +5599,8 @@ button {
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 4px 9px;
   border-radius: 6px;
-  background: var(--card-badge-bg);
-  border: 1px solid var(--card-badge-border);
-  color: var(--card-badge-color);
+  color: black;
   box-shadow: none !important;
 }
 
@@ -5622,10 +5685,6 @@ button {
   font-size: 10px;
   font-weight: 700;
   color: #334155;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  padding: 3.5px 8.5px;
-  border-radius: 5px;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
