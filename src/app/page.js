@@ -4,6 +4,7 @@ import Countdown from "@/components/Countdown";
 import BeaverMascot from "@/components/BeaverMascot";
 import Icon from "@/components/Icon";
 import InteractiveTimeline from "@/components/InteractiveTimeline";
+import RegistrationTabs from "@/components/RegistrationTabs";
 import { site } from "@/data/site";
 import { events } from "@/data/events";
 import { galleryItems } from "@/data/gallery";
@@ -158,47 +159,33 @@ export default function HomePage() {
                   discover next-gen CAD/CAM innovations, and network with 6,000+ peers at Chennai Trade Centre.
                 </p>
 
-                {/* Event Hierarchical Quick Details Grid */}
-                <div className="countdown-details-grid" role="region" aria-label="Event Schedule & Venue">
-                  {/* Tier 1 - Left Column: Event Dates & Timing */}
-                  <div className="detail-grid-card detail-grid-card--date">
-                    <div className="grid-card-icon" aria-hidden="true">
+                {/* Event Details Quick Summary Rows (Matches Screenshot 3) */}
+                <div className="countdown-details-stack" role="region" aria-label="Event Schedule & Venue">
+                  <div className="countdown-detail-row">
+                    <div className="detail-row-icon" aria-hidden="true">
                       <Icon name="calendar" size={15} />
                     </div>
-                    <div className="grid-card-body">
-                      <span className="grid-card-label">EVENT DATES</span>
-                      <div className="grid-card-title">Feb 6 – 7, 2027</div>
-                      <span className="grid-card-meta">09:00 AM – 06:00 PM IST</span>
-                    </div>
+                    <span className="detail-row-text">
+                      <strong>Feb 6 – 7, 2027</strong> · 09:00 AM – 06:00 PM
+                    </span>
                   </div>
 
-                  {/* Tier 1 - Right Column: Venue & Halls */}
-                  <div className="detail-grid-card detail-grid-card--venue">
-                    <div className="grid-card-icon" aria-hidden="true">
+                  <div className="countdown-detail-row">
+                    <div className="detail-row-icon" aria-hidden="true">
                       <Icon name="pin" size={15} />
                     </div>
-                    <div className="grid-card-body">
-                      <span className="grid-card-label">EXPO VENUE</span>
-                      <div className="grid-card-title">Chennai Trade Centre</div>
-                      <span className="grid-card-meta">New Hall 2, 3 &amp; 3A</span>
-                    </div>
+                    <span className="detail-row-text">
+                      Chennai Trade Centre <strong>(New Hall 2, 3 &amp; 3A)</strong>
+                    </span>
                   </div>
 
-                  {/* Tier 2 - Spanning Highlight: Complimentary Visitor Privilege */}
-                  <div className="detail-grid-card detail-grid-card--access">
-                    <div className="grid-card-icon grid-card-icon--highlight" aria-hidden="true">
-                      <Icon name="ticket" size={16} />
+                  <div className="countdown-detail-row countdown-detail-row--access">
+                    <div className="detail-row-icon detail-row-icon--access" aria-hidden="true">
+                      <Icon name="ticket" size={15} />
                     </div>
-                    <div className="grid-card-body">
-                      <div className="grid-card-header-row">
-                        <span className="grid-card-label grid-card-label--highlight">DELEGATE ACCESS</span>
-                        <span className="grid-card-badge">Zero Entry Fee</span>
-                      </div>
-                      <div className="grid-card-title grid-card-title--highlight">Free Visitor Access</div>
-                      <span className="grid-card-meta grid-card-meta--highlight">
-                        Complimentary pass for Dental Clinicians, Faculty &amp; Students
-                      </span>
-                    </div>
+                    <span className="detail-row-text">
+                      <strong>Free Visitor Access</strong> for Dental Clinicians
+                    </span>
                   </div>
                 </div>
 
@@ -542,80 +529,11 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          SECTION 3.8: REGISTRATION CTA (Section 7: Primary Dark Fold)
+          SECTION 3.8: REGISTRATION CTA (Dynamic Color Tabs & Mascot)
           ============================================================ */}
-      <section className="cta-dual-section font-modern fold-primary-dark" id="registration-cta">
+      <section className="cta-dual-section font-modern" id="registration-cta">
         <div className="container">
-          <div className="text-center">
-            <span className="section-eyebrow">JOIN DENTAL SHOW 2027</span>
-            <h2 className="section-main-title">Be Part of the Next Chapter</h2>
-            <div className="title-zigzag" />
-            <p className="max-w-700 mx-auto text-muted">
-              Join thousands of clinicians, dental students, dealers, technicians, and world-class
-              manufacturers at Chennai Trade Centre on 6th & 7th February 2027.
-            </p>
-          </div>
-
-          <div className="cta-dual-grid">
-            {/* For Visitors Card */}
-            <div className="cta-dual-card visitor-side pop-in">
-              <span className="cta-card-badge">FOR CLINICIANS, STUDENTS & TEAMS</span>
-              <h3 className="cta-card-title">Register as a Visitor</h3>
-              <p className="cta-card-desc">
-                For Visitors: Discover the dental industry and connect with the community.
-              </p>
-              <ul className="cta-perks-list">
-                <li>
-                  <Icon name="check" size={18} /> Free access to 3 massive exhibition halls (New Hall 2, 3 & 3A)
-                </li>
-                <li>
-                  <Icon name="check" size={18} /> Experience hands-on scanning, laser & 3D printing demos
-                </li>
-                <li>
-                  <Icon name="check" size={18} /> Meet the Beaver Mascot and network with 6,000+ peers
-                </li>
-              </ul>
-              <div>
-                <Link
-                  href="/visitor-registration"
-                  className="btn btn--primary"
-                  id="cta-visitor-register-btn"
-                >
-                  Register as a Visitor
-                </Link>
-              </div>
-            </div>
-
-            {/* For Exhibitors Card */}
-            <div className="cta-dual-card exhibitor-side pop-in" style={{ animationDelay: "100ms" }}>
-              <span className="cta-card-badge">FOR BRANDS, MANUFACTURERS & TRADERS</span>
-              <h3 className="cta-card-title">Register as an Exhibitor</h3>
-              <p className="cta-card-desc">
-                For Exhibitors: Showcase your business and build new connections.
-              </p>
-              <ul className="cta-perks-list">
-                <li>
-                  <Icon name="check" size={18} /> Premium shell schemes and bare space custom stalls
-                </li>
-                <li>
-                  <Icon name="check" size={18} /> Direct access to active dental buyers & institutional clinic heads
-                </li>
-                <li>
-                  <Icon name="check" size={18} /> Full backing and trade promotion by TNDTMA
-                </li>
-              </ul>
-              <div>
-                <Link
-                  href="/exhibitor-registration"
-                  className="btn btn-header-exhibitor"
-                  style={{ padding: "13px 30px", fontSize: "14px" }}
-                  id="cta-exhibitor-register-btn"
-                >
-                  Register as an Exhibitor
-                </Link>
-              </div>
-            </div>
-          </div>
+          <RegistrationTabs />
         </div>
       </section>
     </>
