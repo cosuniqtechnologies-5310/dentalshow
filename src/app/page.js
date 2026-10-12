@@ -4,7 +4,6 @@ import Countdown from "@/components/Countdown";
 import BeaverMascot from "@/components/BeaverMascot";
 import Icon from "@/components/Icon";
 import InteractiveTimeline from "@/components/InteractiveTimeline";
-import RegistrationTabs from "@/components/RegistrationTabs";
 import { site } from "@/data/site";
 import { events } from "@/data/events";
 import { galleryItems } from "@/data/gallery";
@@ -529,11 +528,44 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          SECTION 3.8: REGISTRATION CTA (Dynamic Color Tabs & Mascot)
+          SECTION 3.8: REGISTRATION CTA (Full Section, Left-Aligned, Client Spec)
           ============================================================ */}
-      <section className="cta-dual-section font-modern" id="registration-cta">
+      <section className="cta-full-section font-modern" id="registration-cta">
         <div className="container">
-          <RegistrationTabs />
+          <div className="cta-full-content">
+            <h2 className="cta-full-title">Be Part of the Next Chapter</h2>
+
+            <div className="cta-full-roles">
+              <p className="cta-role-item">
+                <strong className="role-highlight role-highlight--visitor">For Visitors:</strong>{" "}
+                Discover the dental industry and connect with the community.
+              </p>
+              <p className="cta-role-item">
+                <strong className="role-highlight role-highlight--exhibitor">For Exhibitors:</strong>{" "}
+                Showcase your business and build new connections.
+              </p>
+            </div>
+
+            <div className="cta-full-actions">
+              <Link
+                href="/visitor-registration"
+                className="cta-full-btn cta-full-btn--primary"
+                id="cta-visitor-register-btn"
+              >
+                <span>Register as a Visitor</span>
+                <span className="cta-btn-arrow" aria-hidden="true">→</span>
+              </Link>
+
+              <Link
+                href="/exhibitor-registration"
+                className="cta-full-btn cta-full-btn--secondary"
+                id="cta-exhibitor-register-btn"
+              >
+                <span>Register as an Exhibitor</span>
+                <span className="cta-btn-arrow" aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>
