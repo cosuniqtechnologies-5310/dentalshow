@@ -3330,19 +3330,19 @@ button {
   margin-top: 40px;
 }
 
-/* Timeline Overall Wrapper */
+/* Timeline Overall Wrapper (One Fold Compact) */
 .interactive-timeline-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 14px; /* Compacted from 36px */
   width: 100%;
 }
 
 /* 1. Main Showcase Grid: Left Mascot Guide + Right Active Milestone Card */
 .timeline-showcase-grid {
   display: grid;
-  grid-template-columns: 290px 1fr;
-  gap: 28px;
+  grid-template-columns: 230px 1fr; /* Compacted from 290px */
+  gap: 18px; /* Compacted from 28px */
   align-items: stretch;
   width: 100%;
 }
@@ -3357,8 +3357,8 @@ button {
   width: 100%;
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 18px;
-  padding: 24px 20px 20px;
+  border-radius: 16px;
+  padding: 12px 14px 10px; /* Compacted from 24px 20px 20px */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3371,10 +3371,10 @@ button {
 .timeline-mascot-bubble {
   background: #f0f7fc;
   border: 1.5px solid #bae6fd;
-  border-radius: 14px;
-  padding: 12px 14px;
+  border-radius: 12px;
+  padding: 6px 10px; /* Compacted from 12px 14px */
   width: 100%;
-  margin-bottom: 14px;
+  margin-bottom: 6px;
   position: relative;
   text-align: center;
   box-shadow: none !important;
@@ -3397,38 +3397,38 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 5px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 10px;
+  font-size: 9.5px;
   font-weight: 800;
-  letter-spacing: 0.9px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
   color: #0477BF;
 }
 
 .mascot-bubble-title {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 800;
   color: #023E73 !important;
-  margin: 3px 0 1px;
-  line-height: 1.25;
+  margin: 1px 0;
+  line-height: 1.2;
 }
 
 .mascot-bubble-sub {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 600;
   color: #069DBF;
 }
 
 .mascot-bubble-tail {
   position: absolute;
-  bottom: -6px;
+  bottom: -5px;
   left: 50%;
   transform: translateX(-50%) rotate(45deg);
-  width: 11px;
-  height: 11px;
+  width: 9px;
+  height: 9px;
   background: #f0f7fc;
   border-right: 1.5px solid #bae6fd;
   border-bottom: 1.5px solid #bae6fd;
@@ -3439,7 +3439,7 @@ button {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 250px;
+  height: 155px; /* Compacted from 250px so mascot fits seamlessly */
   position: relative;
 }
 
@@ -3447,28 +3447,28 @@ button {
   object-fit: contain;
   width: auto;
   height: 100%;
-  filter: drop-shadow(0 8px 16px rgba(2, 62, 115, 0.08));
+  filter: drop-shadow(0 6px 12px rgba(2, 62, 115, 0.08));
 }
 
 .timeline-mascot-status-pill {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 5px 12px;
+  gap: 6px;
+  padding: 3px 10px;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 20px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   color: #475569;
-  margin-top: 10px;
+  margin-top: 6px;
   box-shadow: none !important;
 }
 
 .mascot-status-dot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: #0477BF;
 }
@@ -3483,8 +3483,8 @@ button {
   width: 100%;
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 18px;
-  padding: 32px 36px 0;
+  border-radius: 16px;
+  padding: 16px 22px 0; /* Compacted from 32px 36px 0 */
   box-shadow: none !important;
   position: relative;
   overflow: hidden;
@@ -3510,30 +3510,30 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 22px;
+  margin-bottom: 8px; /* Compacted from 22px */
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
 }
 
 .timeline-milestone-pill-wrap {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .timeline-milestone-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 5px 14px;
+  gap: 6px;
+  padding: 3px 12px;
   background: #f0f7fc;
   border: 1px solid #bae6fd;
   border-radius: 20px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 800;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: #023E73;
   box-shadow: none !important;
@@ -3541,9 +3541,9 @@ button {
 
 .timeline-stage-counter {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.1px;
   color: #64748b;
   text-transform: uppercase;
 }
@@ -3551,10 +3551,10 @@ button {
 .timeline-autoplay-controls {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   background: #f8fafc;
-  padding: 4px 10px;
-  border-radius: 22px;
+  padding: 3px 8px;
+  border-radius: 20px;
   border: 1px solid #e2e8f0;
   box-shadow: none !important;
 }
@@ -3563,9 +3563,9 @@ button {
   background: #ffffff;
   border: 1px solid #cbd5e1;
   color: #023E73;
-  font-size: 12px;
-  width: 26px;
-  height: 26px;
+  font-size: 11px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -3583,14 +3583,14 @@ button {
 
 .timeline-play-btn {
   color: #0477BF;
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .timeline-autoplay-status {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 10px;
+  font-size: 9.5px;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 0.9px;
   color: #64748b;
   padding-left: 2px;
 }
@@ -3598,23 +3598,23 @@ button {
 .timeline-spotlight-body {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .timeline-spotlight-year-headline {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   flex-wrap: wrap;
 }
 
 .timeline-spotlight-year {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 22px;
+  font-size: 18px; /* Compacted from 22px */
   font-weight: 900;
   color: #0477BF;
-  letter-spacing: -0.4px;
+  letter-spacing: -0.3px;
 }
 
 .timeline-spotlight-dot {
@@ -3624,27 +3624,27 @@ button {
 
 .timeline-spotlight-tagline {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 13px;
+  font-size: 11.5px;
   font-weight: 700;
   color: #64748b;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
 }
 
 .timeline-spotlight-title {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: clamp(22px, 2.3vw, 28px);
+  font-size: clamp(17px, 1.8vw, 21px); /* Compacted from 28px */
   font-weight: 900;
   color: #0f172a !important;
-  margin: 0 0 10px;
-  letter-spacing: -0.5px;
+  margin: 0 0 4px;
+  letter-spacing: -0.4px;
   line-height: 1.25;
 }
 
 .timeline-spotlight-text {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 15px;
-  line-height: 1.65;
+  font-size: 13px; /* Compacted from 15px */
+  line-height: 1.48;
   color: #475569 !important;
   margin: 0;
   max-width: 680px;
@@ -3653,26 +3653,26 @@ button {
 .timeline-spotlight-footer-grid {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 16px;
+  gap: 12px;
   align-items: center;
-  margin: 24px 0 26px;
+  margin: 12px 0 12px; /* Compacted from 24px 0 26px */
 }
 
 .timeline-stat-chip {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 12px 18px;
+  gap: 10px;
+  padding: 8px 14px; /* Compacted from 12px 18px */
   background: #f0f7fc;
   border: 1px solid #bae6fd;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: none !important;
 }
 
 .timeline-stat-icon-wrap {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
   background: #023E73;
   color: #ffffff;
   display: flex;
@@ -3694,23 +3694,23 @@ button {
 
 .timeline-stat-text .stat-label {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 10px;
+  font-size: 9.5px;
   font-weight: 800;
-  letter-spacing: 1.1px;
+  letter-spacing: 0.9px;
   text-transform: uppercase;
   color: #0477BF;
 }
 
 .timeline-stat-text .stat-val {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 800;
   color: #023E73;
 }
 
 .timeline-stat-text .stat-sub {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 11.5px;
+  font-size: 10.5px;
   color: #475569;
   font-weight: 500;
 }
@@ -3718,27 +3718,27 @@ button {
 .timeline-highlight-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .timeline-highlight-pill {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 600;
   color: #334155;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
-  padding: 6px 12px;
-  border-radius: 8px;
+  padding: 4px 10px;
+  border-radius: 6px;
   white-space: nowrap;
   box-shadow: none !important;
 }
 
 .timeline-progress-track {
-  height: 4px;
+  height: 3px;
   background: #e2e8f0;
-  width: calc(100% + 72px);
-  margin: 0 -36px;
+  width: calc(100% + 44px);
+  margin: 0 -22px;
   box-shadow: none !important;
 }
 
@@ -3758,7 +3758,7 @@ button {
   width: 100vw;
   left: 50%;
   transform: translateX(-50%);
-  padding: 36px 0;
+  padding: 12px 0; /* Compacted from 36px */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3807,23 +3807,22 @@ button {
   width: 100%;
 }
 
-/* Individual Year Pill Button */
+/* Individual Year Pill Button (Compact Pill Shape) */
 .timeline-year-pill-btn {
   position: relative;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3px;
-  padding: 10px 22px;
+  gap: 2px;
+  padding: 6px 18px; /* Compacted from 10px 22px */
   background: #ffffff;
   border: 2px solid #cbd5e1;
   border-radius: 9999px;
-  /* Real Pill Shape */
   cursor: pointer;
   box-shadow: none !important;
   transition: all 0.25s ease;
-  min-width: 110px;
+  min-width: 95px;
 }
 
 .timeline-year-pill-btn:hover {
@@ -3844,7 +3843,7 @@ button {
 
 .year-pill-number {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 14.5px;
+  font-size: 13.5px;
   font-weight: 800;
   color: #0f172a;
   line-height: 1.1;
@@ -3862,7 +3861,7 @@ button {
 
 .year-pill-label {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   color: #64748b;
   line-height: 1.2;
@@ -3878,58 +3877,9 @@ button {
   color: #0477BF;
 }
 
-/* ==========================================================================
-   3. CONTINUOUS EVOLUTION TICKER
-   ========================================================================== */
-
+/* 3. CONTINUOUS EVOLUTION TICKER - HIDDEN AS REQUESTED */
 .timeline-continuous-loop-wrap {
-  margin-top: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.timeline-loop-track-indicator {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  padding: 10px 24px;
-  background: #ffffff;
-  border: 1px dashed #cbd5e1;
-  border-radius: 30px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 12px;
-  color: #475569;
-  letter-spacing: 0.4px;
-  text-align: center;
-  box-shadow: none !important;
-}
-
-.timeline-loop-track-indicator strong {
-  color: #023E73;
-  font-weight: 700;
-}
-
-.timeline-loop-arrow-left,
-.timeline-loop-arrow-right {
-  color: #0477BF;
-  letter-spacing: 2px;
-  font-weight: 900;
-  animation: pulseArrows 2s infinite ease-in-out;
-}
-
-@keyframes pulseArrows {
-
-  0%,
-  100% {
-    opacity: 0.5;
-    transform: translateX(0);
-  }
-
-  50% {
-    opacity: 1;
-    transform: translateX(3px);
-  }
+  display: none !important;
 }
 
 /* Responsive Rules */
@@ -5679,14 +5629,52 @@ button {
   }
 }
 
-/* FOLD 3: LIGHT PRIMARY COLOR (Our Legacy Section 3.4) --------------------- */
+/* FOLD 3: LIGHT PRIMARY COLOR (Our Legacy Section 3.4 - One Fold Compact) --- */
+.section-legacy,
+.timeline-section-fullwidth,
 .section-legacy.fold-light-primary,
 .fold-light-primary {
   background: linear-gradient(180deg, #F0F7FC 0%, #E8F3FA 100%) !important;
   border-top: 1px solid rgba(4, 119, 191, 0.14);
   border-bottom: 1px solid rgba(4, 119, 191, 0.14);
-  padding: 110px 0 !important;
+  padding: 30px 0 20px 0 !important; /* Compact padding for single fold */
   position: relative;
+}
+
+.timeline-header-compact {
+  margin-bottom: 14px !important;
+}
+
+.timeline-section-fullwidth .section-eyebrow {
+  font-size: 10.5px !important;
+  letter-spacing: 1px !important;
+  margin-bottom: 3px !important;
+  display: inline-block;
+  color: #0477BF !important;
+  font-weight: 800;
+}
+
+.timeline-section-fullwidth .section-main-title {
+  font-size: clamp(19px, 2.1vw, 24px) !important;
+  line-height: 1.18 !important;
+  margin: 0 0 4px 0 !important;
+  letter-spacing: -0.4px !important;
+  color: #023E73 !important;
+  font-weight: 800;
+}
+
+.timeline-section-fullwidth .title-zigzag {
+  margin: 4px auto 5px !important;
+  transform: scale(0.8);
+  height: 6px;
+}
+
+.timeline-section-fullwidth .section-desc {
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+  max-width: 680px !important;
+  margin: 0 auto !important;
+  color: #475569 !important;
 }
 
 .fold-light-primary .section-eyebrow {

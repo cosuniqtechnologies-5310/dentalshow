@@ -306,17 +306,6 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
           </div>
         </div>
       </div>
-
-      {/* 3. CONTINUOUS LOOP TICKER */}
-      <div className="timeline-continuous-loop-wrap">
-        <div className="timeline-loop-track-indicator">
-          <span className="timeline-loop-arrow-left">‹‹‹</span>
-          <span className="timeline-loop-text">
-            Continuous Evolution: <strong>~2000</strong> Vision ➔ <strong>2005</strong> Inception ➔ <strong>2015</strong> CTC Scale ➔ <strong>2025</strong> 20th Jubilee ➔ <strong>2027</strong> Grand Chapter
-          </span>
-          <span className="timeline-loop-arrow-right">›››</span>
-        </div>
-      </div>
     </div>
   );
 }

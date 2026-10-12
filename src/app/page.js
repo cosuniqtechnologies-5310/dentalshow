@@ -295,7 +295,7 @@ export default function HomePage() {
           ============================================================ */}
       <section className="section section-legacy font-modern timeline-section-fullwidth" id="legacy">
         <div className="container-fluid timeline-container-fluid">
-          <div className="text-center mb-40">
+          <div className="text-center timeline-header-compact">
             <span className="section-eyebrow">OUR LEGACY & TWO DECADE JOURNEY</span>
             <h2 className="section-main-title">
               A vision born around 2000. A milestone achieved in 2005. A future shaped by innovation.
