@@ -6831,7 +6831,7 @@ button {
   background: linear-gradient(180deg, #EDF7F4 0%, #E6F3EF 100%) !important;
   border-top: 1px solid rgba(59, 191, 143, 0.22);
   border-bottom: 1px solid rgba(59, 191, 143, 0.22);
-  padding: 60px 0 !important;
+  padding: 48px 0 0 !important;
   position: relative;
   overflow: hidden;
 }
@@ -7012,20 +7012,20 @@ button {
 }
 
 .benefits-cards-track.is-slider-mode {
-  --slider-left-pad: max(20px, calc((100% - 1200px) / 2));
-  --slider-visible-span: calc(100% - var(--slider-left-pad));
+  /* Full-bleed left AND right — cards start at the very left screen edge */
+  --slider-visible-span: 100vw;
   display: flex;
-  gap: 24px;
+  gap: 0;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  scroll-padding: 0 4px;
-  /* Left edge aligns flush with .container title above */
-  padding-left: var(--slider-left-pad);
-  /* Right edge bleeds full screen without container constraint */
-  padding-right: 48px;
+  scroll-padding: 0;
+  /* No left indent — cards touch left screen edge like first screenshot */
+  padding-left: 0;
+  /* Small right buffer so last card has a peek effect */
+  padding-right: 0;
   padding-top: 8px;
-  padding-bottom: 28px;
+  padding-bottom: 32px;
   margin-bottom: 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -7057,38 +7057,42 @@ button {
   flex-direction: column;
 }
 
-/* Responsive card width in slider mode: exactly 3.5 cards visible on desktop from title start to right screen edge */
+/* 4 cards fully visible, touching left edge just like the reference screenshot */
 .is-slider-mode .benefit-staple-card {
-  flex: 0 0 calc((var(--slider-visible-span) - 72px) / 3.5);
-  width: calc((var(--slider-visible-span) - 72px) / 3.5);
-  min-width: 280px;
+  flex: 0 0 calc(100vw / 4);
+  width: calc(100vw / 4);
+  min-width: 240px;
   scroll-snap-align: start;
+  border-radius: 0;
+  border: none;
+  border-right: 1px solid rgba(4, 119, 191, 0.12);
 }
 
 @media (max-width: 1080px) {
   .benefits-cards-track.is-slider-mode {
-    gap: 20px;
-    padding-right: 32px;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 0;
   }
 
   .is-slider-mode .benefit-staple-card {
-    flex: 0 0 calc((var(--slider-visible-span) - 40px) / 2.5);
-    width: calc((var(--slider-visible-span) - 40px) / 2.5);
-    min-width: 260px;
+    flex: 0 0 calc(100vw / 2.5);
+    width: calc(100vw / 2.5);
+    min-width: 220px;
   }
 }
 
 @media (max-width: 680px) {
   .benefits-cards-track.is-slider-mode {
-    padding-left: 20px;
-    padding-right: 20px;
-    gap: 16px;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 0;
   }
 
   .is-slider-mode .benefit-staple-card {
-    flex: 0 0 84vw;
-    width: 84vw;
-    min-width: 260px;
+    flex: 0 0 85vw;
+    width: 85vw;
+    min-width: 220px;
   }
 }
 
@@ -7102,7 +7106,7 @@ button {
 .staple-card-cover {
   position: relative;
   width: 100%;
-  height: 205px;
+  height: 185px;
   overflow: hidden;
   background: #023E73;
 }
@@ -7181,7 +7185,7 @@ button {
 
 /* Card Body Section */
 .staple-card-body {
-  padding: 22px 20px 20px;
+  padding: 16px 18px 16px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -7189,36 +7193,36 @@ button {
 
 .staple-card-title {
   font-family: 'Inter', sans-serif !important;
-  font-size: 18.5px;
+  font-size: 16px;
   font-weight: 800;
   color: #000000 !important;
-  margin: 0 0 16px;
-  line-height: 1.3;
+  margin: 0 0 12px;
+  line-height: 1.25;
 }
 
 /* Triads Stack */
 .staple-triads-stack {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 8px;
+  margin-bottom: 14px;
   flex: 1;
 }
 
 .staple-triad-row {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
   text-align: left;
 }
 
 .staple-triad-chip {
   font-family: 'Inter', sans-serif !important;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 800;
   letter-spacing: 0.9px;
   text-transform: uppercase;
-  padding: 2px 8px;
+  padding: 2px 7px;
   border-radius: 4px;
   width: fit-content;
   display: inline-block;
@@ -7241,8 +7245,8 @@ button {
 
 .staple-triad-text {
   font-family: 'Inter', sans-serif !important;
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.4;
   color: #000000 !important;
   margin: 0;
 }
@@ -7250,7 +7254,7 @@ button {
 /* Card Footer CTA */
 .staple-card-footer {
   margin-top: auto;
-  padding-top: 14px;
+  padding-top: 10px;
   border-top: 1px solid #f1f5f9;
 }
 
@@ -7259,14 +7263,14 @@ button {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 10px 16px;
-  border-radius: 8px;
+  padding: 9px 14px;
+  border-radius: 6px;
   background: #f0f7fc;
   border: 1px solid #bae6fd;
   color: #023E73 !important;
   font-family: 'Inter', sans-serif !important;
   font-weight: 800;
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: all 0.25s ease;
