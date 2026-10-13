@@ -4264,12 +4264,13 @@ button {
 /* 1. UNIFIED PANORAMIC MASTER SHOWCASE CARD */
 .timeline-master-showcase-card {
   width: 100%;
+  margin: 0 auto;
   background: #ffffff;
   border: 1px solid rgba(4, 119, 191, 0.16);
-  border-radius: 24px;
+  border-radius: 20px;
   box-shadow: 0 10px 30px -5px rgba(2, 62, 115, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.8) inset !important;
   display: grid;
-  grid-template-columns: 310px 1fr;
+  grid-template-columns: 350px 1fr;
   align-items: stretch;
   overflow: hidden;
   position: relative;
@@ -4284,12 +4285,12 @@ button {
 .timeline-stage-host-alcove {
   background: linear-gradient(180deg, #F8FAFC 0%, #EEF6FC 100%);
   border-right: 1px solid rgba(4, 119, 191, 0.12);
-  padding: 28px 24px 24px;
+  padding: 20px 18px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  justify-content: center;
+  gap: 12px;
   text-align: center;
   position: relative;
 }
@@ -4337,7 +4338,7 @@ button {
 .stage-host-podium-wrap {
   position: relative;
   width: 100%;
-  height: 170px;
+  height: 135px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4348,8 +4349,8 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background: radial-gradient(circle,
       rgba(6, 157, 191, 0.70) 0%,
@@ -4363,7 +4364,7 @@ button {
 .stage-host-mascot-img {
   object-fit: contain;
   width: auto;
-  height: 100%;
+  max-height: 130px;
   position: relative;
   z-index: 2;
   filter: drop-shadow(0 8px 18px rgba(2, 62, 115, 0.12));
@@ -4393,11 +4394,10 @@ button {
 
 /* Right Panel: Executive Milestone Showcase */
 .timeline-stage-content-panel {
-  padding: 30px 38px 0;
+  padding: 22px 28px 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   background: #ffffff;
   animation: fadeInMilestone 0.4s ease-out;
   position: relative;
@@ -4407,9 +4407,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 2px;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
 }
 
 .timeline-milestone-pill-wrap {
@@ -4499,7 +4499,7 @@ button {
 .timeline-spotlight-body {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   text-align: left;
 }
 
@@ -4513,7 +4513,7 @@ button {
 
 .timeline-spotlight-year {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 900;
   color: #0477BF !important;
   letter-spacing: -0.3px;
@@ -4526,7 +4526,7 @@ button {
 
 .timeline-spotlight-tagline {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 800;
   color: #0f172a !important;
   text-transform: uppercase;
@@ -4535,38 +4535,38 @@ button {
 
 .timeline-spotlight-title {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: clamp(21px, 2.2vw, 25px);
+  font-size: clamp(19px, 1.8vw, 22px);
   font-weight: 900;
   color: #0f172a !important;
-  margin: 0 0 6px;
-  letter-spacing: -0.4px;
+  margin: 0 0 2px;
+  letter-spacing: -0.3px;
   line-height: 1.25;
   text-align: left;
 }
 
 .timeline-spotlight-text {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 14.5px;
-  line-height: 1.65;
+  font-size: 14px;
+  line-height: 1.55;
   color: #1e293b !important;
-  margin: 0 0 4px;
-  max-width: 780px;
+  margin: 0;
+  max-width: 100%;
   text-align: left;
 }
 
 .timeline-spotlight-footer-grid {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 20px;
-  align-items: center;
-  margin: 18px 0 20px;
+  grid-template-columns: 220px 1fr;
+  gap: 14px;
+  align-items: stretch;
+  margin: 8px 0 14px;
 }
 
 .timeline-stat-chip {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 12px 20px;
+  gap: 12px;
+  padding: 10px 16px;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
@@ -4574,9 +4574,9 @@ button {
 }
 
 .timeline-stat-icon-wrap {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
   background: #0477BF;
   color: #ffffff;
   display: flex;
@@ -4599,7 +4599,7 @@ button {
 
 .timeline-stat-text .stat-label {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 9.5px;
+  font-size: 9px;
   font-weight: 800;
   letter-spacing: 0.9px;
   text-transform: uppercase;
@@ -4608,35 +4608,58 @@ button {
 
 .timeline-stat-text .stat-val {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 900;
   color: #0f172a !important;
+  line-height: 1.2;
 }
 
 .timeline-stat-text .stat-sub {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 11.5px;
+  font-size: 11px;
   color: #475569 !important;
   font-weight: 600;
+}
+
+.timeline-highlights-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 8px 14px;
+}
+
+.highlights-header-label {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  color: #64748b;
+  text-align: left;
 }
 
 .timeline-highlight-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
+  align-items: center;
 }
 
 .timeline-highlight-pill {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 700;
   color: #0f172a !important;
   background: #ffffff;
   border: 1px solid #cbd5e1;
-  padding: 7px 16px;
-  border-radius: 8px;
+  padding: 5px 12px;
+  border-radius: 6px;
   white-space: nowrap;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03) !important;
   display: inline-flex;
   align-items: center;
 }
@@ -4644,14 +4667,15 @@ button {
 .pill-sparkle-blue {
   color: #0477BF !important;
   font-weight: 800;
-  margin-right: 6px;
+  margin-right: 5px;
+  font-size: 11px;
 }
 
 .timeline-progress-track {
-  height: 1.5px;
+  height: 2px;
   background: #e2e8f0;
-  width: calc(100% + 68px);
-  margin: 0 -34px;
+  width: calc(100% + 56px);
+  margin: auto -28px 0;
   box-shadow: none !important;
 }
 
@@ -7157,7 +7181,7 @@ button {
   transform: scale(1.06);
 }
 
-/* Scalloped Floating Top-Left Badge */
+/* Scalloped Floating Top-Left Badge (Left-Aligned) */
 .staple-scallop-badge {
   position: absolute;
   top: 10px;
@@ -7165,11 +7189,12 @@ button {
   z-index: 2;
   background: #ffffff;
   border-radius: 10px;
-  padding: 4px 10px;
+  padding: 5px 11px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  text-align: left;
   line-height: 1.15;
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -7181,7 +7206,8 @@ button {
   letter-spacing: 0.7px;
   text-transform: uppercase;
   color: #0477BF;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
+  text-align: left;
 }
 
 .scallop-badge-value {
@@ -7189,6 +7215,7 @@ button {
   font-size: 11.5px;
   font-weight: 900;
   color: #000000 !important;
+  text-align: left;
 }
 
 /* Teal Pill Button on Image Bottom */
@@ -7220,7 +7247,7 @@ button {
   transform: translateX(3px);
 }
 
-/* Card Body Section — compact, matching Screenshot 1 */
+/* Card Body Section */
 .staple-card-body {
   padding: 14px 16px 12px;
   display: flex;
@@ -7233,27 +7260,56 @@ button {
   font-size: 15px;
   font-weight: 800;
   color: #000000 !important;
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   line-height: 1.25;
   min-height: 38px;
   display: flex;
   align-items: center;
 }
 
-/* Triads Stack */
-.staple-triads-stack {
+/* Triads Accordion: Discover, Connect, Grow (Interactive Option) */
+.staple-triads-accordion {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 6px;
   margin-bottom: 12px;
   flex: 1;
 }
 
-.staple-triad-row {
+.staple-accordion-item {
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.staple-accordion-item.is-active {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 8px rgba(2, 62, 115, 0.05);
+}
+
+.staple-accordion-header-btn {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
   text-align: left;
+  transition: background 0.18s ease;
+  user-select: none;
+}
+
+.staple-accordion-header-btn:hover {
+  background: rgba(4, 119, 191, 0.04);
+}
+
+.staple-accordion-header-btn.is-open {
+  padding-bottom: 4px;
 }
 
 .staple-triad-chip {
@@ -7262,10 +7318,15 @@ button {
   font-weight: 800;
   letter-spacing: 0.8px;
   text-transform: uppercase;
-  padding: 2px 7px;
+  padding: 2.5px 8px;
   border-radius: 4px;
   width: fit-content;
   display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.staple-accordion-header-btn:hover .staple-triad-chip {
+  transform: translateX(1px);
 }
 
 .chip--discover {
@@ -7283,12 +7344,58 @@ button {
   color: #166534 !important;
 }
 
+.accordion-chevron-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+}
+
+.accordion-chevron-toggle.is-expanded {
+  transform: rotate(180deg);
+  color: #0477BF;
+}
+
+.staple-accordion-collapse {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.28s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+}
+
+.staple-accordion-collapse.is-expanded {
+  max-height: 140px;
+  opacity: 1;
+}
+
+.staple-accordion-inner {
+  padding: 2px 10px 8px;
+  text-align: left;
+}
+
 .staple-triad-text {
   font-family: 'Inter', sans-serif !important;
   font-size: 11.5px;
-  line-height: 1.35;
+  line-height: 1.4;
   color: #1e293b !important;
   margin: 0;
+}
+
+/* Fallback static Triads Stack support */
+.staple-triads-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 12px;
+  flex: 1;
+}
+
+.staple-triad-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
 }
 
 /* Card Footer CTA */

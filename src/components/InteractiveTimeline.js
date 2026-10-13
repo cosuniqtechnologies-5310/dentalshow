@@ -7,7 +7,7 @@ import Icon from "@/components/Icon";
 const defaultMilestones = [
   {
     year: "Around 2000",
-    shortYear: "~2000",
+    shortYear: "2000",
     stageNum: "01",
     badge: "FOUNDING ERA",
     tabLabel: "Founding Vision",
@@ -272,7 +272,7 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
             <div className="timeline-spotlight-footer-grid">
               <div className="timeline-stat-chip">
                 <div className="timeline-stat-icon-wrap">
-                  <Icon name={activeMilestone.icon || "sparkle"} size={22} className="timeline-stat-icon" />
+                  <Icon name={activeMilestone.icon || "sparkle"} size={20} className="timeline-stat-icon" />
                 </div>
                 <div className="timeline-stat-text">
                   <span className="stat-label">MILESTONE IMPACT</span>
@@ -280,12 +280,16 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
                   <span className="stat-sub">{activeMilestone.statDesc}</span>
                 </div>
               </div>
-              <div className="timeline-highlight-pills">
-                {activeMilestone.highlights?.map((h, i) => (
-                  <span key={i} className="timeline-highlight-pill">
-                    <span className="pill-sparkle-blue">✦</span> {h}
-                  </span>
-                ))}
+
+              <div className="timeline-highlights-panel">
+                <span className="highlights-header-label">KEY FOCUS &amp; ACHIEVEMENTS</span>
+                <div className="timeline-highlight-pills">
+                  {activeMilestone.highlights?.map((h, i) => (
+                    <span key={i} className="timeline-highlight-pill">
+                      <span className="pill-sparkle-blue">✦</span> {h}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
 

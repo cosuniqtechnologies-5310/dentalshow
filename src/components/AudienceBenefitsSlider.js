@@ -68,6 +68,136 @@ const defaultAudienceGroups = [
   },
 ];
 
+function AudienceCard({ group }) {
+  const [activeItem, setActiveItem] = useState("discover");
+
+  const triadItems = [
+    {
+      key: "discover",
+      label: "DISCOVER",
+      chipClass: "chip--discover",
+      text: group.discover,
+    },
+    {
+      key: "connect",
+      label: "CONNECT",
+      chipClass: "chip--connect",
+      text: group.connect,
+    },
+    {
+      key: "grow",
+      label: "GROW",
+      chipClass: "chip--grow",
+      text: group.grow,
+    },
+  ];
+
+  const handleToggle = (key) => {
+    setActiveItem((prev) => (prev === key ? null : key));
+  };
+
+  return (
+    <article className="benefit-staple-card" id={`audience-card-${group.id}`}>
+      {/* Top Cover Visual Section */}
+      <div className="staple-card-cover">
+        <Image
+          src={group.image}
+          alt={group.role}
+          fill
+          sizes="(max-width: 768px) 100vw, 360px"
+          className="staple-card-img"
+        />
+
+        {/* Scalloped Floating Top-Left Badge (Left-Aligned) */}
+        <div className="staple-scallop-badge">
+          <span className="scallop-badge-sub">{group.badgeLabel}</span>
+          <strong className="scallop-badge-value">{group.badgeValue}</strong>
+        </div>
+
+        {/* Bottom Teal Pill Button Overlaid on Image Bottom */}
+        <div className="staple-cover-pill">
+          <span>{group.pillLabel}</span>
+          <span className="cover-pill-arrow" aria-hidden="true">›</span>
+        </div>
+      </div>
+
+      {/* Bottom Card Content: Cover Title + Discover, Connect, Grow Accordion */}
+      <div className="staple-card-body">
+        {/* Cover Title */}
+        <h3 className="staple-card-title">{group.role}</h3>
+
+        {/* Triads Accordion: Discover, Connect, Grow */}
+        <div
+          className="staple-triads-accordion"
+          role="region"
+          aria-label={`${group.role} benefit highlights`}
+        >
+          {triadItems.map((item) => {
+            const isOpen = activeItem === item.key;
+            return (
+              <div
+                key={item.key}
+                className={`staple-accordion-item ${isOpen ? "is-active" : ""}`}
+              >
+                <button
+                  type="button"
+                  className={`staple-accordion-header-btn ${isOpen ? "is-open" : ""}`}
+                  onClick={() => handleToggle(item.key)}
+                  aria-expanded={isOpen}
+                  aria-controls={`accordion-content-${group.id}-${item.key}`}
+                >
+                  <span className={`staple-triad-chip ${item.chipClass}`}>
+                    {item.label}
+                  </span>
+                  <span
+                    className={`accordion-chevron-toggle ${isOpen ? "is-expanded" : ""}`}
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M6 9l6 6 6-6" />
+                    </svg>
+                  </span>
+                </button>
+
+                <div
+                  id={`accordion-content-${group.id}-${item.key}`}
+                  className={`staple-accordion-collapse ${isOpen ? "is-expanded" : ""}`}
+                  role="region"
+                >
+                  <div className="staple-accordion-inner">
+                    <p className="staple-triad-text">{item.text}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Card Bottom CTA Link */}
+        <div className="staple-card-footer">
+          <Link
+            href="/visitor-registration"
+            className="staple-card-action-btn"
+            id={`btn-explore-${group.id}`}
+          >
+            <span>Explore Role Benefits</span>
+            <span className="action-btn-arrow" aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+}
+
 export default function AudienceBenefitsSlider({ audienceGroups = defaultAudienceGroups }) {
   const sliderRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -220,75 +350,7 @@ export default function AudienceBenefitsSlider({ audienceGroups = defaultAudienc
         tabIndex={0}
       >
         {audienceGroups.map((group) => (
-          <article key={group.id} className="benefit-staple-card" id={`audience-card-${group.id}`}>
-            {/* Top Cover Visual Section */}
-            <div className="staple-card-cover">
-              <Image
-                src={group.image}
-                alt={group.role}
-                fill
-                sizes="(max-width: 768px) 100vw, 360px"
-                className="staple-card-img"
-              />
-
-              {/* Scalloped Floating Top-Left Badge (Mirroring Screenshot 2) */}
-              <div className="staple-scallop-badge">
-                <span className="scallop-badge-sub">{group.badgeLabel}</span>
-                <strong className="scallop-badge-value">{group.badgeValue}</strong>
-              </div>
-
-              {/* Bottom Teal Pill Button Overlaid on Image Bottom (Mirroring Screenshot 2) */}
-              <div className="staple-cover-pill">
-                <span>{group.pillLabel}</span>
-                <span className="cover-pill-arrow" aria-hidden="true">›</span>
-              </div>
-            </div>
-
-            {/* Bottom Card Content: Cover Title + Discover, Connect, Grow */}
-            <div className="staple-card-body">
-              {/* Cover Title */}
-              <h3 className="staple-card-title">{group.role}</h3>
-
-              {/* Triads List: Discover, Connect, Grow */}
-              <div className="staple-triads-stack">
-                {/* 1. DISCOVER */}
-                <div className="staple-triad-row">
-                  <div className="triad-chip-wrap">
-                    <span className="staple-triad-chip chip--discover">DISCOVER</span>
-                  </div>
-                  <p className="staple-triad-text">{group.discover}</p>
-                </div>
-
-                {/* 2. CONNECT */}
-                <div className="staple-triad-row">
-                  <div className="triad-chip-wrap">
-                    <span className="staple-triad-chip chip--connect">CONNECT</span>
-                  </div>
-                  <p className="staple-triad-text">{group.connect}</p>
-                </div>
-
-                {/* 3. GROW */}
-                <div className="staple-triad-row">
-                  <div className="triad-chip-wrap">
-                    <span className="staple-triad-chip chip--grow">GROW</span>
-                  </div>
-                  <p className="staple-triad-text">{group.grow}</p>
-                </div>
-              </div>
-
-              {/* Card Bottom CTA Link */}
-              <div className="staple-card-footer">
-                <Link
-                  href="/visitor-registration"
-                  className="staple-card-action-btn"
-                  id={`btn-explore-${group.id}`}
-                >
-                  <span>Explore Role Benefits</span>
-                  <span className="action-btn-arrow" aria-hidden="true">→</span>
-                </Link>
-              </div>
-            </div>
-          </article>
+          <AudienceCard key={group.id} group={group} />
         ))}
       </div>
     </div>
