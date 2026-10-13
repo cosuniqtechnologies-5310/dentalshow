@@ -51,21 +51,46 @@ export default function GalleryHierarchicalPreview() {
 
   return (
     <div className="gallery-hierarchical-section">
-      {/* 1. Category Filter Pills */}
-      <div className="gallery-filter-pills-row" role="tablist" aria-label="Gallery category filters">
-        {categories.map((cat) => (
-          <button
-            key={cat.value}
-            type="button"
-            role="tab"
-            aria-selected={activeFilter === cat.value}
-            className={`gallery-filter-pill ${activeFilter === cat.value ? "is-active" : ""}`}
-            onClick={() => setActiveFilter(cat.value)}
+      {/* 1. Category Filter Tabs Row with Right-Aligned Explore Button */}
+      <div className="gallery-filter-bar-row">
+        <div className="gallery-tabs-nav" role="tablist" aria-label="Gallery category filters">
+          {categories.map((cat) => (
+            <button
+              key={cat.value}
+              type="button"
+              role="tab"
+              aria-selected={activeFilter === cat.value}
+              className={`gallery-filter-tab ${activeFilter === cat.value ? "is-active" : ""}`}
+              onClick={() => setActiveFilter(cat.value)}
+            >
+              <span className="gallery-tab-label">{cat.label}</span>
+              <span className="gallery-tab-count">{cat.count}</span>
+            </button>
+          ))}
+        </div>
+
+        {/* Header Right Action Button */}
+        <Link
+          href="/gallery"
+          className="btn-gallery-explore-all gallery-btn-header-right"
+          id="btn-header-gallery"
+        >
+          <span>Explore Central Expo Gallery</span>
+          <svg
+            className="btn-gallery-arrow"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
           >
-            <span>{cat.label}</span>
-            <span className="gallery-pill-count">{cat.count}</span>
-          </button>
-        ))}
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </Link>
       </div>
 
       {/* 2. Hierarchical Grid of Photos */}

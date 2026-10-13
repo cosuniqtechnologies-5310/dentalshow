@@ -7869,60 +7869,141 @@ section .event-panorama-banner .panorama-banner-excerpt,
   text-align: left !important;
 }
 
-/* Category Filter Pills (Left-Aligned) */
-.gallery-filter-pills-row {
+/* Category Filter Bar Row (Clean Tabs on Left, Explore Button on Right) */
+.gallery-filter-bar-row {
   display: flex;
-  align-items: center;
-  justify-content: flex-start !important;
-  gap: 10px;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 28px;
-  text-align: left !important;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgba(2, 62, 115, 0.1);
+  padding-bottom: 0;
 }
 
-.gallery-filter-pill {
+/* 1. Simple, Clean Modern Tab Navigation (Tab Style, NOT buttons) */
+.gallery-tabs-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.gallery-filter-tab {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 2.5px solid transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 10px 4px 14px 4px;
+  position: relative;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #64748B !important;
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 18px;
-  border-radius: 999px;
-  background: #ffffff;
-  border: 1.5px solid rgba(2, 62, 115, 0.15);
+  transition: all 0.2s ease;
+  margin-bottom: -2px; /* Sits flush on top of the container track */
+}
+
+.gallery-filter-tab:hover {
+  color: #0477BF !important;
+}
+
+.gallery-filter-tab.is-active {
   color: #023E73 !important;
-  font-family: 'Inter', sans-serif !important;
-  font-size: 13px;
+  font-weight: 800;
+  border-bottom: 2.5px solid #0477BF !important;
+}
+
+/* Clean, subtle tab count */
+.gallery-tab-count {
+  font-size: 11px;
   font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(2, 62, 115, 0.06);
+  color: #64748B;
+  transition: all 0.2s ease;
+}
+
+.gallery-filter-tab:hover .gallery-tab-count {
+  color: #0477BF;
+  background: rgba(4, 119, 191, 0.12);
+}
+
+.gallery-filter-tab.is-active .gallery-tab-count {
+  background: rgba(4, 119, 191, 0.16);
+  color: #023E73;
+  font-weight: 800;
+}
+
+/* Header Right Button Style */
+.gallery-btn-header-right {
+  margin-left: auto;
+  margin-bottom: 8px;
+  padding: 11px 22px !important;
+  font-size: 12.5px !important;
+}
+
+/* Backward compatibility for gallery-filter-pill */
+.gallery-filter-pills-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgba(2, 62, 115, 0.1);
+}
+
+.gallery-filter-pill {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 2.5px solid transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 10px 4px 14px 4px;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #64748B !important;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
-  box-shadow: 0 2px 6px rgba(2, 62, 115, 0.05);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: -2px;
 }
 
 .gallery-filter-pill:hover {
-  border-color: #0477BF;
   color: #0477BF !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(4, 119, 191, 0.15);
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 .gallery-filter-pill.is-active {
-  background: linear-gradient(135deg, #023E73 0%, #0477BF 100%) !important;
-  border-color: #023E73 !important;
-  color: #ffffff !important;
-  box-shadow: 0 6px 18px rgba(4, 119, 191, 0.28);
+  color: #023E73 !important;
+  font-weight: 800;
+  background: transparent !important;
+  border-bottom: 2.5px solid #0477BF !important;
+  box-shadow: none !important;
 }
 
 .gallery-pill-count {
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   padding: 2px 7px;
   border-radius: 999px;
-  background: rgba(2, 62, 115, 0.08);
-  color: inherit;
+  background: rgba(2, 62, 115, 0.06);
+  color: #64748B;
 }
 
 .gallery-filter-pill.is-active .gallery-pill-count {
-  background: rgba(255, 255, 255, 0.25);
-  color: #ffffff;
+  background: rgba(4, 119, 191, 0.16);
+  color: #023E73;
 }
 
 /* Hierarchical Bento Grid */
@@ -8226,6 +8307,13 @@ section .event-panorama-banner .panorama-banner-excerpt,
   transform: translateX(4px);
 }
 
+.gallery-bottom-cta-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
 /* Responsive Breakpoints */
 @media (max-width: 1024px) {
   .gallery-hierarchical-grid {
@@ -8265,6 +8353,29 @@ section .event-panorama-banner .panorama-banner-excerpt,
 
   .gallery-tile-hover-overlay {
     padding: 18px;
+  }
+
+  .gallery-filter-bar-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .gallery-tabs-nav {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+
+  .gallery-btn-header-right {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .gallery-bottom-cta-wrap {
+    justify-content: center;
   }
 }
 

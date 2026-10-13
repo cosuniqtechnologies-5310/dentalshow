@@ -324,7 +324,7 @@ export default function HomePage() {
 
           <GalleryHierarchicalPreview />
 
-          <div className="text-center mt-40">
+          <div className="gallery-bottom-cta-wrap mt-36">
             <Link href="/gallery" className="btn-gallery-explore-all" id="btn-full-gallery">
               <span>Explore Central Expo Gallery (Filter by Year)</span>
               <svg className="btn-gallery-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
