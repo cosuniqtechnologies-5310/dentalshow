@@ -8072,44 +8072,44 @@ section .event-panorama-banner .panorama-banner-excerpt,
 }
 
 /* Category Filter Bar Row (Clean Tabs on Left, Explore Button on Right) */
+/* Category Filter Bar Row (Clean Tabs on Left, Explore Button on Right) */
 .gallery-filter-bar-row {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 30px;
-  border-bottom: 2px solid rgba(2, 62, 115, 0.1);
+  margin-bottom: 28px;
+  border-bottom: none !important;
   padding-bottom: 0;
 }
 
-/* 1. Simple, Clean Modern Tab Navigation (Tab Style, NOT buttons) */
+/* 1. Simple, Clean Modern Tab Navigation (No Bottom Border) */
 .gallery-tabs-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
 .gallery-filter-tab {
   background: transparent !important;
   border: none !important;
-  border-bottom: 2.5px solid transparent !important;
+  border-bottom: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  padding: 10px 4px 14px 4px;
+  padding: 8px 4px;
   position: relative;
   font-family: 'Inter', sans-serif !important;
   font-size: 14.5px;
-  font-weight: 600;
+  font-weight: 500;
   color: #64748B !important;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   transition: all 0.2s ease;
-  margin-bottom: -2px;
-  /* Sits flush on top of the container track */
+  margin-bottom: 0;
 }
 
 .gallery-filter-tab:hover {
@@ -8118,8 +8118,8 @@ section .event-panorama-banner .panorama-banner-excerpt,
 
 .gallery-filter-tab.is-active {
   color: #023E73 !important;
-  font-weight: 800;
-  border-bottom: 2.5px solid #0477BF !important;
+  font-weight: 700;
+  border-bottom: none !important;
 }
 
 /* Clean, subtle tab count */
@@ -8141,13 +8141,13 @@ section .event-panorama-banner .panorama-banner-excerpt,
 .gallery-filter-tab.is-active .gallery-tab-count {
   background: rgba(4, 119, 191, 0.16);
   color: #023E73;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 /* Header Right Button Style */
 .gallery-btn-header-right {
   margin-left: auto;
-  margin-bottom: 8px;
+  margin-bottom: 0;
   padding: 11px 22px !important;
   font-size: 12.5px !important;
 }
@@ -8155,30 +8155,30 @@ section .event-panorama-banner .panorama-banner-excerpt,
 /* Backward compatibility for gallery-filter-pill */
 .gallery-filter-pills-row {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 30px;
-  border-bottom: 2px solid rgba(2, 62, 115, 0.1);
+  margin-bottom: 28px;
+  border-bottom: none !important;
 }
 
 .gallery-filter-pill {
   background: transparent !important;
   border: none !important;
-  border-bottom: 2.5px solid transparent !important;
+  border-bottom: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  padding: 10px 4px 14px 4px;
+  padding: 8px 4px;
   font-family: 'Inter', sans-serif !important;
   font-size: 14.5px;
-  font-weight: 600;
+  font-weight: 500;
   color: #64748B !important;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: -2px;
+  margin-bottom: 0;
 }
 
 .gallery-filter-pill:hover {
@@ -8189,9 +8189,9 @@ section .event-panorama-banner .panorama-banner-excerpt,
 
 .gallery-filter-pill.is-active {
   color: #023E73 !important;
-  font-weight: 800;
+  font-weight: 700;
   background: transparent !important;
-  border-bottom: 2.5px solid #0477BF !important;
+  border-bottom: none !important;
   box-shadow: none !important;
 }
 
