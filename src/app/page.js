@@ -46,9 +46,9 @@ export default function HomePage() {
                   </p>
 
                   <div className="hero-subquote-callout">
-                    <span className="quote-accent-bar" aria-hidden="true" />
                     <p className="hero-subquote-text">
-                      “One community. Countless possibilities. A future we build together.”
+                      &ldquo;One community. Countless possibilities.<br />
+                      A future we build together.&rdquo;
                     </p>
                   </div>
 
@@ -69,19 +69,6 @@ export default function HomePage() {
                     >
                       <span>Register as an Exhibitor</span>
                     </Link>
-                  </div>
-
-                  {/* Non-repeating Value Propositions */}
-                  <div className="hero-trust-chips">
-                    <span className="trust-chip">
-                      <span className="chip-dot" /> Free Visitor Access Pass
-                    </span>
-                    <span className="trust-chip">
-                      <span className="chip-dot" /> Live Digital CAD/CAM Demos
-                    </span>
-                    <span className="trust-chip">
-                      <span className="chip-dot" /> Direct Manufacturer Pricing
-                    </span>
                   </div>
                 </div>
               </div>
