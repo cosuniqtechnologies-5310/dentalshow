@@ -264,11 +264,13 @@ export default function EventsBannersShowcase({ banners = defaultBanners }) {
 
                 <div className="panorama-meta-strip">
                   <span className="panorama-meta-item">
-                    <Icon name="calendar" size={14} /> {item.dateVenue.split("•")[0]?.trim()}
+                    <Icon name="calendar" size={14} className="panorama-meta-icon" />
+                    <span>{item.dateVenue.split("•")[0]?.trim()}</span>
                   </span>
-                  <span className="panorama-meta-sep">•</span>
+                  <span className="panorama-meta-sep" aria-hidden="true">•</span>
                   <span className="panorama-meta-item">
-                    <Icon name="pin" size={14} /> {item.dateVenue.split("•")[1]?.trim()}
+                    <Icon name="pin" size={14} className="panorama-meta-icon" />
+                    <span>{item.dateVenue.split("•")[1]?.trim()}</span>
                   </span>
                 </div>
 

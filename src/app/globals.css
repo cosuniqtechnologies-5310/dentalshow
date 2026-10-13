@@ -7746,10 +7746,10 @@ button {
 .panorama-banner-content {
   position: relative;
   z-index: 2;
-  max-width: 760px;
+  max-width: 820px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 12px;
   text-align: left;
 }
 
@@ -7761,20 +7761,20 @@ button {
   padding: 4px 12px;
   border-radius: 999px;
   width: fit-content;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
   margin-bottom: 2px;
 }
 
 .panorama-badge-pill span {
   font-family: 'Inter', sans-serif !important;
-  font-size: 10.5px;
+  font-size: 10px;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 0.9px;
   text-transform: uppercase;
   color: #ffffff !important;
 }
 
-/* High-Contrast White Text System on Dark Gradient Banners */
+/* 1. TITLE: Bold, prominent, crisp white heading */
 .event-panorama-banner h3,
 .event-panorama-banner .panorama-banner-title,
 section .event-panorama-banner h3,
@@ -7782,44 +7782,55 @@ section .event-panorama-banner .panorama-banner-title,
 #events-section .event-panorama-banner h3,
 #events-section .event-panorama-banner .panorama-banner-title {
   font-family: 'Inter', sans-serif !important;
-  font-size: clamp(22px, 2.6vw, 32px);
-  font-weight: 900;
+  font-size: clamp(23px, 2.5vw, 29px);
+  font-weight: 700;
   color: #ffffff !important;
   margin: 0;
-  line-height: 1.22;
-  letter-spacing: -0.4px;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
 }
 
+/* 2. SUBTITLE: Date & Venue strip with distinct soft sky tone & icons */
 .panorama-meta-strip {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
-  margin-top: 2px;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(4px);
+  padding: 5px 14px;
+  border-radius: 8px;
+  width: fit-content;
 }
 
 .event-panorama-banner .panorama-meta-item,
 .event-panorama-banner .panorama-meta-item span,
-.event-panorama-banner .panorama-meta-item .icon,
 section .event-panorama-banner .panorama-meta-item,
 #events-section .event-panorama-banner .panorama-meta-item {
   font-family: 'Inter', sans-serif !important;
-  font-size: 13.5px;
-  font-weight: 600;
-  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 500;
+  color: #bae6fd !important;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  opacity: 0.98;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35) !important;
+  line-height: 1.3;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+.panorama-meta-icon {
+  color: #38bdf8 !important;
+  flex-shrink: 0;
 }
 
 .panorama-meta-sep {
-  color: rgba(255, 255, 255, 0.7) !important;
-  font-size: 13px;
+  color: rgba(186, 230, 253, 0.45) !important;
+  font-size: 11px;
 }
 
+/* 3. PARAGRAPH: Soft regular copy with comfortable line-height & distinct contrast */
 .event-panorama-banner p,
 .event-panorama-banner .panorama-banner-excerpt,
 section .event-panorama-banner p,
@@ -7828,10 +7839,12 @@ section .event-panorama-banner .panorama-banner-excerpt,
 #events-section .event-panorama-banner .panorama-banner-excerpt {
   font-family: 'Inter', sans-serif !important;
   font-size: 13.5px;
-  line-height: 1.45;
-  color: rgba(255, 255, 255, 0.96) !important;
-  margin: 4px 0 0 0;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35) !important;
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82) !important;
+  margin: 2px 0 0 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+  letter-spacing: 0.1px;
 }
 
 /* 4. SCALLOPED STAMP BADGE (Theme-tailored colors) */
@@ -9574,14 +9587,8 @@ body,
 .exhibz-cta,
 .ts-experiences,
 .bg-dark,
-.event-panorama-banner,
-.event-panorama-banner *,
 .event-panorama-banner h3,
-.event-panorama-banner p,
-.event-panorama-banner span,
 .panorama-banner-title,
-.panorama-banner-excerpt,
-.panorama-meta-item,
 .panorama-badge-pill span,
 .gallery-tile-hover-overlay,
 .gallery-tile-hover-overlay h3,
