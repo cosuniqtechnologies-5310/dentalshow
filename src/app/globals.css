@@ -8269,20 +8269,23 @@ section .event-panorama-banner .panorama-banner-excerpt,
   opacity: 0;
 }
 
-/* Hover Text Overlay: hidden by default, emerges on hover */
+/* Hover Text Overlay: hidden by default, emerges on hover with cinematic gradient */
 .gallery-tile-hover-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(2, 38, 74, 0.78) 0%, rgba(1, 26, 51, 0.92) 45%, rgba(1, 18, 36, 0.98) 100%) !important;
-  backdrop-filter: blur(8px) saturate(130%) !important;
-  -webkit-backdrop-filter: blur(8px) saturate(130%) !important;
+  background: linear-gradient(180deg,
+      rgba(2, 28, 55, 0.40) 0%,
+      rgba(2, 38, 74, 0.72) 42%,
+      rgba(1, 18, 38, 0.94) 100%) !important;
+  backdrop-filter: blur(5px) saturate(125%) !important;
+  -webkit-backdrop-filter: blur(5px) saturate(125%) !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 24px;
+  padding: 22px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(8px);
+  transform: translateY(6px);
   transition: opacity 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
     transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
     visibility 0.3s;
@@ -8305,87 +8308,130 @@ section .event-panorama-banner .panorama-banner-excerpt,
 
 .hover-category-badge {
   font-family: 'Inter', sans-serif !important;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.8px;
   text-transform: uppercase;
-  padding: 4px 10px;
+  padding: 3.5px 10px;
   border-radius: 6px;
   color: #ffffff !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 .badge-theme-blue {
   background: #0477BF !important;
-  box-shadow: 0 2px 8px rgba(4, 119, 191, 0.5);
+  box-shadow: 0 2px 8px rgba(4, 119, 191, 0.4);
 }
 
 .badge-theme-green {
-  background: #166534 !important;
-  box-shadow: 0 2px 8px rgba(22, 101, 52, 0.5);
+  background: #00A86B !important;
+  box-shadow: 0 2px 8px rgba(0, 168, 107, 0.4);
 }
 
 .badge-theme-cyan {
   background: #069DBF !important;
-  box-shadow: 0 2px 8px rgba(6, 157, 191, 0.5);
+  box-shadow: 0 2px 8px rgba(6, 157, 191, 0.4);
 }
 
 .hover-year-pill {
   font-family: 'Inter', sans-serif !important;
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 700;
+  letter-spacing: 0.6px;
   color: #ffffff !important;
-  background: rgba(255, 255, 255, 0.18) !important;
-  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+  background: rgba(255, 255, 255, 0.16) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  backdrop-filter: blur(4px);
   padding: 3px 9px;
   border-radius: 999px;
-  letter-spacing: 0.5px;
 }
 
 .hover-overlay-bottom {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
+/* 1. HOVER TITLE: Bold, crisp white heading */
 .hover-photo-title,
 .gallery-tile-hover-overlay .hover-photo-title,
 .gallery-hierarchical-tile:hover .hover-photo-title,
 .section .gallery-tile-hover-overlay h3.hover-photo-title {
   font-family: 'Inter', sans-serif !important;
-  font-size: clamp(16px, 1.5vw, 20px) !important;
-  font-weight: 800 !important;
-  line-height: 1.35 !important;
+  font-size: clamp(17px, 1.6vw, 21px) !important;
+  font-weight: 700 !important;
+  line-height: 1.28 !important;
   color: #ffffff !important;
-  margin: 0 !important;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85), 0 1px 3px rgba(0, 0, 0, 0.9) !important;
+  margin: 0 0 6px 0 !important;
+  letter-spacing: -0.3px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
 }
 
 .gallery-tile--hero .hover-photo-title,
 .gallery-tile--hero .gallery-tile-hover-overlay .hover-photo-title {
-  font-size: clamp(19px, 1.9vw, 25px) !important;
+  font-size: clamp(20px, 2.1vw, 26px) !important;
+  line-height: 1.25 !important;
+  margin-bottom: 8px !important;
 }
 
+/* 2. HOVER CAPTION: Clearly differentiated softer regular text */
 .hover-photo-caption,
 .gallery-tile-hover-overlay .hover-photo-caption,
 .gallery-hierarchical-tile:hover .hover-photo-caption,
 .section .gallery-tile-hover-overlay p.hover-photo-caption {
   font-family: 'Inter', sans-serif !important;
-  font-size: 13.5px !important;
-  line-height: 1.55 !important;
-  color: #F1F5F9 !important;
-  font-weight: 500 !important;
-  margin: 0 !important;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  color: rgba(226, 232, 240, 0.88) !important;
+  font-weight: 400 !important;
+  margin: 0 0 10px 0 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+  letter-spacing: 0.1px;
 }
 
+.gallery-tile--hero .hover-photo-caption {
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+/* Compact Tile Overrides to ensure zero text collision */
+.gallery-tile--compact-1 .gallery-tile-hover-overlay,
+.gallery-tile--compact-2 .gallery-tile-hover-overlay {
+  padding: 16px;
+}
+
+.gallery-tile--compact-1 .hover-photo-title,
+.gallery-tile--compact-2 .hover-photo-title {
+  font-size: 15px !important;
+  line-height: 1.25 !important;
+  margin-bottom: 4px !important;
+}
+
+.gallery-tile--compact-1 .hover-photo-caption,
+.gallery-tile--compact-2 .hover-photo-caption {
+  font-size: 11.5px !important;
+  line-height: 1.4 !important;
+  margin-bottom: 6px !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.gallery-tile--compact-1 .hover-action-row,
+.gallery-tile--compact-2 .hover-action-row {
+  margin-top: 4px;
+  padding-top: 8px;
+}
+
+/* 3. HOVER ACTION ROW: Polished interactive CTA */
 .hover-action-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 8px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  margin-top: 6px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .hover-view-btn,
@@ -8395,16 +8441,16 @@ section .event-panorama-banner .panorama-banner-excerpt,
   align-items: center;
   gap: 6px;
   font-family: 'Inter', sans-serif !important;
-  font-size: 12px !important;
-  font-weight: 800 !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: #3BBF8F !important;
-  transition: color 0.2s ease;
+  color: #38bdf8 !important;
+  transition: all 0.2s ease;
 }
 
 .hover-btn-arrow {
-  stroke: #3BBF8F !important;
+  stroke: #38bdf8 !important;
   transition: transform 0.25s ease;
 }
 
@@ -8416,20 +8462,22 @@ section .event-panorama-banner .panorama-banner-excerpt,
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.18) !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   transition: all 0.2s ease;
 }
 
 .gallery-hierarchical-tile:hover .hover-zoom-icon {
-  background: rgba(59, 191, 143, 0.28) !important;
-  border-color: #3BBF8F !important;
-  color: #3BBF8F !important;
+  background: rgba(56, 189, 248, 0.25) !important;
+  border-color: #38bdf8 !important;
+  color: #ffffff !important;
+  transform: scale(1.08);
 }
 
 /* Explore Central Gallery Button */
@@ -9590,12 +9638,9 @@ body,
 .event-panorama-banner h3,
 .panorama-banner-title,
 .panorama-badge-pill span,
-.gallery-tile-hover-overlay,
 .gallery-tile-hover-overlay h3,
-.gallery-tile-hover-overlay p,
-.gallery-tile-hover-overlay span,
 .hover-photo-title,
-.hover-photo-caption {
+.hover-year-pill {
   color: #ffffff !important;
 }
 
@@ -9604,19 +9649,21 @@ body,
 .gallery-hierarchical-tile:hover .hover-photo-title,
 .section-gallery .hover-photo-title {
   color: #ffffff !important;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85), 0 1px 3px rgba(0, 0, 0, 0.9) !important;
+  font-weight: 700 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
 }
 
 .gallery-tile-hover-overlay .hover-photo-caption,
 .gallery-hierarchical-tile:hover .hover-photo-caption,
 .section-gallery .hover-photo-caption {
-  color: #F1F5F9 !important;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+  color: rgba(226, 232, 240, 0.88) !important;
+  font-weight: 400 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
 }
 
 .gallery-tile-hover-overlay .hover-view-btn,
 .gallery-tile-hover-overlay .hover-view-btn span {
-  color: #3BBF8F !important;
+  color: #38bdf8 !important;
 }
 
 .fold-dark h1,
