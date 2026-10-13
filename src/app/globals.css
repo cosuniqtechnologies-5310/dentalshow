@@ -8203,7 +8203,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
     radial-gradient(circle at 85% 20%, rgba(59, 191, 143, 0.22) 0%, transparent 45%),
     linear-gradient(135deg, #011E3D 0%, #023E73 45%, #03528A 80%, #0477BF 100%) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: none !important;
   padding: 60px 0 !important;
   color: #ffffff !important;
   overflow: hidden;
@@ -8391,19 +8391,10 @@ section .event-panorama-banner .panorama-banner-excerpt,
   transition: all 0.3s ease;
 }
 
-.cta-track-card:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.32);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
 
-.cta-track-card--visitor {
-  border-left: 3.5px solid #069DBF;
-}
-
+.cta-track-card--visitor,
 .cta-track-card--exhibitor {
-  border-left: 3.5px solid #3BBF8F;
+  border-left: 1px solid rgba(255, 255, 255, 0.16) !important;
 }
 
 .track-card-badge-row {
@@ -8482,24 +8473,9 @@ section .event-panorama-banner .panorama-banner-excerpt,
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
 }
 
-.cta-track-btn--visitor:hover {
-  background: #e0f2fe !important;
-  color: #023E73 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
-}
-
 .cta-track-btn--exhibitor {
   background: #3BBF8F !important;
   color: #0A2119 !important;
-  box-shadow: 0 4px 14px rgba(59, 191, 143, 0.32);
-}
-
-.cta-track-btn--exhibitor:hover {
-  background: #5eead4 !important;
-  color: #0A2119 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(59, 191, 143, 0.48);
 }
 
 .cta-track-arrow {
@@ -8518,7 +8494,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
   flex-wrap: wrap;
   margin-top: 6px;
   padding-top: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: none !important;
   width: 100%;
 }
 
