@@ -147,7 +147,7 @@ export default function EventsBannersShowcase({ banners = defaultBanners }) {
           </div>
 
           <h2 className="events-main-title">
-            Events &amp; Flagship Editions
+            Events &amp; flagship editions
           </h2>
 
           <p className="events-sub-desc">

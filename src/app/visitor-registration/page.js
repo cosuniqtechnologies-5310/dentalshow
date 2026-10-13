@@ -90,7 +90,7 @@ export default function VisitorRegistrationPage() {
               <div className="portal-badge-pill">
                 <span className="live-indicator" /> Official External Portal
               </div>
-              <h2 className="redirect-card-title">Dental Show 2027 Visitor Pass Portal</h2>
+              <h2 className="redirect-card-title">Dental Show 2027 visitor pass portal</h2>
               <p className="redirect-card-desc">
                 Visitor registration is hosted on our secure ticketing partner platform. Register today
                 to receive your instant digital entry badge.

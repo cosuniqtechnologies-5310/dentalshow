@@ -93,10 +93,14 @@ export default function HomePage() {
             <div className="countdown-2col-grid">
               {/* Column 1: Left-Aligned Information, Venue Details & CTAs */}
               <div className="countdown-left-col">
+                <div className="countdown-eyebrow-row">
+                  <span className="countdown-accent-dash" aria-hidden="true" />
+                  <span className="section-eyebrow">COUNTDOWN TO 2027</span>
+                </div>
 
                 <h2 className="countdown-main-title">
-                  The Countdown to <br className="countdown-title-br" />
-                  Dental Show 2027 Begins
+                  The countdown to <br className="countdown-title-br" />
+                  Dental Show 2027 begins
                 </h2>
 
                 <p className="countdown-sub-lead">
@@ -260,7 +264,7 @@ export default function HomePage() {
           <div className="timeline-header-compact text-left">
             <span className="section-eyebrow">OUR LEGACY &amp; TWO DECADE JOURNEY</span>
             <h2 className="section-main-title">
-              Two Decades of Legacy. A Future Shaped by Innovation.
+              Two decades of legacy. A future shaped by innovation.
             </h2>
             <div className="title-zigzag" />
             <p className="section-desc">
@@ -302,7 +306,7 @@ export default function HomePage() {
               <span className="section-eyebrow">PHOTO &amp; VIDEO HIGHLIGHTS</span>
             </div>
             <h2 className="section-main-title gallery-title-styled">
-              Gallery Preview
+              Gallery preview
             </h2>
             <p className="max-w-700 text-muted gallery-lead-desc">
               Moments That Bring Us Together. Revisit the people, clinical breakthroughs and celebrated memories that make every Dental Show special.
@@ -386,7 +390,7 @@ export default function HomePage() {
               </div>
 
               <h2 className="cta-full-title">
-                Be Part of the Next Chapter
+                Be part of the next chapter
               </h2>
 
               <p className="cta-lead-subtitle">

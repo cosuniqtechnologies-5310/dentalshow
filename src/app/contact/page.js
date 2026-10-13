@@ -62,7 +62,7 @@ export default function ContactPage() {
         <div className="container contact">
           <Reveal className="contact__info">
             <span className="section-eyebrow">OFFICIAL LIAISON &amp; SECRETARIAT</span>
-            <h2 className="section-main-title">Get in Touch with TNDTMA</h2>
+            <h2 className="section-main-title">Get in touch with TNDTMA</h2>
             <div className="title-zigzag" style={{ margin: "0 0 20px 0" }} />
             <p style={{ fontSize: "15px", lineHeight: "1.65", color: "#475569" }}>
               Whether you are a practicing dentist, student delegate, dental dealer, trade visitor or

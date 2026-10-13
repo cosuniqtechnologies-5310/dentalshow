@@ -144,8 +144,8 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal delay={100} className="split__content">
-            <span className="section-eyebrow">OUR LEGACY & HISTORY</span>
-            <h2 className="section-main-title">A Vision Born Around 2000. A Milestone in 2005.</h2>
+            <span className="section-eyebrow">OUR LEGACY &amp; HISTORY</span>
+            <h2 className="section-main-title">A vision born around 2000. A milestone in 2005.</h2>
             <div className="title-zigzag" style={{ margin: "0 0 20px 0" }} />
 
             <p>
@@ -257,7 +257,7 @@ export default function AboutPage() {
               <span className="ambassador-pulse" />
               <span>MEET OUR AMBASSADOR</span>
             </div>
-            <h2 className="section-main-title text-white">The Beaver Mascot of Dental Show</h2>
+            <h2 className="section-main-title text-white">The beaver mascot of Dental Show</h2>
             <div className="title-zigzag" style={{ margin: "0 0 20px 0" }} />
             <p className="about-mascot-desc">
               Why the beaver? Nature’s greatest builders possess teeth that never stop growing,

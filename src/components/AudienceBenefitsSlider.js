@@ -121,7 +121,7 @@ export default function AudienceBenefitsSlider({ audienceGroups = defaultAudienc
           </div>
 
           <h2 className="benefits-main-title">
-            Who Benefits from Dental Show?
+            Who benefits from Dental Show?
           </h2>
 
           <p className="benefits-sub-desc">

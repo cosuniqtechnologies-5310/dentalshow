@@ -9597,9 +9597,9 @@ body,
 /* ── CSS DESIGN TOKENS ─────────────────────────────────────────────────────── */
 :root {
   --title-h1: clamp(2.4rem, 4vw, 3.2rem);
-  --title-h2: clamp(1.85rem, 2.5vw, 2.25rem);
-  /* EXACT same size for all section titles */
-  --title-h3: 18px;
+  --title-h2: clamp(1.85rem, 2.5vw, 2.25rem); /* EXACT same size for all section main titles */
+  --title-h3: 18px; /* EXACT same size for all card titles */
+  --title-eyebrow: 12px; /* EXACT same size for all first titles / eyebrows */
   --para-size: 15px;
   --para-lh: 1.65;
   --section-pad: 72px;
@@ -9608,8 +9608,38 @@ body,
   --btn-pad: 0 24px;
   --btn-radius: 8px;
   --btn-fsize: 14px;
-  --clr-primary: #288065;
-  --clr-primary-hover: #1d6b55;
+  --clr-primary: #00A86B; /* Vibrant Colorful Jade Emerald Green */
+  --clr-primary-slide: #008756; /* Rich emerald that slides left-to-right */
+  --clr-primary-hover: #008756;
+}
+
+/* ── 0. FIRST TITLE / SECTION EYEBROW (Exact same size across all sections) ── */
+.section-eyebrow,
+.benefits-eyebrow-text,
+.events-eyebrow-text,
+.gallery-eyebrow-wrapper span,
+.countdown-eyebrow-row .section-eyebrow,
+.cta-eyebrow-chip span {
+  font-size: var(--title-eyebrow) !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.8px !important;
+  text-transform: uppercase !important;
+  line-height: 1 !important;
+}
+
+.countdown-eyebrow-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.countdown-accent-dash {
+  width: 26px;
+  height: 3px;
+  background: var(--clr-primary);
+  border-radius: 2px;
+  display: inline-block;
 }
 
 /* ── 1. H1 — HERO / BANNER TITLE (Single color solid white, weight 700) ────── */
@@ -9629,7 +9659,7 @@ body,
   font-weight: 700 !important;
 }
 
-/* ── 2. H2 — ALL SECTION MAIN TITLES (exact same size & weight 700 everywhere) ── */
+/* ── 2. H2 — ALL SECTION MAIN TITLES (exact same size & sentence case) ─────── */
 .section-main-title,
 .timeline-section-fullwidth .section-main-title,
 .fold-light-primary .section-main-title,
@@ -9656,6 +9686,7 @@ body,
   font-weight: 700 !important;
   line-height: 1.22 !important;
   letter-spacing: -0.5px !important;
+  text-transform: none !important; /* Sentence case: first letter only caps */
 }
 
 /* ── SINGLE-COLOR SECTION HEADINGS (NO MULTICOLOR HEADINGS) ────────────────── */
@@ -9721,7 +9752,7 @@ body,
   font-weight: 700 !important;
 }
 
-/* ── 3. H3 — CARD TITLES & SUB-HEADINGS (weight 700) ───────────────────────── */
+/* ── 3. H3 — THIRD TITLE / CARD TITLES & SUB-HEADINGS (weight 700) ─────────── */
 .staple-card-title,
 .timeline-spotlight-title,
 .panorama-banner-title,
@@ -9729,10 +9760,13 @@ body,
 .gallery-card-footer__title,
 .benefit-card__title,
 .track-card-heading,
-.cta-eyebrow-chip span {
+.feature-box-body h4,
+.objective-card-title,
+.ctc-title {
   font-size: var(--title-h3) !important;
   font-weight: 700 !important;
   line-height: 1.3 !important;
+  letter-spacing: -0.3px !important;
 }
 
 /* ── 4. PARAGRAPH / BODY COPY — uniform 15px / 400 everywhere ──────────────── */
@@ -9825,7 +9859,7 @@ p,
   letter-spacing: 0.5px;
 }
 
-/* ── 6. UNIVERSAL BUTTON SIZE ──────────────────────────────────────────────── */
+/* ── 6. UNIVERSAL BUTTON SIZE & LEFT-TO-RIGHT SLIDE HOVER EFFECT ───────────── */
 /* All button variants share the exact same height, padding, font-size, radius */
 .btn,
 .btn-hero-visitor,
@@ -9856,18 +9890,125 @@ p,
   min-height: var(--btn-height) !important;
   padding: var(--btn-pad) !important;
   font-size: var(--btn-fsize) !important;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
   border-radius: var(--btn-radius) !important;
   text-decoration: none !important;
   text-transform: none !important;
-  letter-spacing: 0 !important;
+  letter-spacing: 0.2px !important;
   line-height: 1 !important;
   white-space: nowrap !important;
   gap: 8px !important;
-  transition: all 0.25s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+  cursor: pointer !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
 }
 
-/* ── 7. PRIMARY BUTTON — GREEN ─────────────────────────────────────────────── */
+/* Ensure button label, span and arrow icons stay above the sliding color layer */
+.btn > *,
+.btn-hero-visitor > *,
+.btn-hero-exhibitor > *,
+.btn-countdown-primary > *,
+.btn-countdown-secondary > *,
+.btn-header-visitor > *,
+.btn-header-exhibitor > *,
+.cta-track-btn > *,
+.cta-track-btn--visitor > *,
+.cta-track-btn--exhibitor > *,
+.btn-gallery-explore-all > *,
+.btn-events-view-all > *,
+.btn-view-all-top > *,
+#hero-visitor-btn > *,
+#hero-exhibitor-btn > *,
+#countdown-register-btn > *,
+#countdown-exhibitor-btn > *,
+#cta-visitor-register-btn > *,
+#cta-exhibitor-register-btn > * {
+  position: relative !important;
+  z-index: 2 !important;
+  transition: transform 0.25s ease !important;
+}
+
+/* ── LEFT-TO-RIGHT COLOR SLIDE PSEUDO-ELEMENT ──────────────────────────────── */
+.btn::before,
+.btn-hero-visitor::before,
+.btn-hero-exhibitor::before,
+.btn-countdown-primary::before,
+.btn-countdown-secondary::before,
+.btn-header-visitor::before,
+.btn-header-exhibitor::before,
+.cta-track-btn::before,
+.cta-track-btn--visitor::before,
+.cta-track-btn--exhibitor::before,
+.btn-gallery-explore-all::before,
+.btn-events-view-all::before,
+.btn-view-all-top::before,
+#hero-visitor-btn::before,
+#hero-exhibitor-btn::before,
+#countdown-register-btn::before,
+#countdown-exhibitor-btn::before,
+#cta-visitor-register-btn::before,
+#cta-exhibitor-register-btn::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: inherit !important;
+  transform: scaleX(0) !important;
+  transform-origin: left center !important;
+  transition: transform 0.38s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  z-index: 1 !important;
+}
+
+.btn:hover::before,
+.btn-hero-visitor:hover::before,
+.btn-hero-exhibitor:hover::before,
+.btn-countdown-primary:hover::before,
+.btn-countdown-secondary:hover::before,
+.btn-header-visitor:hover::before,
+.btn-header-exhibitor:hover::before,
+.cta-track-btn:hover::before,
+.cta-track-btn--visitor:hover::before,
+.cta-track-btn--exhibitor:hover::before,
+.btn-gallery-explore-all:hover::before,
+.btn-events-view-all:hover::before,
+.btn-view-all-top:hover::before,
+#hero-visitor-btn:hover::before,
+#hero-exhibitor-btn:hover::before,
+#countdown-register-btn:hover::before,
+#countdown-exhibitor-btn:hover::before,
+#cta-visitor-register-btn:hover::before,
+#cta-exhibitor-register-btn:hover::before {
+  transform: scaleX(1) !important;
+}
+
+.btn:hover,
+.btn-hero-visitor:hover,
+.btn-hero-exhibitor:hover,
+.btn-countdown-primary:hover,
+.btn-countdown-secondary:hover,
+.btn-header-visitor:hover,
+.btn-header-exhibitor:hover,
+.cta-track-btn:hover,
+.cta-track-btn--visitor:hover,
+.cta-track-btn--exhibitor:hover,
+.btn-gallery-explore-all:hover,
+.btn-events-view-all:hover,
+.btn-view-all-top:hover {
+  transform: translateY(-2px) !important;
+}
+
+.btn:hover .btn-arrow,
+.btn-hero-visitor:hover .btn-arrow,
+.btn-countdown-primary:hover .btn-arrow,
+.cta-track-btn:hover .cta-track-arrow {
+  transform: translateX(4px) !important;
+}
+
+/* ── 7. PRIMARY BUTTON — VIBRANT COLORFUL GREEN (#00A86B) ──────────────────── */
 .btn-hero-visitor,
 #hero-visitor-btn,
 .btn-countdown-primary,
@@ -9877,7 +10018,16 @@ p,
   background: var(--clr-primary) !important;
   color: #ffffff !important;
   border: 1.5px solid var(--clr-primary) !important;
-  box-shadow: 0 4px 14px rgba(40, 128, 101, 0.32) !important;
+  box-shadow: 0 4px 14px rgba(0, 168, 107, 0.35) !important;
+}
+
+.btn-hero-visitor::before,
+#hero-visitor-btn::before,
+.btn-countdown-primary::before,
+#countdown-register-btn::before,
+.btn-header-visitor::before,
+#cta-visitor-register-btn::before {
+  background: var(--clr-primary-slide) !important;
 }
 
 .btn-hero-visitor:hover,
@@ -9886,11 +10036,8 @@ p,
 #countdown-register-btn:hover,
 .btn-header-visitor:hover,
 #cta-visitor-register-btn:hover {
-  background: var(--clr-primary-hover) !important;
-  border-color: var(--clr-primary-hover) !important;
-  color: #ffffff !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 22px rgba(40, 128, 101, 0.42) !important;
+  box-shadow: 0 8px 22px rgba(0, 168, 107, 0.45) !important;
+  border-color: var(--clr-primary-slide) !important;
 }
 
 /* ── 8a. SECONDARY — DARK SECTIONS → WHITE BUTTON ──────────────────────────── */
@@ -9905,15 +10052,21 @@ p,
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18) !important;
 }
 
+.btn-hero-exhibitor::before,
+#hero-exhibitor-btn::before,
+.cta-track-btn--visitor::before,
+.cta-track-btn--exhibitor::before,
+#cta-exhibitor-register-btn::before {
+  background: #e2e8f0 !important;
+}
+
 .btn-hero-exhibitor:hover,
 #hero-exhibitor-btn:hover,
 .cta-track-btn--visitor:hover,
 .cta-track-btn--exhibitor:hover,
 #cta-exhibitor-register-btn:hover {
-  background: #f1f5f9 !important;
-  color: #0f172a !important;
-  border-color: #f1f5f9 !important;
-  transform: translateY(-2px) !important;
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28) !important;
 }
 
@@ -9929,7 +10082,18 @@ p,
   background: #0f172a !important;
   color: #ffffff !important;
   border: 1.5px solid #0f172a !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16) !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.22) !important;
+}
+
+.btn-countdown-secondary::before,
+#countdown-exhibitor-btn::before,
+.btn-header-exhibitor::before,
+.btn-gallery-explore-all::before,
+.btn-events-view-all::before,
+.btn-view-all-top::before,
+#btn-header-gallery::before,
+#btn-events-view-all-top::before {
+  background: #1e293b !important;
 }
 
 .btn-countdown-secondary:hover,
@@ -9940,11 +10104,9 @@ p,
 .btn-view-all-top:hover,
 #btn-header-gallery:hover,
 #btn-events-view-all-top:hover {
-  background: #1e293b !important;
+  background: #0f172a !important;
   border-color: #1e293b !important;
-  color: #ffffff !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28) !important;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.32) !important;
 }
 
 /* Fix colours for elements inside buttons that override text color */

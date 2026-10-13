@@ -93,7 +93,7 @@ export default function ExhibitorRegistrationPage() {
               <div className="portal-badge-pill exhibitor-pill">
                 <span className="live-indicator" /> Official Exhibitor Booking Portal
               </div>
-              <h2 className="redirect-card-title">Reserve Your Stall at Dental Show 2027</h2>
+              <h2 className="redirect-card-title">Reserve your stall at Dental Show 2027</h2>
               <p className="redirect-card-desc">
                 Exhibitor stall allocation, interactive 3D floor plan selection, and contract management
                 are managed via our secure exhibitor portal.
