@@ -7039,15 +7039,19 @@ button {
   width: 100%;
 }
 
+/* ── BENEFITS SLIDER TRACK: Full-bleed with container-aligned start ──────────
+   Key technique: padding-left on the scroll container (not margin on first child)
+   creates reliable left inset. scroll-padding-left must match so snap works. */
 .benefits-cards-track.is-slider-mode {
   display: flex;
   gap: 18px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  scroll-padding: 0;
-  /* Use margin instead of padding for bulletproof alignment with title */
-  padding-left: 0;
+  /* padding-left aligns first card with section title above.
+     Formula: left offset of .container = max(20px, (100vw - 1200px)/2) */
+  padding-left: max(20px, calc((100vw - 1200px) / 2));
+  scroll-padding-left: max(20px, calc((100vw - 1200px) / 2));
   padding-right: 48px;
   padding-top: 6px;
   padding-bottom: 24px;
@@ -7055,6 +7059,7 @@ button {
   scrollbar-width: none;
   -ms-overflow-style: none;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .benefits-cards-track.is-slider-mode::-webkit-scrollbar {
@@ -7090,17 +7095,16 @@ button {
   scroll-snap-align: start;
 }
 
-/* First card starts at the exact left margin of the title above.
-   Container is min(1200px, 100% - 40px) centered, so left offset = (100vw - 1200px)/2 + 20px.
-   We cap the lower bound at 20px (the container gutter) so it never over-retracts on small screens. */
+/* First child needs NO extra margin — the track padding-left handles the offset */
 .is-slider-mode .benefit-staple-card:first-child {
-  margin-left: max(20px, calc((100vw - 1200px) / 2 + 20px));
+  margin-left: 0;
 }
 
 @media (max-width: 1080px) {
   .benefits-cards-track.is-slider-mode {
     gap: 16px;
     padding-right: 32px;
+    /* padding-left auto-adjusts from the max() formula above */
   }
 
   .is-slider-mode .benefit-staple-card {
@@ -7112,13 +7116,14 @@ button {
 
 @media (max-width: 680px) {
   .benefits-cards-track.is-slider-mode {
-    padding-left: 0;
+    padding-left: 20px;
+    scroll-padding-left: 20px;
     padding-right: 20px;
     gap: 14px;
   }
 
   .is-slider-mode .benefit-staple-card:first-child {
-    margin-left: 20px;
+    margin-left: 0;
   }
 
   .is-slider-mode .benefit-staple-card {
