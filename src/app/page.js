@@ -139,14 +139,10 @@ export default function HomePage() {
       <section className="countdown-section-wrap font-modern fold-white" id="countdown">
         <div className="container">
           <div className="countdown-showcase-card">
-            {/* Overall 3-Column Grid: Left Info Hub + Center Timer Dashboard + Right Feature Highlights */}
-            <div className="countdown-3col-grid">
+            {/* Overall 2-Column Grid: Left Info & CTAs + Right Timer & Feature Highlights */}
+            <div className="countdown-2col-grid">
               {/* Column 1: Left-Aligned Information, Venue Details & CTAs */}
               <div className="countdown-left-col">
-                <div className="countdown-badge-pill">
-                  <span className="live-pulse-dot" aria-hidden="true" />
-                  <span>SOUTH INDIA&apos;S PREMIER DENTAL SPECTACLE</span>
-                </div>
 
                 <h2 className="countdown-main-title">
                   The Countdown to <br className="countdown-title-br" />
@@ -158,33 +154,36 @@ export default function HomePage() {
                   discover next-gen CAD/CAM innovations, and network with 6,000+ peers at Chennai Trade Centre.
                 </p>
 
-                {/* Event Details Quick Summary Rows (Matches Screenshot 3) */}
-                <div className="countdown-details-stack" role="region" aria-label="Event Schedule & Venue">
-                  <div className="countdown-detail-row">
-                    <div className="detail-row-icon" aria-hidden="true">
-                      <Icon name="calendar" size={15} />
+                {/* Event Details 3-Column Horizontal Grid */}
+                <div className="countdown-details-grid" role="region" aria-label="Event Schedule & Venue">
+                  <div className="countdown-detail-card">
+                    <div className="detail-card-icon" aria-hidden="true">
+                      <Icon name="calendar" size={16} />
                     </div>
-                    <span className="detail-row-text">
-                      <strong>Feb 6 – 7, 2027</strong> · 09:00 AM – 06:00 PM
-                    </span>
+                    <div className="detail-card-info">
+                      <strong className="detail-card-title">Feb 6 – 7, 2027</strong>
+                      <span className="detail-card-sub">09:00 AM – 06:00 PM</span>
+                    </div>
                   </div>
 
-                  <div className="countdown-detail-row">
-                    <div className="detail-row-icon" aria-hidden="true">
-                      <Icon name="pin" size={15} />
+                  <div className="countdown-detail-card">
+                    <div className="detail-card-icon" aria-hidden="true">
+                      <Icon name="pin" size={16} />
                     </div>
-                    <span className="detail-row-text">
-                      Chennai Trade Centre <strong>(New Hall 2, 3 &amp; 3A)</strong>
-                    </span>
+                    <div className="detail-card-info">
+                      <strong className="detail-card-title">Chennai Trade Centre</strong>
+                      <span className="detail-card-sub">New Hall 2, 3 &amp; 3A</span>
+                    </div>
                   </div>
 
-                  <div className="countdown-detail-row countdown-detail-row--access">
-                    <div className="detail-row-icon detail-row-icon--access" aria-hidden="true">
-                      <Icon name="ticket" size={15} />
+                  <div className="countdown-detail-card countdown-detail-card--access">
+                    <div className="detail-card-icon detail-card-icon--access" aria-hidden="true">
+                      <Icon name="ticket" size={16} />
                     </div>
-                    <span className="detail-row-text">
-                      <strong>Free Visitor Access</strong> for Dental Clinicians
-                    </span>
+                    <div className="detail-card-info">
+                      <strong className="detail-card-title">Free Visitor Access</strong>
+                      <span className="detail-card-sub">For Dental Clinicians</span>
+                    </div>
                   </div>
                 </div>
 
@@ -208,79 +207,88 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Column 2 (Center): Dedicated Live Countdown Dashboard Panel */}
-              <div className="countdown-timer-col">
-                <div className="countdown-timer-header">
-                  <span className="live-pulse-dot" aria-hidden="true" />
-                  <span>Time Until Grand Opening</span>
-                </div>
-                <div className="countdown-timer-wrapper">
-                  <Countdown target="2027-02-06T09:00:00+05:30" />
-                </div>
-              </div>
-
-              {/* Column 3 (Right Side Last Column): 3 Enriched Feature Cards */}
-              <div className="countdown-features-col">
-                <div className="countdown-feature-box countdown-feature-box--navy">
-                  <div className="feature-box-top">
-                    <div className="feature-box-icon icon-navy">
-                      <Icon name="store" size={20} />
+              {/* Column 2: Live Countdown Timer + Integrated Highlight Cards */}
+              <div className="countdown-right-col">
+                {/* Horizontal Live Countdown Dashboard Panel */}
+                <div className="countdown-timer-panel">
+                  <div className="countdown-timer-panel-header">
+                    <div className="timer-header-left">
+                      <span className="live-pulse-dot" aria-hidden="true" />
+                      <span className="timer-header-title">Time Until Grand Opening</span>
                     </div>
-                    <span className="feature-box-badge badge-navy">EXHIBITION</span>
-                    <div className="feature-box-stat stat-navy">
-                      <span className="stat-dot dot-navy" />
-                      <span>250+ Brands</span>
+                    <div className="timer-header-badge">
+                      <Icon name="calendar" size={12} />
+                      <span>Feb 6–7, 2027</span>
                     </div>
                   </div>
-                  <div className="feature-box-body">
-                    <h4>250+ Global Exhibitors</h4>
-                    <p>Cutting-edge CAD/CAM, implants, lasers &amp; next-gen biomaterials from 18+ nations</p>
-                  </div>
-                  <div className="feature-box-pills">
-                    <span className="feature-pill"><span className="pill-sparkle">✦</span> Live Clinical Demos</span>
-                    <span className="feature-pill"><span className="pill-sparkle">✦</span> Exclusive Expo Offers</span>
+                  <div className="countdown-timer-wrapper">
+                    <Countdown target="2027-02-06T09:00:00+05:30" />
                   </div>
                 </div>
 
-                <div className="countdown-feature-box countdown-feature-box--royal">
-                  <div className="feature-box-top">
-                    <div className="feature-box-icon icon-royal">
-                      <Icon name="users" size={20} />
+                {/* 3 Enriched Feature Highlight Cards */}
+                <div className="countdown-features-stack">
+                  <div className="countdown-feature-box countdown-feature-box--navy">
+                    <div className="feature-box-top">
+                      <div className="feature-box-icon icon-navy">
+                        <Icon name="store" size={18} />
+                      </div>
+                      <span className="feature-box-badge badge-navy">EXHIBITION</span>
+                      <div className="feature-box-stat stat-navy">
+                        <span className="stat-dot dot-navy" />
+                        <span>250+ Brands</span>
+                      </div>
                     </div>
-                    <span className="feature-box-badge badge-royal">NETWORKING</span>
-                    <div className="feature-box-stat stat-royal">
-                      <span className="stat-dot dot-royal" />
-                      <span>6,000+ Peers</span>
+                    <div className="feature-box-body">
+                      <h4>250+ Global Exhibitors</h4>
+                      <p>Cutting-edge CAD/CAM, implants, lasers &amp; next-gen biomaterials from 18+ nations</p>
+                    </div>
+                    <div className="feature-box-pills">
+                      <span className="feature-pill"><span className="pill-sparkle">✦</span> Live Clinical Demos</span>
+                      <span className="feature-pill"><span className="pill-sparkle">✦</span> Exclusive Expo Offers</span>
                     </div>
                   </div>
-                  <div className="feature-box-body">
-                    <h4>6,000+ Trade Delegates</h4>
-                    <p>Connect with clinicians, clinic owners, lab technicians, dealers &amp; students</p>
-                  </div>
-                  <div className="feature-box-pills">
-                    <span className="feature-pill"><span className="pill-sparkle">✦</span> B2B Trade Exchange</span>
-                    <span className="feature-pill"><span className="pill-sparkle">✦</span> Clinical Networking</span>
-                  </div>
-                </div>
 
-                <div className="countdown-feature-box countdown-feature-box--cyan">
-                  <div className="feature-box-top">
-                    <div className="feature-box-icon icon-cyan">
-                      <Icon name="sparkle" size={20} />
+                  <div className="countdown-feature-box countdown-feature-box--royal">
+                    <div className="feature-box-top">
+                      <div className="feature-box-icon icon-royal">
+                        <Icon name="users" size={18} />
+                      </div>
+                      <span className="feature-box-badge badge-royal">NETWORKING</span>
+                      <div className="feature-box-stat stat-royal">
+                        <span className="stat-dot dot-royal" />
+                        <span>6,000+ Peers</span>
+                      </div>
                     </div>
-                    <span className="feature-box-badge badge-cyan">INFRASTRUCTURE</span>
-                    <div className="feature-box-stat stat-cyan">
-                      <span className="stat-dot dot-cyan" />
-                      <span>10,000+ sq.m</span>
+                    <div className="feature-box-body">
+                      <h4>6,000+ Trade Delegates</h4>
+                      <p>Connect with clinicians, clinic owners, lab technicians, dealers &amp; students</p>
+                    </div>
+                    <div className="feature-box-pills">
+                      <span className="feature-pill"><span className="pill-sparkle">✦</span> B2B Trade Exchange</span>
+                      <span className="feature-pill"><span className="pill-sparkle">✦</span> Clinical Networking</span>
                     </div>
                   </div>
-                  <div className="feature-box-body">
-                    <h4>10,000+ sq.m Exhibition Floor</h4>
-                    <p>Chennai Trade Centre&apos;s state-of-the-art New Halls 2, 3 &amp; 3A</p>
-                  </div>
-                  <div className="feature-box-pills">
-                    <span className="feature-pill"><span className="pill-sparkle">✦</span> Fully Air-Conditioned</span>
-                    <span className="feature-pill"><span className="pill-sparkle">✦</span> Easy Metro &amp; Parking</span>
+
+                  <div className="countdown-feature-box countdown-feature-box--cyan">
+                    <div className="feature-box-top">
+                      <div className="feature-box-icon icon-cyan">
+                        <Icon name="sparkle" size={18} />
+                      </div>
+                      <span className="feature-box-badge badge-cyan">INFRASTRUCTURE</span>
+                      <div className="feature-box-stat stat-cyan">
+                        <span className="stat-dot dot-cyan" />
+                        <span>10,000+ sq.m</span>
+                      </div>
+                    </div>
+                    <div className="feature-box-body">
+                      <h4>10,000+ sq.m Exhibition Floor</h4>
+                      <p>Chennai Trade Centre&apos;s state-of-the-art New Halls 2, 3 &amp; 3A</p>
+                    </div>
+                    <div className="feature-box-pills">
+                      <span className="feature-pill"><span className="pill-sparkle">✦</span> Fully Air-Conditioned</span>
+                      <span className="feature-pill"><span className="pill-sparkle">✦</span> Easy Metro &amp; Parking</span>
+                    </div>
                   </div>
                 </div>
               </div>

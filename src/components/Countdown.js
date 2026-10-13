@@ -2,13 +2,6 @@
 
 import { useEffect, useState, useRef } from "react";
 
-const timeUnits = [
-  { key: "days", label: "DAYS" },
-  { key: "hours", label: "HOURS" },
-  { key: "minutes", label: "MINUTES" },
-  { key: "seconds", label: "SECONDS" },
-];
-
 function diff(target) {
   const ms = Math.max(0, new Date(target).getTime() - Date.now());
   return {
@@ -19,37 +12,65 @@ function diff(target) {
   };
 }
 
-function CounterItem({ unit, val }) {
-  const [animating, setAnimating] = useState(false);
-  const prevValRef = useRef(null);
+function RollingDigit({ digit }) {
+  const [current, setCurrent] = useState(digit);
+  const [previous, setPrevious] = useState(digit);
+  const [isRolling, setIsRolling] = useState(false);
+  const mountedRef = useRef(false);
 
   useEffect(() => {
-    if (prevValRef.current !== null && prevValRef.current !== val) {
-      setAnimating(true);
+    if (!mountedRef.current) {
+      mountedRef.current = true;
+      setCurrent(digit);
+      setPrevious(digit);
+      return;
+    }
+
+    if (digit !== current) {
+      setPrevious(current);
+      setCurrent(digit);
+      setIsRolling(true);
       const timer = setTimeout(() => {
-        setAnimating(false);
-      }, 500);
+        setIsRolling(false);
+      }, 400);
       return () => clearTimeout(timer);
     }
-    prevValRef.current = val;
-  }, [val]);
+  }, [digit, current]);
 
   return (
-    <div
-      className={`counter-item counter-item--${unit.key} ${animating ? "is-ticking" : ""}`}
-      data-unit={unit.key}
-    >
-      <div className="counter-inner-content">
-        <span
-          key={`${unit.key}-${val}`}
-          className={`counter-number counter-number--${unit.key} ${animating ? "number-tick" : ""}`}
-        >
-          {val}
+    <div className="odometer-slot" aria-hidden="true">
+      {/* Outgoing digit: moves to the top */}
+      {isRolling && (
+        <span key={`prev-${previous}`} className="odometer-digit odometer-digit--prev">
+          {previous}
         </span>
-        <span className={`counter-label-tag counter-label--${unit.key}`}>
-          {unit.label}
-        </span>
+      )}
+
+      {/* Incoming digit: comes from the bottom */}
+      <span
+        key={`curr-${current}`}
+        className={`odometer-digit odometer-digit--curr ${isRolling ? "is-entering" : ""}`}
+      >
+        {current}
+      </span>
+
+      {/* Subtle top/bottom slot vignettes for mechanical depth */}
+      <div className="odometer-slot-overlay" />
+    </div>
+  );
+}
+
+function RollingGroup({ label, value }) {
+  const digits = String(value).split("");
+
+  return (
+    <div className="odometer-group" data-unit={label.toLowerCase()}>
+      <div className="odometer-slots-row">
+        {digits.map((d, idx) => (
+          <RollingDigit key={`${label}-${idx}-${digits.length}`} digit={d} />
+        ))}
       </div>
+      <span className="odometer-group-label">{label}</span>
     </div>
   );
 }
@@ -67,12 +88,24 @@ export default function Countdown({ target = "2027-02-06T09:00:00+05:30" }) {
     };
   }, [target]);
 
+  // Uniform digits: 3 digits for days (e.g. "115"), 2 digits for hours/mins/secs
+  const daysVal = time
+    ? String(time.days).padStart(Math.max(2, String(time.days).length), "0")
+    : "00";
+  const hoursVal = time ? String(time.hours).padStart(2, "0") : "00";
+  const minsVal = time ? String(time.minutes).padStart(2, "0") : "00";
+  const secsVal = time ? String(time.seconds).padStart(2, "0") : "00";
+
   return (
-    <div className="countdown" role="timer" aria-label="Time until Dental Show 2027">
-      {timeUnits.map((u) => {
-        const val = time ? String(time[u.key]).padStart(2, "0") : "00";
-        return <CounterItem key={u.key} unit={u} val={val} />;
-      })}
+    <div
+      className="odometer-board"
+      role="timer"
+      aria-label={`Time until Dental Show 2027: ${daysVal} days, ${hoursVal} hours, ${minsVal} minutes, ${secsVal} seconds`}
+    >
+      <RollingGroup label="DAYS" value={daysVal} />
+      <RollingGroup label="HOURS" value={hoursVal} />
+      <RollingGroup label="MINUTES" value={minsVal} />
+      <RollingGroup label="SECONDS" value={secsVal} />
     </div>
   );
 }
