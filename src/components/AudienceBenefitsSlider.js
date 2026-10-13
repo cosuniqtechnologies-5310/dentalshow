@@ -95,9 +95,11 @@ export default function AudienceBenefitsSlider({ audienceGroups = defaultAudienc
 
   const handleScroll = (direction) => {
     if (!sliderRef.current) return;
-    const cardWidth = 365; // card width + gap
-    sliderRef.current.scrollBy({
-      left: direction === "left" ? -cardWidth : cardWidth,
+    const container = sliderRef.current;
+    const firstCard = container.querySelector(".benefit-staple-card");
+    const step = firstCard ? firstCard.offsetWidth + 24 : 360;
+    container.scrollBy({
+      left: direction === "left" ? -step : step,
       behavior: "smooth",
     });
   };
@@ -108,8 +110,9 @@ export default function AudienceBenefitsSlider({ audienceGroups = defaultAudienc
 
   return (
     <div className="benefits-showcase-container">
-      {/* 1. TOP HEADER ROW (Matching Screenshot 2 layout) */}
-      <div className="benefits-slider-header">
+      {/* 1. TOP HEADER ROW (Aligned inside standard container) */}
+      <div className="container">
+        <div className="benefits-slider-header">
         {/* Left Column: Line accent, Eyebrow, Main Title, Sub-description */}
         <div className="benefits-header-left">
           <div className="benefits-eyebrow-row">
@@ -136,9 +139,21 @@ export default function AudienceBenefitsSlider({ audienceGroups = defaultAudienc
             onClick={() => handleScroll("left")}
             disabled={!canScrollLeft && !isViewAll}
             aria-label="Previous audience group"
-            title="Previous audience group"
           >
-            ←
+            <svg
+              className="slider-nav-icon"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
           </button>
 
           {/* Circular Next Button */}
@@ -148,30 +163,58 @@ export default function AudienceBenefitsSlider({ audienceGroups = defaultAudienc
             onClick={() => handleScroll("right")}
             disabled={!canScrollRight && !isViewAll}
             aria-label="Next audience group"
-            title="Next audience group"
           >
-            →
+            <svg
+              className="slider-nav-icon"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </button>
 
-          {/* VIEW ALL Button in Top (Mirroring Screenshot 2) */}
+          {/* VIEW ALL / FULL VIEW Button in Top */}
           <button
             type="button"
             className={`btn-view-all-top ${isViewAll ? "is-active" : ""}`}
             onClick={toggleViewAll}
-            aria-label={isViewAll ? "Switch back to slider view" : "View all audience roles"}
+            aria-label={isViewAll ? "Switch back to slider view" : "View all audience roles in full view"}
           >
-            <span>{isViewAll ? "SLIDER VIEW" : "VIEW ALL"}</span>
-            <span className="view-all-icon" aria-hidden="true">
-              {isViewAll ? "⤺" : "↗"}
-            </span>
+            <span>{isViewAll ? "SLIDER VIEW" : "FULL VIEW"}</span>
+            <svg
+              className="btn-view-all-icon"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              {isViewAll ? (
+                <path d="M9 14L4 9l5-5M4 9h10a6 6 0 0 1 6 6v4" />
+              ) : (
+                <path d="M7 17L17 7M7 7h10v10" />
+              )}
+            </svg>
           </button>
         </div>
       </div>
+    </div>
 
-      {/* 2. CARDS ROW / SLIDER TRACK (Cover title, image, Discover, Connect, Grow) */}
+      {/* 2. CARDS ROW / SLIDER TRACK (Right side full screen bleed, exactly 3.5 cards shown) */}
       <div
         ref={sliderRef}
-        className={`benefits-cards-track ${isViewAll ? "is-grid-mode" : "is-slider-mode"}`}
+        className={`benefits-cards-track ${isViewAll ? "is-grid-mode container" : "is-slider-mode"}`}
         role="region"
         aria-label="Audience roles carousel"
         tabIndex={0}

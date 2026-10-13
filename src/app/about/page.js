@@ -16,21 +16,29 @@ export const metadata = {
 
 const objectives = [
   {
+    num: "01",
+    tag: "INNOVATION",
     icon: "sparkle",
     title: "Accessible Dental Innovation",
     text: "Make the latest advancements in dental technology, digital workflows, and materials accessible to aspiring dentists across Tamil Nadu.",
   },
   {
+    num: "02",
+    tag: "COMMUNITY",
     icon: "users",
     title: "Unite the Dental Community",
     text: "Provide an open platform where clinicians, students, dealers, technicians, and manufacturers collaborate to shape modern dentistry.",
   },
   {
+    num: "03",
+    tag: "ETHICS & TRUST",
     icon: "star",
     title: "Strengthen Ethical Trade",
     text: "Foster trust, transparent partnerships, and highest quality standards across the dental supply chain through TNDTMA stewardship.",
   },
   {
+    num: "04",
+    tag: "EDUCATION",
     icon: "pin",
     title: "Hands-on Education & Mentorship",
     text: "Bridge the gap between dental academia and real-world clinical excellence through certified workshops and masterclasses.",
@@ -66,10 +74,45 @@ const timelineMilestones = [
 ];
 
 const stats = [
-  { value: "20+", label: "Years of Legacy (2005–2027)" },
-  { value: "250+", label: "Expected Exhibitors" },
-  { value: "6,000+", label: "Dental Professionals" },
-  { value: "10,000+", label: "Sq. Meters Expo Area" },
+  {
+    value: "20+",
+    label: "Years of Legacy",
+    period: "2005 – 2027",
+    icon: "calendar",
+    highlight: "TNDTMA Milestone",
+  },
+  {
+    value: "250+",
+    label: "Expected Exhibitors",
+    period: "Global Brands",
+    icon: "store",
+    highlight: "Industry Innovators",
+  },
+  {
+    value: "6,000+",
+    label: "Dental Professionals",
+    period: "Clinicians & Specialists",
+    icon: "users",
+    highlight: "South India Gathering",
+  },
+  {
+    value: "10,000+",
+    label: "Sq. Meters Expo Area",
+    period: "New Halls 2, 3 & 3A",
+    icon: "expand",
+    highlight: "Chennai Trade Centre",
+  },
+];
+
+const partnersData = [
+  { name: "NexGen Dental", category: "Dental Implants & Prosthetics", type: "Platinum Partner" },
+  { name: "Orthova Systems", category: "Orthodontic & Clear Aligners", type: "Technology Partner" },
+  { name: "SmileLab India", category: "CAD/CAM Digital Solutions", type: "Clinical Partner" },
+  { name: "Implantis Global", category: "Surgical & Bio-Materials", type: "Premier Partner" },
+  { name: "DentaCloud", category: "AI & Practice Management", type: "Digital Partner" },
+  { name: "LuminaRay Imaging", category: "3D CBCT & Diagnostic Systems", type: "Imaging Partner" },
+  { name: "BioCrown Ceramics", category: "Restorative Aesthetic Ceramics", type: "Materials Partner" },
+  { name: "ScanPro 3D", category: "Intraoral Scanning & Milling", type: "Equipment Partner" },
 ];
 
 export default function AboutPage() {
@@ -133,13 +176,23 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Counter */}
-      <section className="section-stats-bar">
+      <section className="section-stats-bar about-stats-section">
         <div className="container">
-          <div className="grid grid--4">
+          <div className="about-stats-grid">
             {stats.map((s, idx) => (
-              <div key={idx} className="stat-card pop-in" style={{ animationDelay: `${idx * 80}ms` }}>
-                <span className="stat-card__number">{s.value}</span>
-                <span className="stat-card__label">{s.label}</span>
+              <div key={idx} className="about-stat-card pop-in" style={{ animationDelay: `${idx * 80}ms` }}>
+                <div className="about-stat-card__top">
+                  <div className="about-stat-card__icon-pod">
+                    <Icon name={s.icon} size={24} />
+                  </div>
+                  <span className="about-stat-card__badge">{s.period}</span>
+                </div>
+                <div className="about-stat-card__number-wrap">
+                  <span className="about-stat-card__number">{s.value}</span>
+                  <span className="about-stat-card__line" />
+                </div>
+                <h3 className="about-stat-card__label">{s.label}</h3>
+                <p className="about-stat-card__sub">{s.highlight}</p>
               </div>
             ))}
           </div>
@@ -147,7 +200,7 @@ export default function AboutPage() {
       </section>
 
       {/* Objectives & Purpose */}
-      <section className="section bg-light">
+      <section className="section about-objectives-section bg-light">
         <div className="container">
           <SectionTitle
             eyebrow="ASSOCIATION PURPOSE"
@@ -155,14 +208,26 @@ export default function AboutPage() {
             subtitle="TNDTMA is committed to fostering a progressive, high-quality, and ethical dental trade that elevates clinical patient care."
           />
 
-          <div className="grid grid--4 mt-md">
+          <div className="about-objectives-grid mt-lg">
             {objectives.map((obj, i) => (
-              <div className="feature-card pop-in" style={{ animationDelay: `${i * 100}ms` }} key={obj.title}>
-                <div className="feature-card__icon">
-                  <Icon name={obj.icon} size={28} />
+              <div className="about-objective-card pop-in" style={{ animationDelay: `${i * 100}ms` }} key={obj.title}>
+                <div className="objective-card-header">
+                  <div className="objective-icon-pod">
+                    <Icon name={obj.icon} size={26} />
+                  </div>
+                  <div className="objective-meta-pod">
+                    <span className="objective-num">{obj.num}</span>
+                    <span className="objective-tag">{obj.tag}</span>
+                  </div>
                 </div>
-                <h3 className="feature-card__title">{obj.title}</h3>
-                <p className="feature-card__text">{obj.text}</p>
+                <h3 className="objective-card-title">{obj.title}</h3>
+                <p className="objective-card-text">{obj.text}</p>
+                <div className="objective-card-footer">
+                  <span className="objective-pillar-badge">
+                    <Icon name="check" size={14} className="objective-check" />
+                    TNDTMA Strategic Pillar
+                  </span>
+                </div>
               </div>
             ))}
           </div>
@@ -171,7 +236,7 @@ export default function AboutPage() {
 
       {/* Historical Timeline */}
       <section className="section timeline-section-fullwidth" id="timeline">
-        <div className="container-fluid timeline-container-fluid">
+        <div className="container">
           <SectionTitle
             eyebrow="MILESTONES"
             title="Our Journey of Two Decades"
@@ -185,43 +250,58 @@ export default function AboutPage() {
       </section>
 
       {/* Beaver Mascot Feature */}
-      <section className="section bg-gradient-dark text-white">
+      <section className="section about-mascot-section bg-gradient-dark text-white">
         <div className="container split align-items-center">
           <div className="split__content text-white">
-            <span className="section-eyebrow text-cyan">MEET OUR AMBASSADOR</span>
+            <div className="ambassador-badge-pill">
+              <span className="ambassador-pulse" />
+              <span>MEET OUR AMBASSADOR</span>
+            </div>
             <h2 className="section-main-title text-white">The Beaver Mascot of Dental Show</h2>
             <div className="title-zigzag" style={{ margin: "0 0 20px 0" }} />
-            <p className="text-light-muted">
+            <p className="about-mascot-desc">
               Why the beaver? Nature’s greatest builders possess teeth that never stop growing,
               naturally reinforced with iron, making them an enduring symbol of dental strength,
               persistence, and meticulous precision!
             </p>
-            <p className="text-light-muted">
+            <p className="about-mascot-desc">
               Our friendly Beaver Mascot welcomes thousands of clinicians, students, and exhibitors to
               Chennai Trade Centre, embodying the spirit: <em>“See. Touch. Feel. Experience.”</em>
             </p>
-            <Link href="/events" className="btn btn--primary mt-sm">
-              Discover Programme
-            </Link>
+            <div className="mascot-cta-row mt-md">
+              <Link href="/events" className="btn btn--primary">
+                Discover Programme <Icon name="arrow" size={16} />
+              </Link>
+              <Link href="/visitor-registration" className="btn btn--outline-light">
+                Meet Mascot at CTC
+              </Link>
+            </div>
           </div>
           <div className="split__media center">
-            <BeaverMascot size={320} />
+            <BeaverMascot size={330} />
           </div>
         </div>
       </section>
 
       {/* Sponsors & Partners */}
-      <section className="section">
+      <section className="section about-partners-section">
         <div className="container">
           <SectionTitle
             eyebrow="INDUSTRY COLLABORATORS"
             title="Trusted Dental Partners"
-            subtitle="Working alongside renowned medical manufacturers and clinical bodies."
+            subtitle="Working alongside renowned medical manufacturers and clinical bodies to shape South India's premier dental exposition."
           />
-          <div className="sponsor-grid mt-md">
-            {sponsors.map((s) => (
-              <div key={s} className="sponsor-tile">
-                <span className="sponsor-tile__name">{s}</span>
+          <div className="about-partners-grid mt-lg">
+            {partnersData.map((p, idx) => (
+              <div key={p.name} className="about-partner-card pop-in" style={{ animationDelay: `${idx * 60}ms` }}>
+                <div className="partner-card-emblem">
+                  <Icon name="tooth" size={20} />
+                </div>
+                <div className="partner-card-info">
+                  <h4 className="partner-card-name">{p.name}</h4>
+                  <span className="partner-card-category">{p.category}</span>
+                </div>
+                <span className="partner-card-tier">{p.type}</span>
               </div>
             ))}
           </div>

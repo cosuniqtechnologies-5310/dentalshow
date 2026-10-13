@@ -1,19 +1,37 @@
 import PageBanner from "@/components/PageBanner";
-import SectionTitle from "@/components/SectionTitle";
 import EventsExplorer from "@/components/EventsExplorer";
 
 export const metadata = {
-  title: "Events",
-  description: "Browse conferences, workshops, exhibitions and networking events at DentalShow 2027.",
+  title: "Events & Programme | Dental Show 2027",
+  description: "Browse conferences, clinical workshops, exhibitions, and 20 years of flagship editions organized by TNDTMA across Tamil Nadu.",
 };
 
 export default function EventsPage() {
   return (
     <>
-      <PageBanner title="Events" crumbs={[{ label: "Events" }]} subtitle="Conferences, workshops, exhibitions and networking — filter by what interests you." />
-      <section className="section font-corporate">
+      <PageBanner
+        title="Events & Programme"
+        crumbs={[{ label: "Events" }]}
+        subtitle="Conferences, clinical masterclasses, exhibitions and 20 years of landmark dental conventions across Tamil Nadu."
+      />
+
+      <section className="section section-events-page font-modern fold-white" id="events-main-section">
         <div className="container">
-          <SectionTitle eyebrow="Programme" title="All Events" subtitle="Select an event to see sessions, speakers and ticket details." />
+          <div className="events-page-header">
+            <div className="events-page-header__left">
+              <div className="events-eyebrow-row">
+                <span className="events-accent-dash" aria-hidden="true" />
+                <span className="events-eyebrow-text">PROGRAMME &amp; EDITIONS</span>
+              </div>
+              <h2 className="events-page-title">
+                All Events &amp; <span className="title-highlight-teal">Flagship Editions</span>
+              </h2>
+              <p className="events-page-subtitle">
+                Select an edition to explore scientific schedules, keynote clinical faculties, trade directories, and delegate access.
+              </p>
+            </div>
+          </div>
+
           <EventsExplorer />
         </div>
       </section>

@@ -123,9 +123,9 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* FULL WIDTH DENTAL SHOW DISPLAY AT BOTTOM WITH CLEAR VISIBILITY & BOTTOM SPACE */}
+      {/* FULL WIDTH DENTAL SHOW 2027 DISPLAY AT BOTTOM WITH WHITE GRADIENT & PROPER FIT */}
       <div className="footer-giant-brand" aria-hidden="true">
-        <span className="footer-giant-brand-text">DENTAL SHOW</span>
+        <span className="footer-giant-brand-text">DENTAL SHOW 2027</span>
       </div>
     </footer>
   );

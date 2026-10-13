@@ -135,22 +135,36 @@ export default function GalleryExplorer() {
                   className="gallery-thumb"
                 />
                 <div className="gallery-item-badges">
-                  <span className="badge-year">{item.year}</span>
+                  <span className="badge-year">
+                    <Icon name="calendar" size={11} className="badge-year-icon" />
+                    {item.year}
+                  </span>
                   <span className="badge-cat">{item.category}</span>
                 </div>
                 <div className="gallery-item__overlay">
                   <div className="gallery-item__icon">
-                    <Icon name="search" size={22} />
+                    <Icon name="search" size={20} />
                   </div>
                   <div className="gallery-item__text">
+                    <span className="gallery-overlay-hint">Click to enlarge</span>
                     <strong className="gallery-item__title">{item.title}</strong>
                     <span className="gallery-item__caption">{item.caption}</span>
                   </div>
                 </div>
               </div>
               <div className="gallery-card-footer">
-                <span className="gallery-card-footer__title">{item.title}</span>
-                <span className="gallery-card-footer__tag">{item.category}</span>
+                <div className="gallery-card-footer__body">
+                  <h3 className="gallery-card-footer__title">{item.title}</h3>
+                  <div className="gallery-card-footer__meta">
+                    <span className="gallery-card-footer__tag">
+                      <span className="gallery-tag-dot" />
+                      {item.category}
+                    </span>
+                    <span className="gallery-card-footer__action">
+                      View Photo <Icon name="arrowUpRight" size={13} />
+                    </span>
+                  </div>
+                </div>
               </div>
             </button>
           ))}

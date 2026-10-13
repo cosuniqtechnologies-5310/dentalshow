@@ -41,7 +41,7 @@ export default async function EventPage({ params }) {
         image={event.image}
       />
 
-      <section className="section">
+      <section className="section font-modern fold-white">
         <div className="container event-layout">
           <article className="event-main">
             <div className="event-hero">
@@ -152,7 +152,7 @@ export default async function EventPage({ params }) {
         </div>
       </section>
 
-      <section className="section section--alt">
+      <section className="section section--alt font-modern fold-white">
         <div className="container">
           <SectionTitle eyebrow="You may also like" title="Related Events" />
           <div className="grid grid--3">

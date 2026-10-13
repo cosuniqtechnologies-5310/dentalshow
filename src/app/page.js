@@ -5,13 +5,13 @@ import BeaverMascot from "@/components/BeaverMascot";
 import Icon from "@/components/Icon";
 import InteractiveTimeline from "@/components/InteractiveTimeline";
 import AudienceBenefitsSlider from "@/components/AudienceBenefitsSlider";
+import EventsBannersShowcase from "@/components/EventsBannersShowcase";
+import GalleryHierarchicalPreview from "@/components/GalleryHierarchicalPreview";
 import { site } from "@/data/site";
 import { events } from "@/data/events";
 import { galleryItems } from "@/data/gallery";
 
 export default function HomePage() {
-  const upcomingEvent = events.find((e) => e.status === "Upcoming") || events[0];
-  const pastEvent = events.find((e) => e.status === "Past") || events[1];
   const galleryPreview = galleryItems.slice(0, 6);
 
   return (
@@ -279,7 +279,7 @@ export default function HomePage() {
           SECTION 3.4: OUR LEGACY & TIMELINE (Light Blue Theme & Connection Thread)
           ============================================================ */}
       <section className="section section-legacy font-modern timeline-section-fullwidth" id="legacy">
-        <div className="container-fluid timeline-container-fluid">
+        <div className="container">
           <div className="timeline-header-compact text-left">
             <span className="section-eyebrow">OUR LEGACY &amp; TWO DECADE JOURNEY</span>
             <h2 className="section-main-title">
@@ -302,203 +302,150 @@ export default function HomePage() {
           SECTION 3.5: DISCOVER. CONNECT. GROW. (Screenshot 2 Slider Layout)
           ============================================================ */}
       <section className="section section-benefits font-modern fold-benefits-staples" id="benefits">
-        <div className="container">
-          <AudienceBenefitsSlider />
-        </div>
+        <AudienceBenefitsSlider />
       </section>
 
       {/* ============================================================
-          SECTION 3.6: EVENTS (Section 5: White Fold)
+          SECTION 3.6: EVENTS (Reference Screenshot Panorama Layout)
           ============================================================ */}
-      <section className="section section-events font-corporate fold-white" id="events-section">
+      <section className="section section-events font-modern fold-events-boutiques" id="events-section">
         <div className="container">
-          <div className="text-center mb-50">
-            <span className="section-eyebrow">SHOWCASE & SESSIONS</span>
-            <h2 className="section-main-title">Events</h2>
-            <div className="title-zigzag" />
-            <p className="max-w-700 mx-auto text-muted">
-              Explore the upcoming flagship exhibition and revisit the proud milestones of past editions.
-            </p>
-          </div>
-
-          <div className="events-duo-grid">
-            {/* Upcoming Event Card */}
-            {upcomingEvent && (
-              <article className="event-duo-card pop-in">
-                <div className="event-duo-media">
-                  <Image
-                    src={upcomingEvent.image}
-                    alt={upcomingEvent.title}
-                    fill
-                    sizes="(max-width: 900px) 100vw, 50vw"
-                    style={{ objectFit: "cover" }}
-                  />
-                  <span className="event-duo-badge badge-upcoming-glow">
-                    ★ {upcomingEvent.badge}
-                  </span>
-                </div>
-                <div className="event-duo-body">
-                  <h3 className="event-duo-title">{upcomingEvent.title}</h3>
-                  <ul className="event-duo-meta">
-                    <li>
-                      <Icon name="calendar" size={16} /> {upcomingEvent.dateLabel}
-                    </li>
-                    <li>
-                      <Icon name="pin" size={16} /> {upcomingEvent.venue}
-                    </li>
-                  </ul>
-                  <p className="event-duo-excerpt">{upcomingEvent.excerpt}</p>
-                  <ul className="event-duo-highlights">
-                    {upcomingEvent.highlights.slice(0, 3).map((h) => (
-                      <li key={h}>{h}</li>
-                    ))}
-                  </ul>
-                  <div className="event-duo-actions">
-                    <Link href="/visitor-registration" className="btn btn--primary">
-                      Register as Visitor
-                    </Link>
-                    <Link href="/exhibitor-registration" className="btn btn--ghost">
-                      Register as Exhibitor
-                    </Link>
-                  </div>
-                </div>
-              </article>
-            )}
-
-            {/* Past Event Card */}
-            {pastEvent && (
-              <article className="event-duo-card pop-in" style={{ animationDelay: "150ms" }}>
-                <div className="event-duo-media">
-                  <Image
-                    src={pastEvent.image}
-                    alt={pastEvent.title}
-                    fill
-                    sizes="(max-width: 900px) 100vw, 50vw"
-                    style={{ objectFit: "cover" }}
-                  />
-                  <span className="event-duo-badge badge-past-gray">
-                    {pastEvent.badge}
-                  </span>
-                </div>
-                <div className="event-duo-body">
-                  <h3 className="event-duo-title">{pastEvent.title}</h3>
-                  <ul className="event-duo-meta">
-                    <li>
-                      <Icon name="calendar" size={16} /> {pastEvent.dateLabel}
-                    </li>
-                    <li>
-                      <Icon name="pin" size={16} /> {pastEvent.venue}
-                    </li>
-                  </ul>
-                  <p className="event-duo-excerpt">{pastEvent.excerpt}</p>
-                  <ul className="event-duo-highlights">
-                    {pastEvent.highlights.slice(0, 3).map((h) => (
-                      <li key={h}>{h}</li>
-                    ))}
-                  </ul>
-                  <div className="event-duo-actions">
-                    <Link href="/gallery" className="btn btn--ghost">
-                      View 2025 Photos & Highlights
-                    </Link>
-                    <Link href="/about" className="link-arrow">
-                      Read Legacy Story →
-                    </Link>
-                  </div>
-                </div>
-              </article>
-            )}
-          </div>
-
-          <div className="text-center mt-lg">
-            <Link href="/events" className="btn btn--primary">
-              View All Events & Sessions <Icon name="arrow" size={18} />
-            </Link>
-          </div>
+          <EventsBannersShowcase />
         </div>
       </section>
 
       {/* ============================================================
-          SECTION 3.7: GALLERY PREVIEW (Section 6: Light Primary Fold)
+          SECTION 3.7: GALLERY PREVIEW (Hierarchical Grid with Hover Reveals)
           ============================================================ */}
       <section className="section section-gallery font-modern fold-light-primary" id="gallery-preview">
         <div className="container">
-          <div className="text-center mb-50">
-            <span className="section-eyebrow">PHOTO & VIDEO HIGHLIGHTS</span>
-            <h2 className="section-main-title">Gallery Preview</h2>
-            <div className="title-zigzag" />
-            <p className="max-w-700 mx-auto text-muted">
-              Moments That Bring Us Together. Revisit the people, experiences and memories that make
-              every Dental Show special.
+          <div className="gallery-section-header text-center mb-40">
+            <div className="gallery-eyebrow-wrapper">
+              <span className="gallery-accent-dash" aria-hidden="true" />
+              <span className="section-eyebrow">PHOTO &amp; VIDEO HIGHLIGHTS</span>
+            </div>
+            <h2 className="section-main-title gallery-title-styled">
+              Gallery <span className="title-highlight-royal">Preview</span>
+            </h2>
+            <p className="max-w-700 mx-auto text-muted gallery-lead-desc">
+              Moments That Bring Us Together. Revisit the people, clinical breakthroughs and celebrated memories that make every Dental Show special.
             </p>
           </div>
 
-          <div className="gallery-preview-grid">
-            {galleryPreview.map((item, idx) => (
-              <Link
-                key={item.id}
-                href="/gallery"
-                className={`gallery-preview-tile ${idx === 0 || idx === 5 ? "tall" : ""}`}
-              >
-                <Image
-                  src={item.src}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  style={{ objectFit: "cover" }}
-                />
-                <div className="preview-tile-overlay">
-                  <span className="preview-tile-year">{item.year} • {item.category}</span>
-                  <span className="preview-tile-title">{item.title}</span>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <GalleryHierarchicalPreview />
 
-          <div className="text-center mt-lg">
-            <Link href="/gallery" className="btn btn--primary" id="btn-full-gallery">
-              Explore Central Gallery (Filterable by Year) <Icon name="arrow" size={18} />
+          <div className="text-center mt-40">
+            <Link href="/gallery" className="btn-gallery-explore-all" id="btn-full-gallery">
+              <span>Explore Central Expo Gallery (Filter by Year)</span>
+              <svg className="btn-gallery-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
             </Link>
           </div>
         </div>
       </section>
 
       {/* ============================================================
-          SECTION 3.8: REGISTRATION CTA (Full Section, Left-Aligned, Client Spec)
+          SECTION 3.8: REGISTRATION CTA (Mascot Left + Elevated Dual-Track Registration)
           ============================================================ */}
       <section className="cta-full-section font-modern" id="registration-cta">
         <div className="container">
-          <div className="cta-full-content">
-            <h2 className="cta-full-title">Be Part of the Next Chapter</h2>
-
-            <div className="cta-full-roles">
-              <p className="cta-role-item">
-                <strong className="role-highlight role-highlight--visitor">For Visitors:</strong>{" "}
-                Discover the dental industry and connect with the community.
-              </p>
-              <p className="cta-role-item">
-                <strong className="role-highlight role-highlight--exhibitor">For Exhibitors:</strong>{" "}
-                Showcase your business and build new connections.
-              </p>
+          <div className="cta-section-grid">
+            {/* Left Column: Friendly Beaver Mascot */}
+            <div className="cta-mascot-column">
+              <div className="cta-mascot-card">
+                <div className="cta-mascot-glow-ring" aria-hidden="true" />
+                <div className="cta-mascot-img-wrap">
+                  <Image
+                    src="/images/friendly-beaver-dentist-mascot.png"
+                    alt="Dental Show 2027 Mascot - Dr. Beaver"
+                    width={340}
+                    height={480}
+                    className="cta-mascot-img"
+                    priority
+                  />
+                  <div className="cta-mascot-shadow" aria-hidden="true" />
+                </div>
+                {/* Floating Mascot Credential Badge */}
+                <div className="cta-mascot-pill">
+                  <span className="mascot-pill-dot" aria-hidden="true" />
+                  <span className="mascot-pill-text">Official Dental Show Mascot</span>
+                </div>
+              </div>
             </div>
 
-            <div className="cta-full-actions">
-              <Link
-                href="/visitor-registration"
-                className="cta-full-btn cta-full-btn--primary"
-                id="cta-visitor-register-btn"
-              >
-                <span>Register as a Visitor</span>
-                <span className="cta-btn-arrow" aria-hidden="true">→</span>
-              </Link>
+            {/* Right Column: Elevated Editorial Registration Content */}
+            <div className="cta-full-content">
+              {/* Eyebrow badge */}
+              <div className="cta-eyebrow-chip">
+                <span className="eyebrow-sparkle" aria-hidden="true">✦</span>
+                <span>FAST-TRACK DIGITAL ENTRY • CHENNAI 2027</span>
+              </div>
 
-              <Link
-                href="/exhibitor-registration"
-                className="cta-full-btn cta-full-btn--secondary"
-                id="cta-exhibitor-register-btn"
-              >
-                <span>Register as an Exhibitor</span>
-                <span className="cta-btn-arrow" aria-hidden="true">→</span>
-              </Link>
+              <h2 className="cta-full-title">
+                Be Part of the <span className="cta-title-gradient">Next Chapter</span>
+              </h2>
+
+              <p className="cta-lead-subtitle">
+                Join 10,000+ clinicians, trade pioneers, and global manufacturers shaping modern dental care. Secure your access in seconds.
+              </p>
+
+              {/* Elevated Dual-Track Cards (For Visitors & For Exhibitors) */}
+              <div className="cta-cards-duo">
+                <div className="cta-track-card cta-track-card--visitor">
+                  <div className="track-card-badge-row">
+                    <span className="track-badge badge--visitor">FOR VISITORS</span>
+                    <span className="track-perk-pill">Complimentary Pass</span>
+                  </div>
+                  <h4 className="track-card-heading">Clinicians, Students &amp; Traders</h4>
+                  <p className="track-card-desc">
+                    Discover cutting-edge equipment, attend scientific masterclasses, earn CPD credits, and connect with regional colleagues.
+                  </p>
+                  <Link
+                    href="/visitor-registration"
+                    className="cta-track-btn cta-track-btn--visitor"
+                    id="cta-visitor-register-btn"
+                  >
+                    <span>Register as a Visitor</span>
+                    <svg className="cta-track-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </Link>
+                </div>
+
+                <div className="cta-track-card cta-track-card--exhibitor">
+                  <div className="track-card-badge-row">
+                    <span className="track-badge badge--exhibitor">FOR EXHIBITORS</span>
+                    <span className="track-perk-pill">Prime Hall Stalls</span>
+                  </div>
+                  <h4 className="track-card-heading">Manufacturers &amp; Brands</h4>
+                  <p className="track-card-desc">
+                    Showcase innovative CAD/CAM technologies, build B2B distribution pipelines, and engage directly with qualified buyers.
+                  </p>
+                  <Link
+                    href="/exhibitor-registration"
+                    className="cta-track-btn cta-track-btn--exhibitor"
+                    id="cta-exhibitor-register-btn"
+                  >
+                    <span>Register as an Exhibitor</span>
+                    <svg className="cta-track-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Trust & Accreditations Micro-Strip */}
+              <div className="cta-trust-bar">
+                <div className="cta-trust-chip">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3BBF8F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Instant E-Badge Issuance</span>
+                </div>
+                <div className="cta-trust-chip">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3BBF8F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>100% Free Delegate Access</span>
+                </div>
+                <div className="cta-trust-chip">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3BBF8F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>TNDTMA Accredited</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

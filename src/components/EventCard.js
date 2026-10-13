@@ -6,7 +6,7 @@ export default function EventCard({ event }) {
   const isUpcoming = event.category === "Upcoming" || event.status === "Upcoming";
 
   return (
-    <article className="event-card">
+    <article className={`event-card ${isUpcoming ? "event-card--upcoming" : "event-card--past"}`}>
       <Link href={`/events/${event.slug}`} className="event-card__media" aria-label={event.title}>
         <Image
           src={event.image}
@@ -15,10 +15,10 @@ export default function EventCard({ event }) {
           sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
         />
         <span className={`chip chip--float ${isUpcoming ? "chip--upcoming" : "chip--past"}`}>
-          {isUpcoming ? "Upcoming Flagship" : "Past Edition"}
+          {isUpcoming ? "★ UPCOMING FLAGSHIP" : "PAST EDITION"}
         </span>
         <span className={`event-card__price ${isUpcoming ? "event-card__price--upcoming" : "event-card__price--concluded"}`}>
-          {event.price}
+          {isUpcoming ? "FREE VISITOR REGISTRATION" : "Concluded"}
         </span>
       </Link>
       <div className="event-card__body">
@@ -36,11 +36,15 @@ export default function EventCard({ event }) {
         <p className="event-card__excerpt">{event.excerpt}</p>
         <div className="event-card__footer">
           <Link href={`/events/${event.slug}`} className="link-arrow">
-            View details <Icon name="arrow" size={16} />
+            <span>View details</span> <Icon name="arrow" size={16} />
           </Link>
-          {isUpcoming && (
-            <Link href="/visitor-registration" className="btn btn--primary btn--sm" style={{ padding: "8px 14px", fontSize: "12px" }}>
-              Register Free
+          {isUpcoming ? (
+            <Link href="/visitor-registration" className="btn-card-register">
+              REGISTER FREE
+            </Link>
+          ) : (
+            <Link href={`/events/${event.slug}`} className="btn-card-recap">
+              Event Story →
             </Link>
           )}
         </div>

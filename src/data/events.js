@@ -114,6 +114,116 @@ export const events = [
       { time: "02:00 PM", title: "Touchless & Digital Impression Protocols", speaker: "Dr. Anya Sharma" },
     ],
   },
+  {
+    slug: "dental-show-2021",
+    title: "Dental Show 2021 (Digital & Hybrid Summit)",
+    status: "Past",
+    category: "Past",
+    badge: "Past Event • Digital Hybrid",
+    date: "2021-02-13",
+    dateLabel: "13th & 14th February 2021",
+    time: "10:00 AM – 05:00 PM",
+    venue: "Virtual Expo & CTC Hybrid Hub, Chennai",
+    city: "Chennai, Tamil Nadu",
+    image: "/images/gallery-conference-2.jpg",
+    price: "Concluded",
+    seats: 3200,
+    excerpt:
+      "A pioneering hybrid convention that bridged clinicians and manufacturers across South India through digital showrooms and live interactive webinars.",
+    description: [
+      "In response to unprecedented global circumstances, Dental Show 2021 became a milestone digital and hybrid gathering, ensuring uninterrupted education and dealer connection.",
+      "The virtual showroom featured 360-degree equipment walkthroughs, touchless ordering portals, and 18 interactive clinical webinars broadcast live across India.",
+      "Over 3,200 clinicians engaged with digital keynotes on infection prevention, teledentistry, and rapid restorative techniques."
+    ],
+    highlights: [
+      "110+ Virtual & Hybrid Exhibitor Pavilions",
+      "Over 3,200 Connected Attendees across India",
+      "18 Live CME Accredited Webinar Sessions",
+      "First Digital Trade Ordering Marketplace"
+    ],
+    ctaText: "View Archive",
+    ctaLink: "/gallery",
+    secondaryCtaText: "Read Story",
+    secondaryCtaLink: "/about",
+    speakers: ["dr-marcus-obi", "dr-sarah-jenkins"],
+    sessions: [
+      { time: "10:00 AM", title: "Teledentistry & Infection Protocols in Practice", speaker: "Keynote Faculty" },
+      { time: "02:30 PM", title: "Restorative Materials for the Modern Clinic", speaker: "Clinical Panel" },
+    ],
+  },
+  {
+    slug: "dental-show-2019",
+    title: "Dental Show 2019 (Grand Biennial Convention)",
+    status: "Past",
+    category: "Past",
+    badge: "Past Event • Landmark Edition",
+    date: "2019-02-09",
+    dateLabel: "9th & 10th February 2019",
+    time: "09:00 AM – 06:00 PM",
+    venue: "Chennai Trade Centre Halls 1 & 2",
+    city: "Chennai, Tamil Nadu",
+    image: "/images/gallery-workshop-1.jpg",
+    price: "Concluded",
+    seats: 4200,
+    excerpt:
+      "A record-setting edition featuring over 160 international brands, comprehensive endodontics masterclasses, and modern operatory showcases.",
+    description: [
+      "Dental Show 2019 drew over 4,200 delegates to Chennai Trade Centre with an expansive dual-hall layout covering general dentistry, pediatric care, and prosthodontics.",
+      "Leading European and Asian manufacturers showcased direct composite materials, rotary endodontic motors, and digital pan-oral imaging units.",
+      "The convention set new benchmarks for certified hands-on workshops with masterclinicians from across the subcontinent."
+    ],
+    highlights: [
+      "160+ Global & Indian Dental Brands",
+      "4,200+ Registered Clinical Delegates",
+      "14 Hands-on Endodontic & Implant Workshops",
+      "State-wide Dental Student Poster Competition"
+    ],
+    ctaText: "View 2019 Gallery",
+    ctaLink: "/gallery",
+    secondaryCtaText: "Read Recap",
+    secondaryCtaLink: "/about",
+    speakers: ["dr-richard-hale", "dr-anya-sharma"],
+    sessions: [
+      { time: "09:30 AM", title: "Contemporary Rotary Endodontics Masterclass", speaker: "Faculty Panel" },
+      { time: "03:00 PM", title: "Ergonomics & Operatory Lighting Standards", speaker: "Industry Experts" },
+    ],
+  },
+  {
+    slug: "dental-show-2017",
+    title: "Dental Show 2017 (Clinical Innovations Expo)",
+    status: "Past",
+    category: "Past",
+    badge: "Past Event • Innovation Era",
+    date: "2017-02-11",
+    dateLabel: "11th & 12th February 2017",
+    time: "09:30 AM – 05:30 PM",
+    venue: "Chennai Trade Centre, Nandambakkam",
+    city: "Chennai, Tamil Nadu",
+    image: "/images/gallery-networking-2.jpg",
+    price: "Concluded",
+    seats: 3600,
+    excerpt:
+      "Spotlighting the emergence of 3D printing in prosthodontics and cone-beam computed tomography (CBCT) across Tamil Nadu dental practices.",
+    description: [
+      "Dental Show 2017 served as a catalyst for Tamil Nadu's digital transition, introducing clinics to early in-office 3D milling and chairside digital radiography.",
+      "The event welcomed over 3,600 attendees and fostered groundbreaking trade partnerships between domestic dealers and international dental equipment leaders."
+    ],
+    highlights: [
+      "130+ Exhibitors from 8 Countries",
+      "3,600+ Clinical Visitors",
+      "Early 3D Printing in Dentistry Showcase",
+      "TNDTMA Clinician Merit Awards"
+    ],
+    ctaText: "View 2017 Photos",
+    ctaLink: "/gallery",
+    secondaryCtaText: "Read History",
+    secondaryCtaLink: "/about",
+    speakers: ["dr-marcus-obi", "dr-richard-hale"],
+    sessions: [
+      { time: "10:00 AM", title: "Early CBCT Integration for General Dentists", speaker: "Diagnostic Panel" },
+      { time: "02:00 PM", title: "Chairside CAD/CAM vs Traditional Impressions", speaker: "Prosthodontic Lead" },
+    ],
+  },
 ];
 
 export const upcomingEvents = events.filter((e) => e.status === "Upcoming");
