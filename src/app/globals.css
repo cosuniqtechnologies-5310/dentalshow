@@ -20,33 +20,29 @@
   --line-border: #e2e8f0;
 
   /* ========================================================================
-     TYPOGRAPHY ARCHITECTURE (User Specified 4 Font Pairings)
-     1. Inter (Variable weights) — Modern, Institutional & Clean (Primary UI)
-     2. Merriweather + Source Sans 3 — Academic & Authoritative (Legacy & Legal)
-     3. Lora + Lato — Approachable & Trustworthy (Clinical Advice & Benefits)
-     4. Roboto Slab + Roboto — Structured & Corporate (Calendars & Tables)
+     TYPOGRAPHY ARCHITECTURE (Unified Global Font Family: Inter)
      ======================================================================== */
   --font-inter: var(--next-font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --font-merriweather: var(--next-font-merriweather), 'Merriweather', Georgia, 'Times New Roman', serif;
-  --font-source-sans: var(--next-font-source-sans), 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-lora: var(--next-font-lora), 'Lora', Georgia, 'Times New Roman', serif;
-  --font-lato: var(--next-font-lato), 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-roboto-slab: var(--next-font-roboto-slab), 'Roboto Slab', Georgia, serif;
-  --font-roboto: var(--next-font-roboto), 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-merriweather: var(--next-font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-source-sans: var(--next-font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-lora: var(--next-font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-lato: var(--next-font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-roboto-slab: var(--next-font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-roboto: var(--next-font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Primary Default (Inter): Modern, Institutional & Clean */
   --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
-  /* Contextual Specialized Pairings */
-  --font-academic-heading: 'Merriweather', Georgia, 'Times New Roman', serif;
-  --font-academic-body: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Contextual Specialized Pairings (Unified to Inter) */
+  --font-academic-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-academic-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  --font-clinical-heading: 'Lora', Georgia, 'Times New Roman', serif;
-  --font-clinical-body: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-clinical-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-clinical-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  --font-corporate-heading: 'Roboto Slab', Georgia, serif;
-  --font-corporate-body: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-corporate-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-corporate-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   --ease: cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -67,7 +63,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #0A2119;
-  color: var(--text-muted);
+  color: #000000;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 26px;
@@ -90,7 +86,7 @@ h4,
 h5,
 h6 {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  color: var(--text-dark);
+  color: #000000;
   font-weight: 700;
   line-height: 1.25;
   margin: 0 0 15px;
@@ -117,7 +113,7 @@ h4 {
 
 p {
   margin: 0 0 20px;
-  color: var(--text-muted);
+  color: #000000;
   line-height: 26px;
 }
 
@@ -224,19 +220,20 @@ button {
 .section-eyebrow,
 .column-eyebrow {
   display: block;
-  font-family: var(--font-body), sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: #888888;
+  color: #000000;
   margin-bottom: 8px;
 }
 
 .section-main-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: clamp(2rem, 3.8vw, 2.6rem);
   font-weight: 800;
-  color: var(--text-dark);
+  color: #000000;
   margin-bottom: 12px;
 }
 
@@ -250,19 +247,21 @@ button {
 }
 
 .column-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: clamp(1.8rem, 3.2vw, 2.4rem);
   font-weight: 700;
-  color: var(--text-dark);
+  color: #000000;
   margin-bottom: 10px;
 }
 
 .column-title span {
   display: block;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: #888;
+  color: #000000;
   margin-bottom: 6px;
 }
 
@@ -3157,8 +3156,8 @@ button {
 
 .timeline-section-fullwidth {
   background: linear-gradient(180deg, #f0f7fc 0%, #e8f3fa 100%) !important;
-  color: #0f172a !important;
-  padding: 85px 0 !important;
+  color: #000000 !important;
+  padding: 60px 0 !important;
   position: relative;
   overflow: hidden;
   border-top: 1px solid #e2e8f0;
@@ -3178,233 +3177,204 @@ button {
 }
 
 .timeline-section-fullwidth .section-eyebrow {
-  color: #0477BF !important;
+  color: #0f172a !important;
   font-weight: 800;
   letter-spacing: 2px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  text-align: left !important;
 }
 
 .timeline-section-fullwidth .section-main-title {
-  color: #023E73 !important;
-  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  color: #0f172a !important;
+  font-size: clamp(22px, 2.4vw, 28px);
   font-weight: 900;
-  letter-spacing: -0.6px;
+  letter-spacing: -0.5px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  text-align: left !important;
+  margin: 0 0 6px 0 !important;
+}
+
+.timeline-section-fullwidth .title-highlight-blue {
+  color: #0477BF !important;
+  font-weight: 900;
 }
 
 .timeline-section-fullwidth .section-desc,
 .timeline-section-fullwidth p {
-  color: #475569 !important;
-  font-size: 15.5px;
-  line-height: 1.6;
+  color: #1e293b !important;
+  font-size: 14.5px;
+  line-height: 1.55;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  text-align: left !important;
+  margin: 0 0 16px 0 !important;
 }
 
 .timeline-section-fullwidth .title-zigzag {
   background-image: radial-gradient(circle at center, #0477BF 1.5px, transparent 1.5px);
+  margin: 6px 0 10px 0 !important;
 }
 
 .timeline-interactive-mount {
-  margin-top: 40px;
+  margin-top: 0 !important;
 }
 
-/* Timeline Overall Wrapper (One Fold Compact) */
+/* Timeline Overall Wrapper (Spacious Layout) */
 .interactive-timeline-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  /* Compacted from 36px */
+  gap: 44px;
   width: 100%;
 }
 
-/* 1. Main Showcase Grid: Left Mascot Guide + Right Active Milestone Card */
-.timeline-showcase-grid {
-  display: grid;
-  grid-template-columns: 230px 1fr;
-  /* Compacted from 290px */
-  gap: 18px;
-  /* Compacted from 28px */
-  align-items: stretch;
-  width: 100%;
-}
-
-/* Left Column: Mascot Character Presentation */
-.timeline-mascot-col {
-  display: flex;
-  width: 100%;
-}
-
-.timeline-mascot-card {
+/* 1. UNIFIED PANORAMIC MASTER SHOWCASE CARD */
+.timeline-master-showcase-card {
   width: 100%;
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  padding: 12px 14px 10px;
-  /* Compacted from 24px 20px 20px */
+  border: 1px solid rgba(4, 119, 191, 0.16);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px -5px rgba(2, 62, 115, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.8) inset !important;
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  align-items: stretch;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-master-showcase-card:hover {
+  box-shadow: 0 14px 36px -6px rgba(2, 62, 115, 0.1) !important;
+}
+
+/* Left Host Stage (Exhibition Pavilion & Mascot Podium) */
+.timeline-stage-host-alcove {
+  background: linear-gradient(180deg, #F8FAFC 0%, #EEF6FC 100%);
+  border-right: 1px solid rgba(4, 119, 191, 0.12);
+  padding: 28px 24px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   text-align: center;
-  box-shadow: none !important;
   position: relative;
 }
 
-.timeline-mascot-bubble {
-  background: #f0f7fc;
-  border: 1.5px solid #bae6fd;
-  border-radius: 12px;
-  padding: 6px 10px;
-  /* Compacted from 12px 14px */
-  width: 100%;
-  margin-bottom: 6px;
-  position: relative;
-  text-align: center;
-  box-shadow: none !important;
+.stage-host-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
   animation: mascotBubbleIn 0.35s ease-out;
 }
 
-@keyframes mascotBubbleIn {
-  from {
-    opacity: 0.3;
-    transform: translateY(-4px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.mascot-bubble-kicker {
+.stage-host-badge {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 5px;
+  gap: 6px;
+  padding: 4px 12px;
+  background: #ffffff;
+  border: 1px solid #bae6fd;
+  border-radius: 20px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 9.5px;
+  font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   color: #0477BF;
 }
 
-.mascot-bubble-title {
+.stage-host-year-callout {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 14px;
-  font-weight: 800;
-  color: #023E73 !important;
-  margin: 1px 0;
-  line-height: 1.2;
+  font-size: 22px;
+  font-weight: 900;
+  color: #0f172a !important;
+  margin: 4px 0 0;
+  line-height: 1.1;
 }
 
-.mascot-bubble-sub {
+.stage-host-label {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
-  color: #069DBF;
+  color: #64748b;
 }
 
-.mascot-bubble-tail {
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  width: 9px;
-  height: 9px;
-  background: #f0f7fc;
-  border-right: 1.5px solid #bae6fd;
-  border-bottom: 1.5px solid #bae6fd;
-}
-
-.timeline-mascot-art-wrap {
+.stage-host-podium-wrap {
+  position: relative;
+  width: 100%;
+  height: 170px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 155px;
-  /* Compacted from 250px so mascot fits seamlessly */
-  position: relative;
 }
 
-.timeline-mascot-img {
+.stage-host-glow-ring {
+  position: absolute;
+  bottom: 8px;
+  width: 170px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(4, 119, 191, 0.22) 0%, transparent 75%);
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+.stage-host-mascot-img {
   object-fit: contain;
   width: auto;
   height: 100%;
-  filter: drop-shadow(0 6px 12px rgba(2, 62, 115, 0.08));
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 8px 18px rgba(2, 62, 115, 0.12));
 }
 
-.timeline-mascot-status-pill {
+.stage-host-footer-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 3px 10px;
-  background: #f8fafc;
+  padding: 5px 14px;
+  background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 20px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 10px;
+  font-size: 10.5px;
   font-weight: 700;
-  color: #475569;
-  margin-top: 6px;
-  box-shadow: none !important;
+  color: #0f172a !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
 }
 
-.mascot-status-dot {
-  width: 5px;
-  height: 5px;
+.host-dot-blue {
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #0477BF;
 }
 
-/* Right Column: Active Milestone Showcase Card */
-.timeline-content-col {
-  display: flex;
-  width: 100%;
-}
-
-.timeline-spotlight-card {
-  width: 100%;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  padding: 16px 22px 0;
-  /* Compacted from 32px 36px 0 */
-  box-shadow: none !important;
-  position: relative;
-  overflow: hidden;
+/* Right Panel: Executive Milestone Showcase */
+.timeline-stage-content-panel {
+  padding: 30px 38px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 16px;
+  background: #ffffff;
   animation: fadeInMilestone 0.4s ease-out;
-}
-
-@keyframes fadeInMilestone {
-  from {
-    opacity: 0.3;
-    transform: translateY(6px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  position: relative;
 }
 
 .timeline-spotlight-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 8px;
-  /* Compacted from 22px */
+  margin-bottom: 12px;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 16px;
 }
 
 .timeline-milestone-pill-wrap {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
@@ -3412,34 +3382,38 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 3px 12px;
-  background: #f0f7fc;
-  border: 1px solid #bae6fd;
+  padding: 5px 16px;
+  background: #ffffff;
+  border: 1.5px solid #0477BF;
   border-radius: 20px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 10.5px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #023E73;
+  color: #0f172a !important;
   box-shadow: none !important;
+}
+
+.timeline-milestone-pill .live-pulse-dot {
+  background: #0477BF;
 }
 
 .timeline-stage-counter {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 10px;
+  font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 1.1px;
-  color: #64748b;
+  color: #0f172a !important;
   text-transform: uppercase;
 }
 
 .timeline-autoplay-controls {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   background: #f8fafc;
-  padding: 3px 8px;
+  padding: 4px 12px;
   border-radius: 20px;
   border: 1px solid #e2e8f0;
   box-shadow: none !important;
@@ -3448,10 +3422,10 @@ button {
 .timeline-ctrl-btn {
   background: #ffffff;
   border: 1px solid #cbd5e1;
-  color: #023E73;
+  color: #0f172a;
   font-size: 11px;
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -3462,9 +3436,9 @@ button {
 }
 
 .timeline-ctrl-btn:hover {
-  background: #023E73;
+  background: #0477BF;
   color: #ffffff;
-  border-color: #023E73;
+  border-color: #0477BF;
 }
 
 .timeline-play-btn {
@@ -3477,14 +3451,15 @@ button {
   font-size: 9.5px;
   font-weight: 800;
   letter-spacing: 0.9px;
-  color: #64748b;
+  color: #475569;
   padding-left: 2px;
 }
 
 .timeline-spotlight-body {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
+  text-align: left;
 }
 
 .timeline-spotlight-year-headline {
@@ -3497,10 +3472,9 @@ button {
 
 .timeline-spotlight-year {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 18px;
-  /* Compacted from 22px */
+  font-size: 22px;
   font-weight: 900;
-  color: #0477BF;
+  color: #0477BF !important;
   letter-spacing: -0.3px;
 }
 
@@ -3511,60 +3485,58 @@ button {
 
 .timeline-spotlight-tagline {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 11.5px;
-  font-weight: 700;
-  color: #64748b;
+  font-size: 12px;
+  font-weight: 800;
+  color: #0f172a !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .timeline-spotlight-title {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: clamp(17px, 1.8vw, 21px);
-  /* Compacted from 28px */
+  font-size: clamp(21px, 2.2vw, 25px);
   font-weight: 900;
   color: #0f172a !important;
-  margin: 0 0 4px;
+  margin: 0 0 6px;
   letter-spacing: -0.4px;
   line-height: 1.25;
+  text-align: left;
 }
 
 .timeline-spotlight-text {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 13px;
-  /* Compacted from 15px */
-  line-height: 1.48;
-  color: #475569 !important;
-  margin: 0;
-  max-width: 680px;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #1e293b !important;
+  margin: 0 0 4px;
+  max-width: 780px;
+  text-align: left;
 }
 
 .timeline-spotlight-footer-grid {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 12px;
+  gap: 20px;
   align-items: center;
-  margin: 12px 0 12px;
-  /* Compacted from 24px 0 26px */
+  margin: 18px 0 20px;
 }
 
 .timeline-stat-chip {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 14px;
-  /* Compacted from 12px 18px */
-  background: #f0f7fc;
-  border: 1px solid #bae6fd;
-  border-radius: 10px;
+  gap: 14px;
+  padding: 12px 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
   box-shadow: none !important;
 }
 
 .timeline-stat-icon-wrap {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: #023E73;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #0477BF;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -3581,6 +3553,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 1px;
+  text-align: left;
 }
 
 .timeline-stat-text .stat-label {
@@ -3589,53 +3562,61 @@ button {
   font-weight: 800;
   letter-spacing: 0.9px;
   text-transform: uppercase;
-  color: #0477BF;
+  color: #0477BF !important;
 }
 
 .timeline-stat-text .stat-val {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 14px;
-  font-weight: 800;
-  color: #023E73;
+  font-size: 15.5px;
+  font-weight: 900;
+  color: #0f172a !important;
 }
 
 .timeline-stat-text .stat-sub {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 10.5px;
-  color: #475569;
-  font-weight: 500;
+  font-size: 11.5px;
+  color: #475569 !important;
+  font-weight: 600;
 }
 
 .timeline-highlight-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 10px;
 }
 
 .timeline-highlight-pill {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 10.5px;
-  font-weight: 600;
-  color: #334155;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  padding: 4px 10px;
-  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a !important;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 7px 16px;
+  border-radius: 8px;
   white-space: nowrap;
-  box-shadow: none !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pill-sparkle-blue {
+  color: #0477BF !important;
+  font-weight: 800;
+  margin-right: 6px;
 }
 
 .timeline-progress-track {
   height: 3px;
   background: #e2e8f0;
-  width: calc(100% + 44px);
-  margin: 0 -22px;
+  width: calc(100% + 68px);
+  margin: 0 -34px;
   box-shadow: none !important;
 }
 
 .timeline-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #023E73 0%, #0477BF 60%, #069DBF 100%);
+  background: #0477BF;
   transition: width 0.05s linear;
   box-shadow: none !important;
 }
@@ -3649,8 +3630,7 @@ button {
   width: 100vw;
   left: 50%;
   transform: translateX(-50%);
-  padding: 12px 0;
-  /* Compacted from 36px */
+  padding: 16px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3671,7 +3651,7 @@ button {
 
 .timeline-thread-track-container {
   position: relative;
-  width: min(1360px, calc(100% - 40px));
+  width: min(1380px, calc(100% - 48px));
   margin: 0 auto;
   z-index: 2;
 }
@@ -3682,7 +3662,7 @@ button {
   top: 50%;
   left: 0;
   height: 3px;
-  background: linear-gradient(90deg, #023E73 0%, #0477BF 70%, #069DBF 100%);
+  background: #0477BF;
   transform: translateY(-50%);
   z-index: 2;
   transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -3695,25 +3675,22 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 22px;
   width: 100%;
 }
 
-/* Individual Year Pill Button (Compact Pill Shape) */
+/* Individual Year Pill Button - ONLY YEAR DISPLAY */
 .timeline-year-pill-btn {
   position: relative;
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2px;
-  padding: 6px 18px;
-  /* Compacted from 10px 22px */
+  padding: 11px 28px;
   background: #ffffff;
   border: 2px solid #cbd5e1;
   border-radius: 9999px;
   cursor: pointer;
-  box-shadow: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
   transition: all 0.25s ease;
   min-width: 95px;
 }
@@ -3721,12 +3698,18 @@ button {
 .timeline-year-pill-btn:hover {
   border-color: #0477BF;
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(4, 119, 191, 0.2) !important;
+}
+
+.timeline-year-pill-btn:hover .year-pill-number {
+  color: #0477BF !important;
 }
 
 .timeline-year-pill-btn.is-active {
-  background: #023E73 !important;
-  border-color: #023E73 !important;
+  background: #0477BF !important;
+  border-color: #0477BF !important;
   transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(4, 119, 191, 0.35) !important;
 }
 
 .timeline-year-pill-btn.is-passed {
@@ -3736,38 +3719,21 @@ button {
 
 .year-pill-number {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 13.5px;
+  font-size: 15px;
   font-weight: 800;
-  color: #0f172a;
-  line-height: 1.1;
+  color: #0f172a !important;
+  line-height: 1;
   letter-spacing: -0.2px;
   transition: color 0.2s ease;
 }
 
 .timeline-year-pill-btn.is-active .year-pill-number {
   color: #ffffff !important;
+  font-weight: 900;
 }
 
 .timeline-year-pill-btn.is-passed .year-pill-number {
-  color: #023E73;
-}
-
-.year-pill-label {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 10px;
-  font-weight: 600;
-  color: #64748b;
-  line-height: 1.2;
-  white-space: nowrap;
-  transition: color 0.2s ease;
-}
-
-.timeline-year-pill-btn.is-active .year-pill-label {
-  color: #93c5fd !important;
-}
-
-.timeline-year-pill-btn.is-passed .year-pill-label {
-  color: #0477BF;
+  color: #0477BF !important;
 }
 
 /* 3. CONTINUOUS EVOLUTION TICKER - HIDDEN AS REQUESTED */
@@ -3777,20 +3743,21 @@ button {
 
 /* Responsive Rules */
 @media (max-width: 992px) {
-  .timeline-showcase-grid {
+  .timeline-master-showcase-card {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 
-  .timeline-mascot-card {
+  .timeline-stage-host-alcove {
+    border-right: none;
+    border-bottom: 1px solid rgba(4, 119, 191, 0.12);
     flex-direction: row;
     gap: 20px;
     padding: 20px;
     text-align: left;
   }
 
-  .timeline-mascot-art-wrap {
-    height: 180px;
+  .stage-host-podium-wrap {
+    height: 140px;
     width: 140px;
     flex-shrink: 0;
   }
@@ -3812,7 +3779,7 @@ button {
 }
 
 @media (max-width: 640px) {
-  .timeline-spotlight-card {
+  .timeline-stage-content-panel {
     padding: 24px 20px 0;
   }
 
@@ -3821,34 +3788,23 @@ button {
     margin: 0 -20px;
   }
 
-  .timeline-mascot-card {
+  .timeline-stage-host-alcove {
     flex-direction: column;
     text-align: center;
   }
 
-  .timeline-mascot-art-wrap {
-    height: 200px;
+  .stage-host-podium-wrap {
+    height: 160px;
     width: 100%;
   }
 
   .timeline-year-pill-btn {
-    padding: 8px 16px;
-    min-width: 95px;
+    padding: 9px 20px;
+    min-width: 80px;
   }
 
   .year-pill-number {
     font-size: 13.5px;
-  }
-
-  .year-pill-label {
-    font-size: 10px;
-  }
-
-  .timeline-loop-track-indicator {
-    font-size: 11px;
-    padding: 8px 16px;
-    flex-direction: column;
-    gap: 6px;
   }
 }
 
@@ -4788,7 +4744,7 @@ button {
 
 .countdown-section-wrap {
   position: relative;
-  padding: 64px 0 !important;
+  padding: 60px 0 !important;
   background: #ffffff !important;
   /* Pure white background as requested */
   border-top: 1px solid #e2e8f0;
@@ -4858,7 +4814,7 @@ button {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: clamp(1.85rem, 2.4vw, 2.35rem);
   font-weight: 800;
-  color: #0f172a !important;
+  color: #000000 !important;
   margin: 0;
   line-height: 1.2;
   letter-spacing: -0.5px;
@@ -4879,14 +4835,14 @@ button {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 14.5px;
   line-height: 1.6;
-  color: #475569;
+  color: #000000 !important;
   max-width: 560px;
   margin: 0;
   text-align: left;
 }
 
 .countdown-sub-lead strong {
-  color: #0f172a;
+  color: #000000 !important;
   font-weight: 700;
 }
 
@@ -4956,14 +4912,14 @@ button {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 12.5px;
   font-weight: 800;
-  color: #0f172a;
+  color: #000000 !important;
   line-height: 1.3;
 }
 
 .detail-card-sub {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 11px;
-  color: #64748b;
+  color: #000000 !important;
   font-weight: 600;
   line-height: 1.35;
 }
@@ -5389,19 +5345,20 @@ button {
 .countdown-features-stack {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0px;
   flex: 1;
   justify-content: space-between;
   border: 1.5px dashed black;
   border-radius: 20px;
+  overflow: hidden;
 }
 
 .countdown-feature-box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 7px;
-  padding: 13px 18px;
+  gap: 0px;
+  padding: 13px 18px 0px 18px;
   background: #ffffff !important;
   flex: 1;
   position: relative;
@@ -5496,7 +5453,7 @@ button {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 14px;
   font-weight: 500;
-  color: #0f172a !important;
+  color: #000000 !important;
   margin: 2px 0 2px 0;
   line-height: 1.3;
   letter-spacing: -0.3px;
@@ -5507,7 +5464,7 @@ button {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 12px;
   line-height: 1.45;
-  color: #64748b;
+  color: #000000 !important;
   margin: 0;
 }
 
@@ -5524,7 +5481,7 @@ button {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 10.5px;
   font-weight: 400;
-  color: #334155;
+  color: #000000 !important;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
@@ -5622,7 +5579,7 @@ button {
   }
 }
 
-/* FOLD 3: LIGHT PRIMARY COLOR (Our Legacy Section 3.4 - One Fold Compact) --- */
+/* FOLD 3: LIGHT PRIMARY COLOR (Our Legacy Section 3.4) --- */
 .section-legacy,
 .timeline-section-fullwidth,
 .section-legacy.fold-light-primary,
@@ -5630,55 +5587,60 @@ button {
   background: linear-gradient(180deg, #F0F7FC 0%, #E8F3FA 100%) !important;
   border-top: 1px solid rgba(4, 119, 191, 0.14);
   border-bottom: 1px solid rgba(4, 119, 191, 0.14);
-  padding: 30px 0 20px 0 !important;
-  /* Compact padding for single fold */
+  padding: 60px 0 !important;
+  min-height: auto !important;
+  height: auto !important;
   position: relative;
+  overflow: hidden;
 }
 
 .timeline-header-compact {
-  margin-bottom: 14px !important;
+  margin-bottom: 40px !important;
+  text-align: left !important;
 }
 
-.timeline-section-fullwidth .section-eyebrow {
-  font-size: 10.5px !important;
-  letter-spacing: 1px !important;
-  margin-bottom: 3px !important;
+.timeline-section-fullwidth .section-eyebrow,
+.fold-light-primary .section-eyebrow {
+  font-size: 11px !important;
+  letter-spacing: 1.5px !important;
+  margin-bottom: 5px !important;
   display: inline-block;
-  color: #0477BF !important;
+  color: #000000 !important;
   font-weight: 800;
+  text-align: left !important;
 }
 
-.timeline-section-fullwidth .section-main-title {
-  font-size: clamp(19px, 2.1vw, 24px) !important;
-  line-height: 1.18 !important;
-  margin: 0 0 4px 0 !important;
-  letter-spacing: -0.4px !important;
-  color: #023E73 !important;
-  font-weight: 800;
+.timeline-section-fullwidth .section-main-title,
+.fold-light-primary .section-main-title {
+  font-size: clamp(22px, 2.4vw, 28px) !important;
+  line-height: 1.25 !important;
+  margin: 0 0 6px 0 !important;
+  max-width: 900px !important;
+  letter-spacing: -0.5px !important;
+  color: #000000 !important;
+  font-weight: 900;
+  text-align: left !important;
+}
+
+.timeline-section-fullwidth .title-highlight-blue {
+  color: #0477BF !important;
+  font-weight: 900;
 }
 
 .timeline-section-fullwidth .title-zigzag {
-  margin: 4px auto 5px !important;
-  transform: scale(0.8);
+  margin: 6px 0 10px 0 !important;
+  transform: scale(0.85);
+  transform-origin: left center;
   height: 6px;
 }
 
 .timeline-section-fullwidth .section-desc {
-  font-size: 13px !important;
-  line-height: 1.45 !important;
-  max-width: 680px !important;
-  margin: 0 auto !important;
-  color: #475569 !important;
-}
-
-.fold-light-primary .section-eyebrow {
-  color: #0477BF !important;
-  font-weight: 700;
-}
-
-.fold-light-primary .section-main-title {
-  color: #023E73 !important;
-  font-weight: 800;
+  font-size: 14.5px !important;
+  line-height: 1.55 !important;
+  max-width: 820px !important;
+  margin: 0 0 16px 0 !important;
+  color: #000000 !important;
+  text-align: left !important;
 }
 
 .legacy-split-grid {
@@ -5747,7 +5709,7 @@ button {
 }
 
 .legacy-year {
-  font-family: 'Roboto Slab', Georgia, serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 15px;
   font-weight: 800;
   color: #0477BF !important;
@@ -5760,13 +5722,13 @@ button {
 .legacy-desc strong {
   display: block;
   font-size: 14.5px;
-  color: #023E73 !important;
+  color: #000000 !important;
   margin-bottom: 3px;
 }
 
 .legacy-desc span {
   font-size: 13.5px;
-  color: #4a5e78 !important;
+  color: #000000 !important;
   line-height: 1.45;
 }
 
@@ -5777,182 +5739,453 @@ button {
   }
 }
 
-/* FOLD 4: PRIMARY DARK (Discover / Who Benefits Section 3.5) --------------- */
-.section-benefits.fold-primary-dark,
-.fold-primary-dark {
-  background: linear-gradient(135deg, #023E73 0%, #012b52 50%, #023E73 100%) !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 115px 0 !important;
-  color: #ffffff !important;
+/* ==========================================================================
+   HOMEPAGE SECTION 3.5: AUDIENCE BENEFITS SHOWCASE (Screenshot 2 Slider Layout)
+   ========================================================================== */
+.section-benefits.fold-benefits-staples,
+.fold-benefits-staples {
+  background: linear-gradient(180deg, #EDF7F4 0%, #E6F3EF 100%) !important;
+  border-top: 1px solid rgba(59, 191, 143, 0.22);
+  border-bottom: 1px solid rgba(59, 191, 143, 0.22);
+  padding: 60px 0 !important;
   position: relative;
   overflow: hidden;
 }
 
-.fold-primary-dark::before {
-  content: '';
-  position: absolute;
-  top: -150px;
-  right: -150px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(6, 157, 191, 0.2) 0%, transparent 70%);
-  pointer-events: none;
+.benefits-showcase-container {
+  width: 100%;
+  position: relative;
 }
 
-.fold-primary-dark::after {
-  content: '';
-  position: absolute;
-  bottom: -150px;
-  left: -150px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(59, 191, 143, 0.15) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.fold-primary-dark .section-eyebrow {
-  color: #3BBF8F !important;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.fold-primary-dark .section-main-title {
-  color: #ffffff !important;
-  font-weight: 800;
-}
-
-.fold-primary-dark .title-zigzag {
-  filter: brightness(0) invert(1);
-}
-
-.fold-primary-dark .section-desc-light,
-.fold-primary-dark p.text-muted {
-  color: rgba(255, 255, 255, 0.88) !important;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.fold-primary-dark .column-title {
-  color: #ffffff !important;
-  font-weight: 700;
-}
-
-.audience-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 25px;
-}
-
-.fold-primary-dark .audience-benefit-card {
-  background: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.32) !important;
-  border-radius: 12px;
-  padding: 28px 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* 1. TOP HEADER ROW (Matching Screenshot 2 layout) */
+.benefits-slider-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 32px;
 }
 
-.fold-primary-dark .audience-benefit-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45) !important;
-  border-color: #3BBF8F !important;
+.benefits-header-left {
+  max-width: 720px;
+  text-align: left;
 }
 
-.audience-card-header {
+.benefits-eyebrow-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.benefits-accent-dash {
+  width: 26px;
+  height: 3px;
+  background: #288065;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.benefits-eyebrow-text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #166534 !important;
+}
+
+.benefits-main-title {
+  font-family: 'Inter', sans-serif !important;
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 900;
+  color: #000000 !important;
+  margin: 0 0 10px;
+  letter-spacing: -0.6px;
+  line-height: 1.18;
+}
+
+.title-highlight-teal {
+  color: #0477BF !important;
+  font-weight: 900;
+}
+
+.benefits-sub-desc {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #000000 !important;
+  margin: 0;
+  max-width: 660px;
+}
+
+/* 2. TOP RIGHT CONTROLS: PREV / NEXT ARROWS + VIEW ALL BUTTON (Screenshot 2) */
+.benefits-header-controls {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 20px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid #edf2f7;
+  flex-shrink: 0;
 }
 
-.audience-card-icon {
+.slider-nav-btn {
   width: 44px;
   height: 44px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, rgba(4, 119, 191, 0.12), rgba(6, 157, 191, 0.18));
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #288065;
+  color: #166534;
+  font-size: 19px;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0477BF;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(40, 128, 101, 0.08);
 }
 
-.audience-card-role {
-  font-size: 18px;
-  font-weight: 700;
-  color: #023E73 !important;
-  margin: 0;
+.slider-nav-btn:hover:not(:disabled) {
+  background: #3BBF8F;
+  border-color: #3BBF8F;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(40, 128, 101, 0.25);
 }
 
-.audience-triad-list {
+.slider-nav-btn.is-disabled,
+.slider-nav-btn:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn-view-all-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1.5px solid #288065;
+  color: #166534;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(40, 128, 101, 0.08);
+  white-space: nowrap;
+}
+
+.btn-view-all-top:hover {
+  background: #288065;
+  border-color: #288065;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(40, 128, 101, 0.25);
+}
+
+.btn-view-all-top.is-active {
+  background: #166534;
+  border-color: #166534;
+  color: #ffffff;
+}
+
+.view-all-icon {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+/* 3. SLIDER TRACK & CARDS (Mirroring Screenshot 2 with Discover/Connect/Grow) */
+.benefits-cards-track {
+  width: 100%;
+}
+
+.benefits-cards-track.is-slider-mode {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 8px 4px 26px;
+  margin-bottom: 24px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.benefits-cards-track.is-slider-mode::-webkit-scrollbar {
+  display: none;
+}
+
+.benefits-cards-track.is-grid-mode {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+  padding: 8px 4px 26px;
+  margin-bottom: 24px;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Card Container */
+.benefit-staple-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(4, 119, 191, 0.14);
+  box-shadow: 0 8px 24px rgba(2, 62, 115, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+}
+
+.is-slider-mode .benefit-staple-card {
+  flex: 0 0 355px;
+  width: 355px;
+  scroll-snap-align: start;
+}
+
+.benefit-staple-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(2, 62, 115, 0.14);
+  border-color: #3BBF8F;
+}
+
+/* Top Cover Visual Section */
+.staple-card-cover {
+  position: relative;
+  width: 100%;
+  height: 205px;
+  overflow: hidden;
+  background: #023E73;
+}
+
+.staple-card-img {
+  object-fit: cover;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.benefit-staple-card:hover .staple-card-img {
+  transform: scale(1.06);
+}
+
+/* Scalloped Floating Top-Left Badge (Mirroring Screenshot 2 FROM ₹199) */
+.staple-scallop-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 6px 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.15;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.scallop-badge-sub {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 8.5px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #0477BF;
+  margin-bottom: 2px;
+}
+
+.scallop-badge-value {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13.5px;
+  font-weight: 900;
+  color: #000000 !important;
+}
+
+/* Teal Pill Button on Image Bottom (Mirroring Screenshot 2) */
+.staple-cover-pill {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  z-index: 2;
+  background: linear-gradient(135deg, #069DBF 0%, #3BBF8F 100%);
+  color: #ffffff !important;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+}
+
+.cover-pill-arrow {
+  font-size: 15px;
+  font-weight: 900;
+  transition: transform 0.2s ease;
+}
+
+.benefit-staple-card:hover .cover-pill-arrow {
+  transform: translateX(3px);
+}
+
+/* Card Body Section */
+.staple-card-body {
+  padding: 22px 20px 20px;
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
-.triad-item {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  font-size: 13.5px;
-  line-height: 1.5;
-  color: #334e68 !important;
+.staple-card-title {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 18.5px;
+  font-weight: 800;
+  color: #000000 !important;
+  margin: 0 0 16px;
+  line-height: 1.3;
 }
 
-.triad-badge {
-  font-size: 11px;
+/* Triads Stack */
+.staple-triads-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.staple-triad-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.staple-triad-chip {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 10px;
   font-weight: 800;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.9px;
   text-transform: uppercase;
   padding: 2px 8px;
   border-radius: 4px;
   width: fit-content;
-  margin-bottom: 2px;
+  display: inline-block;
 }
 
-.badge-discover {
-  background: rgba(6, 157, 191, 0.15);
-  color: #069DBF;
+.chip--discover {
+  background: rgba(6, 157, 191, 0.14);
+  color: #0477BF !important;
 }
 
-.badge-connect {
-  background: rgba(4, 119, 191, 0.15);
-  color: #0477BF;
+.chip--connect {
+  background: rgba(4, 119, 191, 0.14);
+  color: #023E73 !important;
 }
 
-.badge-grow {
+.chip--grow {
   background: rgba(59, 191, 143, 0.22);
-  color: #1f855e;
+  color: #166534 !important;
 }
 
-.audience-conclusion-box {
-  margin-top: 45px;
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(59, 191, 143, 0.45) !important;
-  backdrop-filter: blur(12px);
-  border-radius: 14px;
-  padding: 30px 40px;
-  text-align: center;
-  color: #ffffff;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
-}
-
-.conclusion-quote {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: clamp(16px, 2.2vw, 21px);
-  font-weight: 700;
+.staple-triad-text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px;
   line-height: 1.5;
+  color: #000000 !important;
   margin: 0;
+}
+
+/* Card Footer CTA */
+.staple-card-footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.staple-card-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #f0f7fc;
+  border: 1px solid #bae6fd;
+  color: #023E73 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.staple-card-action-btn:hover {
+  background: #0477BF;
+  border-color: #0477BF;
   color: #ffffff !important;
 }
 
-.conclusion-quote span {
-  color: #3BBF8F;
+.action-btn-arrow {
+  font-weight: 800;
+  transition: transform 0.25s ease;
+}
+
+.staple-card-action-btn:hover .action-btn-arrow {
+  transform: translateX(4px);
+  color: #ffffff !important;
+}
+
+/* 4. CONCLUDING HIGHLIGHT QUOTE */
+.benefits-conclusion-card {
+  margin-top: 14px;
+  background: #ffffff;
+  border: 1px solid rgba(59, 191, 143, 0.35);
+  border-radius: 14px;
+  padding: 22px 32px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(40, 128, 101, 0.06);
+}
+
+.benefits-conclusion-quote {
+  font-family: 'Inter', sans-serif !important;
+  font-size: clamp(15px, 1.7vw, 17.5px);
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000 !important;
+  margin: 0;
+}
+
+.benefits-conclusion-quote .highlight-text {
+  color: #166534 !important;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .benefits-slider-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .benefits-header-controls {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .is-slider-mode .benefit-staple-card {
+    flex: 0 0 300px;
+    width: 300px;
+  }
 }
 
 /* ==========================================================================
@@ -6020,7 +6253,7 @@ button {
 .event-duo-title {
   font-size: 20px;
   font-weight: 700;
-  color: #023E73;
+  color: #000000 !important;
   margin-bottom: 12px;
 }
 
@@ -6029,7 +6262,7 @@ button {
   flex-wrap: wrap;
   gap: 15px;
   font-size: 13.5px;
-  color: #64748b;
+  color: #000000 !important;
   margin-bottom: 16px;
 }
 
@@ -6037,12 +6270,13 @@ button {
   display: flex;
   align-items: center;
   gap: 6px;
+  color: #000000 !important;
 }
 
 .event-duo-excerpt {
   font-size: 14.5px;
   line-height: 1.6;
-  color: var(--text-dark);
+  color: #000000 !important;
   margin-bottom: 20px;
   flex: 1;
 }
@@ -6058,7 +6292,7 @@ button {
 
 .event-duo-highlights li {
   font-size: 13px;
-  color: #475569;
+  color: #000000 !important;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -6153,7 +6387,7 @@ button {
   background: linear-gradient(135deg, #023E73 0%, #034b7a 45%, #0477BF 100%) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 85px 0 90px !important;
+  padding: 60px 0 !important;
   color: #ffffff !important;
   overflow: hidden;
 }
@@ -6585,12 +6819,18 @@ button {
 }
 
 /* ==========================================================================
-   TYPOGRAPHY SYSTEM (User Specified 4 Font Pairings)
+   UNIFIED TYPOGRAPHY & SECTION SYSTEM (Master Consistency Spec)
+   1. Global Font Family: Unified 'Inter' everywhere across the entire website
+   2. Global Section Spacing: Uniform 60px top and bottom padding across all sections
+   3. Global Font Color: Solid crisp black (#000000) on all light sections,
+      pure white (#ffffff) on dark backgrounds only
    ========================================================================== */
 
-/* 1. Academic & Authoritative: Merriweather (Headings) + Source Sans 3 (Body)
-   Key Advantage: Excellent for reading heavy text like journal entries and legal dental bylaws. */
+/* 1. UNIFIED FONT FAMILY: INTER FOR ALL ELEMENTS ACROSS THE ENTIRE WEBSITE */
 .font-academic,
+.font-clinical,
+.font-corporate,
+.font-modern,
 .legacy-text-column,
 .legacy-body-text,
 .legacy-quote-highlight,
@@ -6603,32 +6843,7 @@ button {
 .legal-page-body,
 .legal-article,
 .bylaws-content,
-.about-history-content {
-  font-family: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-}
-
-.font-academic h1,
-.font-academic h2,
-.font-academic h3,
-.font-academic h4,
-.legacy-text-column h2,
-.timeline-journey-title,
-.legal__section h2,
-.legal__section h3,
-.legal-page h1,
-.legal-page h2,
-.legal-page h3,
-.legal-page-title,
-.about-history-content h2,
-.about-history-content h3 {
-  font-family: 'Merriweather', Georgia, 'Times New Roman', serif !important;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-
-/* 2. Modern, Institutional & Clean: Inter + Inter (Variable weights)
-   Key Advantage: Highly responsive for interactive elements like member portals and find-a-dentist maps. */
-.font-modern,
+.about-history-content,
 .exhibz-header,
 .exhibz-nav,
 .exhibz-nav__link,
@@ -6653,6 +6868,27 @@ button {
 .bubble-text,
 .badge-name,
 .brand-title,
+.audience-benefit-card,
+.benefit-card,
+.benefit-card__desc,
+.who-benefits-section,
+.visitor-guide-card,
+.clinical-advice-box,
+.patient-facing-note,
+.triad-item,
+.triad-item p,
+.events-duo-grid,
+.event-duo-card,
+.event-card,
+.event-card__body,
+.schedule-table,
+.stall-selection-grid,
+.stall-card,
+.stat-card,
+.ctc-venue-card,
+.event-duo-meta,
+.event-meta-info,
+.stall-spec-table,
 .countdown-section-wrap,
 .countdown-showcase-card,
 .countdown-main-title,
@@ -6676,66 +6912,247 @@ button {
 .odometer-group-label,
 .countdown-features-col,
 .countdown-features-stack,
-.countdown-feature-box {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+.countdown-feature-box,
+.timeline-master-showcase-card,
+.timeline-stage-content-panel,
+.timeline-spotlight-title,
+.timeline-spotlight-text,
+.timeline-stat-chip,
+.timeline-year-pill-btn,
+.legacy-year,
+.timeline-year-badge,
+.countdown-venue-pill strong {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
 }
 
-/* 3. Approachable & Trustworthy: Lora (Headings) + Lato (Body)
-   Key Advantage: Soft, clean serif edges bring an empathetic feel to clinical, patient-facing advice pages. */
-.font-clinical,
-.audience-benefit-card,
-.benefit-card,
-.benefit-card__desc,
-.who-benefits-section,
-.visitor-guide-card,
-.clinical-advice-box,
-.patient-facing-note,
-.triad-item p {
-  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-}
-
+/* Headings across all typography modules unified to Inter */
+.font-academic h1,
+.font-academic h2,
+.font-academic h3,
+.font-academic h4,
 .font-clinical h1,
 .font-clinical h2,
 .font-clinical h3,
 .font-clinical h4,
-.audience-card-role,
-.benefit-card__title,
-.who-benefits-heading,
-.visitor-guide-title {
-  font-family: 'Lora', Georgia, 'Times New Roman', serif !important;
-  font-weight: 600;
-}
-
-/* 4. Structured & Corporate: Roboto Slab (Headings) + Roboto (Body)
-   Key Advantage: Highly legible at very small sizes inside data tables, event calendars, and board directories. */
-.font-corporate,
-.events-duo-grid,
-.event-duo-card,
-.event-card,
-.event-card__body,
-.schedule-table,
-.stall-selection-grid,
-.stall-card,
-.stat-card,
-.ctc-venue-card,
-.event-duo-meta,
-.event-meta-info,
-.stall-spec-table {
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-}
-
 .font-corporate h1,
 .font-corporate h2,
 .font-corporate h3,
 .font-corporate h4,
+.font-modern h1,
+.font-modern h2,
+.font-modern h3,
+.font-modern h4,
+.legacy-text-column h2,
+.timeline-journey-title,
+.legal__section h2,
+.legal__section h3,
+.legal-page h1,
+.legal-page h2,
+.legal-page h3,
+.legal-page-title,
+.about-history-content h2,
+.about-history-content h3,
+.audience-card-role,
+.benefit-card__title,
+.who-benefits-heading,
+.visitor-guide-title,
 .event-duo-title,
 .event-card__title,
 .stall-title,
 .stat-card__number,
-.ctc-title,
-.countdown-venue-pill strong,
-.timeline-year-badge,
-.legacy-year {
-  font-family: 'Roboto Slab', Georgia, serif !important;
+.ctc-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
   font-weight: 700;
+}
+
+/* 2. UNIVERSAL SECTION PADDING (Exactly 60px top & bottom across the entire website) */
+.section,
+section:not(.hero-area),
+.countdown-section-wrap,
+.section-legacy,
+.timeline-section-fullwidth,
+.section-benefits,
+.fold-benefits-staples,
+.section-benefits.fold-primary-dark,
+.fold-primary-dark,
+.section-events,
+.section-gallery,
+.fold-light-primary,
+.cta-full-section,
+.ts-intro,
+.ts-schedule,
+.upcoming-events-section,
+.home-gallery-section,
+.home-sponsors-section,
+.exhibz-cta {
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+
+/* 3. UNIVERSAL FONT COLOR SYSTEM */
+/* A. LIGHT SECTIONS: FONT COLOR MUST BE SOLID CRISP BLACK */
+body,
+#main,
+.fold-white,
+.section-legacy,
+.timeline-section-fullwidth,
+.section-events,
+.section-gallery,
+.fold-light-primary,
+.fold-benefits-staples,
+.bg-light,
+.countdown-section-wrap,
+.ts-intro,
+.ts-schedule,
+.upcoming-events-section,
+.home-gallery-section,
+.home-sponsors-section {
+  color: #000000 !important;
+}
+
+/* Headings in Light / Default Sections: Solid Black */
+.section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) h1,
+.section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) h2,
+.section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) h3,
+.section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) h4,
+.section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) h5,
+.section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) h6,
+.section-main-title:not(.text-white),
+.column-title:not(.text-white),
+.countdown-main-title,
+.event-duo-title,
+.event-card__title,
+.feature-box-body h4,
+.detail-card-title,
+.timeline-spotlight-title,
+.timeline-spotlight-tagline,
+.stage-host-year-callout,
+.gallery-card-footer__title,
+.contact-card__val,
+.stat-card__number,
+.stall-title,
+.ctc-title,
+.single-intro-text .ts-title,
+.schedule-slot-title {
+  color: #000000 !important;
+}
+
+/* Eyebrows & Metadata in Light Sections: Solid Black */
+.section-eyebrow:not(.text-mint),
+.column-eyebrow,
+.event-duo-meta,
+.event-duo-meta li,
+.event-duo-highlights li,
+.meta li,
+.detail-card-sub,
+.timeline-stat-text .stat-sub,
+.stage-host-label {
+  color: #000000 !important;
+}
+
+/* Paragraphs & Body Descriptions in Light Sections: Solid Black */
+.section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) p,
+.fold-white p,
+.section-desc,
+.countdown-sub-lead,
+.event-duo-excerpt,
+.timeline-spotlight-text,
+.feature-box-body p,
+.feature-pill,
+.text-muted,
+.about-article p,
+.legacy-body-text,
+.timeline-highlight-pill {
+  color: #000000 !important;
+}
+
+/* B. DARK BACKGROUND SECTIONS: FONT COLOR WHITE ONLY */
+.fold-dark,
+.hero-area,
+.banner-item,
+.fold-primary-dark,
+.section-benefits.fold-primary-dark,
+.cta-full-section,
+.footer,
+.page-banner,
+.exhibz-cta,
+.ts-experiences,
+.bg-dark {
+  color: #ffffff !important;
+}
+
+.fold-dark h1,
+.fold-dark h2,
+.fold-dark h3,
+.fold-dark h4,
+.hero-area h1,
+.hero-area h2,
+.hero-area h3,
+.hero-area h4,
+.banner-title,
+.fold-primary-dark h1,
+.fold-primary-dark h2,
+.fold-primary-dark h3,
+.fold-primary-dark h4,
+.fold-primary-dark .section-main-title,
+.fold-primary-dark .column-title,
+.cta-full-title,
+.page-banner__title,
+.footer-giant-brand-text,
+.footer-col-title {
+  color: #ffffff !important;
+}
+
+.hero-description,
+.hero-subquote-text,
+.fold-primary-dark .section-desc-light,
+.fold-primary-dark p.text-muted,
+.conclusion-quote,
+.cta-role-item,
+.page-banner__sub,
+.footer-brand-bio,
+.footer-bottom-address,
+.footer-bottom-copyright {
+  color: #ffffff !important;
+}
+
+/* C. WHITE CARDS INSIDE DARK SECTIONS: MAINTAIN SOLID BLACK TEXT */
+.fold-primary-dark .audience-benefit-card,
+.audience-benefit-card {
+  background: #ffffff !important;
+}
+
+.audience-benefit-card .audience-card-role,
+.fold-primary-dark .audience-card-role {
+  color: #000000 !important;
+}
+
+.audience-benefit-card .triad-item,
+.audience-benefit-card .triad-item p,
+.fold-primary-dark .triad-item,
+.fold-primary-dark .triad-item p {
+  color: #000000 !important;
+}
+
+/* D. BRAND ACCENT HIGHLIGHTS (Retained for visual polish) */
+.title-highlight-royal,
+.title-highlight-blue,
+.pill-sparkle-blue,
+.timeline-spotlight-year,
+.feature-pill .pill-sparkle {
+  color: #0477BF !important;
+}
+
+.title-gradient-year,
+.text-mint,
+.fold-primary-dark .section-eyebrow,
+.conclusion-quote span,
+.role-highlight--exhibitor,
+.timer-header-title,
+.mini-sub-label {
+  color: #3BBF8F !important;
+}
+
+.role-highlight--visitor {
+  color: #069DBF !important;
 }

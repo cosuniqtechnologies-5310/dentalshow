@@ -4,6 +4,7 @@ import Countdown from "@/components/Countdown";
 import BeaverMascot from "@/components/BeaverMascot";
 import Icon from "@/components/Icon";
 import InteractiveTimeline from "@/components/InteractiveTimeline";
+import AudienceBenefitsSlider from "@/components/AudienceBenefitsSlider";
 import { site } from "@/data/site";
 import { events } from "@/data/events";
 import { galleryItems } from "@/data/gallery";
@@ -12,44 +13,6 @@ export default function HomePage() {
   const upcomingEvent = events.find((e) => e.status === "Upcoming") || events[0];
   const pastEvent = events.find((e) => e.status === "Past") || events[1];
   const galleryPreview = galleryItems.slice(0, 6);
-
-  const audienceGroups = [
-    {
-      role: "For Dentists",
-      icon: "star",
-      discover: "Explore the latest dental technologies, equipment, materials and clinical solutions.",
-      connect: "Meet manufacturers, dealers and industry experts.",
-      grow: "Find innovative solutions to enhance your practice and patient care.",
-    },
-    {
-      role: "For Dental Students & Aspiring Dentists",
-      icon: "users",
-      discover: "Experience emerging technologies and advancements in modern dentistry.",
-      connect: "Interact with industry professionals and learn about the evolving dental landscape.",
-      grow: "Gain inspiration and insights to prepare for a successful dental career.",
-    },
-    {
-      role: "For Dental Dealers & Traders",
-      icon: "pin",
-      discover: "Explore new products, brands and business opportunities.",
-      connect: "Build relationships with manufacturers, suppliers and fellow traders.",
-      grow: "Expand your network, strengthen your market presence and discover new avenues for business growth.",
-    },
-    {
-      role: "For Manufacturers & Brands",
-      icon: "sparkle",
-      discover: "Understand market needs and emerging industry trends.",
-      connect: "Engage directly with dentists, dealers, institutions and potential business partners.",
-      grow: "Showcase innovations, strengthen brand visibility and expand your market reach.",
-    },
-    {
-      role: "For Dental Technicians, Laboratories & Institutions",
-      icon: "check",
-      discover: "Explore advanced equipment, materials and workflow solutions.",
-      connect: "Meet suppliers, manufacturers and professionals across the dental ecosystem.",
-      grow: "Identify technologies and partnerships that can improve capabilities and support future development.",
-    },
-  ];
 
   return (
     <>
@@ -317,13 +280,13 @@ export default function HomePage() {
           ============================================================ */}
       <section className="section section-legacy font-modern timeline-section-fullwidth" id="legacy">
         <div className="container-fluid timeline-container-fluid">
-          <div className="text-center timeline-header-compact">
-            <span className="section-eyebrow">OUR LEGACY & TWO DECADE JOURNEY</span>
+          <div className="timeline-header-compact text-left">
+            <span className="section-eyebrow">OUR LEGACY &amp; TWO DECADE JOURNEY</span>
             <h2 className="section-main-title">
-              A vision born around 2000. A milestone achieved in 2005. A future shaped by innovation.
+              Two Decades of Legacy. A Future Shaped by <span className="title-highlight-blue">Innovation</span>.
             </h2>
             <div className="title-zigzag" />
-            <p className="max-w-700 mx-auto section-desc">
+            <p className="section-desc">
               From the initial trade vision committee around 2000 to South India’s largest dental showcase
               in 2027. Explore our continuous progression across two decades of clinical and trade leadership.
             </p>
@@ -336,62 +299,11 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          SECTION 3.5: DISCOVER. CONNECT. GROW. (Section 4: Primary Dark Fold)
+          SECTION 3.5: DISCOVER. CONNECT. GROW. (Screenshot 2 Slider Layout)
           ============================================================ */}
-      <section className="section section-benefits font-clinical fold-primary-dark" id="benefits">
+      <section className="section section-benefits font-modern fold-benefits-staples" id="benefits">
         <div className="container">
-          <div className="text-center mb-50">
-            <span className="section-eyebrow text-mint">ONE PLATFORM. MULTIPLE OPPORTUNITIES.</span>
-            <h2 className="section-main-title text-white">Discover. Connect. Grow.</h2>
-            <div className="title-zigzag" />
-            <p className="max-w-700 mx-auto section-desc-light">
-              A stronger future for the entire dental community. Dental Show 2027 brings together the
-              people, products and possibilities shaping the future of dentistry. Whether you are a
-              dentist exploring better clinical solutions, a student aspiring to excel, a dealer
-              looking to grow, or a manufacturer ready to expand your reach, there is something here
-              for you.
-            </p>
-            <h3 className="column-title text-white mt-md">Who Benefits from Dental Show?</h3>
-          </div>
-
-          {/* 5 Audience Cards */}
-          <div className="audience-cards-grid">
-            {audienceGroups.map((group, idx) => (
-              <div key={group.role} className="audience-benefit-card pop-in" style={{ animationDelay: `${idx * 80}ms` }}>
-                <div className="audience-card-header">
-                  <div className="audience-card-icon">
-                    <Icon name={group.icon} size={22} />
-                  </div>
-                  <h4 className="audience-card-role">{group.role}</h4>
-                </div>
-
-                <div className="audience-triad-list">
-                  <div className="triad-item">
-                    <span className="triad-badge badge-discover">Discover</span>
-                    <p>{group.discover}</p>
-                  </div>
-
-                  <div className="triad-item">
-                    <span className="triad-badge badge-connect">Connect</span>
-                    <p>{group.connect}</p>
-                  </div>
-
-                  <div className="triad-item">
-                    <span className="triad-badge badge-grow">Grow</span>
-                    <p>{group.grow}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Concluding Highlight Quote */}
-          <div className="audience-conclusion-box">
-            <p className="conclusion-quote">
-              “At Dental Show 2027, every connection can spark an idea, every discovery can open a door,
-              and <span>every opportunity can move dentistry forward</span>.”
-            </p>
-          </div>
+          <AudienceBenefitsSlider />
         </div>
       </section>
 

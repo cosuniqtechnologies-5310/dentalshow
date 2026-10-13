@@ -145,45 +145,39 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
       role="region"
       aria-label="Two Decades Timeline"
     >
-      {/* 1. TOP MAIN SHOWCASE: LEFT MASCOT ANIMAL + RIGHT ACTIVE YEAR SPECIAL */}
-      <div className="timeline-showcase-grid">
-        {/* Left Column: Mascot Guide Character */}
-        <div className="timeline-mascot-col">
-          <div className="timeline-mascot-card">
-            {/* Dynamic speech bubble matching active milestone */}
-            <div className="timeline-mascot-bubble" key={`bubble-${activeMilestone.year}`}>
-              <div className="mascot-bubble-kicker">
-                <span className="live-pulse-dot" aria-hidden="true" />
-                <span>MILESTONE GUIDE</span>
-              </div>
-              <p className="mascot-bubble-title">{activeMilestone.year}</p>
-              <span className="mascot-bubble-sub">{activeMilestone.tabLabel}</span>
-              <div className="mascot-bubble-tail" aria-hidden="true" />
+      {/* 1. UNIFIED PANORAMIC MASTER STAGE */}
+      <div className="timeline-master-showcase-card">
+        {/* Left Stage: Mascot Exhibition Guide & Podium */}
+        <div className="timeline-stage-host-alcove">
+          <div className="stage-host-header" key={`host-kicker-${activeMilestone.year}`}>
+            <div className="stage-host-badge">
+              <span className="live-pulse-dot" aria-hidden="true" />
+              <span>EXHIBITION GUIDE</span>
             </div>
+            <div className="stage-host-year-callout">{activeMilestone.year}</div>
+            <span className="stage-host-label">{activeMilestone.tabLabel}</span>
+          </div>
 
-            {/* Mascot Character Image */}
-            <div className="timeline-mascot-art-wrap">
-              <Image
-                src="/images/friendly-beaver-dentist-mascot.png"
-                alt="Dental Show Mascot Guide"
-                width={220}
-                height={310}
-                priority
-                className="timeline-mascot-img"
-              />
-            </div>
+          <div className="stage-host-podium-wrap">
+            <div className="stage-host-glow-ring" aria-hidden="true" />
+            <Image
+              src="/images/friendly-beaver-dentist-mascot.png"
+              alt="Dental Show Mascot Guide"
+              width={200}
+              height={260}
+              priority
+              className="stage-host-mascot-img"
+            />
+          </div>
 
-            {/* Mascot Pill Badge Underneath */}
-            <div className="timeline-mascot-status-pill">
-              <span className="mascot-status-dot" aria-hidden="true" />
-              <span>Two Decades of Dental Excellence</span>
-            </div>
+          <div className="stage-host-footer-pill">
+            <span className="host-dot-blue" aria-hidden="true" />
+            <span>Official Expo Milestone</span>
           </div>
         </div>
 
-        {/* Right Column: Active Year Special Milestone Card */}
-        <div className="timeline-content-col">
-          <div className="timeline-spotlight-card" key={activeMilestone.year}>
+        {/* Right Panel: Executive Milestone Showcase */}
+        <div className="timeline-stage-content-panel" key={activeMilestone.year}>
             <div className="timeline-spotlight-top">
               <div className="timeline-milestone-pill-wrap">
                 <span className="timeline-milestone-pill">
@@ -253,19 +247,18 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
               <div className="timeline-highlight-pills">
                 {activeMilestone.highlights?.map((h, i) => (
                   <span key={i} className="timeline-highlight-pill">
-                    ✦ {h}
+                    <span className="pill-sparkle-blue">✦</span> {h}
                   </span>
                 ))}
               </div>
             </div>
 
-            {/* Continuous Autoplay Progress Bar */}
-            <div className="timeline-progress-track">
-              <div
-                className="timeline-progress-fill"
-                style={{ width: `${progress}%` }}
-              />
-            </div>
+          {/* Continuous Autoplay Progress Bar */}
+          <div className="timeline-progress-track">
+            <div
+              className="timeline-progress-fill"
+              style={{ width: `${progress}%` }}
+            />
           </div>
         </div>
       </div>
@@ -299,7 +292,6 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
                   title={`${m.year}: ${m.title}`}
                 >
                   <span className="year-pill-number">{m.shortYear || m.year}</span>
-                  <span className="year-pill-label">{m.tabLabel}</span>
                 </button>
               );
             })}
