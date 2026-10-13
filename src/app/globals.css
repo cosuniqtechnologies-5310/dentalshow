@@ -7090,9 +7090,11 @@ button {
   scroll-snap-align: start;
 }
 
-/* First card starts at the exact left margin of the title above */
+/* First card starts at the exact left margin of the title above.
+   Container is min(1200px, 100% - 40px) centered, so left offset = (100vw - 1200px)/2 + 20px.
+   We cap the lower bound at 20px (the container gutter) so it never over-retracts on small screens. */
 .is-slider-mode .benefit-staple-card:first-child {
-  margin-left: max(20px, calc((100vw - 1200px) / 2));
+  margin-left: max(20px, calc((100vw - 1200px) / 2 + 20px));
 }
 
 @media (max-width: 1080px) {
@@ -9570,4 +9572,378 @@ body,
 
 .role-highlight--visitor {
   color: #069DBF !important;
+}
+
+/* ==========================================================================
+   GLOBAL DESIGN SYSTEM — MASTER THEME STANDARDIZATION
+   Enforced at the very end of the file so it overrides everything above.
+
+   Rules:
+   1. THREE title sizes only: H1 hero, H2 section, H3 card/sub
+   2. ONE paragraph / body-copy size: 15px / 400 weight
+   3. Font-weight: 600 ONLY for titles. 400 for everything else.
+   4. Buttons: all the exact same size.
+      Primary = green (#288065). Secondary = white on dark / black on light.
+   5. Section padding: 72px top & bottom (44px mobile).
+   6. Grid/column gap: 24px everywhere.
+   ========================================================================== */
+
+/* ── CSS DESIGN TOKENS ─────────────────────────────────────────────────────── */
+:root {
+  --title-h1: clamp(2.4rem, 4vw, 3.2rem);
+  --title-h2: clamp(1.85rem, 2.8vw, 2.35rem);
+  --title-h3: 18px;
+  --para-size: 15px;
+  --para-lh: 1.65;
+  --section-pad: 72px;
+  --grid-gap: 24px;
+  --btn-height: 46px;
+  --btn-pad: 0 24px;
+  --btn-radius: 8px;
+  --btn-fsize: 14px;
+  --clr-primary: #288065;
+  --clr-primary-hover: #1d6b55;
+}
+
+/* ── 1. H1 — HERO / BANNER TITLE ───────────────────────────────────────────── */
+.banner-title {
+  font-size: var(--title-h1) !important;
+  font-weight: 600 !important;
+  line-height: 1.15 !important;
+}
+
+/* ── 2. H2 — ALL SECTION MAIN TITLES (same size everywhere) ────────────────── */
+.section-main-title,
+.countdown-main-title,
+.benefits-main-title,
+.events-main-title,
+.gallery-title-styled,
+.cta-full-title,
+.redirect-card-title,
+.registration-showcase-title,
+.events-page-title {
+  font-size: var(--title-h2) !important;
+  font-weight: 600 !important;
+  line-height: 1.22 !important;
+}
+
+/* ── 3. H3 — CARD TITLES & SUB-HEADINGS ────────────────────────────────────── */
+.staple-card-title,
+.timeline-spotlight-title,
+.panorama-banner-title,
+.hover-photo-title,
+.gallery-card-footer__title,
+.benefit-card__title,
+.track-card-heading,
+.cta-eyebrow-chip span {
+  font-size: var(--title-h3) !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+}
+
+/* ── 4. PARAGRAPH / BODY COPY — uniform 15px / 400 everywhere ──────────────── */
+p,
+.hero-description,
+.hero-subquote-text,
+.countdown-sub-lead,
+.benefits-sub-desc,
+.events-sub-desc,
+.gallery-lead-desc,
+.cta-full-desc,
+.cta-lead-subtitle,
+.staple-triad-text,
+.timeline-spotlight-text,
+.panorama-banner-excerpt,
+.panorama-banner-desc,
+.section-desc,
+.redirect-card-desc,
+.track-card-desc,
+.gallery-lead-desc,
+.section-desc {
+  font-size: var(--para-size) !important;
+  font-weight: 400 !important;
+  line-height: var(--para-lh) !important;
+}
+
+/* ── 5. KILL HEAVY WEIGHTS GLOBALLY (non-titles) ────────────────────────────── */
+.hero-tagline-pill,
+.hero-kicker-pill,
+.hero-trust-chips,
+.trust-chip,
+.bottom-overlay-pill,
+.countdown-badge-pill,
+.detail-card-title,
+.detail-card-sub,
+.countdown-sub-lead strong,
+.section-eyebrow,
+.benefits-eyebrow-text,
+.events-eyebrow-text,
+.gallery-accent-dash,
+.gallery-filter-tab,
+.gallery-filter-pill,
+.gallery-tab-count,
+.gallery-pill-count,
+.cta-trust-chip,
+.track-badge,
+.track-perk-pill,
+.cta-mascot-pill,
+.feature-pill,
+.feature-box-badge,
+.events-eyebrow-text,
+.panorama-badge-pill span,
+.hover-category-badge,
+.hover-year-pill,
+.ambient-badge-year,
+.scallop-badge-sub,
+.scallop-badge-value,
+.staple-cover-pill,
+.cover-pill-arrow,
+.staple-triad-chip,
+.benefits-conclusion-quote,
+.exhibz-nav__link,
+.footer-col-title,
+.year-pill-btn,
+.cat-pill-btn,
+.portal-badge-pill,
+.badge-option-name,
+.stall-title,
+.filter-label,
+.timer-header-title,
+.odometer-group-label,
+.mini-sub-label {
+  font-weight: 400 !important;
+}
+
+/* Section-eyebrow labels stay uppercase but 400 weight */
+.section-eyebrow,
+.benefits-eyebrow-text,
+.events-eyebrow-text,
+.gallery-eyebrow-wrapper span {
+  font-weight: 400 !important;
+}
+
+/* Badge / chip labels: keep 400 */
+.feature-box-badge,
+.staple-triad-chip,
+.track-badge,
+.hover-category-badge {
+  font-weight: 400 !important;
+  letter-spacing: 0.5px;
+}
+
+/* ── 6. UNIVERSAL BUTTON SIZE ──────────────────────────────────────────────── */
+/* All button variants share the exact same height, padding, font-size, radius */
+.btn,
+.btn-hero-visitor,
+.btn-hero-exhibitor,
+.btn-countdown-primary,
+.btn-countdown-secondary,
+.btn-header-visitor,
+.btn-header-exhibitor,
+.cta-track-btn,
+.cta-track-btn--visitor,
+.cta-track-btn--exhibitor,
+.btn-gallery-explore-all,
+.btn-events-view-all,
+.btn-view-all-top,
+.btn-large-redirect,
+#hero-visitor-btn,
+#hero-exhibitor-btn,
+#countdown-register-btn,
+#countdown-exhibitor-btn,
+#cta-visitor-register-btn,
+#cta-exhibitor-register-btn,
+#btn-header-gallery,
+#btn-events-view-all-top {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: var(--btn-height) !important;
+  min-height: var(--btn-height) !important;
+  padding: var(--btn-pad) !important;
+  font-size: var(--btn-fsize) !important;
+  font-weight: 400 !important;
+  border-radius: var(--btn-radius) !important;
+  text-decoration: none !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  gap: 8px !important;
+  transition: all 0.25s ease !important;
+}
+
+/* ── 7. PRIMARY BUTTON — GREEN ─────────────────────────────────────────────── */
+.btn-hero-visitor,
+#hero-visitor-btn,
+.btn-countdown-primary,
+#countdown-register-btn,
+.btn-header-visitor,
+#cta-visitor-register-btn {
+  background: var(--clr-primary) !important;
+  color: #ffffff !important;
+  border: 1.5px solid var(--clr-primary) !important;
+  box-shadow: 0 4px 14px rgba(40, 128, 101, 0.32) !important;
+}
+
+.btn-hero-visitor:hover,
+#hero-visitor-btn:hover,
+.btn-countdown-primary:hover,
+#countdown-register-btn:hover,
+.btn-header-visitor:hover,
+#cta-visitor-register-btn:hover {
+  background: var(--clr-primary-hover) !important;
+  border-color: var(--clr-primary-hover) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 22px rgba(40, 128, 101, 0.42) !important;
+}
+
+/* ── 8a. SECONDARY — DARK SECTIONS → WHITE BUTTON ──────────────────────────── */
+.btn-hero-exhibitor,
+#hero-exhibitor-btn,
+.cta-track-btn--visitor,
+.cta-track-btn--exhibitor,
+#cta-exhibitor-register-btn {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1.5px solid #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18) !important;
+}
+
+.btn-hero-exhibitor:hover,
+#hero-exhibitor-btn:hover,
+.cta-track-btn--visitor:hover,
+.cta-track-btn--exhibitor:hover,
+#cta-exhibitor-register-btn:hover {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #f1f5f9 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28) !important;
+}
+
+/* ── 8b. SECONDARY — LIGHT SECTIONS → BLACK BUTTON ─────────────────────────── */
+.btn-countdown-secondary,
+#countdown-exhibitor-btn,
+.btn-header-exhibitor,
+.btn-gallery-explore-all,
+.btn-events-view-all,
+.btn-view-all-top,
+#btn-header-gallery,
+#btn-events-view-all-top {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border: 1.5px solid #0f172a !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16) !important;
+}
+
+.btn-countdown-secondary:hover,
+#countdown-exhibitor-btn:hover,
+.btn-header-exhibitor:hover,
+.btn-gallery-explore-all:hover,
+.btn-events-view-all:hover,
+.btn-view-all-top:hover,
+#btn-header-gallery:hover,
+#btn-events-view-all-top:hover {
+  background: #1e293b !important;
+  border-color: #1e293b !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28) !important;
+}
+
+/* Fix colours for elements inside buttons that override text color */
+.btn-hero-exhibitor *,
+#hero-exhibitor-btn * { color: inherit !important; }
+.btn-countdown-secondary *,
+#countdown-exhibitor-btn * { color: inherit !important; }
+
+/* Buttons that were previously pill/rounded — flatten to rectangular 8px */
+.btn-events-view-all,
+.btn-view-all-top,
+.btn-gallery-explore-all {
+  border-radius: var(--btn-radius) !important;
+}
+
+/* Override the countdown flex-1 width rule so buttons are natural width again */
+.btn-countdown-primary,
+.btn-countdown-secondary,
+#countdown-register-btn,
+#countdown-exhibitor-btn {
+  flex: 0 0 auto !important;
+  width: auto !important;
+}
+
+/* ── 9. UNIFORM SECTION PADDING ─────────────────────────────────────────────── */
+.hero-area .banner-item,
+.countdown-section-wrap,
+.timeline-section-fullwidth,
+.fold-benefits-staples,
+.section-benefits,
+.fold-events-boutiques,
+.section-events,
+.fold-light-primary,
+.section-gallery,
+.cta-full-section,
+.section-legacy {
+  padding-top: var(--section-pad) !important;
+  padding-bottom: var(--section-pad) !important;
+}
+
+/* ── 10. UNIFORM COLUMN / GRID GAPS ─────────────────────────────────────────── */
+.countdown-2col-grid,
+.cta-section-grid,
+.cta-cards-duo,
+.benefits-cards-track.is-grid-mode,
+.events-banners-stack,
+.gallery-hierarchical-grid,
+.badge-selection-grid,
+.stall-selection-grid {
+  gap: var(--grid-gap) !important;
+}
+
+/* ── MOBILE OVERRIDES ────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-area .banner-item,
+  .countdown-section-wrap,
+  .timeline-section-fullwidth,
+  .fold-benefits-staples,
+  .section-benefits,
+  .fold-events-boutiques,
+  .section-events,
+  .fold-light-primary,
+  .section-gallery,
+  .cta-full-section,
+  .section-legacy {
+    padding-top: 44px !important;
+    padding-bottom: 44px !important;
+  }
+
+  /* Stack countdown 2-col on mobile */
+  .countdown-2col-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Stack CTA grid on mobile */
+  .cta-section-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Stack CTA duo on mobile */
+  .cta-cards-duo {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Buttons: allow wrapping on mobile, full width where needed */
+  .hero-cta-buttons {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .hero-cta-buttons .btn-hero-visitor,
+  .hero-cta-buttons .btn-hero-exhibitor {
+    width: 100% !important;
+    justify-content: center !important;
+  }
 }
