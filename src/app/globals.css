@@ -634,18 +634,16 @@ button {
   position: absolute;
   inset: 0;
   background-image:
-    /* Bright cyan spotlight behind mascot on right */
-    radial-gradient(circle at 82% 42%, rgba(6, 157, 191, 0.7) 0%, rgba(59, 191, 143, 0.35) 32%, transparent 65%),
     /* Luminous cerulean glow behind headline on left */
-    radial-gradient(circle at 18% 22%, rgba(6, 157, 191, 0.5) 0%, rgba(4, 119, 191, 0.25) 45%, transparent 70%),
+    radial-gradient(circle at 18% 22%, rgba(6, 157, 191, 0.45) 0%, rgba(4, 119, 191, 0.22) 45%, transparent 70%),
     /* Mint accent ambient glow at bottom left */
-    radial-gradient(circle at 35% 88%, rgba(59, 191, 143, 0.3) 0%, transparent 55%),
+    radial-gradient(circle at 35% 88%, rgba(59, 191, 143, 0.25) 0%, transparent 55%),
     /* Angled luminous shine beam */
-    linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.09) 48%, rgba(6, 157, 191, 0.22) 54%, transparent 65%),
+    linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, 0.09) 48%, rgba(6, 157, 191, 0.20) 54%, transparent 65%),
     /* Premium high-tech dental exhibition micro-grid */
     radial-gradient(rgba(255, 255, 255, 0.14) 1.2px, transparent 1.2px);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 34px 34px;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+  background-size: 100% 100%, 100% 100%, 100% 100%, 34px 34px;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
   z-index: 1;
   pointer-events: none;
 }
@@ -5142,20 +5140,21 @@ button {
   z-index: 2;
 }
 
-/* Radiant circular gradient spotlight directly behind the animal character body */
+/* Radiant green radial gradient spotlight directly behind the animal character body */
 .mascot-character-core::before {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 380px;
-  height: 380px;
-  background: radial-gradient(circle,
-      rgba(6, 157, 191, 0.75) 0%,
-      rgba(59, 191, 143, 0.45) 32%,
-      transparent 70%);
-  border-radius: 50%;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle at 50% 50%,
+      rgba(59, 191, 143, 0.75) 0%,
+      rgba(59, 191, 143, 0.45) 30%,
+      rgba(6, 157, 191, 0.20) 60%,
+      transparent 85%);
+  filter: blur(20px);
   pointer-events: none;
   z-index: -1;
 }
@@ -5165,31 +5164,31 @@ button {
   height: auto;
   display: block;
   object-fit: contain;
-  filter: drop-shadow(0 15px 35px rgba(2, 62, 115, 0.45)) drop-shadow(0 0 30px rgba(6, 157, 191, 0.35));
+  filter: drop-shadow(0 15px 35px rgba(2, 62, 115, 0.45)) drop-shadow(0 0 30px rgba(59, 191, 143, 0.35));
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
 }
 
 .beaver-mascot-wrapper:hover .mascot-cutout-img {
   transform: scale(1.02);
-  filter: drop-shadow(0 22px 45px rgba(2, 62, 115, 0.55)) drop-shadow(0 0 35px rgba(59, 191, 143, 0.4));
+  filter: drop-shadow(0 22px 45px rgba(2, 62, 115, 0.55)) drop-shadow(0 0 35px rgba(59, 191, 143, 0.5));
 }
 
 .mascot-ambient-aura {
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   background: radial-gradient(circle at 50% 50%,
-      rgba(6, 157, 191, 0.85) 0%,
-      rgba(59, 191, 143, 0.60) 24%,
-      rgba(4, 119, 191, 0.32) 48%,
-      rgba(2, 62, 115, 0.12) 66%,
-      transparent 78%);
+      rgba(59, 191, 143, 0.70) 0%,
+      rgba(59, 191, 143, 0.45) 25%,
+      rgba(6, 157, 191, 0.25) 50%,
+      rgba(6, 157, 191, 0.08) 70%,
+      transparent 90%);
   pointer-events: none;
   z-index: 1;
-  border-radius: 50%;
+  filter: blur(28px);
   animation: auraGlowPulse 5s ease-in-out infinite;
 }
 
@@ -8562,17 +8561,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
 }
 
 .cta-mascot-glow-ring {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 380px;
-  height: 380px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(59, 191, 143, 0.3) 0%, rgba(4, 119, 191, 0.2) 42%, transparent 70%);
-  filter: blur(24px);
-  pointer-events: none;
-  z-index: 1;
+  display: none;
 }
 
 .cta-mascot-card .mascot-ambient-aura {
@@ -8580,17 +8569,17 @@ section .event-panorama-banner .panorama-banner-excerpt,
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 520px;
-  height: 520px;
+  width: 600px;
+  height: 600px;
   background: radial-gradient(circle at 50% 50%,
-    rgba(6, 157, 191, 0.85) 0%,
-    rgba(59, 191, 143, 0.60) 24%,
-    rgba(4, 119, 191, 0.32) 48%,
-    rgba(2, 62, 115, 0.12) 66%,
-    transparent 78%);
+      rgba(59, 191, 143, 0.70) 0%,
+      rgba(59, 191, 143, 0.45) 25%,
+      rgba(6, 157, 191, 0.25) 50%,
+      rgba(6, 157, 191, 0.08) 70%,
+      transparent 90%);
   pointer-events: none;
   z-index: 1;
-  border-radius: 50%;
+  filter: blur(28px);
   animation: auraGlowPulse 5s ease-in-out infinite;
 }
 
@@ -8614,20 +8603,21 @@ section .event-panorama-banner .panorama-banner-excerpt,
   transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* Radiant circular gradient spotlight directly behind the animal character body */
+/* Radiant green radial gradient spotlight directly behind the animal character body */
 .cta-mascot-img-wrap::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 380px;
-  height: 380px;
-  background: radial-gradient(circle,
-    rgba(6, 157, 191, 0.75) 0%,
-    rgba(59, 191, 143, 0.45) 32%,
-    transparent 70%);
-  border-radius: 50%;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle at 50% 50%,
+      rgba(59, 191, 143, 0.75) 0%,
+      rgba(59, 191, 143, 0.45) 30%,
+      rgba(6, 157, 191, 0.20) 60%,
+      transparent 85%);
+  filter: blur(20px);
   pointer-events: none;
   z-index: -1;
 }
