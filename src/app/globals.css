@@ -4648,7 +4648,7 @@ button {
 }
 
 .timeline-progress-track {
-  height: 3px;
+  height: 1.5px;
   background: #e2e8f0;
   width: calc(100% + 68px);
   margin: 0 -34px;
@@ -4684,7 +4684,7 @@ button {
   left: 50%;
   width: 100vw;
   transform: translate(-50%, -50%);
-  height: 2px;
+  height: 1px;
   background: #cbd5e1;
   z-index: 1;
   pointer-events: none;
@@ -4702,7 +4702,7 @@ button {
   position: absolute;
   top: 50%;
   left: 0;
-  height: 3px;
+  height: 1.5px;
   background: #0477BF;
   transform: translateY(-50%);
   z-index: 2;
@@ -4726,12 +4726,12 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 11px 28px;
+  padding: 10px 26px;
   background: #ffffff;
-  border: 2px solid #cbd5e1;
+  border: 1px solid #cbd5e1;
   border-radius: 9999px;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
   transition: all 0.25s ease;
   min-width: 95px;
 }
@@ -4739,7 +4739,7 @@ button {
 .timeline-year-pill-btn:hover {
   border-color: #0477BF;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(4, 119, 191, 0.2) !important;
+  box-shadow: 0 4px 12px rgba(4, 119, 191, 0.15) !important;
 }
 
 .timeline-year-pill-btn:hover .year-pill-number {
@@ -4748,20 +4748,20 @@ button {
 
 .timeline-year-pill-btn.is-active {
   background: #0477BF !important;
-  border-color: #0477BF !important;
+  border: 1px solid #0477BF !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(4, 119, 191, 0.35) !important;
+  box-shadow: 0 6px 16px rgba(4, 119, 191, 0.3) !important;
 }
 
 .timeline-year-pill-btn.is-passed {
   background: #f0f7fc;
-  border-color: #0477BF;
+  border: 1px solid #0477BF;
 }
 
 .year-pill-number {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 600;
   color: #0f172a !important;
   line-height: 1;
   letter-spacing: -0.2px;
@@ -4770,7 +4770,7 @@ button {
 
 .timeline-year-pill-btn.is-active .year-pill-number {
   color: #ffffff !important;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .timeline-year-pill-btn.is-passed .year-pill-number {
@@ -9597,9 +9597,12 @@ body,
 /* ── CSS DESIGN TOKENS ─────────────────────────────────────────────────────── */
 :root {
   --title-h1: clamp(2.4rem, 4vw, 3.2rem);
-  --title-h2: clamp(1.85rem, 2.5vw, 2.25rem); /* EXACT same size for all section main titles */
-  --title-h3: 18px; /* EXACT same size for all card titles */
-  --title-eyebrow: 12px; /* EXACT same size for all first titles / eyebrows */
+  --title-h2: clamp(1.85rem, 2.5vw, 2.25rem);
+  /* EXACT same size for all section main titles */
+  --title-h3: 18px;
+  /* EXACT same size for all card titles */
+  --title-eyebrow: 12px;
+  /* EXACT same size for all first titles / eyebrows */
   --para-size: 15px;
   --para-lh: 1.65;
   --section-pad: 72px;
@@ -9608,8 +9611,10 @@ body,
   --btn-pad: 0 24px;
   --btn-radius: 8px;
   --btn-fsize: 14px;
-  --clr-primary: #00A86B; /* Vibrant Colorful Jade Emerald Green */
-  --clr-primary-slide: #008756; /* Rich emerald that slides left-to-right */
+  --clr-primary: #00A86B;
+  /* Vibrant Colorful Jade Emerald Green */
+  --clr-primary-slide: #008756;
+  /* Rich emerald that slides left-to-right */
   --clr-primary-hover: #008756;
 }
 
@@ -9686,7 +9691,8 @@ body,
   font-weight: 700 !important;
   line-height: 1.22 !important;
   letter-spacing: -0.5px !important;
-  text-transform: none !important; /* Sentence case: first letter only caps */
+  text-transform: none !important;
+  /* Sentence case: first letter only caps */
 }
 
 /* ── SINGLE-COLOR SECTION HEADINGS (NO MULTICOLOR HEADINGS) ────────────────── */
@@ -9906,25 +9912,25 @@ p,
 }
 
 /* Ensure button label, span and arrow icons stay above the sliding color layer */
-.btn > *,
-.btn-hero-visitor > *,
-.btn-hero-exhibitor > *,
-.btn-countdown-primary > *,
-.btn-countdown-secondary > *,
-.btn-header-visitor > *,
-.btn-header-exhibitor > *,
-.cta-track-btn > *,
-.cta-track-btn--visitor > *,
-.cta-track-btn--exhibitor > *,
-.btn-gallery-explore-all > *,
-.btn-events-view-all > *,
-.btn-view-all-top > *,
-#hero-visitor-btn > *,
-#hero-exhibitor-btn > *,
-#countdown-register-btn > *,
-#countdown-exhibitor-btn > *,
-#cta-visitor-register-btn > *,
-#cta-exhibitor-register-btn > * {
+.btn>*,
+.btn-hero-visitor>*,
+.btn-hero-exhibitor>*,
+.btn-countdown-primary>*,
+.btn-countdown-secondary>*,
+.btn-header-visitor>*,
+.btn-header-exhibitor>*,
+.cta-track-btn>*,
+.cta-track-btn--visitor>*,
+.cta-track-btn--exhibitor>*,
+.btn-gallery-explore-all>*,
+.btn-events-view-all>*,
+.btn-view-all-top>*,
+#hero-visitor-btn>*,
+#hero-exhibitor-btn>*,
+#countdown-register-btn>*,
+#countdown-exhibitor-btn>*,
+#cta-visitor-register-btn>*,
+#cta-exhibitor-register-btn>* {
   position: relative !important;
   z-index: 2 !important;
   transition: transform 0.25s ease !important;
