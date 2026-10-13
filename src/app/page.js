@@ -187,23 +187,41 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Dual Call to Action Buttons */}
-                <div className="countdown-actions-group">
-                  <Link
-                    href="/visitor-registration"
-                    className="btn btn-countdown-primary"
-                    id="countdown-register-btn"
-                  >
-                    <span>Register as Visitor (Free Pass)</span>
-                    <span className="btn-arrow" aria-hidden="true">→</span>
-                  </Link>
-                  <Link
-                    href="/exhibitor-registration"
-                    className="btn btn-countdown-secondary"
-                    id="countdown-exhibitor-btn"
-                  >
-                    <span>Book an Exhibitor Booth</span>
-                  </Link>
+                {/* Expo Floor Live Preview Banner with Action Buttons Overlaid on the Image Bottom */}
+                <div className="countdown-bottom-visual" role="region" aria-label="Chennai Trade Centre Exhibition Hall & Registration">
+                  <Image
+                    src="/images/gallery-exhibition-1.jpg"
+                    alt="Chennai Trade Centre Dental Exhibition Floor"
+                    width={580}
+                    height={265}
+                    className="countdown-bottom-img"
+                    priority
+                  />
+                  <div className="countdown-bottom-overlay">
+                    <div className="bottom-overlay-pill">
+                      <span className="live-pulse-dot" aria-hidden="true" />
+                      <span>Chennai Trade Centre • Halls 2, 3 &amp; 3A</span>
+                    </div>
+
+                    {/* Dual Action Buttons Overlaid on Image Bottom */}
+                    <div className="countdown-actions-group">
+                      <Link
+                        href="/visitor-registration"
+                        className="btn btn-countdown-primary"
+                        id="countdown-register-btn"
+                      >
+                        <span>Register as Visitor (Free Pass)</span>
+                        <span className="btn-arrow" aria-hidden="true">→</span>
+                      </Link>
+                      <Link
+                        href="/exhibitor-registration"
+                        className="btn btn-countdown-secondary"
+                        id="countdown-exhibitor-btn"
+                      >
+                        <span>Book an Exhibitor Booth</span>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -241,7 +259,6 @@ export default function HomePage() {
                     </div>
                     <div className="feature-box-body">
                       <h4>250+ Global Exhibitors</h4>
-                      <p>Cutting-edge CAD/CAM, implants, lasers &amp; next-gen biomaterials from 18+ nations</p>
                     </div>
                     <div className="feature-box-pills">
                       <span className="feature-pill"><span className="pill-sparkle">✦</span> Live Clinical Demos</span>
@@ -262,7 +279,6 @@ export default function HomePage() {
                     </div>
                     <div className="feature-box-body">
                       <h4>6,000+ Trade Delegates</h4>
-                      <p>Connect with clinicians, clinic owners, lab technicians, dealers &amp; students</p>
                     </div>
                     <div className="feature-box-pills">
                       <span className="feature-pill"><span className="pill-sparkle">✦</span> B2B Trade Exchange</span>
@@ -283,7 +299,6 @@ export default function HomePage() {
                     </div>
                     <div className="feature-box-body">
                       <h4>10,000+ sq.m Exhibition Floor</h4>
-                      <p>Chennai Trade Centre&apos;s state-of-the-art New Halls 2, 3 &amp; 3A</p>
                     </div>
                     <div className="feature-box-pills">
                       <span className="feature-pill"><span className="pill-sparkle">✦</span> Fully Air-Conditioned</span>

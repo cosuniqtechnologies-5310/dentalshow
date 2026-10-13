@@ -4820,7 +4820,7 @@ button {
 .countdown-2col-grid {
   display: grid;
   grid-template-columns: 1fr 1.08fr;
-  gap: 32px;
+  gap: 44px;
   align-items: stretch;
 }
 
@@ -4831,7 +4831,7 @@ button {
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
-  gap: 16px;
+  gap: 20px;
   height: 100%;
 }
 
@@ -4994,49 +4994,116 @@ button {
   font-weight: 700;
 }
 
-/* Dual Action Buttons */
+/* Bottom Visual Banner in Left Information Column with Overlaid Action Buttons */
+.countdown-bottom-visual {
+  position: relative;
+  width: 100%;
+  height: 265px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1.5px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(2, 62, 115, 0.08);
+  margin-top: 2px;
+  background: #022E54;
+}
+
+.countdown-bottom-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.countdown-bottom-visual:hover .countdown-bottom-img {
+  transform: scale(1.035);
+}
+
+.countdown-bottom-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(2, 62, 115, 0.55) 0%,
+      rgba(1, 18, 36, 0.15) 30%,
+      rgba(1, 18, 36, 0.72) 65%,
+      rgba(1, 18, 36, 0.94) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 18px 16px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.bottom-overlay-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(2, 62, 115, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  padding: 4px 11px;
+  border-radius: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 11px;
+  font-weight: 700;
+  color: #e0f2fe;
+  width: fit-content;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.bottom-overlay-pill .live-pulse-dot {
+  width: 6.5px;
+  height: 6.5px;
+}
+
+/* Dual Action Buttons Overlaid on the Image Bottom */
 .countdown-actions-group {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: nowrap !important;
   align-items: center;
   justify-content: flex-start;
-  gap: 12px;
-  align-self: flex-start;
+  gap: 14px;
   width: 100%;
-  margin-top: 4px;
+  pointer-events: auto;
+  margin-top: 0;
 }
 
 .btn-countdown-primary,
 #countdown-register-btn {
-  padding: 13px 22px;
+  padding: 12.5px 18px;
   background: #023E73 !important;
   color: #ffffff !important;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-weight: 800;
-  font-size: 12px;
-  letter-spacing: 0.6px;
+  font-size: 11.5px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(2, 62, 115, 0.2) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   transition: all 0.25s ease;
   text-decoration: none;
-  border: 1.5px solid #023E73 !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.45) !important;
   white-space: nowrap !important;
-  flex-shrink: 0;
+  flex: 1 1 0;
+  width: auto;
 }
 
 .btn-countdown-primary:hover,
 #countdown-register-btn:hover {
   background: #0477BF !important;
-  border-color: #0477BF !important;
+  border-color: #38bdf8 !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(4, 119, 191, 0.3) !important;
+  box-shadow: 0 6px 18px rgba(4, 119, 191, 0.45) !important;
   color: #ffffff !important;
 }
 
@@ -5054,32 +5121,36 @@ button {
 
 .btn-countdown-secondary,
 #countdown-exhibitor-btn {
-  padding: 13px 22px;
-  background: #ffffff !important;
-  border: 1.5px solid #023E73 !important;
+  padding: 12.5px 18px;
+  background: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
   color: #023E73 !important;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-weight: 800;
-  font-size: 12px;
-  letter-spacing: 0.6px;
+  font-size: 11.5px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   border-radius: 8px;
-  box-shadow: none !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   transition: all 0.25s ease;
   text-decoration: none;
   white-space: nowrap !important;
-  flex-shrink: 0;
+  flex: 1 1 0;
+  width: auto;
 }
 
 .btn-countdown-secondary:hover,
 #countdown-exhibitor-btn:hover {
-  background: #023E73 !important;
-  border-color: #023E73 !important;
-  color: #ffffff !important;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #0477BF !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(2, 62, 115, 0.15) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35) !important;
 }
 
 /* ==========================================================================
@@ -5094,11 +5165,11 @@ button {
 }
 
 /* ==========================================================================
-   Split-Flap / Mechanical Flip Clock Chassis (Theme Navy & Ice Cyan Aesthetic)
+   Split-Flap / Mechanical Flip Clock Chassis (Logo Color Green #3BBF8F Theme)
    ========================================================================== */
 .countdown-timer-panel {
-  background: linear-gradient(155deg, #022E54 0%, #011E3A 55%, #011224 100%);
-  border: 1.5px solid rgba(4, 119, 191, 0.45);
+  background: linear-gradient(155deg, #075e43 0%, #04432f 55%, #02251a 100%);
+  border: 1.5px solid #3BBF8F;
   border-radius: 22px;
   padding: 24px 28px 24px;
   display: flex;
@@ -5107,12 +5178,6 @@ button {
   transition: all 0.25s ease;
   position: relative;
   overflow: hidden;
-}
-
-.countdown-timer-panel:hover {
-  border-color: rgba(6, 157, 191, 0.7);
-  box-shadow: 0 20px 44px -8px rgba(2, 62, 115, 0.42), 0 6px 16px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
 }
 
 .countdown-timer-panel-header {
@@ -5136,28 +5201,32 @@ button {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: #F0F9FF;
+  color: #f0fdf4;
 }
 
 .timer-header-badge {
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  background: rgba(59, 191, 143, 0.2);
+  border: 1px solid rgba(59, 191, 143, 0.55);
+  border-radius: 20px;
+  padding: 3px 10px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 11px;
   font-weight: 700;
-  color: #7DD3FC;
+  color: #a7f3d0;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .timer-header-badge svg {
-  color: #7DD3FC;
+  color: #a7f3d0;
 }
 
 .live-pulse-dot {
   width: 8px;
   height: 8px;
-  background: #38BDF8;
+  background: #3BBF8F;
   border-radius: 50%;
   animation: liveDotRadar 2s ease-in-out infinite;
   flex-shrink: 0;
@@ -5166,17 +5235,17 @@ button {
 @keyframes liveDotRadar {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.8);
+    box-shadow: 0 0 0 0 rgba(59, 191, 143, 0.85);
   }
 
   70% {
     transform: scale(1.2);
-    box-shadow: 0 0 0 7px rgba(56, 189, 248, 0);
+    box-shadow: 0 0 0 7px rgba(59, 191, 143, 0);
   }
 
   100% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);
+    box-shadow: 0 0 0 0 rgba(59, 191, 143, 0);
   }
 }
 
@@ -5207,11 +5276,11 @@ button {
   gap: 0 !important;
   border-radius: 11px;
   overflow: hidden;
-  background: linear-gradient(180deg, #051426 0%, #092038 50%, #04101e 100%);
-  border: 1.5px solid rgba(56, 189, 248, 0.4);
+  background: linear-gradient(180deg, #01170f 0%, #052c1e 50%, #01110a 100%);
+  border: 1.5px solid #3BBF8F;
   box-shadow:
-    inset 0 8px 10px -3px rgba(0, 0, 0, 0.85),
-    inset 0 -8px 10px -3px rgba(0, 0, 0, 0.85),
+    inset 0 8px 10px -3px rgba(0, 0, 0, 0.9),
+    inset 0 -8px 10px -3px rgba(0, 0, 0, 0.9),
     0 6px 14px rgba(0, 0, 0, 0.45);
 }
 
@@ -5309,8 +5378,8 @@ button {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2.2px;
-  color: #7dd3fc;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  color: #3BBF8F;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   margin-top: 2px;
 }
 
@@ -5323,6 +5392,8 @@ button {
   gap: 10px;
   flex: 1;
   justify-content: space-between;
+  border: 1.5px dashed black;
+  border-radius: 20px;
 }
 
 .countdown-feature-box {
@@ -5336,7 +5407,6 @@ button {
   position: relative;
   overflow: hidden;
   cursor: default;
-  border: 1.5px solid #e2e8f0;
   border-radius: 14px;
   transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
   box-shadow: 0 2px 6px rgba(2, 62, 115, 0.02);
@@ -5344,20 +5414,6 @@ button {
 
 .countdown-feature-box:hover {
   transform: translateY(-2px);
-  border-color: var(--card-accent, #023E73);
-  box-shadow: 0 6px 16px rgba(2, 62, 115, 0.06);
-}
-
-.countdown-feature-box--navy {
-  --card-accent: #023E73;
-}
-
-.countdown-feature-box--royal {
-  --card-accent: #0477BF;
-}
-
-.countdown-feature-box--cyan {
-  --card-accent: #069DBF;
 }
 
 /* Feature Box Top Row */
@@ -5372,8 +5428,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
   border-radius: 8px;
   flex-shrink: 0;
   transition: transform 0.25s ease;
@@ -5381,19 +5435,7 @@ button {
 }
 
 .feature-box-icon svg {
-  color: #ffffff !important;
-}
-
-.feature-box-icon.icon-navy {
-  background: #023E73 !important;
-}
-
-.feature-box-icon.icon-royal {
-  background: #0477BF !important;
-}
-
-.feature-box-icon.icon-cyan {
-  background: #069DBF !important;
+  color: #000000 !important;
 }
 
 .countdown-feature-box:hover .feature-box-icon {
@@ -5403,32 +5445,16 @@ button {
 .feature-box-badge {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 10px;
-  font-weight: 800;
+  font-weight: 400;
   letter-spacing: 0.8px;
   text-transform: uppercase;
-  border-radius: 6px;
-  padding: 3px 8px;
-  background: #e0f2fe;
-  border: 1px solid #bae6fd;
-}
-
-.badge-navy {
-  color: #023E73 !important;
-}
-
-.badge-royal {
-  color: #0477BF !important;
-}
-
-.badge-cyan {
-  color: #069DBF !important;
 }
 
 .feature-box-stat {
   margin-left: auto;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 400;
   color: #0f172a;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
@@ -5469,16 +5495,12 @@ button {
 .feature-box-body h4 {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 500;
   color: #0f172a !important;
   margin: 2px 0 2px 0;
   line-height: 1.3;
   letter-spacing: -0.3px;
   transition: color 0.2s ease;
-}
-
-.countdown-feature-box:hover .feature-box-body h4 {
-  color: var(--card-accent, #023E73) !important;
 }
 
 .feature-box-body p {
@@ -5501,12 +5523,8 @@ button {
 .feature-pill {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 10.5px;
-  font-weight: 700;
+  font-weight: 400;
   color: #334155;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  padding: 3px 8px;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
