@@ -68,15 +68,32 @@ const roboto = Roboto({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://dentalshow.in"),
   title: {
     default: `${site.name} – Chennai Trade Centre | Organised by TNDTMA`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '512x512' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     title: `${site.name} – Chennai Trade Centre`,
     description: site.description,
     type: "website",
+    images: [
+      {
+        url: "/images/logos/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Dental Show 2027 Logo",
+      },
+    ],
   },
 };
 
@@ -92,6 +109,9 @@ export default function RootLayout({ children }) {
       className={`${inter.variable} ${merriweather.variable} ${sourceSans.variable} ${lora.variable} ${lato.variable} ${robotoSlab.variable} ${roboto.variable}`}
     >
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.png" type="image/png" sizes="512x512" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
