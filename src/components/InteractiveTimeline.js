@@ -145,7 +145,43 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
       role="region"
       aria-label="Two Decades Timeline"
     >
-      {/* 1. UNIFIED PANORAMIC MASTER STAGE */}
+      {/* 1. FULL-SCREEN 100VW CONNECTING LINE WITH MID-CONNECTED YEAR PILLS (Positioned Above Showcase Card) */}
+      <div className="timeline-connected-thread-section">
+        {/* Full-bleed 100vw Horizontal Line */}
+        <div className="timeline-thread-line-100vw" />
+
+        <div className="timeline-thread-track-container">
+          {/* Active progress segment on the line */}
+          <div
+            className="timeline-thread-line-active"
+            style={{ width: `${threadProgressPercent}%` }}
+          />
+
+          {/* Year Pills directly connected in the middle */}
+          <div className="timeline-year-pills-row" role="tablist" aria-label="Milestone Years">
+            {milestones.map((m, idx) => {
+              const isActive = idx === activeIndex;
+              const isPassed = idx < activeIndex;
+
+              return (
+                <button
+                  key={m.year}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  className={`timeline-year-pill-btn ${isActive ? "is-active" : ""} ${isPassed ? "is-passed" : ""}`}
+                  onClick={() => handleSelect(idx)}
+                  title={`${m.year}: ${m.title}`}
+                >
+                  <span className="year-pill-number">{m.shortYear || m.year}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* 2. UNIFIED PANORAMIC MASTER STAGE */}
       <div className="timeline-master-showcase-card">
         {/* Left Stage: Mascot Exhibition Guide & Podium */}
         <div className="timeline-stage-host-alcove">
@@ -259,42 +295,6 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
               className="timeline-progress-fill"
               style={{ width: `${progress}%` }}
             />
-          </div>
-        </div>
-      </div>
-
-      {/* 2. FULL-SCREEN 100VW CONNECTING LINE WITH MID-CONNECTED YEAR PILLS */}
-      <div className="timeline-connected-thread-section">
-        {/* Full-bleed 100vw Horizontal Line */}
-        <div className="timeline-thread-line-100vw" />
-
-        <div className="timeline-thread-track-container">
-          {/* Active progress segment on the line */}
-          <div
-            className="timeline-thread-line-active"
-            style={{ width: `${threadProgressPercent}%` }}
-          />
-
-          {/* Year Pills directly connected in the middle */}
-          <div className="timeline-year-pills-row" role="tablist" aria-label="Milestone Years">
-            {milestones.map((m, idx) => {
-              const isActive = idx === activeIndex;
-              const isPassed = idx < activeIndex;
-
-              return (
-                <button
-                  key={m.year}
-                  type="button"
-                  role="tab"
-                  aria-selected={isActive}
-                  className={`timeline-year-pill-btn ${isActive ? "is-active" : ""} ${isPassed ? "is-passed" : ""}`}
-                  onClick={() => handleSelect(idx)}
-                  title={`${m.year}: ${m.title}`}
-                >
-                  <span className="year-pill-number">{m.shortYear || m.year}</span>
-                </button>
-              );
-            })}
           </div>
         </div>
       </div>

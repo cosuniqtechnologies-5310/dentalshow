@@ -4138,36 +4138,44 @@ button {
 
 /* RESPONSIVE LAYOUTS FOR ALL 4 SECTIONS */
 @media (max-width: 1024px) {
+
   .about-stats-grid,
   .section-stats-bar .grid--4 {
     grid-template-columns: repeat(2, 1fr) !important;
   }
+
   .about-objectives-grid,
   .section.bg-light .grid--4 {
     grid-template-columns: repeat(2, 1fr) !important;
   }
+
   .about-partners-grid,
   .sponsor-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
+
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 640px) {
+
   .about-stats-grid,
   .section-stats-bar .grid--4 {
     grid-template-columns: 1fr !important;
   }
+
   .about-objectives-grid,
   .section.bg-light .grid--4 {
     grid-template-columns: 1fr !important;
   }
+
   .about-partners-grid,
   .sponsor-grid {
     grid-template-columns: 1fr !important;
   }
+
   .gallery-grid {
     grid-template-columns: 1fr !important;
   }
@@ -4650,7 +4658,7 @@ button {
 }
 
 /* ==========================================================================
-   2. CONNECTING LINE WITH MID-CONNECTED YEAR PILLS (Container Width)
+   2. CONNECTING LINE WITH MID-CONNECTED YEAR PILLS (Full-Screen Bleed Line)
    ========================================================================== */
 
 .timeline-connected-thread-section {
@@ -4664,16 +4672,17 @@ button {
   box-shadow: none !important;
 }
 
-/* Horizontal Line running across container width */
+/* Horizontal Line running across full screen (100vw edge-to-edge bleed) */
 .timeline-thread-line-100vw {
   position: absolute;
   top: 50%;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  width: 100vw;
+  transform: translate(-50%, -50%);
   height: 2px;
   background: #cbd5e1;
-  transform: translateY(-50%);
   z-index: 1;
+  pointer-events: none;
 }
 
 .timeline-thread-track-container {
@@ -6148,11 +6157,11 @@ button {
 }
 
 /* ==========================================================================
-   Split-Flap / Mechanical Flip Clock Chassis (Logo Color Green #3BBF8F Theme)
+   Split-Flap / Mechanical Flip Clock Chassis (Light Green / Mint Theme)
    ========================================================================== */
 .countdown-timer-panel {
-  background: linear-gradient(155deg, #075e43 0%, #04432f 55%, #02251a 100%);
-  border: 1.5px solid #3BBF8F;
+  background: linear-gradient(145deg, #ffffff 0%, #f4fbf7 50%, #e8f8f0 100%);
+  border: 2px solid #3BBF8F;
   border-radius: 22px;
   padding: 24px 28px 24px;
   display: flex;
@@ -6161,6 +6170,12 @@ button {
   transition: all 0.25s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 12px 32px rgba(59, 191, 143, 0.14), 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.countdown-timer-panel:hover {
+  box-shadow: 0 16px 40px rgba(59, 191, 143, 0.2), 0 3px 8px rgba(0, 0, 0, 0.05);
+  border-color: #2da87b;
 }
 
 .countdown-timer-panel-header {
@@ -6184,26 +6199,26 @@ button {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: #f0fdf4;
+  color: #065f46 !important;
 }
 
 .timer-header-badge {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  background: rgba(59, 191, 143, 0.2);
-  border: 1px solid rgba(59, 191, 143, 0.55);
+  gap: 6px;
+  background: rgba(59, 191, 143, 0.14);
+  border: 1px solid rgba(59, 191, 143, 0.45);
   border-radius: 20px;
-  padding: 3px 10px;
+  padding: 3px 11px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 11px;
   font-weight: 700;
-  color: #a7f3d0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  color: #047857;
+  box-shadow: 0 1px 4px rgba(59, 191, 143, 0.1);
 }
 
 .timer-header-badge svg {
-  color: #a7f3d0;
+  color: #059669;
 }
 
 .live-pulse-dot {
@@ -6257,14 +6272,14 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0 !important;
-  border-radius: 11px;
+  border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(180deg, #01170f 0%, #052c1e 50%, #01110a 100%);
+  background: #ffffff;
   border: 1.5px solid #3BBF8F;
   box-shadow:
-    inset 0 8px 10px -3px rgba(0, 0, 0, 0.9),
-    inset 0 -8px 10px -3px rgba(0, 0, 0, 0.9),
-    0 6px 14px rgba(0, 0, 0, 0.45);
+    0 4px 14px rgba(59, 191, 143, 0.14),
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
 /* Substantial, Balanced Odometer Digit Slot */
@@ -6285,8 +6300,8 @@ button {
 
 /* Subtle mechanical divider slit between digits in the same group */
 .odometer-slot:not(:last-child) {
-  border-right: 1px solid rgba(0, 0, 0, 0.85) !important;
-  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.08) !important;
+  border-right: 1px solid rgba(59, 191, 143, 0.25) !important;
+  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.8) !important;
 }
 
 /* Prominent, Bold Centered Numerals */
@@ -6299,10 +6314,10 @@ button {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   font-size: 38px;
   font-weight: 800;
-  color: #ffffff;
+  color: #064e3b;
   letter-spacing: -0.5px;
   line-height: 1;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  text-shadow: none;
   will-change: transform, opacity;
 }
 
@@ -6345,13 +6360,13 @@ button {
   inset: 0;
   pointer-events: none;
   background: linear-gradient(180deg,
-      rgba(0, 0, 0, 0.45) 0%,
-      rgba(0, 0, 0, 0) 25%,
-      rgba(255, 255, 255, 0.04) 50%,
-      rgba(0, 0, 0, 0) 75%,
-      rgba(0, 0, 0, 0.55) 100%);
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0) 48%,
+      rgba(6, 78, 59, 0.08) 50%,
+      rgba(255, 255, 255, 0) 52%,
+      rgba(59, 191, 143, 0.08) 100%);
   border-radius: 0;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 /* Group Sub-Label (DAYS, HOURS, MINUTES, SECONDS) */
@@ -6360,10 +6375,10 @@ button {
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 2.2px;
-  color: #3BBF8F;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-  margin-top: 2px;
+  letter-spacing: 2px;
+  color: #059669;
+  text-shadow: none;
+  margin-top: 4px;
 }
 
 /* ==========================================================================
