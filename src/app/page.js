@@ -34,9 +34,9 @@ export default function HomePage() {
                     </span>
                   </div>
 
-                  {/* Main Title with High-Contrast Highlight */}
+                  {/* Main Title — Single solid color */}
                   <h1 className="banner-title">
-                    Dental Show <span className="title-gradient-year">2027</span>
+                    Dental Show 2027
                   </h1>
 
                   {/* Core Description Copy */}
@@ -96,7 +96,7 @@ export default function HomePage() {
 
                 <h2 className="countdown-main-title">
                   The Countdown to <br className="countdown-title-br" />
-                  <span className="title-highlight-royal">Dental Show 2027</span> Begins
+                  Dental Show 2027 Begins
                 </h2>
 
                 <p className="countdown-sub-lead">
@@ -260,7 +260,7 @@ export default function HomePage() {
           <div className="timeline-header-compact text-left">
             <span className="section-eyebrow">OUR LEGACY &amp; TWO DECADE JOURNEY</span>
             <h2 className="section-main-title">
-              Two Decades of Legacy. A Future Shaped by <span className="title-highlight-blue">Innovation</span>.
+              Two Decades of Legacy. A Future Shaped by Innovation.
             </h2>
             <div className="title-zigzag" />
             <p className="section-desc">
@@ -302,7 +302,7 @@ export default function HomePage() {
               <span className="section-eyebrow">PHOTO &amp; VIDEO HIGHLIGHTS</span>
             </div>
             <h2 className="section-main-title gallery-title-styled">
-              Gallery <span className="title-highlight-royal">Preview</span>
+              Gallery Preview
             </h2>
             <p className="max-w-700 text-muted gallery-lead-desc">
               Moments That Bring Us Together. Revisit the people, clinical breakthroughs and celebrated memories that make every Dental Show special.
@@ -386,7 +386,7 @@ export default function HomePage() {
               </div>
 
               <h2 className="cta-full-title">
-                Be Part of the <span className="cta-title-gradient">Next Chapter</span>
+                Be Part of the Next Chapter
               </h2>
 
               <p className="cta-lead-subtitle">

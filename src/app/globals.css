@@ -231,8 +231,8 @@ button {
 
 .section-main-title {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: clamp(2rem, 3.8vw, 2.6rem);
-  font-weight: 800;
+  font-size: var(--title-h2);
+  font-weight: 700;
   color: #000000;
   margin-bottom: 12px;
 }
@@ -4220,9 +4220,9 @@ button {
 }
 
 .timeline-section-fullwidth .section-main-title {
-  color: #0f172a !important;
-  font-size: clamp(22px, 2.4vw, 28px);
-  font-weight: 900;
+  color: #000000 !important;
+  font-size: var(--title-h2) !important;
+  font-weight: 700 !important;
   letter-spacing: -0.5px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   text-align: left !important;
@@ -4230,8 +4230,8 @@ button {
 }
 
 .timeline-section-fullwidth .title-highlight-blue {
-  color: #0477BF !important;
-  font-weight: 900;
+  color: #000000 !important;
+  font-weight: 700 !important;
 }
 
 .timeline-section-fullwidth .section-desc,
@@ -5904,11 +5904,11 @@ button {
 
 .countdown-main-title {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: clamp(1.85rem, 2.4vw, 2.35rem);
-  font-weight: 800;
+  font-size: var(--title-h2) !important;
+  font-weight: 700 !important;
   color: #000000 !important;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.22;
   letter-spacing: -0.5px;
   text-align: left;
 }
@@ -6724,19 +6724,19 @@ button {
 
 .timeline-section-fullwidth .section-main-title,
 .fold-light-primary .section-main-title {
-  font-size: clamp(22px, 2.4vw, 28px) !important;
-  line-height: 1.25 !important;
+  font-size: var(--title-h2) !important;
+  line-height: 1.22 !important;
   margin: 0 0 6px 0 !important;
   max-width: 900px !important;
   letter-spacing: -0.5px !important;
   color: #000000 !important;
-  font-weight: 900;
+  font-weight: 700 !important;
   text-align: left !important;
 }
 
 .timeline-section-fullwidth .title-highlight-blue {
-  color: #0477BF !important;
-  font-weight: 900;
+  color: #000000 !important;
+  font-weight: 700 !important;
 }
 
 .timeline-section-fullwidth .title-zigzag {
@@ -6909,17 +6909,17 @@ button {
 
 .benefits-main-title {
   font-family: 'Inter', sans-serif !important;
-  font-size: clamp(28px, 3.4vw, 40px);
-  font-weight: 900;
+  font-size: var(--title-h2) !important;
+  font-weight: 700 !important;
   color: #000000 !important;
   margin: 0 0 10px;
-  letter-spacing: -0.6px;
-  line-height: 1.18;
+  letter-spacing: -0.5px;
+  line-height: 1.22;
 }
 
 .title-highlight-teal {
-  color: #0477BF !important;
-  font-weight: 900;
+  color: #000000 !important;
+  font-weight: 700 !important;
 }
 
 .benefits-sub-desc {
@@ -7049,9 +7049,9 @@ button {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   /* padding-left aligns first card with section title above.
-     Formula: left offset of .container = max(20px, (100vw - 1200px)/2) */
-  padding-left: max(20px, calc((100vw - 1200px) / 2));
-  scroll-padding-left: max(20px, calc((100vw - 1200px) / 2));
+     Formula: left offset of .container = max(20px, (100% - 1200px)/2) */
+  padding-left: max(20px, calc((100% - 1200px) / 2));
+  scroll-padding-left: max(20px, calc((100% - 1200px) / 2));
   padding-right: 48px;
   padding-top: 6px;
   padding-bottom: 24px;
@@ -7436,12 +7436,12 @@ button {
 
 .events-main-title {
   font-family: 'Inter', sans-serif !important;
-  font-size: clamp(28px, 3.4vw, 40px);
-  font-weight: 900;
+  font-size: var(--title-h2) !important;
+  font-weight: 700 !important;
   color: #000000 !important;
   margin: 0 0 10px;
-  letter-spacing: -0.6px;
-  line-height: 1.18;
+  letter-spacing: -0.5px;
+  line-height: 1.22;
 }
 
 .events-sub-desc {
@@ -7891,10 +7891,11 @@ section .event-panorama-banner .panorama-banner-excerpt,
 
 .gallery-title-styled {
   font-family: 'Inter', sans-serif !important;
-  font-size: clamp(28px, 3.4vw, 42px);
-  font-weight: 900;
+  font-size: var(--title-h2) !important;
+  font-weight: 700 !important;
   color: #000000 !important;
-  letter-spacing: -0.6px;
+  letter-spacing: -0.5px;
+  line-height: 1.22;
   margin: 0 0 12px;
   text-align: left !important;
 }
@@ -8706,19 +8707,19 @@ section .event-panorama-banner .panorama-banner-excerpt,
 
 .cta-full-title {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: clamp(32px, 3.8vw, 48px);
-  font-weight: 900;
+  font-size: var(--title-h2) !important;
+  font-weight: 700 !important;
   color: #ffffff !important;
   margin: 0;
-  letter-spacing: -0.6px;
-  line-height: 1.15;
+  letter-spacing: -0.5px;
+  line-height: 1.22;
   text-align: left !important;
 }
 
 .cta-title-gradient {
-  background: linear-gradient(135deg, #3BBF8F 0%, #67e8f9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 .cta-lead-subtitle {
@@ -9556,16 +9557,13 @@ body,
   color: #000000 !important;
 }
 
-/* D. BRAND ACCENT HIGHLIGHTS (Retained for visual polish) */
-.title-highlight-royal,
-.title-highlight-blue,
+/* D. BRAND ACCENT HIGHLIGHTS (Non-heading elements only) */
 .pill-sparkle-blue,
 .timeline-spotlight-year,
 .feature-pill .pill-sparkle {
   color: #0477BF !important;
 }
 
-.title-gradient-year,
 .text-mint,
 .fold-primary-dark .section-eyebrow,
 .conclusion-quote span,
@@ -9584,19 +9582,23 @@ body,
    Enforced at the very end of the file so it overrides everything above.
 
    Rules:
-   1. THREE title sizes only: H1 hero, H2 section, H3 card/sub
+   1. THREE title sizes only: H1 hero, H2 section (ALL identical), H3 card/sub
    2. ONE paragraph / body-copy size: 15px / 400 weight
-   3. Font-weight: 600 ONLY for titles. 400 for everything else.
-   4. Buttons: all the exact same size.
+   3. Font-weight: 700 for all titles. 400 for everything else.
+   4. Single solid color for all headings:
+      - Dark sections: solid #ffffff (no multicolor, no gradients)
+      - Light sections: solid #000000 (no multicolor, no blue/teal spans)
+   5. Buttons: all the exact same size (46px height, 14px font, 400 weight).
       Primary = green (#288065). Secondary = white on dark / black on light.
-   5. Section padding: 72px top & bottom (44px mobile).
-   6. Grid/column gap: 24px everywhere.
+   6. Section padding: 72px top & bottom (44px mobile).
+   7. Grid/column gap: 24px everywhere.
    ========================================================================== */
 
 /* ── CSS DESIGN TOKENS ─────────────────────────────────────────────────────── */
 :root {
   --title-h1: clamp(2.4rem, 4vw, 3.2rem);
-  --title-h2: clamp(1.85rem, 2.8vw, 2.35rem);
+  --title-h2: clamp(1.85rem, 2.5vw, 2.25rem);
+  /* EXACT same size for all section titles */
   --title-h3: 18px;
   --para-size: 15px;
   --para-lh: 1.65;
@@ -9610,15 +9612,32 @@ body,
   --clr-primary-hover: #1d6b55;
 }
 
-/* ── 1. H1 — HERO / BANNER TITLE ───────────────────────────────────────────── */
-.banner-title {
+/* ── 1. H1 — HERO / BANNER TITLE (Single color solid white, weight 700) ────── */
+.banner-title,
+.hero-area h1 {
   font-size: var(--title-h1) !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   line-height: 1.15 !important;
+  color: #ffffff !important;
 }
 
-/* ── 2. H2 — ALL SECTION MAIN TITLES (same size everywhere) ────────────────── */
+.banner-title *,
+.hero-area h1 * {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* ── 2. H2 — ALL SECTION MAIN TITLES (exact same size & weight 700 everywhere) ── */
 .section-main-title,
+.timeline-section-fullwidth .section-main-title,
+.fold-light-primary .section-main-title,
+.fold-primary-dark .section-main-title,
+.section-benefits .section-main-title,
+.section-events .section-main-title,
+.section-gallery .section-main-title,
+.section-legacy .section-main-title,
 .countdown-main-title,
 .benefits-main-title,
 .events-main-title,
@@ -9626,13 +9645,83 @@ body,
 .cta-full-title,
 .redirect-card-title,
 .registration-showcase-title,
-.events-page-title {
+.events-page-title,
+#legacy .section-main-title,
+#benefits .benefits-main-title,
+#events-section .events-main-title,
+#gallery-preview .gallery-title-styled,
+#registration-cta .cta-full-title,
+#countdown .countdown-main-title {
   font-size: var(--title-h2) !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   line-height: 1.22 !important;
+  letter-spacing: -0.5px !important;
 }
 
-/* ── 3. H3 — CARD TITLES & SUB-HEADINGS ────────────────────────────────────── */
+/* ── SINGLE-COLOR SECTION HEADINGS (NO MULTICOLOR HEADINGS) ────────────────── */
+/* Light sections: 100% Solid Black (#000000) for title and all children */
+.section-main-title,
+.timeline-section-fullwidth .section-main-title,
+.fold-light-primary .section-main-title,
+.section-benefits .section-main-title,
+.section-events .section-main-title,
+.section-gallery .section-main-title,
+.section-legacy .section-main-title,
+.countdown-main-title,
+.benefits-main-title,
+.events-main-title,
+.gallery-title-styled,
+.events-page-title,
+.redirect-card-title,
+.registration-showcase-title {
+  color: #000000 !important;
+}
+
+.section-main-title *,
+.timeline-section-fullwidth .section-main-title *,
+.fold-light-primary .section-main-title *,
+.section-benefits .section-main-title *,
+.section-events .section-main-title *,
+.section-gallery .section-main-title *,
+.section-legacy .section-main-title *,
+.countdown-main-title *,
+.benefits-main-title *,
+.events-main-title *,
+.gallery-title-styled *,
+.events-page-title *,
+.redirect-card-title *,
+.registration-showcase-title * {
+  color: #000000 !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+/* Dark sections: 100% Solid White (#ffffff) for title and all children */
+.cta-full-title,
+.fold-dark h1,
+.fold-dark h2,
+.fold-primary-dark h1,
+.fold-primary-dark h2,
+.fold-primary-dark .section-main-title {
+  color: #ffffff !important;
+}
+
+.cta-full-title *,
+.fold-dark h1 *,
+.fold-dark h2 *,
+.fold-primary-dark h1 *,
+.fold-primary-dark h2 *,
+.fold-primary-dark .section-main-title * {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* ── 3. H3 — CARD TITLES & SUB-HEADINGS (weight 700) ───────────────────────── */
 .staple-card-title,
 .timeline-spotlight-title,
 .panorama-banner-title,
@@ -9642,7 +9731,7 @@ body,
 .track-card-heading,
 .cta-eyebrow-chip span {
   font-size: var(--title-h3) !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   line-height: 1.3 !important;
 }
 
@@ -9860,9 +9949,14 @@ p,
 
 /* Fix colours for elements inside buttons that override text color */
 .btn-hero-exhibitor *,
-#hero-exhibitor-btn * { color: inherit !important; }
+#hero-exhibitor-btn * {
+  color: inherit !important;
+}
+
 .btn-countdown-secondary *,
-#countdown-exhibitor-btn * { color: inherit !important; }
+#countdown-exhibitor-btn * {
+  color: inherit !important;
+}
 
 /* Buttons that were previously pill/rounded — flatten to rectangular 8px */
 .btn-events-view-all,
@@ -9910,6 +10004,7 @@ p,
 
 /* ── MOBILE OVERRIDES ────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
+
   .hero-area .banner-item,
   .countdown-section-wrap,
   .timeline-section-fullwidth,
@@ -9950,5 +10045,21 @@ p,
   .hero-cta-buttons .btn-hero-exhibitor {
     width: 100% !important;
     justify-content: center !important;
+  }
+}
+
+/* ── 11. BENEFITS SLIDER LEFT ALIGNMENT REINFORCEMENT ───────────────────────── */
+/* Ensures first card aligns flush with the container title on all screens */
+@media (min-width: 681px) {
+  .benefits-cards-track.is-slider-mode {
+    padding-left: max(20px, calc((100% - 1200px) / 2)) !important;
+    scroll-padding-left: max(20px, calc((100% - 1200px) / 2)) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .benefits-cards-track.is-slider-mode {
+    padding-left: 20px !important;
+    scroll-padding-left: 20px !important;
   }
 }

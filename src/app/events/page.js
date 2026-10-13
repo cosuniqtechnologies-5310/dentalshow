@@ -24,7 +24,7 @@ export default function EventsPage() {
                 <span className="events-eyebrow-text">PROGRAMME &amp; EDITIONS</span>
               </div>
               <h2 className="events-page-title">
-                All Events &amp; <span className="title-highlight-teal">Flagship Editions</span>
+                All Events &amp; Flagship Editions
               </h2>
               <p className="events-page-subtitle">
                 Select an edition to explore scientific schedules, keynote clinical faculties, trade directories, and delegate access.
