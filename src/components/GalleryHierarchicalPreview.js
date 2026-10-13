@@ -75,7 +75,7 @@ export default function GalleryHierarchicalPreview() {
           className="btn-gallery-explore-all gallery-btn-header-right"
           id="btn-header-gallery"
         >
-          <span>Explore Central Expo Gallery</span>
+          <span>Explore Central Expo Gallery (Filter by Year)</span>
           <svg
             className="btn-gallery-arrow"
             width="16"
