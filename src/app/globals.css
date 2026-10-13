@@ -10210,6 +10210,8 @@ p,
 /* ── 8a. SECONDARY — DARK SECTIONS → WHITE BUTTON ──────────────────────────── */
 .btn-hero-exhibitor,
 #hero-exhibitor-btn,
+.btn-countdown-secondary,
+#countdown-exhibitor-btn,
 .cta-track-btn--visitor,
 .cta-track-btn--exhibitor,
 #cta-exhibitor-register-btn {
@@ -10221,6 +10223,8 @@ p,
 
 .btn-hero-exhibitor::before,
 #hero-exhibitor-btn::before,
+.btn-countdown-secondary::before,
+#countdown-exhibitor-btn::before,
 .cta-track-btn--visitor::before,
 .cta-track-btn--exhibitor::before,
 #cta-exhibitor-register-btn::before {
@@ -10229,6 +10233,8 @@ p,
 
 .btn-hero-exhibitor:hover,
 #hero-exhibitor-btn:hover,
+.btn-countdown-secondary:hover,
+#countdown-exhibitor-btn:hover,
 .cta-track-btn--visitor:hover,
 .cta-track-btn--exhibitor:hover,
 #cta-exhibitor-register-btn:hover {
@@ -10238,8 +10244,6 @@ p,
 }
 
 /* ── 8b. SECONDARY — LIGHT SECTIONS → BLACK BUTTON ─────────────────────────── */
-.btn-countdown-secondary,
-#countdown-exhibitor-btn,
 .btn-header-exhibitor,
 .btn-gallery-explore-all,
 .btn-events-view-all,
@@ -10252,8 +10256,6 @@ p,
   box-shadow: 0 4px 14px rgba(15, 23, 42, 0.22) !important;
 }
 
-.btn-countdown-secondary::before,
-#countdown-exhibitor-btn::before,
 .btn-header-exhibitor::before,
 .btn-gallery-explore-all::before,
 .btn-events-view-all::before,
@@ -10263,8 +10265,6 @@ p,
   background: #1e293b !important;
 }
 
-.btn-countdown-secondary:hover,
-#countdown-exhibitor-btn:hover,
 .btn-header-exhibitor:hover,
 .btn-gallery-explore-all:hover,
 .btn-events-view-all:hover,
@@ -10278,13 +10278,10 @@ p,
 
 /* Fix colours for elements inside buttons that override text color */
 .btn-hero-exhibitor *,
-#hero-exhibitor-btn * {
-  color: inherit !important;
-}
-
+#hero-exhibitor-btn *,
 .btn-countdown-secondary *,
 #countdown-exhibitor-btn * {
-  color: inherit !important;
+  color: #0f172a !important;
 }
 
 /* Buttons that were previously pill/rounded — flatten to rectangular 8px */
