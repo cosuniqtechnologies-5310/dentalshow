@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-function SparkleStar({ className = "", size = 20, color = "#ffffff" }) {
+export function SparkleStar({ className = "", size = 20, color = "#ffffff" }) {
   return (
     <svg
       className={`magical-sparkle ${className}`}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Countdown from "@/components/Countdown";
-import BeaverMascot from "@/components/BeaverMascot";
+import BeaverMascot, { SparkleStar } from "@/components/BeaverMascot";
 import Icon from "@/components/Icon";
 import InteractiveTimeline from "@/components/InteractiveTimeline";
 import AudienceBenefitsSlider from "@/components/AudienceBenefitsSlider";
@@ -309,7 +309,7 @@ export default function HomePage() {
           ============================================================ */}
       <section className="section section-gallery font-modern fold-light-primary" id="gallery-preview">
         <div className="container">
-          <div className="gallery-section-header text-center mb-40">
+          <div className="gallery-section-header text-left mb-40">
             <div className="gallery-eyebrow-wrapper">
               <span className="gallery-accent-dash" aria-hidden="true" />
               <span className="section-eyebrow">PHOTO &amp; VIDEO HIGHLIGHTS</span>
@@ -317,7 +317,7 @@ export default function HomePage() {
             <h2 className="section-main-title gallery-title-styled">
               Gallery <span className="title-highlight-royal">Preview</span>
             </h2>
-            <p className="max-w-700 mx-auto text-muted gallery-lead-desc">
+            <p className="max-w-700 text-muted gallery-lead-desc">
               Moments That Bring Us Together. Revisit the people, clinical breakthroughs and celebrated memories that make every Dental Show special.
             </p>
           </div>
@@ -339,12 +339,47 @@ export default function HomePage() {
           SECTION 3.8: REGISTRATION CTA (Mascot Left + Elevated Dual-Track Registration)
           ============================================================ */}
       <section className="cta-full-section font-modern" id="registration-cta">
+        {/* Section-Wide Ambient Floating Glitters */}
+        <div className="cta-section-ambient-glitters" aria-hidden="true">
+          <SparkleStar className="sparkle-ambient-1" size={26} color="#ffffff" />
+          <SparkleStar className="sparkle-ambient-2" size={20} color="#3BBF8F" />
+          <SparkleStar className="sparkle-ambient-3" size={24} color="#069DBF" />
+          <SparkleStar className="sparkle-ambient-4" size={18} color="#ffffff" />
+          <SparkleStar className="sparkle-ambient-5" size={22} color="#3BBF8F" />
+          <span className="glitter-dust dust-ambient-1" />
+          <span className="glitter-dust dust-ambient-2" />
+          <span className="glitter-dust dust-ambient-3" />
+          <span className="glitter-dust dust-ambient-4" />
+        </div>
+
         <div className="container">
           <div className="cta-section-grid">
             {/* Left Column: Friendly Beaver Mascot */}
             <div className="cta-mascot-column">
               <div className="cta-mascot-card">
                 <div className="cta-mascot-glow-ring" aria-hidden="true" />
+                <div className="mascot-ambient-aura" aria-hidden="true" />
+
+                {/* MAGICAL GLITTERS & BACKGROUND SPARKLES (Home Banner Effect) */}
+                <div className="mascot-magical-glitters cta-mascot-glitters" aria-hidden="true">
+                  <SparkleStar className="sparkle-1" size={26} color="#ffffff" />
+                  <SparkleStar className="sparkle-2" size={20} color="#3BBF8F" />
+                  <SparkleStar className="sparkle-3" size={24} color="#069DBF" />
+                  <SparkleStar className="sparkle-4" size={18} color="#ffffff" />
+                  <SparkleStar className="sparkle-5" size={20} color="#3BBF8F" />
+                  <SparkleStar className="sparkle-6" size={16} color="#069DBF" />
+                  <SparkleStar className="sparkle-7" size={22} color="#ffffff" />
+                  <SparkleStar className="sparkle-8" size={18} color="#3BBF8F" />
+
+                  {/* Floating Radiant Glitter Dust */}
+                  <span className="glitter-dust dust-1" />
+                  <span className="glitter-dust dust-2" />
+                  <span className="glitter-dust dust-3" />
+                  <span className="glitter-dust dust-4" />
+                  <span className="glitter-dust dust-5" />
+                  <span className="glitter-dust dust-6" />
+                </div>
+
                 <div className="cta-mascot-img-wrap">
                   <Image
                     src="/images/friendly-beaver-dentist-mascot.png"

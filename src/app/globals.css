@@ -5262,6 +5262,24 @@ button {
   animation-duration: 3s;
 }
 
+.magical-sparkle.sparkle-7 {
+  top: 10%;
+  left: -2%;
+  --sparkle-glow: #ffffff;
+  --sparkle-glow2: #069DBF;
+  animation-delay: 1.1s;
+  animation-duration: 2.9s;
+}
+
+.magical-sparkle.sparkle-8 {
+  top: 32%;
+  right: -5%;
+  --sparkle-glow: #3BBF8F;
+  --sparkle-glow2: #ffffff;
+  animation-delay: 0.6s;
+  animation-duration: 3.1s;
+}
+
 /* Floating Radiant Glitter Dust */
 .glitter-dust {
   position: absolute;
@@ -5334,6 +5352,16 @@ button {
   --dust-color: #069DBF;
   animation-delay: 0.9s;
   animation-duration: 3.2s;
+}
+
+.glitter-dust.dust-6 {
+  width: 6px;
+  height: 6px;
+  top: 18%;
+  left: 12%;
+  --dust-color: #ffffff;
+  animation-delay: 1.7s;
+  animation-duration: 3.6s;
 }
 
 .mascot-pedestal-shadow {
@@ -6157,7 +6185,6 @@ button {
   border: 2px solid #3BBF8F;
   border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 14px 35px rgba(59, 191, 143, 0.14), 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: all 0.25s ease;
 }
 
@@ -7802,13 +7829,16 @@ section .event-panorama-banner .panorama-banner-excerpt,
    ========================================================================== */
 .gallery-section-header {
   margin-bottom: 32px;
+  text-align: left !important;
 }
 
 .gallery-eyebrow-wrapper {
   display: inline-flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 10px;
   margin-bottom: 8px;
+  text-align: left !important;
 }
 
 .gallery-accent-dash {
@@ -7826,6 +7856,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
   color: #000000 !important;
   letter-spacing: -0.6px;
   margin: 0 0 12px;
+  text-align: left !important;
 }
 
 .gallery-lead-desc {
@@ -7833,17 +7864,20 @@ section .event-panorama-banner .panorama-banner-excerpt,
   font-size: 15px;
   line-height: 1.6;
   color: #475569 !important;
-  margin: 0 auto;
+  margin: 0 0 0 0 !important;
+  max-width: 760px;
+  text-align: left !important;
 }
 
-/* Category Filter Pills */
+/* Category Filter Pills (Left-Aligned) */
 .gallery-filter-pills-row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start !important;
   gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 28px;
+  text-align: left !important;
 }
 
 .gallery-filter-pill {
@@ -7996,26 +8030,27 @@ section .event-panorama-banner .panorama-banner-excerpt,
 .gallery-tile-hover-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(2, 62, 115, 0.15) 0%, rgba(1, 30, 61, 0.72) 42%, rgba(1, 24, 48, 0.96) 100%);
-  backdrop-filter: blur(3px);
+  background: linear-gradient(180deg, rgba(2, 38, 74, 0.78) 0%, rgba(1, 26, 51, 0.92) 45%, rgba(1, 18, 36, 0.98) 100%) !important;
+  backdrop-filter: blur(8px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(8px) saturate(130%) !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 24px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
-  transition: opacity 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
-    transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
-    visibility 0.32s;
+  transform: translateY(8px);
+  transition: opacity 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+    visibility 0.3s;
   z-index: 3;
 }
 
 .gallery-hierarchical-tile:hover .gallery-tile-hover-overlay,
 .gallery-hierarchical-tile:focus-visible .gallery-tile-hover-overlay {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
 }
 
 .hover-overlay-top {
@@ -8027,35 +8062,40 @@ section .event-panorama-banner .panorama-banner-excerpt,
 
 .hover-category-badge {
   font-family: 'Inter', sans-serif !important;
-  font-size: 10.5px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   padding: 4px 10px;
   border-radius: 6px;
   color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .badge-theme-blue {
-  background: #0477BF;
-  box-shadow: 0 2px 8px rgba(4, 119, 191, 0.4);
+  background: #0477BF !important;
+  box-shadow: 0 2px 8px rgba(4, 119, 191, 0.5);
 }
 
 .badge-theme-green {
-  background: #166534;
-  box-shadow: 0 2px 8px rgba(22, 101, 52, 0.4);
+  background: #166534 !important;
+  box-shadow: 0 2px 8px rgba(22, 101, 52, 0.5);
 }
 
 .badge-theme-cyan {
-  background: #069DBF;
-  box-shadow: 0 2px 8px rgba(6, 157, 191, 0.4);
+  background: #069DBF !important;
+  box-shadow: 0 2px 8px rgba(6, 157, 191, 0.5);
 }
 
 .hover-year-pill {
   font-family: 'Inter', sans-serif !important;
   font-size: 11px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.75) !important;
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+  padding: 3px 9px;
+  border-radius: 999px;
   letter-spacing: 0.5px;
 }
 
@@ -8065,44 +8105,55 @@ section .event-panorama-banner .panorama-banner-excerpt,
   gap: 8px;
 }
 
-.hover-photo-title {
+.hover-photo-title,
+.gallery-tile-hover-overlay .hover-photo-title,
+.gallery-hierarchical-tile:hover .hover-photo-title,
+.section .gallery-tile-hover-overlay h3.hover-photo-title {
   font-family: 'Inter', sans-serif !important;
-  font-size: clamp(15px, 1.4vw, 19px);
-  font-weight: 800;
-  line-height: 1.3;
+  font-size: clamp(16px, 1.5vw, 20px) !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
   color: #ffffff !important;
-  margin: 0;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  margin: 0 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85), 0 1px 3px rgba(0, 0, 0, 0.9) !important;
 }
 
-.gallery-tile--hero .hover-photo-title {
-  font-size: clamp(18px, 1.8vw, 24px);
+.gallery-tile--hero .hover-photo-title,
+.gallery-tile--hero .gallery-tile-hover-overlay .hover-photo-title {
+  font-size: clamp(19px, 1.9vw, 25px) !important;
 }
 
-.hover-photo-caption {
+.hover-photo-caption,
+.gallery-tile-hover-overlay .hover-photo-caption,
+.gallery-hierarchical-tile:hover .hover-photo-caption,
+.section .gallery-tile-hover-overlay p.hover-photo-caption {
   font-family: 'Inter', sans-serif !important;
-  font-size: 12.5px;
-  line-height: 1.45;
-  color: rgba(255, 255, 255, 0.82) !important;
-  margin: 0;
+  font-size: 13.5px !important;
+  line-height: 1.55 !important;
+  color: #F1F5F9 !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
 }
 
 .hover-action-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 6px;
-  padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
 }
 
-.hover-view-btn {
+.hover-view-btn,
+.gallery-tile-hover-overlay .hover-view-btn,
+.gallery-tile-hover-overlay .hover-view-btn span {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-family: 'Inter', sans-serif !important;
-  font-size: 11.5px;
-  font-weight: 800;
+  font-size: 12px !important;
+  font-weight: 800 !important;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   color: #3BBF8F !important;
@@ -8110,7 +8161,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
 }
 
 .hover-btn-arrow {
-  stroke: #3BBF8F;
+  stroke: #3BBF8F !important;
   transition: transform 0.25s ease;
 }
 
@@ -8119,14 +8170,23 @@ section .event-panorama-banner .panorama-banner-excerpt,
 }
 
 .hover-zoom-icon {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.18) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.gallery-hierarchical-tile:hover .hover-zoom-icon {
+  background: rgba(59, 191, 143, 0.28) !important;
+  border-color: #3BBF8F !important;
+  color: #3BBF8F !important;
 }
 
 /* Explore Central Gallery Button */
@@ -8235,6 +8295,100 @@ section .event-panorama-banner .panorama-banner-excerpt,
   pointer-events: none;
 }
 
+/* Ambient Section-Wide Floating Sparkles (Home Banner Atmosphere) */
+.cta-section-ambient-glitters {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.sparkle-ambient-1 {
+  top: 10%;
+  left: 6%;
+  --sparkle-glow: #ffffff;
+  --sparkle-glow2: #069DBF;
+  animation-delay: 0.3s;
+  animation-duration: 3.4s;
+}
+
+.sparkle-ambient-2 {
+  top: 16%;
+  right: 12%;
+  --sparkle-glow: #3BBF8F;
+  --sparkle-glow2: #0477BF;
+  animation-delay: 1.2s;
+  animation-duration: 4.1s;
+}
+
+.sparkle-ambient-3 {
+  bottom: 20%;
+  right: 28%;
+  --sparkle-glow: #069DBF;
+  --sparkle-glow2: #ffffff;
+  animation-delay: 2s;
+  animation-duration: 3.7s;
+}
+
+.sparkle-ambient-4 {
+  top: 72%;
+  left: 32%;
+  --sparkle-glow: #ffffff;
+  --sparkle-glow2: #3BBF8F;
+  animation-delay: 1.6s;
+  animation-duration: 3.2s;
+}
+
+.sparkle-ambient-5 {
+  top: 8%;
+  right: 42%;
+  --sparkle-glow: #3BBF8F;
+  --sparkle-glow2: #069DBF;
+  animation-delay: 0.8s;
+  animation-duration: 3.9s;
+}
+
+.dust-ambient-1 {
+  width: 6px;
+  height: 6px;
+  top: 14%;
+  right: 24%;
+  --dust-color: #3BBF8F;
+  animation-delay: 0.6s;
+  animation-duration: 4.6s;
+}
+
+.dust-ambient-2 {
+  width: 5px;
+  height: 5px;
+  bottom: 22%;
+  right: 14%;
+  --dust-color: #069DBF;
+  animation-delay: 1.9s;
+  animation-duration: 5s;
+}
+
+.dust-ambient-3 {
+  width: 7px;
+  height: 7px;
+  top: 45%;
+  right: 46%;
+  --dust-color: #ffffff;
+  animation-delay: 1.3s;
+  animation-duration: 4.3s;
+}
+
+.dust-ambient-4 {
+  width: 5px;
+  height: 5px;
+  bottom: 12%;
+  left: 48%;
+  --dust-color: #3BBF8F;
+  animation-delay: 2.8s;
+  animation-duration: 3.8s;
+}
+
 .cta-section-grid {
   display: grid;
   grid-template-columns: 360px 1fr;
@@ -8273,6 +8427,31 @@ section .event-panorama-banner .panorama-banner-excerpt,
   filter: blur(24px);
   pointer-events: none;
   z-index: 1;
+}
+
+.cta-mascot-card .mascot-ambient-aura {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 430px;
+  height: 430px;
+  background: radial-gradient(circle, rgba(6, 157, 191, 0.55) 0%, rgba(59, 191, 143, 0.35) 36%, rgba(4, 119, 191, 0.16) 58%, transparent 75%);
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 50%;
+  animation: auraGlowPulse 5s ease-in-out infinite;
+}
+
+.cta-mascot-card .cta-mascot-glitters {
+  position: absolute;
+  inset: -35px -35px 35px -35px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cta-mascot-card:hover .magical-sparkle {
+  filter: drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 20px var(--sparkle-glow, #3BBF8F));
 }
 
 .cta-mascot-img-wrap {
@@ -9051,10 +9230,10 @@ body,
   color: #000000 !important;
 }
 
-/* Headings in Light / Default Sections: Solid Black (Excluding dark panorama banners) */
+/* Headings in Light / Default Sections: Solid Black (Excluding dark panorama banners and gallery hover overlays) */
 .section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) h1:not(.panorama-banner-title),
 .section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) h2:not(.panorama-banner-title),
-.section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) h3:not(.panorama-banner-title),
+.section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) h3:not(.panorama-banner-title):not(.hover-photo-title),
 .section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) h4,
 .section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) h5,
 .section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) h6,
@@ -9093,9 +9272,9 @@ body,
   color: #000000 !important;
 }
 
-/* Paragraphs & Body Descriptions in Light Sections: Solid Black (Excluding dark panorama banners) */
-.section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) p:not(.panorama-banner-excerpt),
-.fold-white p:not(.panorama-banner-excerpt),
+/* Paragraphs & Body Descriptions in Light Sections: Solid Black (Excluding dark panorama banners and gallery hover overlays) */
+.section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section) p:not(.panorama-banner-excerpt):not(.hover-photo-caption),
+.fold-white p:not(.panorama-banner-excerpt):not(.hover-photo-caption),
 .section-desc,
 .countdown-sub-lead,
 .event-duo-excerpt,
@@ -9129,8 +9308,34 @@ body,
 .panorama-banner-title,
 .panorama-banner-excerpt,
 .panorama-meta-item,
-.panorama-badge-pill span {
+.panorama-badge-pill span,
+.gallery-tile-hover-overlay,
+.gallery-tile-hover-overlay h3,
+.gallery-tile-hover-overlay p,
+.gallery-tile-hover-overlay span,
+.hover-photo-title,
+.hover-photo-caption {
   color: #ffffff !important;
+}
+
+/* Gallery Hover Overlay Contrast & Text Visibility Guarantee */
+.gallery-tile-hover-overlay .hover-photo-title,
+.gallery-hierarchical-tile:hover .hover-photo-title,
+.section-gallery .hover-photo-title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85), 0 1px 3px rgba(0, 0, 0, 0.9) !important;
+}
+
+.gallery-tile-hover-overlay .hover-photo-caption,
+.gallery-hierarchical-tile:hover .hover-photo-caption,
+.section-gallery .hover-photo-caption {
+  color: #F1F5F9 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+.gallery-tile-hover-overlay .hover-view-btn,
+.gallery-tile-hover-overlay .hover-view-btn span {
+  color: #3BBF8F !important;
 }
 
 .fold-dark h1,
