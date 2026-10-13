@@ -291,14 +291,6 @@ export default function AudienceBenefitsSlider({ audienceGroups = defaultAudienc
           </article>
         ))}
       </div>
-
-      {/* 3. CONCLUDING HIGHLIGHT QUOTE */}
-      <div className="benefits-conclusion-card">
-        <p className="benefits-conclusion-quote">
-          “At Dental Show 2027, every connection can spark an idea, every discovery can open a door,
-          and <span className="highlight-text">every opportunity can move dentistry forward</span>.”
-        </p>
-      </div>
     </div>
   );
 }

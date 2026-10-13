@@ -7012,19 +7012,21 @@ button {
 }
 
 .benefits-cards-track.is-slider-mode {
+  --slider-left-pad: max(20px, calc((100% - 1200px) / 2));
+  --slider-visible-span: calc(100% - var(--slider-left-pad));
   display: flex;
   gap: 24px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scroll-padding: 0 4px;
-  /* Left edge aligns with .container (width: min(1200px, 100% - 40px)) */
-  padding-left: max(20px, calc((100vw - 1200px) / 2));
-  /* Right edge allows smooth scrolling right to full screen edge */
-  padding-right: max(24px, calc((100vw - 1200px) / 2));
+  /* Left edge aligns flush with .container title above */
+  padding-left: var(--slider-left-pad);
+  /* Right edge bleeds full screen without container constraint */
+  padding-right: 48px;
   padding-top: 8px;
   padding-bottom: 28px;
-  margin-bottom: 24px;
+  margin-bottom: 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
   width: 100%;
@@ -7055,37 +7057,31 @@ button {
   flex-direction: column;
 }
 
-/* Responsive card width in slider mode: exactly 3.5 cards visible on desktop, right side full screen */
+/* Responsive card width in slider mode: exactly 3.5 cards visible on desktop from title start to right screen edge */
 .is-slider-mode .benefit-staple-card {
-  --slider-left-pad: max(20px, calc((100vw - 1200px) / 2));
-  --slider-visible-span: calc(100vw - var(--slider-left-pad));
-  --card-width-3half: calc((var(--slider-visible-span) - 72px) / 3.5);
-
-  flex: 0 0 var(--card-width-3half);
-  width: var(--card-width-3half);
-  min-width: 310px;
+  flex: 0 0 calc((var(--slider-visible-span) - 72px) / 3.5);
+  width: calc((var(--slider-visible-span) - 72px) / 3.5);
+  min-width: 280px;
   scroll-snap-align: start;
 }
 
 @media (max-width: 1080px) {
   .benefits-cards-track.is-slider-mode {
-    padding-left: max(20px, calc((100vw - 1200px) / 2));
-    padding-right: 32px;
     gap: 20px;
+    padding-right: 32px;
   }
 
   .is-slider-mode .benefit-staple-card {
-    --card-width-2half: calc((var(--slider-visible-span) - 40px) / 2.5);
-    flex: 0 0 var(--card-width-2half);
-    width: var(--card-width-2half);
-    min-width: 280px;
+    flex: 0 0 calc((var(--slider-visible-span) - 40px) / 2.5);
+    width: calc((var(--slider-visible-span) - 40px) / 2.5);
+    min-width: 260px;
   }
 }
 
 @media (max-width: 680px) {
   .benefits-cards-track.is-slider-mode {
     padding-left: 20px;
-    padding-right: 24px;
+    padding-right: 20px;
     gap: 16px;
   }
 
