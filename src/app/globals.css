@@ -5885,7 +5885,7 @@ button {
 /* Event Details 3-Column Horizontal Grid Strip */
 .countdown-details-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0;
   width: 100%;
   margin: 2px 0 0;
@@ -6146,36 +6146,42 @@ button {
 }
 
 /* ==========================================================================
-   Column 2: Right Column (Timer Panel + Feature Cards Stack)
+   Column 2: Right Column (Unified One-Column Card with Overall Border)
    ========================================================================== */
 .countdown-right-col {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 0 !important;
   height: 100%;
-  justify-content: space-between;
+  background: #ffffff;
+  border: 2px solid #3BBF8F;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(59, 191, 143, 0.14), 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+}
+
+.countdown-right-col:hover {
+  box-shadow: 0 18px 45px rgba(59, 191, 143, 0.2), 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-color: #2da87b;
 }
 
 /* ==========================================================================
-   Split-Flap / Mechanical Flip Clock Chassis (Light Green / Mint Theme)
+   Top Half: Live Countdown Timer (Light Green / Mint Theme Background)
    ========================================================================== */
 .countdown-timer-panel {
   background: linear-gradient(145deg, #ffffff 0%, #f4fbf7 50%, #e8f8f0 100%);
-  border: 2px solid #3BBF8F;
-  border-radius: 22px;
-  padding: 24px 28px 24px;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1.5px solid rgba(59, 191, 143, 0.25) !important;
+  padding: 24px 28px 22px;
   display: flex;
   flex-direction: column;
   gap: 18px;
   transition: all 0.25s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 12px 32px rgba(59, 191, 143, 0.14), 0 2px 6px rgba(0, 0, 0, 0.03);
-}
-
-.countdown-timer-panel:hover {
-  box-shadow: 0 16px 40px rgba(59, 191, 143, 0.2), 0 3px 8px rgba(0, 0, 0, 0.05);
-  border-color: #2da87b;
+  box-shadow: none !important;
 }
 
 .countdown-timer-panel-header {
@@ -6382,37 +6388,46 @@ button {
 }
 
 /* ==========================================================================
-   3 Executive Feature Highlight Cards (Directly Integrated Below Timer)
+   Bottom Half: 3 Integrated Feature Highlight Rows (Inside Unified Card)
    ========================================================================== */
 .countdown-features-stack {
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 0;
   flex: 1;
   justify-content: space-between;
-  border: 1.5px dashed black;
-  border-radius: 20px;
+  background: #ffffff !important;
+  border: none !important;
+  border-radius: 0 !important;
   overflow: hidden;
+  padding: 4px 0;
 }
 
 .countdown-feature-box {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 0px;
-  padding: 13px 18px 0px 18px;
+  justify-content: center;
+  gap: 6px;
+  padding: 15px 26px;
   background: #ffffff !important;
   flex: 1;
   position: relative;
   overflow: hidden;
   cursor: default;
-  border-radius: 14px;
-  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
-  box-shadow: 0 2px 6px rgba(2, 62, 115, 0.02);
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  box-shadow: none !important;
+  transition: background 0.2s ease;
+}
+
+.countdown-feature-box:last-child {
+  border-bottom: none !important;
 }
 
 .countdown-feature-box:hover {
-  transform: translateY(-2px);
+  background: #f8fafc !important;
+  transform: none !important;
 }
 
 /* Feature Box Top Row */

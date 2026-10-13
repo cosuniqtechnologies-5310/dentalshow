@@ -129,16 +129,6 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="countdown-detail-card">
-                    <div className="detail-card-icon" aria-hidden="true">
-                      <Icon name="pin" size={16} />
-                    </div>
-                    <div className="detail-card-info">
-                      <strong className="detail-card-title">Chennai Trade Centre</strong>
-                      <span className="detail-card-sub">New Hall 2, 3 &amp; 3A</span>
-                    </div>
-                  </div>
-
                   <div className="countdown-detail-card countdown-detail-card--access">
                     <div className="detail-card-icon detail-card-icon--access" aria-hidden="true">
                       <Icon name="ticket" size={16} />
