@@ -7267,94 +7267,135 @@ button {
   align-items: center;
 }
 
-/* Triads Accordion: Discover, Connect, Grow (Interactive Option) */
+/* Triads Accordion: Discover, Connect, Grow (Interactive Option - Full Color Fill) */
 .staple-triads-accordion {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 7px;
   margin-bottom: 12px;
   flex: 1;
 }
 
 .staple-accordion-item {
   border-radius: 8px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
   overflow: hidden;
-  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.22s ease;
+  border: 1px solid transparent;
 }
 
-.staple-accordion-item.is-active {
-  background: #ffffff;
-  border-color: #cbd5e1;
-  box-shadow: 0 2px 8px rgba(2, 62, 115, 0.05);
+/* 1. DISCOVER: Full Color Fill (Soft Cyan / Sky Blue) */
+.staple-accordion-item--discover {
+  background: #E8F5FB;
+  border-color: rgba(4, 119, 191, 0.24);
 }
 
+.staple-accordion-item--discover:hover,
+.staple-accordion-item--discover.is-active {
+  background: #E0F0F9;
+  border-color: #0477BF;
+  box-shadow: 0 2px 8px rgba(4, 119, 191, 0.12);
+}
+
+.staple-accordion-header-btn--discover .staple-triad-label,
+.staple-triad-label.label--discover {
+  color: #0477BF !important;
+}
+
+.accordion-chevron-toggle.chevron--discover {
+  color: #0477BF !important;
+}
+
+.staple-accordion-inner.inner--discover {
+  background: #F2F9FD;
+  border-top: 1px solid rgba(4, 119, 191, 0.18);
+}
+
+/* 2. CONNECT: Full Color Fill (Soft Navy / Azure Blue) */
+.staple-accordion-item--connect {
+  background: #EBF3FA;
+  border-color: rgba(2, 62, 115, 0.22);
+}
+
+.staple-accordion-item--connect:hover,
+.staple-accordion-item--connect.is-active {
+  background: #DFEDF8;
+  border-color: #023E73;
+  box-shadow: 0 2px 8px rgba(2, 62, 115, 0.12);
+}
+
+.staple-accordion-header-btn--connect .staple-triad-label,
+.staple-triad-label.label--connect {
+  color: #023E73 !important;
+}
+
+.accordion-chevron-toggle.chevron--connect {
+  color: #023E73 !important;
+}
+
+.staple-accordion-inner.inner--connect {
+  background: #F4F8FC;
+  border-top: 1px solid rgba(2, 62, 115, 0.16);
+}
+
+/* 3. GROW: Full Color Fill (Soft Emerald / Mint Green) */
+.staple-accordion-item--grow {
+  background: #EBF8F2;
+  border-color: rgba(22, 101, 52, 0.22);
+}
+
+.staple-accordion-item--grow:hover,
+.staple-accordion-item--grow.is-active {
+  background: #DEF3E8;
+  border-color: #166534;
+  box-shadow: 0 2px 8px rgba(22, 101, 52, 0.12);
+}
+
+.staple-accordion-header-btn--grow .staple-triad-label,
+.staple-triad-label.label--grow {
+  color: #166534 !important;
+}
+
+.accordion-chevron-toggle.chevron--grow {
+  color: #166534 !important;
+}
+
+.staple-accordion-inner.inner--grow {
+  background: #F2FAF5;
+  border-top: 1px solid rgba(59, 191, 143, 0.22);
+}
+
+/* Accordion Header Button */
 .staple-accordion-header-btn {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 7px 10px;
+  padding: 8px 12px;
   background: transparent;
   border: none;
   cursor: pointer;
   text-align: left;
-  transition: background 0.18s ease;
   user-select: none;
+  transition: background 0.18s ease;
 }
 
-.staple-accordion-header-btn:hover {
-  background: rgba(4, 119, 191, 0.04);
-}
-
-.staple-accordion-header-btn.is-open {
-  padding-bottom: 4px;
-}
-
-.staple-triad-chip {
+.staple-triad-label {
   font-family: 'Inter', sans-serif !important;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 800;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.9px;
   text-transform: uppercase;
-  padding: 2.5px 8px;
-  border-radius: 4px;
-  width: fit-content;
-  display: inline-block;
-  transition: transform 0.15s ease;
-}
-
-.staple-accordion-header-btn:hover .staple-triad-chip {
-  transform: translateX(1px);
-}
-
-.chip--discover {
-  background: rgba(6, 157, 191, 0.14);
-  color: #0477BF !important;
-}
-
-.chip--connect {
-  background: rgba(4, 119, 191, 0.14);
-  color: #023E73 !important;
-}
-
-.chip--grow {
-  background: rgba(59, 191, 143, 0.22);
-  color: #166534 !important;
 }
 
 .accordion-chevron-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #64748b;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .accordion-chevron-toggle.is-expanded {
   transform: rotate(180deg);
-  color: #0477BF;
 }
 
 .staple-accordion-collapse {
@@ -7370,14 +7411,14 @@ button {
 }
 
 .staple-accordion-inner {
-  padding: 2px 10px 8px;
+  padding: 8px 12px 10px;
   text-align: left;
 }
 
 .staple-triad-text {
   font-family: 'Inter', sans-serif !important;
   font-size: 11.5px;
-  line-height: 1.4;
+  line-height: 1.45;
   color: #1e293b !important;
   margin: 0;
 }

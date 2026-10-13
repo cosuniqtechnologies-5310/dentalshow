@@ -69,25 +69,22 @@ const defaultAudienceGroups = [
 ];
 
 function AudienceCard({ group }) {
-  const [activeItem, setActiveItem] = useState("discover");
+  const [activeItem, setActiveItem] = useState(null);
 
   const triadItems = [
     {
       key: "discover",
       label: "DISCOVER",
-      chipClass: "chip--discover",
       text: group.discover,
     },
     {
       key: "connect",
       label: "CONNECT",
-      chipClass: "chip--connect",
       text: group.connect,
     },
     {
       key: "grow",
       label: "GROW",
-      chipClass: "chip--grow",
       text: group.grow,
     },
   ];
@@ -126,7 +123,7 @@ function AudienceCard({ group }) {
         {/* Cover Title */}
         <h3 className="staple-card-title">{group.role}</h3>
 
-        {/* Triads Accordion: Discover, Connect, Grow */}
+        {/* Triads Accordion: Discover, Connect, Grow (Full Color Fill) */}
         <div
           className="staple-triads-accordion"
           role="region"
@@ -137,20 +134,20 @@ function AudienceCard({ group }) {
             return (
               <div
                 key={item.key}
-                className={`staple-accordion-item ${isOpen ? "is-active" : ""}`}
+                className={`staple-accordion-item staple-accordion-item--${item.key} ${isOpen ? "is-active" : ""}`}
               >
                 <button
                   type="button"
-                  className={`staple-accordion-header-btn ${isOpen ? "is-open" : ""}`}
+                  className={`staple-accordion-header-btn staple-accordion-header-btn--${item.key} ${isOpen ? "is-open" : ""}`}
                   onClick={() => handleToggle(item.key)}
                   aria-expanded={isOpen}
                   aria-controls={`accordion-content-${group.id}-${item.key}`}
                 >
-                  <span className={`staple-triad-chip ${item.chipClass}`}>
+                  <span className={`staple-triad-label label--${item.key}`}>
                     {item.label}
                   </span>
                   <span
-                    className={`accordion-chevron-toggle ${isOpen ? "is-expanded" : ""}`}
+                    className={`accordion-chevron-toggle chevron--${item.key} ${isOpen ? "is-expanded" : ""}`}
                     aria-hidden="true"
                   >
                     <svg
@@ -159,7 +156,7 @@ function AudienceCard({ group }) {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      strokeWidth="2.4"
+                      strokeWidth="2.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     >
@@ -173,7 +170,7 @@ function AudienceCard({ group }) {
                   className={`staple-accordion-collapse ${isOpen ? "is-expanded" : ""}`}
                   role="region"
                 >
-                  <div className="staple-accordion-inner">
+                  <div className={`staple-accordion-inner inner--${item.key}`}>
                     <p className="staple-triad-text">{item.text}</p>
                   </div>
                 </div>
