@@ -197,10 +197,10 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
           <div className="stage-host-podium-wrap">
             <div className="stage-host-glow-ring" aria-hidden="true" />
             <Image
-              src="/images/friendly-beaver-dentist-mascot.png"
+              src="/images/dental-show-mascot-new.png"
               alt="Dental Show Mascot Guide"
               width={200}
-              height={260}
+              height={282}
               priority
               className="stage-host-mascot-img"
             />
