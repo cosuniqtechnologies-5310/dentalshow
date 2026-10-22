@@ -59,7 +59,7 @@ export default function HomePage() {
                       className="btn btn-hero-visitor"
                       id="hero-visitor-btn"
                     >
-                      <span>Register as a Visitor</span>
+                      <span>Register as a visitor</span>
                       <span className="btn-arrow" aria-hidden="true">→</span>
                     </Link>
                     <Link
@@ -67,7 +67,7 @@ export default function HomePage() {
                       className="btn btn-hero-exhibitor"
                       id="hero-exhibitor-btn"
                     >
-                      <span>Register as an Exhibitor</span>
+                      <span>Register as an exhibitor</span>
                     </Link>
                   </div>
                 </div>
@@ -95,17 +95,16 @@ export default function HomePage() {
               <div className="countdown-left-col">
                 <div className="countdown-eyebrow-row">
                   <span className="countdown-accent-dash" aria-hidden="true" />
-                  <span className="section-eyebrow">COUNTDOWN TO 2027</span>
+                  <span className="section-eyebrow countdown-eyebrow-text">YOUR NEXT DENTAL DISCOVERY AWAITS</span>
                 </div>
 
                 <h2 className="countdown-main-title">
-                  The countdown to <br className="countdown-title-br" />
-                  Dental Show 2027 begins
+                  For the dentist you are. <br className="countdown-title-br" />
+                  For the dentist you aspire to be.
                 </h2>
 
                 <p className="countdown-sub-lead">
-                  Mark your calendar for <strong>6th &amp; 7th February 2027</strong>. Connect with 250+ global brands,
-                  discover next-gen CAD/CAM innovations, and network with 6,000+ peers at Chennai Trade Centre.
+                  Whether you&apos;re advancing your practice or taking your first steps into dentistry, every new discovery opens the door to greater possibilities. Explore innovations, exchange ideas and connect with a community that shares your passion for dentistry.
                 </p>
 
                 {/* Event Details 3-Column Horizontal Grid */}
@@ -126,7 +125,7 @@ export default function HomePage() {
                     </div>
                     <div className="detail-card-info">
                       <strong className="detail-card-title">Free Visitor Access</strong>
-                      <span className="detail-card-sub">For Dental Clinicians</span>
+                      <span className="detail-card-sub">For Dentists &amp; Dental Students</span>
                     </div>
                   </div>
                 </div>
@@ -154,7 +153,7 @@ export default function HomePage() {
                         className="btn btn-countdown-primary"
                         id="countdown-register-btn"
                       >
-                        <span>Register as Visitor (Free Pass)</span>
+                        <span>Visitor registration</span>
                         <span className="btn-arrow" aria-hidden="true">→</span>
                       </Link>
                       <Link
@@ -162,7 +161,7 @@ export default function HomePage() {
                         className="btn btn-countdown-secondary"
                         id="countdown-exhibitor-btn"
                       >
-                        <span>Book an Exhibitor Booth</span>
+                        <span>Exhibitor registration</span>
                       </Link>
                     </div>
                   </div>
@@ -197,8 +196,8 @@ export default function HomePage() {
                       </div>
                       <span className="feature-box-badge badge-navy">EXHIBITION</span>
                       <div className="feature-box-stat stat-navy">
-                        <span className="stat-dot dot-navy" />
-                        <span>250+ Brands</span>
+                        <span className="feature-stat-sparkle" aria-hidden="true">✦</span>
+                        <span>Global dental innovations</span>
                       </div>
                     </div>
                     <div className="feature-box-body">
@@ -217,8 +216,8 @@ export default function HomePage() {
                       </div>
                       <span className="feature-box-badge badge-royal">NETWORKING</span>
                       <div className="feature-box-stat stat-royal">
-                        <span className="stat-dot dot-royal" />
-                        <span>6,000+ Peers</span>
+                        <span className="feature-stat-sparkle" aria-hidden="true">✦</span>
+                        <span>Meaningful connections</span>
                       </div>
                     </div>
                     <div className="feature-box-body">
@@ -237,8 +236,8 @@ export default function HomePage() {
                       </div>
                       <span className="feature-box-badge badge-cyan">INFRASTRUCTURE</span>
                       <div className="feature-box-stat stat-cyan">
-                        <span className="stat-dot dot-cyan" />
-                        <span>10,000+ sq.m</span>
+                        <span className="feature-stat-sparkle" aria-hidden="true">✦</span>
+                        <span>A world of possibilities</span>
                       </div>
                     </div>
                     <div className="feature-box-body">

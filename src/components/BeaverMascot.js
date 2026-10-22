@@ -109,7 +109,7 @@ export default function BeaverMascot({ size = 310, className = "" }) {
         <div className="mascot-info-badge" aria-label="Mascot Left Hand Highlights">
           <div className="info-badge-head">
             <span className="info-badge-dot" aria-hidden="true" />
-            <span className="info-badge-tag">EXPO HIGHLIGHTS</span>
+            <span className="info-badge-tag">Expo highlights</span>
           </div>
           <div className="info-badge-title">250+ Brands</div>
           <div className="info-badge-stats">1000+ products, 6000+ Visitors</div>

@@ -32,23 +32,23 @@ export const site = {
 
 export const nav = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
+  { label: "About us", href: "/about" },
   { label: "Events", href: "/events" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Contact us", href: "/contact" },
 ];
 
 export const footerLinks = {
   quick: [
     { label: "Home", href: "/" },
-    { label: "About Us", href: "/about" },
+    { label: "About us", href: "/about" },
     { label: "Events", href: "/events" },
     { label: "Gallery", href: "/gallery" },
-    { label: "Contact Us", href: "/contact" },
+    { label: "Contact us", href: "/contact" },
   ],
   registration: [
-    { label: "Visitor Registration", href: "/visitor-registration" },
-    { label: "Exhibitor Registration", href: "/exhibitor-registration" },
+    { label: "Visitor registration", href: "/visitor-registration" },
+    { label: "Exhibitor registration", href: "/exhibitor-registration" },
     { label: "Stall Layout & Plans", href: "/exhibitor-registration#stall-types" },
     { label: "Scientific Sessions", href: "/events" },
     { label: "Venue & CTC Location", href: "/contact#venue" },

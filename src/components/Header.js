@@ -56,13 +56,13 @@ export default function Header() {
     };
   }, [open]);
 
-  // Section 3.1: Home | About Us | Events | Gallery | Contact Us
+  // Section 3.1: Home | About us | Events | Gallery | Contact us
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "About Us", href: "/about" },
+    { label: "About us", href: "/about" },
     { label: "Events", href: "/events" },
     { label: "Gallery", href: "/gallery" },
-    { label: "Contact Us", href: "/contact" },
+    { label: "Contact us", href: "/contact" },
   ];
 
   return (
@@ -88,21 +88,21 @@ export default function Header() {
             })}
           </ul>
 
-          {/* Section 3.1 Buttons: Visitor Registration | Exhibitor Registration */}
+          {/* Section 3.1 Buttons: Visitor registration | Exhibitor registration */}
           <div className="header-actions">
             <Link
               href="/visitor-registration"
               className="btn-header-visitor"
               onClick={() => setOpen(false)}
             >
-              Visitor Registration
+              Visitor registration
             </Link>
             <Link
               href="/exhibitor-registration"
               className="btn-header-exhibitor"
               onClick={() => setOpen(false)}
             >
-              Exhibitor Registration
+              Exhibitor registration
             </Link>
           </div>
         </nav>
