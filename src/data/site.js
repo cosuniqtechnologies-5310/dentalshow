@@ -5,7 +5,7 @@ export const site = {
   organizerFullName: "Tamil Nadu Dental Trade & Manufacturers Association",
   tagline: "See. Touch. Feel. Experience",
   description:
-    "More than an exhibition, Dental Show 2027 is where dreams take shape, ideas spark innovation, and the people who move dentistry forward come together. One community. Countless possibilities. A future we build together.",
+    "Bringing dentists, dental students, manufacturers, traders and the wider dental community together to discover innovations, experience new possibilities and build meaningful connections. See. Touch. Feel. Experience.",
   eventDate: "2027-02-06T09:00:00+05:30",
   eventDateLabel: "6th & 7th February 2027",
   venue: "Chennai Trade Centre New Hall 2, 3 & 3A",

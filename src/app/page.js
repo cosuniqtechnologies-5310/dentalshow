@@ -30,7 +30,7 @@ export default function HomePage() {
                   <div className="hero-badge-row">
                     <span className="hero-tagline-pill">
                       <span className="live-pulse-dot" aria-hidden="true" />
-                      <span>Official TNDTMA Biennial Convention</span>
+                      <span>A celebration of dentistry, innovation &amp; networking</span>
                     </span>
                   </div>
 
@@ -41,14 +41,14 @@ export default function HomePage() {
 
                   {/* Core Description Copy */}
                   <p className="hero-description">
-                    More than an exhibition, Dental Show 2027 is where dreams take shape, ideas spark
-                    innovation, and the people who move dentistry forward come together.
+                    Bringing dentists, dental students, manufacturers, traders and the wider dental
+                    community together to discover innovations, experience new possibilities and
+                    build meaningful connections.
                   </p>
 
                   <div className="hero-subquote-callout">
                     <p className="hero-subquote-text">
-                      &ldquo;One community. Countless possibilities.<br />
-                      A future we build together.&rdquo;
+                      <strong className="hero-subquote-bold">See. Touch. Feel. Experience.</strong>
                     </p>
                   </div>
 
@@ -364,7 +364,7 @@ export default function HomePage() {
 
                 <div className="cta-mascot-img-wrap">
                   <Image
-                    src="/images/friendly-beaver-dentist-mascot.png"
+                    src="/images/dental-show-mascot-new.png"
                     alt="Dental Show 2027 Mascot - Dr. Beaver"
                     width={340}
                     height={480}

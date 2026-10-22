@@ -69,10 +69,10 @@ export default function RegistrationTabs() {
               {/* Mascot Image */}
               <div className="registration-animal-image-box">
                 <Image
-                  src="/images/friendly-beaver-dentist-mascot.png"
+                  src="/images/dental-show-mascot-new.png"
                   alt="Dental Show Mascot - Visitor Host"
                   width={290}
-                  height={380}
+                  height={410}
                   priority
                   className="registration-animal-img"
                 />
@@ -199,10 +199,10 @@ export default function RegistrationTabs() {
               {/* Mascot Image */}
               <div className="registration-animal-image-box">
                 <Image
-                  src="/images/friendly-beaver-dentist-mascot.png"
+                  src="/images/dental-show-mascot-new.png"
                   alt="Dental Show Mascot - Exhibitor Host"
                   width={290}
-                  height={380}
+                  height={410}
                   priority
                   className="registration-animal-img"
                 />

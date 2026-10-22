@@ -5428,12 +5428,12 @@ button {
   z-index: 1;
 }
 
-/* COMPACT SPEECH BUBBLE: Snug & balanced to waving hand, 100% CLEAR of face */
+/* COMPACT SPEECH BUBBLE: Snug & balanced to waving hand (Mascot Right Hand) */
 .mascot-speech-bubble {
   position: absolute;
-  top: 10%;
-  left: -155px;
-  width: 185px;
+  top: 8%;
+  left: -175px;
+  width: 205px;
   background: #ffffff;
   border: 2px solid #069DBF;
   border-radius: 16px 16px 4px 16px;
@@ -5454,15 +5454,16 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 1.5px 6px;
+  padding: 2px 7px;
   background: rgba(4, 119, 191, 0.1);
   border-radius: 6px;
   font-size: 8.5px;
   font-weight: 800;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #0477BF;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
+  line-height: 1.3;
 }
 
 .live-pulse-dot {
@@ -5488,19 +5489,20 @@ button {
   }
 }
 
-.speech-quote {
+.speech-quote,
+.speech-venue {
   font-family: var(--font-heading), sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
   color: #023E73;
-  line-height: 1.3;
+  line-height: 1.25;
   margin: 0 0 2px 0;
   letter-spacing: -0.2px;
 }
 
 .speech-sub {
-  font-size: 9.5px;
-  font-weight: 600;
+  font-size: 10px;
+  font-weight: 700;
   color: #069DBF;
   line-height: 1.25;
   display: block;
@@ -5513,17 +5515,17 @@ button {
   pointer-events: none;
 }
 
-/* DOCKED INFO BADGE: Cleanly docked beside thumbs-up hand, leaving chest and face clear */
+/* DOCKED INFO BADGE: Cleanly docked beside thumbs-up hand (Mascot Left Hand) */
 .mascot-info-badge {
   position: absolute;
   bottom: 25px;
   right: -18px;
-  width: 172px;
+  width: 185px;
   background: rgba(2, 62, 115, 0.94);
   border: 1.5px solid #3BBF8F;
   backdrop-filter: blur(10px);
   border-radius: 12px;
-  padding: 8px 12px;
+  padding: 9px 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.38), 0 0 15px rgba(59, 191, 143, 0.2);
   z-index: 10;
   text-align: left;
@@ -5560,31 +5562,31 @@ button {
 
 .info-badge-title {
   font-family: var(--font-heading), sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
   color: #ffffff;
   line-height: 1.25;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
 }
 
 .info-badge-stats {
-  font-size: 9.5px;
-  font-weight: 600;
+  font-size: 10px;
+  font-weight: 700;
   color: #069DBF;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 /* Responsive mascot wrapping */
 @media (max-width: 1250px) and (min-width: 992px) {
   .mascot-speech-bubble {
-    left: -135px;
-    width: 165px;
+    left: -150px;
+    width: 180px;
     padding: 8px 10px;
   }
 
   .mascot-info-badge {
     right: -10px;
-    width: 155px;
+    width: 170px;
   }
 }
 
@@ -5717,11 +5719,18 @@ button {
   font-size: 15px;
   color: rgba(255, 255, 255, 0.95);
   font-weight: 500;
-  font-style: italic;
   margin: 0;
   line-height: 1.65;
   letter-spacing: 0.2px;
   text-align: left;
+}
+
+.hero-subquote-bold,
+.hero-subquote-text strong {
+  font-weight: 700 !important;
+  font-style: normal;
+  color: #ffffff;
+  letter-spacing: 0.3px;
 }
 
 .hero-cta-buttons {

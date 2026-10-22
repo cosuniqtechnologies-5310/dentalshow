@@ -24,7 +24,7 @@ export function SparkleStar({ className = "", size = 20, color = "#ffffff" }) {
 
 export default function BeaverMascot({ size = 310, className = "" }) {
   const width = typeof size === "number" ? size : 310;
-  const height = Math.round(width * (1491 / 1055));
+  const height = Math.round(width * (1920 / 1359));
 
   return (
     <div
@@ -54,14 +54,14 @@ export default function BeaverMascot({ size = 310, className = "" }) {
           <span className="glitter-dust dust-5" />
         </div>
 
-        {/* SPEECH BUBBLE: Floating cleanly to the left, 100% clear of animal's face */}
-        <div className="mascot-speech-bubble">
+        {/* SPEECH BUBBLE: Floating cleanly near Mascot Right Hand (waving hand) */}
+        <div className="mascot-speech-bubble" aria-label="Mascot Right Hand Details">
           <div className="speech-badge-pill">
             <span className="live-pulse-dot" aria-hidden="true" />
-            <span>6TH &amp; 7TH FEB 2027</span>
+            <span>6th &amp; 7th Feb 2027 (Sat &amp; Sun)</span>
           </div>
-          <p className="speech-quote">“See • Touch • Feel • Experience”</p>
-          <span className="speech-sub">South India&apos;s Premier Expo</span>
+          <p className="speech-quote speech-venue">Chennai Trade Centre</p>
+          <span className="speech-sub">New Hall 2, 3 &amp; 3A</span>
 
           {/* Curved tail pointing toward beaver's cheerful face */}
           <div className="speech-tail-right" aria-hidden="true">
@@ -95,7 +95,7 @@ export default function BeaverMascot({ size = 310, className = "" }) {
         {/* CENTER: Free-standing Beaver Doctor - 100% Unobstructed Face & Body */}
         <div className="mascot-character-core">
           <Image
-            src="/images/friendly-beaver-dentist-mascot.png"
+            src="/images/dental-show-mascot-new.png"
             alt="Dental Show 2027 Beaver Mascot"
             width={width}
             height={height}
@@ -105,14 +105,14 @@ export default function BeaverMascot({ size = 310, className = "" }) {
           <div className="mascot-pedestal-shadow" aria-hidden="true" />
         </div>
 
-        {/* FLOATING INFO BADGE - Docked cleanly near thumbs-up hand */}
-        <div className="mascot-info-badge">
+        {/* FLOATING INFO BADGE - Docked cleanly near Mascot Left Hand (thumbs-up hand) */}
+        <div className="mascot-info-badge" aria-label="Mascot Left Hand Highlights">
           <div className="info-badge-head">
             <span className="info-badge-dot" aria-hidden="true" />
-            <span className="info-badge-tag">CHENNAI TRADE CENTRE</span>
+            <span className="info-badge-tag">EXPO HIGHLIGHTS</span>
           </div>
-          <div className="info-badge-title">New Hall 2, 3 &amp; 3A</div>
-          <div className="info-badge-stats">250+ Exhibitors · 6k+ Peers</div>
+          <div className="info-badge-title">250+ Brands</div>
+          <div className="info-badge-stats">1000+ products, 6000+ Visitors</div>
         </div>
       </div>
     </div>

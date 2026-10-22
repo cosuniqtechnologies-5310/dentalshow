@@ -12,7 +12,7 @@ const defaultBanners = [
     statusBadge: "UPCOMING FLAGSHIP EXPO",
     dateVenue: "6th & 7th February 2027 • Chennai Trade Centre New Halls 2, 3 & 3A",
     highlight: "250+ Brands • 6,000+ Trade Delegates • Free Visitor Pass Access",
-    excerpt: "More than an exhibition, Dental Show 2027 is where dreams take shape, ideas spark innovation, and the people who move dentistry forward come together.",
+    excerpt: "Bringing dentists, dental students, manufacturers, traders and the wider dental community together to discover innovations, experience new possibilities and build meaningful connections.",
     image: "/images/gallery-exhibition-1.jpg",
     link: "/visitor-registration",
     stampText: "• REGISTER NOW • REGISTER NOW ",

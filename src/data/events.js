@@ -16,7 +16,7 @@ export const events = [
     price: "Free Visitor Registration",
     seats: 6000,
     excerpt:
-      "More than an exhibition, Dental Show 2027 is where dreams take shape, ideas spark innovation, and the people who move dentistry forward come together.",
+      "Bringing dentists, dental students, manufacturers, traders and the wider dental community together to discover innovations, experience new possibilities and build meaningful connections.",
     description: [
       "Dental Show 2027 is South India's premier international dental exhibition and conference organized by TNDTMA (Tamil Nadu Dental Trade & Manufacturers Association).",
       "Held across the state-of-the-art New Halls 2, 3 and 3A at Chennai Trade Centre, this edition unites clinicians, dental students, dealers, technicians and global manufacturers under one visionary roof.",
