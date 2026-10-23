@@ -84,12 +84,45 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          SECTION 3.3: COUNTDOWN (Section 2: White Fold)
+          SECTION 3.2.5: FULL-WIDTH LIVE COUNTDOWN TIMER (Vibrant Full-Screen Section)
+          ============================================================ */}
+      <section className="timer-fullview-section font-modern" id="countdown-timer">
+        <div className="container timer-fullview-container">
+          <div className="timer-fullview-wrapper">
+            <div className="timer-fullview-header">
+              <div className="timer-header-left">
+                <span className="live-pulse-dot" aria-hidden="true" />
+                <span className="timer-header-title">Time Until Grand Opening</span>
+                <span className="timer-header-edition-tag">2027 Edition</span>
+              </div>
+              <div className="timer-header-badge">
+                <Icon name="calendar" size={13} />
+                <span>Feb 6–7, 2027 • Chennai Trade Centre</span>
+              </div>
+            </div>
+            <div className="timer-fullview-body">
+              <Countdown target="2027-02-06T09:00:00+05:30" />
+            </div>
+            <div className="timer-fullview-ribbon" role="region" aria-label="Event Highlights">
+              <span className="ribbon-chip"><span className="ribbon-sparkle">✦</span> 300+ Stalls</span>
+              <span className="ribbon-divider" aria-hidden="true">•</span>
+              <span className="ribbon-chip"><span className="ribbon-sparkle">✦</span> 10k+ Expected Visitors</span>
+              <span className="ribbon-divider" aria-hidden="true">•</span>
+              <span className="ribbon-chip"><span className="ribbon-sparkle">✦</span> 10,000+ sq.m Exhibition Floor</span>
+              <span className="ribbon-divider" aria-hidden="true">•</span>
+              <span className="ribbon-chip"><span className="ribbon-sparkle">✦</span> Halls 2, 3 &amp; 3A</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================
+          SECTION 3.3: SHOWCASE & HIGHLIGHTS (Section 2: White Fold)
           ============================================================ */}
       <section className="countdown-section-wrap font-modern fold-white" id="countdown">
         <div className="container">
           <div className="countdown-showcase-card">
-            {/* Overall 2-Column Grid: Left Info & CTAs + Right Timer & Feature Highlights */}
+            {/* Overall 2-Column Grid: Left Info & CTAs + Right Feature Highlights */}
             <div className="countdown-2col-grid">
               {/* Column 1: Left-Aligned Information, Venue Details & CTAs */}
               <div className="countdown-left-col">
@@ -107,18 +140,8 @@ export default function HomePage() {
                   Whether you&apos;re advancing your practice or taking your first steps into dentistry, every new discovery opens the door to greater possibilities. Explore innovations, exchange ideas and connect with a community that shares your passion for dentistry.
                 </p>
 
-                {/* Event Details 3-Column Horizontal Grid */}
+                {/* Event Details 2-Column Horizontal Grid */}
                 <div className="countdown-details-grid" role="region" aria-label="Event Schedule & Venue">
-                  <div className="countdown-detail-card">
-                    <div className="detail-card-icon" aria-hidden="true">
-                      <Icon name="calendar" size={16} />
-                    </div>
-                    <div className="detail-card-info">
-                      <strong className="detail-card-title">Feb 6 – 7, 2027</strong>
-                      <span className="detail-card-sub">09:00 AM – 06:00 PM</span>
-                    </div>
-                  </div>
-
                   <div className="countdown-detail-card countdown-detail-card--access">
                     <div className="detail-card-icon detail-card-icon--access" aria-hidden="true">
                       <Icon name="ticket" size={16} />
@@ -126,6 +149,16 @@ export default function HomePage() {
                     <div className="detail-card-info">
                       <strong className="detail-card-title">Free visitor access</strong>
                       <span className="detail-card-sub">For dentists &amp; dental students</span>
+                    </div>
+                  </div>
+
+                  <div className="countdown-detail-card">
+                    <div className="detail-card-icon" aria-hidden="true">
+                      <Icon name="calendar" size={16} />
+                    </div>
+                    <div className="detail-card-info">
+                      <strong className="detail-card-title">Feb 6 – 7, 2027</strong>
+                      <span className="detail-card-sub">09:00 AM – 06:00 PM</span>
                     </div>
                   </div>
                 </div>
@@ -168,26 +201,8 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Column 2: Live Countdown Timer + Integrated Highlight Cards */}
+              {/* Column 2: 3 Integrated Feature Highlight Cards */}
               <div className="countdown-right-col">
-                {/* Horizontal Live Countdown Dashboard Panel */}
-                <div className="countdown-timer-panel">
-                  <div className="countdown-timer-panel-header">
-                    <div className="timer-header-left">
-                      <span className="live-pulse-dot" aria-hidden="true" />
-                      <span className="timer-header-title">Time Until Grand Opening</span>
-                    </div>
-                    <div className="timer-header-badge">
-                      <Icon name="calendar" size={12} />
-                      <span>Feb 6–7, 2027</span>
-                    </div>
-                  </div>
-                  <div className="countdown-timer-wrapper">
-                    <Countdown target="2027-02-06T09:00:00+05:30" />
-                  </div>
-                </div>
-
-                {/* 3 Enriched Feature Highlight Cards */}
                 <div className="countdown-features-stack">
                   <div className="countdown-feature-box countdown-feature-box--navy">
                     <div className="feature-box-top">
@@ -201,7 +216,7 @@ export default function HomePage() {
                       </div>
                     </div>
                     <div className="feature-box-body">
-                      <h4>250+ Global exhibitors</h4>
+                      <h4>300+ stalls</h4>
                     </div>
                     <div className="feature-box-pills">
                       <span className="feature-pill"><span className="pill-sparkle">✦</span> Live Clinical Demos</span>
@@ -221,7 +236,7 @@ export default function HomePage() {
                       </div>
                     </div>
                     <div className="feature-box-body">
-                      <h4>6,000+ Trade delegates</h4>
+                      <h4>10k visitors</h4>
                     </div>
                     <div className="feature-box-pills">
                       <span className="feature-pill"><span className="pill-sparkle">✦</span> B2B Trade Exchange</span>

@@ -113,8 +113,17 @@ export default function Countdown({ target = "2027-02-06T09:00:00+05:30" }) {
         aria-label={`Time until Dental Show 2027: ${daysVal} days, ${hoursVal} hours, ${minsVal} minutes, ${secsVal} seconds`}
       >
         <RollingGroup label="DAYS" value={daysVal} />
+        <div className="odometer-separator" aria-hidden="true">
+          <span>:</span>
+        </div>
         <RollingGroup label="HOURS" value={hoursVal} />
+        <div className="odometer-separator" aria-hidden="true">
+          <span>:</span>
+        </div>
         <RollingGroup label="MINUTES" value={minsVal} />
+        <div className="odometer-separator" aria-hidden="true">
+          <span>:</span>
+        </div>
         <RollingGroup label="SECONDS" value={secsVal} />
       </div>
 

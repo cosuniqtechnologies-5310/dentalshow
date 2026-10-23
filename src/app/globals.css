@@ -5861,17 +5861,372 @@ button {
   pointer-events: none;
 }
 
-/* Premium Showcase Container Card - Executive Left-Aligned Dashboard (Flat, Harmonious & Shadow-Free) */
+/* ==========================================================================
+   SECTION 3.2.5: FULL-WIDTH VIBRANT GREEN LIVE COUNTDOWN TIMER SECTION
+   ========================================================================== */
+.timer-fullview-section {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse 70% 85% at 50% -25%, rgba(52, 211, 153, 0.45) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 60% at 92% 120%, rgba(16, 185, 129, 0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 55% at 8% 120%, rgba(5, 150, 105, 0.45) 0%, transparent 60%),
+    linear-gradient(135deg, #022c22 0%, #064e3b 22%, #047857 52%, #059669 80%, #10b981 100%);
+  padding: 52px 0 56px;
+  border-top: 2px solid rgba(52, 211, 153, 0.4);
+  border-bottom: 2px solid rgba(52, 211, 153, 0.35);
+  box-shadow: 0 16px 48px rgba(2, 44, 34, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  overflow: hidden;
+}
+
+.timer-fullview-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.timer-fullview-container {
+  position: relative;
+  z-index: 2;
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 4vw !important;
+}
+
+.timer-fullview-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  width: 100%;
+}
+
+.timer-fullview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(167, 243, 208, 0.3);
+}
+
+.timer-fullview-section .timer-header-title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.timer-fullview-section .live-pulse-dot {
+  width: 11px;
+  height: 11px;
+  background: #34d399;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #34d399;
+  animation: liveDotRadarGreen 2s ease-in-out infinite;
+}
+
+@keyframes liveDotRadarGreen {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.95);
+  }
+  70% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 11px rgba(52, 211, 153, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0);
+  }
+}
+
+.timer-fullview-section .timer-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(167, 243, 208, 0.55);
+  border-radius: 24px;
+  padding: 7px 18px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  transition: all 0.25s ease;
+}
+
+.timer-fullview-section .timer-header-badge:hover {
+  background: rgba(255, 255, 255, 0.28);
+  border-color: #6ee7b7;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.timer-fullview-section .timer-header-badge svg {
+  color: #6ee7b7 !important;
+}
+
+.timer-fullview-body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0 4px;
+}
+
+/* Full-Screen Centered Layout: Expands across entire container */
+.timer-fullview-section .odometer-centered-layout {
+  width: 100% !important;
+  max-width: 100% !important;
+  justify-content: center !important;
+  margin: 0 !important;
+}
+
+/* Hide small side flanks in full-screen timer mode */
+.timer-fullview-section .odometer-side-flank {
+  display: none !important;
+}
+
+/* Full-Screen Board: Justified edge-to-edge layout matching header */
+.timer-fullview-section .odometer-board {
+  width: 100% !important;
+  max-width: 1400px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 0 !important;
+  margin: 0 auto !important;
+}
+
+/* 4 Uniform Luxury Frosted Glass Countdown Modules */
+.timer-fullview-section .odometer-group {
+  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 285px !important;
+  height: 200px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.28) !important;
+  border-radius: 22px !important;
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1) !important;
+  flex-shrink: 0 !important;
+  padding: 16px 12px 14px !important;
+}
+
+.timer-fullview-section .odometer-group:hover {
+  transform: translateY(-4px) !important;
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-color: rgba(52, 211, 153, 0.7) !important;
+  box-shadow:
+    0 24px 52px rgba(0, 0, 0, 0.4),
+    0 0 32px rgba(52, 211, 153, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45) !important;
+}
+
+/* Base separator hidden elsewhere */
+.odometer-separator {
+  display: none;
+}
+
+/* Perfectly centered separator element between modules */
+.timer-fullview-section .odometer-separator {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  height: 200px;
+  min-width: 24px;
+}
+
+.timer-fullview-section .odometer-separator span {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 46px;
+  font-weight: 900;
+  color: #34d399;
+  text-shadow:
+    0 0 18px rgba(52, 211, 153, 0.9),
+    0 0 36px rgba(52, 211, 153, 0.5);
+  line-height: 1;
+  user-select: none;
+  transform: translateY(-8px);
+}
+
+/* Split-Flap Realistic Drum Digit Slots */
+.timer-fullview-section .odometer-slots-row {
+  position: relative;
+  background: #ffffff !important;
+  border: 2.5px solid #34d399 !important;
+  border-radius: 14px !important;
+  box-shadow:
+    0 10px 24px rgba(2, 44, 34, 0.35),
+    0 0 18px rgba(52, 211, 153, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+/* Split-Flap Center Groove Line across digits */
+.timer-fullview-section .odometer-slot::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1.5px;
+  background: rgba(2, 44, 34, 0.25);
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Split-flap top/bottom drum bevel */
+.timer-fullview-section .odometer-slot-overlay {
+  background: linear-gradient(180deg,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 255, 255, 0) 48%,
+    rgba(2, 44, 34, 0.12) 50%,
+    rgba(255, 255, 255, 0) 52%,
+    rgba(52, 211, 153, 0.08) 100%) !important;
+}
+
+/* 3-digit DAYS slot sizing to fit perfectly inside uniform module */
+.timer-fullview-section .odometer-group[data-unit="days"] .odometer-slot {
+  width: 70px !important;
+  height: 104px !important;
+}
+
+.timer-fullview-section .odometer-group[data-unit="days"] .odometer-digit {
+  font-size: 64px !important;
+}
+
+/* 2-digit HOURS, MINUTES, SECONDS slot sizing */
+.timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-slot {
+  width: 84px !important;
+  height: 104px !important;
+}
+
+.timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-digit {
+  font-size: 70px !important;
+}
+
+.timer-fullview-section .odometer-slot:not(:last-child) {
+  border-right: 2px solid rgba(5, 150, 105, 0.3) !important;
+  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.95) !important;
+}
+
+.timer-fullview-section .odometer-digit {
+  font-weight: 900 !important;
+  color: #022c22 !important;
+  letter-spacing: -1.5px;
+  text-shadow: none;
+}
+
+/* Capsule Label Badge inside Module */
+.timer-fullview-section .odometer-group-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 78, 59, 0.45) !important;
+  border: 1px solid rgba(52, 211, 153, 0.4) !important;
+  padding: 4px 18px !important;
+  border-radius: 20px !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  letter-spacing: 2.5px !important;
+  margin-top: 12px !important;
+  color: #6ee7b7 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Event Highlights Ribbon below timer */
+.timer-fullview-ribbon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(167, 243, 208, 0.35);
+  border-radius: 30px;
+  padding: 8px 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  margin-top: 4px;
+}
+
+.ribbon-chip {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.ribbon-sparkle {
+  color: #6ee7b7;
+  font-size: 11px;
+}
+
+.ribbon-divider {
+  color: rgba(167, 243, 208, 0.6);
+  font-size: 14px;
+}
+
+.timer-header-edition-tag {
+  background: rgba(52, 211, 153, 0.2);
+  border: 1px solid rgba(52, 211, 153, 0.5);
+  color: #a7f3d0;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
 /* ==========================================================================
    SECTION 3.3: COUNTDOWN & SHOWCASE (Pure White Fold, Theme-Aligned 2-Column)
    ========================================================================== */
 
 .countdown-section-wrap {
   position: relative;
-  padding: 60px 0 !important;
+  padding: 22px 0 54px !important;
   background: #ffffff !important;
   /* Pure white background as requested */
-  border-top: 1px solid #e2e8f0;
+  border-top: none !important;
   border-bottom: 1px solid #e2e8f0;
 }
 
@@ -6242,15 +6597,16 @@ button {
   gap: 0 !important;
   height: 100%;
   background: #ffffff;
-  border: 2px solid #3BBF8F;
-  border-radius: 22px;
+  border: 2px solid rgba(4, 119, 191, 0.28);
+  border-radius: 20px;
   overflow: hidden;
   transition: all 0.25s ease;
+  box-shadow: 0 4px 18px rgba(4, 119, 191, 0.08);
 }
 
 .countdown-right-col:hover {
-  box-shadow: 0 18px 45px rgba(59, 191, 143, 0.2), 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-color: #2da87b;
+  box-shadow: 0 14px 36px rgba(4, 119, 191, 0.16);
+  border-color: #0477BF;
 }
 
 /* ==========================================================================
@@ -6261,10 +6617,10 @@ button {
   border: none !important;
   border-radius: 0 !important;
   border-bottom: 1.5px solid rgba(59, 191, 143, 0.25) !important;
-  padding: 20px 24px 18px;
+  padding: 16px 22px 14px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
   flex-shrink: 0 !important;
   transition: all 0.25s ease;
   position: relative;
@@ -6554,12 +6910,14 @@ button {
 
 /* ==========================================================================
    Bottom Half: 3 Integrated Feature Highlight Rows (Inside Unified Card)
+   — Compact, refined layout with tighter vertical rhythm
    ========================================================================== */
 .countdown-features-stack {
   display: grid !important;
   grid-template-rows: repeat(3, 1fr) !important;
   gap: 0 !important;
-  flex: 1 1 0 !important;
+  flex: 1 1 auto !important;
+  height: 100% !important;
   min-height: 0 !important;
   background: #ffffff !important;
   border: none !important;
@@ -6572,8 +6930,8 @@ button {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
-  gap: 4px;
-  padding: 12px 26px;
+  gap: 8px;
+  padding: 22px 28px;
   min-height: 0 !important;
   box-sizing: border-box !important;
   background: #ffffff !important;
@@ -6582,7 +6940,7 @@ button {
   cursor: default;
   border-radius: 0 !important;
   border: none !important;
-  border-bottom: 1px solid rgba(4, 119, 191, 0.16) !important;
+  border-bottom: 1px solid rgba(4, 119, 191, 0.12) !important;
   box-shadow: none !important;
   transition: background 0.2s ease;
 }
@@ -6598,24 +6956,24 @@ button {
 
 /* 2nd Card (Networking): Light Blue theme matching royal blue (#0477BF) */
 .countdown-feature-box.countdown-feature-box--royal {
-  background: #e8f6fa !important;
+  background: #eef7fa !important;
   border-top: none !important;
-  border-bottom: 1px solid rgba(4, 119, 191, 0.16) !important;
+  border-bottom: 1px solid rgba(4, 119, 191, 0.12) !important;
 }
 
 .countdown-feature-box.countdown-feature-box--royal:hover {
-  background: #e8f6fa !important;
+  background: #eef7fa !important;
 }
 
 .countdown-feature-box.countdown-feature-box--royal .feature-box-stat {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border: 1px solid rgba(4, 119, 191, 0.25) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(4, 119, 191, 0.2) !important;
   color: #023E73 !important;
 }
 
 .countdown-feature-box.countdown-feature-box--royal:hover .feature-box-stat {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border-color: rgba(4, 119, 191, 0.25) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(4, 119, 191, 0.2) !important;
 }
 
 .countdown-feature-box.countdown-feature-box--royal .feature-box-badge {
@@ -6643,11 +7001,11 @@ button {
   background: #ffffff !important;
 }
 
-/* Feature Box Top Row */
+/* Feature Box Top Row — tighter alignment */
 .feature-box-top {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
 }
 
@@ -6655,7 +7013,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 6px;
   flex-shrink: 0;
   transition: transform 0.25s ease;
   box-shadow: none !important;
@@ -6663,6 +7021,8 @@ button {
 
 .feature-box-icon svg {
   color: #000000 !important;
+  width: 15px !important;
+  height: 15px !important;
 }
 
 .countdown-feature-box:hover .feature-box-icon {
@@ -6671,26 +7031,26 @@ button {
 
 .feature-box-badge {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 0.8px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
   text-transform: uppercase;
 }
 
 .feature-box-stat {
   margin-left: auto;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 400;
   color: #0f172a;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
-  padding: 3px 10px;
-  border-radius: 20px;
+  padding: 2px 8px;
+  border-radius: 16px;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   transition: all 0.2s ease;
 }
 
@@ -6700,8 +7060,8 @@ button {
 }
 
 .stat-dot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -6719,7 +7079,7 @@ button {
 }
 
 .feature-stat-sparkle {
-  font-size: 10px;
+  font-size: 8px;
   line-height: 1;
   flex-shrink: 0;
 }
@@ -6736,50 +7096,58 @@ button {
   color: #069DBF;
 }
 
-/* Feature Box Body */
+/* Feature Box Body — compact inline with pills */
+.feature-box-body {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .feature-box-body h4 {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 20px !important;
+  font-weight: 600 !important;
   color: #000000 !important;
-  margin: 2px 0 2px 0;
-  line-height: 1.3;
-  letter-spacing: -0.3px;
+  margin: 0 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.2px !important;
   transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 .feature-box-body p {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 12px;
-  line-height: 1.45;
+  font-size: 11px;
+  line-height: 1.4;
   color: #000000 !important;
   margin: 0;
 }
 
-/* Feature Box Micro Pills */
+/* Feature Box Micro Pills — inline with body */
 .feature-box-pills {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 6px;
   flex-wrap: wrap;
-  padding-top: 1px;
+  padding-top: 0;
 }
 
 .feature-pill {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 10.5px;
+  font-size: 10px;
   font-weight: 400;
   color: #000000 !important;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
   transition: all 0.2s ease;
 }
 
 .feature-pill .pill-sparkle {
   color: var(--card-accent, #0477BF);
-  font-size: 9px;
+  font-size: 8px;
 }
 
 .countdown-feature-box:hover .feature-pill {
@@ -6790,7 +7158,94 @@ button {
 /* ==========================================================================
    Responsive Adaptations
    ========================================================================== */
+@media (max-width: 1320px) {
+  .timer-fullview-section .odometer-group {
+    width: 240px !important;
+    height: 180px !important;
+    padding: 14px 10px !important;
+  }
+
+  .timer-fullview-section .odometer-group[data-unit="days"] .odometer-slot {
+    width: 58px !important;
+    height: 90px !important;
+  }
+
+  .timer-fullview-section .odometer-group[data-unit="days"] .odometer-digit {
+    font-size: 52px !important;
+  }
+
+  .timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-slot {
+    width: 70px !important;
+    height: 90px !important;
+  }
+
+  .timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-digit {
+    font-size: 58px !important;
+  }
+
+  .timer-fullview-section .odometer-separator {
+    height: 180px !important;
+  }
+
+  .timer-fullview-section .odometer-separator span {
+    font-size: 38px !important;
+  }
+}
+
 @media (max-width: 991px) {
+  .timer-fullview-section {
+    padding: 38px 0 42px;
+  }
+
+  .timer-fullview-section .odometer-group {
+    width: 175px !important;
+    height: 150px !important;
+    padding: 12px 6px !important;
+    border-radius: 16px !important;
+  }
+
+  .timer-fullview-section .odometer-group[data-unit="days"] .odometer-slot {
+    width: 42px !important;
+    height: 72px !important;
+  }
+
+  .timer-fullview-section .odometer-group[data-unit="days"] .odometer-digit {
+    font-size: 38px !important;
+  }
+
+  .timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-slot {
+    width: 54px !important;
+    height: 72px !important;
+  }
+
+  .timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-digit {
+    font-size: 44px !important;
+  }
+
+  .timer-fullview-section .odometer-separator {
+    height: 150px !important;
+    min-width: 14px !important;
+  }
+
+  .timer-fullview-section .odometer-separator span {
+    font-size: 28px !important;
+  }
+
+  .timer-fullview-section .odometer-group-label {
+    font-size: 10px !important;
+    padding: 3px 12px !important;
+    margin-top: 8px !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  .timer-fullview-ribbon {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+
   .countdown-2col-grid {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -6798,6 +7253,67 @@ button {
 
   .countdown-showcase-card {
     padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timer-fullview-section {
+    padding: 28px 0 30px;
+  }
+
+  .timer-fullview-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .timer-fullview-section .odometer-board {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+
+  .timer-fullview-section .odometer-group {
+    width: calc(50% - 10px) !important;
+    min-width: 135px !important;
+    height: 130px !important;
+    padding: 10px 4px !important;
+  }
+
+  .timer-fullview-section .odometer-group[data-unit="days"] .odometer-slot {
+    width: 34px !important;
+    height: 54px !important;
+  }
+
+  .timer-fullview-section .odometer-group[data-unit="days"] .odometer-digit {
+    font-size: 30px !important;
+  }
+
+  .timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-slot {
+    width: 44px !important;
+    height: 54px !important;
+  }
+
+  .timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-digit {
+    font-size: 34px !important;
+  }
+
+  .timer-fullview-section .odometer-separator {
+    display: none !important;
+  }
+
+  .timer-fullview-section .odometer-group-label {
+    font-size: 9.5px !important;
+    padding: 2px 10px !important;
+    letter-spacing: 1.2px !important;
+    margin-top: 6px !important;
+  }
+
+  .timer-fullview-ribbon {
+    display: none !important;
   }
 }
 
@@ -6829,6 +7345,34 @@ button {
   #countdown-exhibitor-btn {
     width: 100% !important;
     justify-content: center !important;
+  }
+
+  .timer-fullview-section {
+    padding: 22px 0 24px;
+  }
+
+  .timer-fullview-section .odometer-slot {
+    width: 28px !important;
+    height: 44px !important;
+  }
+
+  .timer-fullview-section .odometer-digit {
+    font-size: 24px !important;
+  }
+
+  .timer-fullview-section .odometer-separator {
+    height: 44px !important;
+    min-width: 10px !important;
+  }
+
+  .timer-fullview-section .odometer-separator span {
+    font-size: 20px !important;
+  }
+
+  .timer-fullview-section .odometer-group-label {
+    font-size: 9px !important;
+    letter-spacing: 1.2px !important;
+    margin-top: 6px !important;
   }
 
   .odometer-side-flank {
@@ -10192,7 +10736,6 @@ body,
 .gallery-card-footer__title,
 .benefit-card__title,
 .track-card-heading,
-.feature-box-body h4,
 .objective-card-title,
 .ctc-title {
   font-size: var(--title-h3) !important;
