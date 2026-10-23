@@ -9,71 +9,91 @@ const defaultMilestones = [
     year: "Around 2000",
     shortYear: "2000",
     stageNum: "01",
-    badge: "FOUNDING ERA",
-    tabLabel: "Founding Vision",
-    title: "A Vision Born in Tamil Nadu",
-    tagline: "Uniting the Dental Trade Ecosystem",
-    text: "A forward-thinking group of dental trade leaders envisioned a united body to strengthen Tamil Nadu's dental trade ecosystem, bridge technological gaps, and support clinical practitioners with accessible world-class equipment.",
-    stat: "1st Vision Committee",
-    statDesc: "Trade Leaders Convened",
+    guideBadge: "FOUNDING STORY",
+    tabLabel: "Shared Vision",
+    milestoneBadge: "Founding Vision Marker",
+    badge: "ORIGIN ERA",
+    tagline: "UNITING THE DENTAL COMMUNITY",
+    title: "A Shared Vision for Tamil Nadu",
+    text: "Around 2000, dental trade leaders envisioned a united community to strengthen Tamil Nadu's dental industry, bridge technology gaps, and help practitioners access quality equipment.",
+    impactLabel: "FOUNDING IMPACT",
+    stat: "A United Trade Community",
+    statDesc: "Dental Leaders United",
+    focusLabel: "FOUNDING IDEAS & PRIORITIES",
     icon: "star",
-    highlights: ["Trade Unity", "Ecosystem Vision", "Practitioner Focus"],
+    highlights: ["Trade Unity", "Shared Progress", "Practitioner Support"],
   },
   {
     year: "2005",
     shortYear: "2005",
     stageNum: "02",
-    badge: "HISTORIC LAUNCH",
-    tabLabel: "Inaugural Expo",
-    title: "The First Dental Show is Born",
-    tagline: "Official Inception of TNDTMA",
-    text: "Official formation of the Tamil Nadu Dental Trade & Manufacturers Association and the triumphant inaugural Dental Show in 2005, putting modern diagnostics and equipment directly within reach of regional dental clinics.",
-    stat: "TNDTMA Established",
-    statDesc: "Inaugural State Expo",
+    guideBadge: "DENTAL SHOW HISTORY",
+    tabLabel: "The First Dental Show",
+    milestoneBadge: "A Historic Milestone",
+    badge: "HISTORIC BEGINNING",
+    tagline: "TNDTMA AND THE FIRST DENTAL SHOW",
+    title: "A Vision Becomes Reality",
+    text: "TNDTMA was registered in 2005, marking a significant step towards a united dental trade community. That same year, the first Dental Show brought the shared vision to life, creating a platform for connection, discovery and progress.",
+    impactLabel: "MILESTONE IMPACT",
+    stat: "TNDTMA Registered",
+    statDesc: "First Dental Show Held",
+    focusLabel: "KEY FOCUS & ACHIEVEMENTS",
     icon: "store",
-    highlights: ["Inaugural Expo", "Accessibility", "Direct Local Reach"],
+    highlights: ["First Dental Show", "Dental Trade Unity", "Community Connection"],
   },
   {
     year: "2015",
     shortYear: "2015",
     stageNum: "03",
-    badge: "REGIONAL SCALE",
-    tabLabel: "CTC Expansion",
-    title: "Expansion to Chennai Trade Centre",
-    tagline: "South India's Flagship Convention",
-    text: "Dental Show relocated to Chennai Trade Centre, expanding floor capacity to accommodate leading multinational dental conglomerates and solidifying its status as South India's premier annual dental gathering.",
-    stat: "3,500+ Clinicians",
-    statDesc: "CTC Flagship Venue",
+    guideBadge: "DENTAL SHOW HISTORY",
+    tabLabel: "A Decade of Progress",
+    milestoneBadge: "A Decade of Growth",
+    badge: "A DECADE OF PROGRESS",
+    tagline: "BUILDING ON A SHARED VISION",
+    title: "A Growing Platform for Dentistry",
+    text: "Dental Show continued its journey of bringing the dental trade community together. Building on the vision established in its early years, the event created opportunities for industry connections, product discovery and the exchange of ideas across the dental ecosystem.",
+    impactLabel: "MILESTONE IMPACT",
+    stat: "A Growing Community",
+    statDesc: "Connecting Dental Professionals",
+    focusLabel: "KEY FOCUS & ACHIEVEMENTS",
     icon: "tooth",
-    highlights: ["CTC Trade Centre", "CAD/CAM Influx", "Multi-Hall Expansion"],
+    highlights: ["Community Connections", "Product Discovery", "Industry Collaboration"],
   },
   {
     year: "2025",
     shortYear: "2025",
     stageNum: "04",
-    badge: "20TH ANNIVERSARY",
-    tabLabel: "Two Decades",
-    title: "Two Decades of Clinical Excellence",
-    tagline: "180+ Global Exhibitors & 4,800+ Delegates",
-    text: "Celebrated two decades of continuous leadership with over 180 international brand pavilions, 4,800+ clinical delegates, and the Student Dental Excellence scholarship programme.",
-    stat: "20 Years of Impact",
-    statDesc: "180+ Brand Pavilions",
+    guideBadge: "DENTAL SHOW HISTORY",
+    tabLabel: "Two Decades of Progress",
+    milestoneBadge: "A Legacy to Celebrate",
+    badge: "TWO DECADES OF IMPACT",
+    tagline: "CELEBRATING TWO DECADES OF DENTAL SHOW",
+    title: "Two Decades of Connecting Dentistry",
+    text: "Celebrating two decades of journey, Dental Show continues to bring the dental community together through innovation, professional connections and shared learning. Its legacy reflects a continuing commitment to supporting dental professionals and inspiring the next generation of dentistry.",
+    impactLabel: "MILESTONE IMPACT",
+    stat: "Two Decades of Progress",
+    statDesc: "A Growing Dental Community",
+    focusLabel: "KEY FOCUS & ACHIEVEMENTS",
     icon: "users",
-    highlights: ["20th Landmark", "Student Excellence", "Global Brand Pavilions"],
+    highlights: ["Legacy & Growth", "Future Dentists", "Dental Innovation"],
   },
   {
     year: "2027",
     shortYear: "2027",
     stageNum: "05",
-    badge: "THE GRAND CHAPTER",
-    tabLabel: "Grand Chapter 2027",
-    title: "Dental Show 2027: Next-Gen Innovation",
-    tagline: "CTC New Halls 2, 3 & 3A · 10,000+ sq.m",
-    text: "Taking place across CTC's newly expanded Halls 2, 3 & 3A. Featuring 250+ global exhibitors, 6,000+ trade delegates, live CAD/CAM digital workflows, and cutting-edge implantology masterclasses.",
-    stat: "10,000+ sq.m · 250+ Brands",
-    statDesc: "6,000+ Trade Delegates",
+    guideBadge: "DENTAL SHOW 2027",
+    tabLabel: "The Next Chapter",
+    milestoneBadge: "Discover What's Next",
+    badge: "THE FUTURE CHAPTER",
+    tagline: "CHENNAI TRADE CENTRE · 6–7 FEBRUARY",
+    title: "Dental Show 2027: Discover What's Next",
+    text: "Bringing the dental community together on 6–7 February 2027 at Chennai Trade Centre, Dental Show invites dentists, students and industry professionals to discover innovations, exchange ideas and explore new possibilities for the future of dentistry.",
+    impactLabel: "THE DENTAL SHOW EXPERIENCE",
+    stat: "A Community of Possibilities",
+    statDesc: "Discover. Connect. Grow.",
+    focusLabel: "WHAT AWAITS YOU",
     icon: "sparkle",
-    highlights: ["New Halls 2, 3 & 3A", "6,000+ Delegates", "CAD/CAM Masterclasses"],
+    highlights: ["Dental Innovations", "Professional Connections", "Learning & Discovery"],
   },
 ];
 
@@ -188,7 +208,7 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
           <div className="stage-host-header" key={`host-kicker-${activeMilestone.year}`}>
             <div className="stage-host-badge">
               <span className="live-pulse-dot" aria-hidden="true" />
-              <span>EXHIBITION GUIDE</span>
+              <span>{activeMilestone.guideBadge || "EXHIBITION GUIDE"}</span>
             </div>
             <div className="stage-host-year-callout">{activeMilestone.year}</div>
             <span className="stage-host-label">{activeMilestone.tabLabel}</span>
@@ -208,7 +228,7 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
 
           <div className="stage-host-footer-pill">
             <span className="host-dot-blue" aria-hidden="true" />
-            <span>Official Expo Milestone</span>
+            <span>{activeMilestone.milestoneBadge || "Official Expo Milestone"}</span>
           </div>
         </div>
 
@@ -275,14 +295,14 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
                   <Icon name={activeMilestone.icon || "sparkle"} size={20} className="timeline-stat-icon" />
                 </div>
                 <div className="timeline-stat-text">
-                  <span className="stat-label">MILESTONE IMPACT</span>
+                  <span className="stat-label">{activeMilestone.impactLabel || "MILESTONE IMPACT"}</span>
                   <strong className="stat-val">{activeMilestone.stat}</strong>
                   <span className="stat-sub">{activeMilestone.statDesc}</span>
                 </div>
               </div>
 
               <div className="timeline-highlights-panel">
-                <span className="highlights-header-label">KEY FOCUS &amp; ACHIEVEMENTS</span>
+                <span className="highlights-header-label">{activeMilestone.focusLabel || "KEY FOCUS & ACHIEVEMENTS"}</span>
                 <div className="timeline-highlight-pills">
                   {activeMilestone.highlights?.map((h, i) => (
                     <span key={i} className="timeline-highlight-pill">

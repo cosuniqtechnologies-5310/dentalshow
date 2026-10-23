@@ -97,15 +97,34 @@ export default function Countdown({ target = "2027-02-06T09:00:00+05:30" }) {
   const secsVal = time ? String(time.seconds).padStart(2, "0") : "00";
 
   return (
-    <div
-      className="odometer-board"
-      role="timer"
-      aria-label={`Time until Dental Show 2027: ${daysVal} days, ${hoursVal} hours, ${minsVal} minutes, ${secsVal} seconds`}
-    >
-      <RollingGroup label="DAYS" value={daysVal} />
-      <RollingGroup label="HOURS" value={hoursVal} />
-      <RollingGroup label="MINUTES" value={minsVal} />
-      <RollingGroup label="SECONDS" value={secsVal} />
+    <div className="odometer-centered-layout">
+      {/* Left Decorative Wing Design */}
+      <div className="odometer-side-flank odometer-side-flank--left" aria-hidden="true">
+        <span className="flank-accent-dot" />
+        <span className="flank-accent-line" />
+        <span className="flank-sparkle-badge">✦</span>
+        <span className="flank-inner-line" />
+      </div>
+
+      {/* Centered Odometer Board */}
+      <div
+        className="odometer-board"
+        role="timer"
+        aria-label={`Time until Dental Show 2027: ${daysVal} days, ${hoursVal} hours, ${minsVal} minutes, ${secsVal} seconds`}
+      >
+        <RollingGroup label="DAYS" value={daysVal} />
+        <RollingGroup label="HOURS" value={hoursVal} />
+        <RollingGroup label="MINUTES" value={minsVal} />
+        <RollingGroup label="SECONDS" value={secsVal} />
+      </div>
+
+      {/* Right Decorative Wing Design */}
+      <div className="odometer-side-flank odometer-side-flank--right" aria-hidden="true">
+        <span className="flank-inner-line" />
+        <span className="flank-sparkle-badge">✦</span>
+        <span className="flank-accent-line" />
+        <span className="flank-accent-dot" />
+      </div>
     </div>
   );
 }

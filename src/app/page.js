@@ -124,8 +124,8 @@ export default function HomePage() {
                       <Icon name="ticket" size={16} />
                     </div>
                     <div className="detail-card-info">
-                      <strong className="detail-card-title">Free Visitor Access</strong>
-                      <span className="detail-card-sub">For Dentists &amp; Dental Students</span>
+                      <strong className="detail-card-title">Free visitor access</strong>
+                      <span className="detail-card-sub">For dentists &amp; dental students</span>
                     </div>
                   </div>
                 </div>
@@ -201,7 +201,7 @@ export default function HomePage() {
                       </div>
                     </div>
                     <div className="feature-box-body">
-                      <h4>250+ Global Exhibitors</h4>
+                      <h4>250+ Global exhibitors</h4>
                     </div>
                     <div className="feature-box-pills">
                       <span className="feature-pill"><span className="pill-sparkle">✦</span> Live Clinical Demos</span>
@@ -221,7 +221,7 @@ export default function HomePage() {
                       </div>
                     </div>
                     <div className="feature-box-body">
-                      <h4>6,000+ Trade Delegates</h4>
+                      <h4>6,000+ Trade delegates</h4>
                     </div>
                     <div className="feature-box-pills">
                       <span className="feature-pill"><span className="pill-sparkle">✦</span> B2B Trade Exchange</span>
@@ -241,7 +241,7 @@ export default function HomePage() {
                       </div>
                     </div>
                     <div className="feature-box-body">
-                      <h4>10,000+ sq.m Exhibition Floor</h4>
+                      <h4>10,000+ sq.m exhibition floor</h4>
                     </div>
                     <div className="feature-box-pills">
                       <span className="feature-pill"><span className="pill-sparkle">✦</span> Fully Air-Conditioned</span>
@@ -261,15 +261,23 @@ export default function HomePage() {
       <section className="section section-legacy font-modern timeline-section-fullwidth" id="legacy">
         <div className="container">
           <div className="timeline-header-compact text-left">
-            <span className="section-eyebrow">OUR LEGACY &amp; TWO DECADE JOURNEY</span>
-            <h2 className="section-main-title">
-              Two decades of legacy. A future shaped by innovation.
-            </h2>
-            <div className="title-zigzag" />
-            <p className="section-desc">
-              From the initial trade vision committee around 2000 to South India’s largest dental showcase
-              in 2027. Explore our continuous progression across two decades of clinical and trade leadership.
-            </p>
+            <div className="timeline-header-grid">
+              <div className="timeline-header-col-left">
+                <div className="timeline-eyebrow-row">
+                  <span className="timeline-accent-dash" aria-hidden="true" />
+                  <span className="section-eyebrow timeline-eyebrow-text">OUR JOURNEY. OUR COMMUNITY. OUR FUTURE.</span>
+                </div>
+                <h2 className="section-main-title timeline-main-title">
+                  A vision that began with trade.<br className="timeline-title-br" />
+                  A future we build together.
+                </h2>
+              </div>
+              <div className="timeline-header-col-right">
+                <p className="section-desc timeline-header-desc">
+                  What began as a vision to strengthen the dental trade around 2000 has grown into a journey of bringing the dental community closer. Through TNDTMA, Dental Show continues to connect professionals, inspire future dentists and bring dental innovations within reach. In 2027, the journey continues—with new discoveries, meaningful connections and possibilities for the future of dentistry.
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="timeline-interactive-mount">
