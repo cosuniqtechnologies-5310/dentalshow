@@ -13,49 +13,31 @@ function diff(target) {
 }
 
 function RollingDigit({ digit }) {
-  const [current, setCurrent] = useState(digit);
-  const [previous, setPrevious] = useState(digit);
-  const [isRolling, setIsRolling] = useState(false);
-  const mountedRef = useRef(false);
+  const [prevDigit, setPrevDigit] = useState(digit);
+  const [isTicking, setIsTicking] = useState(false);
+
+  if (digit !== prevDigit) {
+    setPrevDigit(digit);
+    setIsTicking(true);
+  }
 
   useEffect(() => {
-    if (!mountedRef.current) {
-      mountedRef.current = true;
-      setCurrent(digit);
-      setPrevious(digit);
-      return;
-    }
-
-    if (digit !== current) {
-      setPrevious(current);
-      setCurrent(digit);
-      setIsRolling(true);
+    if (isTicking) {
       const timer = setTimeout(() => {
-        setIsRolling(false);
-      }, 400);
+        setIsTicking(false);
+      }, 220);
       return () => clearTimeout(timer);
     }
-  }, [digit, current]);
+  }, [isTicking]);
 
   return (
     <div className="odometer-slot" aria-hidden="true">
-      {/* Outgoing digit: moves to the top */}
-      {isRolling && (
-        <span key={`prev-${previous}`} className="odometer-digit odometer-digit--prev">
-          {previous}
-        </span>
-      )}
-
-      {/* Incoming digit: comes from the bottom */}
       <span
-        key={`curr-${current}`}
-        className={`odometer-digit odometer-digit--curr ${isRolling ? "is-entering" : ""}`}
+        key={`digit-${digit}`}
+        className={`odometer-digit ${isTicking ? "is-ticking" : ""}`}
       >
-        {current}
+        {digit}
       </span>
-
-      {/* Subtle top/bottom slot vignettes for mechanical depth */}
-      <div className="odometer-slot-overlay" />
     </div>
   );
 }

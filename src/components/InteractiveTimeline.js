@@ -118,8 +118,6 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
     const intervalTime = 50;
     const step = (intervalTime / duration) * 100;
 
-    setProgress(0);
-
     progressIntervalRef.current = setInterval(() => {
       if (isHoveredRef.current) return;
       setProgress((prev) => {
@@ -189,7 +187,7 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
                   type="button"
                   role="tab"
                   aria-selected={isActive}
-                  className={`timeline-year-pill-btn ${isActive ? "is-active" : ""} ${isPassed ? "is-passed" : ""}`}
+                  className={`timeline-year-pill-btn pill-stage-${idx} ${isActive ? "is-active" : ""} ${isPassed ? "is-passed" : ""}`}
                   onClick={() => handleSelect(idx)}
                   title={`${m.year}: ${m.title}`}
                 >
@@ -201,14 +199,14 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
         </div>
       </div>
 
-      {/* 2. UNIFIED PANORAMIC MASTER STAGE */}
-      <div className="timeline-master-showcase-card">
-        {/* Left Stage: Mascot Exhibition Guide & Podium */}
-        <div className="timeline-stage-host-alcove">
-          <div className="stage-host-header" key={`host-kicker-${activeMilestone.year}`}>
+      {/* 2. UNIFIED PANORAMIC MASTER STAGE WITH 5 DISTINCT COLOR THEMES & 2-COLUMN BALANCED LAYOUT */}
+      <div className={`timeline-master-showcase-card stage-theme-${activeIndex}`}>
+        {/* Left Column: Mascot Alcove Podium */}
+        <div className="timeline-stage-host-alcove" key={`host-${activeMilestone.year}`}>
+          <div className="stage-host-header">
             <div className="stage-host-badge">
               <span className="live-pulse-dot" aria-hidden="true" />
-              <span>{activeMilestone.guideBadge || "EXHIBITION GUIDE"}</span>
+              <span>{activeMilestone.guideBadge}</span>
             </div>
             <div className="stage-host-year-callout">{activeMilestone.year}</div>
             <span className="stage-host-label">{activeMilestone.tabLabel}</span>
@@ -219,107 +217,123 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
             <Image
               src="/images/dental-show-mascot-new.png"
               alt="Dental Show Mascot Guide"
-              width={200}
-              height={282}
+              width={160}
+              height={220}
               priority
               className="stage-host-mascot-img"
             />
+            <div className="stage-host-shadow" aria-hidden="true" />
           </div>
 
           <div className="stage-host-footer-pill">
-            <span className="host-dot-blue" aria-hidden="true" />
-            <span>{activeMilestone.milestoneBadge || "Official Expo Milestone"}</span>
+            <span className="host-dot-accent" aria-hidden="true" />
+            <span>{activeMilestone.milestoneBadge}</span>
           </div>
         </div>
 
-        {/* Right Panel: Executive Milestone Showcase */}
-        <div className="timeline-stage-content-panel" key={activeMilestone.year}>
-            <div className="timeline-spotlight-top">
-              <div className="timeline-milestone-pill-wrap">
-                <span className="timeline-milestone-pill">
-                  <span className="live-pulse-dot" aria-hidden="true" />
-                  <span>{activeMilestone.badge}</span>
-                </span>
-                <span className="timeline-stage-counter">
-                  STAGE {activeMilestone.stageNum} OF 0{total}
-                </span>
-              </div>
-
-              <div className="timeline-autoplay-controls">
-                <button
-                  type="button"
-                  className="timeline-ctrl-btn"
-                  onClick={handlePrev}
-                  aria-label="Previous milestone"
-                  title="Previous milestone"
-                >
-                  ←
-                </button>
-                <button
-                  type="button"
-                  className="timeline-ctrl-btn timeline-play-btn"
-                  onClick={() => setIsPlaying(!isPlaying)}
-                  aria-label={isPlaying ? "Pause autoplay" : "Play autoplay"}
-                  title={isPlaying ? "Pause autoplay" : "Resume autoplay"}
-                >
-                  {isPlaying ? "❚❚" : "▶"}
-                </button>
-                <button
-                  type="button"
-                  className="timeline-ctrl-btn"
-                  onClick={handleNext}
-                  aria-label="Next milestone"
-                  title="Next milestone"
-                >
-                  →
-                </button>
-                <span className="timeline-autoplay-status">
-                  {isPlaying ? "AUTO-CYCLING" : "PAUSED"}
-                </span>
-              </div>
+        {/* Right Column: Spotlight Panel */}
+        <div className="timeline-stage-content-panel" key={`stage-${activeIndex}`}>
+          {/* Top Controls Bar */}
+          <div className="timeline-card-topbar">
+            <div className="timeline-card-stage-meta">
+              <span className="timeline-stage-kicker-pill">
+                <span className="live-pulse-dot" aria-hidden="true" />
+                <span>{activeMilestone.badge}</span>
+              </span>
+              <span className="timeline-stage-counter">
+                STAGE {activeMilestone.stageNum} OF 0{total}
+              </span>
             </div>
 
-            <div className="timeline-spotlight-body">
-              <div className="timeline-spotlight-year-headline">
-                <span className="timeline-spotlight-year">{activeMilestone.year}</span>
-                <span className="timeline-spotlight-dot">/</span>
-                <span className="timeline-spotlight-tagline">{activeMilestone.tagline}</span>
-              </div>
-              <h3 className="timeline-spotlight-title">{activeMilestone.title}</h3>
-              <p className="timeline-spotlight-text">{activeMilestone.text}</p>
+            <div className="timeline-autoplay-controls">
+              <button
+                type="button"
+                className="timeline-ctrl-btn"
+                onClick={handlePrev}
+                aria-label="Previous milestone"
+                title="Previous milestone"
+              >
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6" /></svg>
+              </button>
+              <button
+                type="button"
+                className="timeline-ctrl-btn timeline-play-btn"
+                onClick={() => setIsPlaying(!isPlaying)}
+                aria-label={isPlaying ? "Pause autoplay" : "Play autoplay"}
+                title={isPlaying ? "Pause autoplay" : "Resume autoplay"}
+              >
+                {isPlaying ? (
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1" /><rect x="14" y="4" width="4" height="16" rx="1" /></svg>
+                ) : (
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3" /></svg>
+                )}
+              </button>
+              <button
+                type="button"
+                className="timeline-ctrl-btn"
+                onClick={handleNext}
+                aria-label="Next milestone"
+                title="Next milestone"
+              >
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6" /></svg>
+              </button>
+              <span className="timeline-autoplay-status">
+                {isPlaying ? "AUTO-CYCLING" : "PAUSED"}
+              </span>
+            </div>
+          </div>
+
+          {/* Main Stage Content */}
+          <div className="stage-unified-layout">
+            {/* Stage Year & Tagline Header */}
+            <div className="stage-unified-header">
+              <span className="stage-unified-year">{activeMilestone.year}</span>
+              <span className="stage-unified-sep">/</span>
+              <span className="stage-unified-tagline">{activeMilestone.tagline}</span>
             </div>
 
-            <div className="timeline-spotlight-footer-grid">
-              <div className="timeline-stat-chip">
-                <div className="timeline-stat-icon-wrap">
-                  <Icon name={activeMilestone.icon || "sparkle"} size={20} className="timeline-stat-icon" />
-                </div>
-                <div className="timeline-stat-text">
-                  <span className="stat-label">{activeMilestone.impactLabel || "MILESTONE IMPACT"}</span>
-                  <strong className="stat-val">{activeMilestone.stat}</strong>
-                  <span className="stat-sub">{activeMilestone.statDesc}</span>
+            {/* Hero Title & Description */}
+            <h3 className="stage-unified-title">{activeMilestone.title}</h3>
+            <p className="stage-unified-desc">{activeMilestone.text}</p>
+
+            {/* Bottom Row: Impact Card + Focus/Achievements Card */}
+            <div className="stage-unified-bottom-row">
+              {/* Impact Card (Left) */}
+              <div className="stage-unified-impact-card">
+                <span className="stage-unified-card-label">{activeMilestone.impactLabel}</span>
+                <div className="stage-unified-impact-items">
+                  <div className="stage-unified-impact-item">
+                    <span className="impact-check-icon">✓</span>
+                    <span>{activeMilestone.stat}</span>
+                  </div>
+                  <div className="stage-unified-impact-item">
+                    <span className="impact-check-icon">✓</span>
+                    <span>{activeMilestone.statDesc}</span>
+                  </div>
                 </div>
               </div>
 
-              <div className="timeline-highlights-panel">
-                <span className="highlights-header-label">{activeMilestone.focusLabel || "KEY FOCUS & ACHIEVEMENTS"}</span>
-                <div className="timeline-highlight-pills">
+              {/* Focus & Achievements Card (Right) */}
+              <div className="stage-unified-focus-card">
+                <span className="stage-unified-card-label">{activeMilestone.focusLabel}</span>
+                <div className="stage-unified-focus-tags">
                   {activeMilestone.highlights?.map((h, i) => (
-                    <span key={i} className="timeline-highlight-pill">
-                      <span className="pill-sparkle-blue">✦</span> {h}
+                    <span key={i} className="stage-unified-tag">
+                      <span className="tag-diamond">✦</span> {h}
                     </span>
                   ))}
                 </div>
               </div>
             </div>
-
-          {/* Continuous Autoplay Progress Bar */}
-          <div className="timeline-progress-track">
-            <div
-              className="timeline-progress-fill"
-              style={{ width: `${progress}%` }}
-            />
           </div>
+        </div>
+
+        {/* Continuous Autoplay Progress Bar (Full Card Width) */}
+        <div className="timeline-progress-track">
+          <div
+            className="timeline-progress-fill"
+            style={{ width: `${progress}%` }}
+          />
         </div>
       </div>
     </div>

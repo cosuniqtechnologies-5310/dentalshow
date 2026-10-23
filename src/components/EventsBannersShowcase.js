@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import Icon from "@/components/Icon";
 
@@ -241,18 +240,8 @@ export default function EventsBannersShowcase({ banners = defaultBanners }) {
               role="listitem"
               id={`event-banner-${item.id}`}
             >
-              {/* Background Photo with Color Grading Blend */}
-              <div className="panorama-banner-bg">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 900px) 100vw, 1200px"
-                  className="panorama-banner-img"
-                  priority={idx === 0}
-                />
-                <div className="panorama-banner-overlay" />
-              </div>
+              {/* Clean Brand Gradient Surface (Background photo removed as requested) */}
+              <div className="panorama-banner-overlay" aria-hidden="true" />
 
               {/* Banner Left Content */}
               <div className="panorama-banner-content">
