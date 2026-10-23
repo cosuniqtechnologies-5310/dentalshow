@@ -159,7 +159,7 @@ button {
 }
 
 .no-padding {
-  padding: 0 !important;
+  padding: 0;
 }
 
 .sr-only {
@@ -347,7 +347,7 @@ button {
   height: 86px;
   min-height: 86px;
   z-index: 1000;
-  background: #ffffff !important;
+  background: #ffffff;
   border-bottom: 1px solid rgba(2, 62, 115, 0.1);
   box-shadow: 0 4px 20px rgba(2, 62, 115, 0.06);
   padding: 0 clamp(32px, 4vw, 64px);
@@ -358,7 +358,7 @@ button {
 
 .exhibz-header.is-sticky {
   position: fixed;
-  background: #ffffff !important;
+  background: #ffffff;
   box-shadow: 0 4px 25px rgba(2, 62, 115, 0.12);
   border-bottom: 1px solid rgba(2, 62, 115, 0.14);
   height: 70px;
@@ -438,7 +438,7 @@ button {
   align-items: center;
   gap: 5px;
   padding: 10px 14px;
-  color: #023E73 !important;
+  color: #023E73;
   font-family: var(--font-heading), sans-serif;
   font-weight: 700;
   font-size: 13.5px;
@@ -450,11 +450,11 @@ button {
 
 .exhibz-nav__link:hover,
 .exhibz-nav__item.dropdown-open .exhibz-nav__link {
-  color: #0477BF !important;
+  color: #0477BF;
 }
 
 .exhibz-nav__link.is-active {
-  color: #0477BF !important;
+  color: #0477BF;
   font-weight: 800;
 }
 
@@ -570,7 +570,7 @@ button {
     padding: 12px 0;
     border-bottom: 1px solid #e2e8f0;
     font-size: 14.5px;
-    color: #023E73 !important;
+    color: #023E73;
   }
 
   .exhibz-nav__link.is-active::after {
@@ -719,7 +719,7 @@ button {
 }
 
 .banner-content-wrap .banner-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: clamp(2.1rem, 3.3vw, 2.85rem);
   font-weight: 900;
   color: #ffffff;
@@ -745,22 +745,22 @@ button {
   width: 74px;
   height: 74px;
   aspect-ratio: 1 / 1;
-  border-radius: 50% !important;
-  border: 2px solid #000000 !important;
-  background: #ffffff !important;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: none !important;
+  box-shadow: none;
   flex-shrink: 0;
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .counter-item:hover {
   transform: translateY(-2px);
-  border-color: #000000 !important;
-  box-shadow: none !important;
+  border-color: #000000;
+  box-shadow: none;
 }
 
 .counter-inner-content {
@@ -773,22 +773,22 @@ button {
 }
 
 .counter-number {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 26px;
   font-weight: 800;
   line-height: 1;
-  color: #000000 !important;
+  color: #000000;
   margin-bottom: 2px;
   letter-spacing: -0.5px;
 }
 
 .counter-label-tag {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 9px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: #000000 !important;
+  color: #000000;
 }
 
 .btn-hero-ticket {
@@ -1639,8 +1639,8 @@ button {
    ========================================================================== */
 .section-events-page,
 .section-events-page.fold-white {
-  background: #ffffff !important;
-  padding: 60px 0 !important;
+  background: #ffffff;
+  padding: 60px 0;
   position: relative;
 }
 
@@ -1655,20 +1655,20 @@ button {
 }
 
 .events-page-title {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(28px, 3.4vw, 42px);
   font-weight: 900;
-  color: #000000 !important;
+  color: #000000;
   margin: 0 0 10px;
   letter-spacing: -0.6px;
   line-height: 1.18;
 }
 
 .events-page-subtitle {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 15.5px;
   line-height: 1.6;
-  color: #000000 !important;
+  color: #000000;
   margin: 0;
   max-width: 700px;
 }
@@ -1701,8 +1701,8 @@ button {
   border-radius: 999px;
   background: #ffffff;
   border: 1.5px solid #e2e8f0;
-  color: #000000 !important;
-  font-family: 'Inter', sans-serif !important;
+  color: #000000;
+  font-family: 'Inter', sans-serif;
   font-size: 13.5px;
   font-weight: 700;
   cursor: pointer;
@@ -1712,14 +1712,14 @@ button {
 
 .events-tab-btn:hover {
   border-color: #0477BF;
-  color: #0477BF !important;
+  color: #0477BF;
   transform: translateY(-1px);
 }
 
 .events-tab-btn.is-active {
   background: #0477BF;
   border-color: #0477BF;
-  color: #ffffff !important;
+  color: #ffffff;
   box-shadow: 0 4px 14px rgba(4, 119, 191, 0.3);
 }
 
@@ -1770,8 +1770,8 @@ button {
   border-radius: 999px;
   border: 1.5px solid #e2e8f0;
   background: #ffffff;
-  color: #000000 !important;
-  font-family: 'Inter', sans-serif !important;
+  color: #000000;
+  font-family: 'Inter', sans-serif;
   font-size: 13.5px;
   outline: none;
   transition: all 0.25s ease;
@@ -1812,17 +1812,17 @@ button {
   gap: 12px;
   margin-bottom: 24px;
   font-size: 13.5px;
-  color: #000000 !important;
+  color: #000000;
 }
 
 .results-count-text strong {
-  color: #0477BF !important;
+  color: #0477BF;
   font-weight: 800;
 }
 
 .results-filter-tag {
   background: #e0f2fe;
-  color: #023E73 !important;
+  color: #023E73;
   padding: 3px 10px;
   border-radius: 999px;
   font-size: 12px;
@@ -1872,7 +1872,7 @@ button {
   left: 14px;
   padding: 6px 14px;
   border-radius: 999px;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
@@ -1881,15 +1881,15 @@ button {
 }
 
 .chip--upcoming {
-  background: #023E73 !important;
-  color: #ffffff !important;
+  background: #023E73;
+  color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 14px rgba(2, 62, 115, 0.35);
 }
 
 .chip--past {
-  background: #334155 !important;
-  color: #ffffff !important;
+  background: #334155;
+  color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -1899,7 +1899,7 @@ button {
   bottom: 14px;
   padding: 6px 14px;
   border-radius: 999px;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-weight: 800;
   font-size: 11.5px;
   z-index: 2;
@@ -1908,15 +1908,15 @@ button {
 }
 
 .event-card__price--upcoming {
-  background: linear-gradient(135deg, #0477BF 0%, #069DBF 100%) !important;
-  color: #ffffff !important;
+  background: linear-gradient(135deg, #0477BF 0%, #069DBF 100%);
+  color: #ffffff;
   box-shadow: 0 4px 14px rgba(4, 119, 191, 0.4);
 }
 
 .event-card__price--concluded {
-  background: rgba(15, 23, 42, 0.82) !important;
+  background: rgba(15, 23, 42, 0.82);
   backdrop-filter: blur(8px);
-  color: #f1f5f9 !important;
+  color: #f1f5f9;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -1932,7 +1932,7 @@ button {
   flex-direction: column;
   gap: 8px;
   font-size: 13.5px;
-  color: #000000 !important;
+  color: #000000;
   margin-bottom: 14px;
 }
 
@@ -1941,7 +1941,7 @@ button {
   align-items: center;
   gap: 8px;
   font-weight: 600;
-  color: #000000 !important;
+  color: #000000;
 }
 
 .meta .icon {
@@ -1950,7 +1950,7 @@ button {
 }
 
 .event-card__title {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 19.5px;
   font-weight: 800;
   margin-bottom: 10px;
@@ -1959,19 +1959,19 @@ button {
 }
 
 .event-card__title a {
-  color: #000000 !important;
+  color: #000000;
   transition: color 0.2s ease;
 }
 
 .event-card__title a:hover {
-  color: #0477BF !important;
+  color: #0477BF;
 }
 
 .event-card__excerpt {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   line-height: 1.55;
-  color: #000000 !important;
+  color: #000000;
   margin-bottom: 20px;
   flex-grow: 1;
 }
@@ -1993,8 +1993,8 @@ button {
   padding: 8px 16px;
   border-radius: 999px;
   background: #0477BF;
-  color: #ffffff !important;
-  font-family: 'Inter', sans-serif !important;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.6px;
@@ -2011,10 +2011,10 @@ button {
 }
 
 .btn-card-recap {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 12.5px;
   font-weight: 700;
-  color: #0477BF !important;
+  color: #0477BF;
   padding: 6px 12px;
   border-radius: 6px;
   background: #f0f7fc;
@@ -2024,7 +2024,7 @@ button {
 
 .btn-card-recap:hover {
   background: #0477BF;
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 /* Pagination Bar (Requested by user) */
@@ -2056,7 +2056,7 @@ button {
   background: #ffffff;
   border: 1.5px solid #cbd5e1;
   color: #0f172a;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 13px;
   font-weight: 700;
   cursor: pointer;
@@ -2084,7 +2084,7 @@ button {
   background: #ffffff;
   border: 1.5px solid #cbd5e1;
   color: #0f172a;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 13.5px;
   font-weight: 800;
   display: flex;
@@ -2124,12 +2124,12 @@ button {
 .events-empty-state h3 {
   font-size: 20px;
   font-weight: 800;
-  color: #000000 !important;
+  color: #000000;
   margin-bottom: 8px;
 }
 
 .events-empty-state p {
-  color: #000000 !important;
+  color: #000000;
   font-size: 14.5px;
   max-width: 480px;
   margin: 0 auto 18px;
@@ -2448,9 +2448,9 @@ button {
    HOMEPAGE FOOTER (Creative #0A2119 Theme: Screenshot 1 + Screenshot 2 Combined)
    ========================================================================== */
 .footer {
-  background: #0A2119 !important;
-  color: #ffffff !important;
-  border-top: 1px solid rgba(59, 191, 143, 0.22) !important;
+  background: #0A2119;
+  color: #ffffff;
+  border-top: 1px solid rgba(59, 191, 143, 0.22);
   border-radius: 40px 40px 0 0;
   position: relative;
   width: 100%;
@@ -2477,12 +2477,12 @@ button {
 }
 
 .footer-col-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 14px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #ffffff !important;
+  color: #ffffff;
   margin: 0 0 20px;
 }
 
@@ -2498,7 +2498,7 @@ button {
 }
 
 .footer-org-tndtma {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-weight: 900;
   color: #3BBF8F;
   font-size: 15px;
@@ -2528,7 +2528,7 @@ button {
 }
 
 .footer-col-links a {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 13.5px;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -2536,7 +2536,7 @@ button {
 }
 
 .footer-col-links a:hover {
-  color: #3BBF8F !important;
+  color: #3BBF8F;
   transform: translateX(3px);
 }
 
@@ -2551,7 +2551,7 @@ button {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(255, 255, 255, 0.85);
   font-size: 13px;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -2563,7 +2563,7 @@ button {
 }
 
 .footer-contact-row:hover {
-  color: #5eead4 !important;
+  color: #5eead4;
 }
 
 .footer-contact-row--address {
@@ -2580,7 +2580,7 @@ button {
 
 .mini-sub-label {
   display: block;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
@@ -2596,34 +2596,34 @@ button {
 
 .footer-mini-subscribe .subscribe--compact input {
   flex: 1;
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(59, 191, 143, 0.3) !important;
-  border-radius: 8px !important;
-  padding: 8px 12px !important;
-  font-size: 12.5px !important;
-  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(59, 191, 143, 0.3);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  color: #ffffff;
 }
 
 .footer-mini-subscribe .subscribe--compact input:focus {
-  border-color: #3BBF8F !important;
+  border-color: #3BBF8F;
   outline: none;
 }
 
 .footer-mini-subscribe .subscribe--compact button {
-  background: #3BBF8F !important;
-  color: #0A2119 !important;
-  border: none !important;
-  border-radius: 8px !important;
-  padding: 8px 14px !important;
-  font-size: 11.5px !important;
-  font-weight: 800 !important;
-  text-transform: uppercase !important;
+  background: #3BBF8F;
+  color: #0A2119;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .footer-mini-subscribe .subscribe--compact button:hover {
-  background: #5eead4 !important;
+  background: #5eead4;
 }
 
 /* 3. Horizontal Divider (Screenshot 1) */
@@ -2699,7 +2699,7 @@ button {
 }
 
 .cred-pill {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 11px;
   font-weight: 700;
   color: #a7f3d0;
@@ -2729,7 +2729,7 @@ button {
 
 .footer-giant-brand-text {
   display: block;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: clamp(34px, 8.4vw, 138px);
   font-weight: 900;
   letter-spacing: clamp(2.5px, 0.75vw, 10px);
@@ -2738,11 +2738,11 @@ button {
   white-space: nowrap;
   text-align: center;
   width: 100%;
-  color: transparent !important;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.22) 55%, rgba(255, 255, 255, 0.02) 100%) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
+  color: transparent;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.22) 55%, rgba(255, 255, 255, 0.02) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 2px 24px rgba(255, 255, 255, 0.08));
 }
 
@@ -2969,9 +2969,9 @@ button {
 }
 
 .year-pill-btn.is-active {
-  background: #023E73 !important;
-  border-color: #023E73 !important;
-  color: #ffffff !important;
+  background: #023E73;
+  border-color: #023E73;
+  color: #ffffff;
   box-shadow: 0 4px 14px rgba(2, 62, 115, 0.25);
 }
 
@@ -2985,8 +2985,8 @@ button {
 }
 
 .year-pill-btn.is-active .year-count {
-  background: #3BBF8F !important;
-  color: #023E73 !important;
+  background: #3BBF8F;
+  color: #023E73;
 }
 
 .category-pills {
@@ -3014,9 +3014,9 @@ button {
 }
 
 .cat-pill-btn.is-active {
-  background: #0477BF !important;
-  border-color: #0477BF !important;
-  color: #ffffff !important;
+  background: #0477BF;
+  border-color: #0477BF;
+  color: #ffffff;
   box-shadow: 0 4px 12px rgba(4, 119, 191, 0.25);
 }
 
@@ -3180,20 +3180,20 @@ button {
 }
 
 .gallery-item__title {
-  display: block !important;
-  font-size: 15px !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  line-height: 1.35 !important;
-  margin: 0 !important;
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+  margin: 0;
 }
 
 .gallery-item__caption {
-  display: block !important;
-  font-size: 12.5px !important;
-  color: rgba(255, 255, 255, 0.88) !important;
-  line-height: 1.4 !important;
-  margin: 0 !important;
+  display: block;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.4;
+  margin: 0;
 }
 
 .gallery-card-footer {
@@ -3214,22 +3214,22 @@ button {
 }
 
 .gallery-card-footer__title {
-  font-size: 15.5px !important;
-  font-weight: 700 !important;
-  color: #023E73 !important;
-  line-height: 1.45 !important;
-  margin: 0 !important;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 2 !important;
-  -webkit-box-orient: vertical !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #023E73;
+  line-height: 1.45;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   min-height: 44px;
   transition: color 0.25s ease;
 }
 
 .gallery-item:hover .gallery-card-footer__title {
-  color: #0477BF !important;
+  color: #0477BF;
 }
 
 .gallery-card-footer__meta {
@@ -3624,9 +3624,9 @@ button {
 }
 
 .about-img {
-  object-fit: cover !important;
-  width: 100% !important;
-  height: 100% !important;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
   transition: transform 0.5s ease;
 }
 
@@ -3669,7 +3669,7 @@ button {
    ========================================================================== */
 .about-stats-section,
 .section-stats-bar {
-  background: linear-gradient(135deg, #022544 0%, #023E73 45%, #03528b 100%) !important;
+  background: linear-gradient(135deg, #022544 0%, #023E73 45%, #03528b 100%);
   position: relative;
   padding: 64px 0;
   overflow: hidden;
@@ -3780,11 +3780,11 @@ button {
 
 .about-stat-card__number,
 .stat-card__number {
-  font-size: clamp(2.4rem, 3.2vw, 3.2rem) !important;
-  font-weight: 800 !important;
-  line-height: 1 !important;
-  color: #ffffff !important;
-  letter-spacing: -0.02em !important;
+  font-size: clamp(2.4rem, 3.2vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1;
+  color: #ffffff;
+  letter-spacing: -0.02em;
 }
 
 .about-stat-card__line {
@@ -3797,11 +3797,11 @@ button {
 
 .about-stat-card__label,
 .stat-card__label {
-  font-size: 16px !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
-  line-height: 1.35 !important;
-  margin-bottom: 4px !important;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+  margin-bottom: 4px;
 }
 
 .about-stat-card__sub {
@@ -3921,19 +3921,19 @@ button {
 
 .objective-card-title,
 .feature-card__title {
-  font-size: 18.5px !important;
-  font-weight: 800 !important;
-  color: #023E73 !important;
-  line-height: 1.35 !important;
-  margin: 0 0 12px 0 !important;
+  font-size: 18.5px;
+  font-weight: 800;
+  color: #023E73;
+  line-height: 1.35;
+  margin: 0 0 12px 0;
 }
 
 .objective-card-text,
 .feature-card__text {
-  font-size: 14.5px !important;
-  line-height: 1.6 !important;
-  color: #475569 !important;
-  margin: 0 0 20px 0 !important;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0 0 20px 0;
   flex: 1;
 }
 
@@ -3960,7 +3960,7 @@ button {
    ========================================================================== */
 .about-mascot-section,
 .bg-gradient-dark {
-  background: linear-gradient(135deg, #011d38 0%, #023E73 50%, #034b80 100%) !important;
+  background: linear-gradient(135deg, #011d38 0%, #023E73 50%, #034b80 100%);
   position: relative;
   padding: 88px 0;
   overflow: hidden;
@@ -3978,7 +3978,7 @@ button {
 }
 
 .about-mascot-section .split__content {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .ambassador-badge-pill {
@@ -4005,16 +4005,16 @@ button {
 }
 
 .about-mascot-desc {
-  font-size: 16px !important;
-  line-height: 1.65 !important;
-  color: rgba(255, 255, 255, 0.9) !important;
-  margin-bottom: 16px !important;
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 16px;
 }
 
 .about-mascot-desc em {
-  color: #3BBF8F !important;
-  font-style: normal !important;
-  font-weight: 700 !important;
+  color: #3BBF8F;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .mascot-cta-row {
@@ -4032,7 +4032,7 @@ button {
   border-radius: 30px;
   border: 1.5px solid rgba(255, 255, 255, 0.35);
   background: rgba(255, 255, 255, 0.06);
-  color: #ffffff !important;
+  color: #ffffff;
   font-weight: 700;
   font-size: 14px;
   backdrop-filter: blur(8px);
@@ -4041,7 +4041,7 @@ button {
 
 .btn--outline-light:hover {
   background: #ffffff;
-  color: #023E73 !important;
+  color: #023E73;
   border-color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
@@ -4058,30 +4058,30 @@ button {
 .about-partners-grid,
 .sponsor-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr) !important;
-  gap: 20px !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .about-partner-card,
 .sponsor-tile {
-  background: #ffffff !important;
-  border: 1.5px solid #e2e8f0 !important;
-  border-radius: 16px !important;
-  padding: 24px 20px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  text-align: left !important;
-  position: relative !important;
-  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
-  box-shadow: 0 4px 14px rgba(2, 62, 115, 0.03) !important;
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(2, 62, 115, 0.03);
 }
 
 .about-partner-card:hover,
 .sponsor-tile:hover {
-  border-color: #0477BF !important;
-  transform: translateY(-5px) !important;
-  box-shadow: 0 14px 30px rgba(4, 119, 191, 0.12) !important;
+  border-color: #0477BF;
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(4, 119, 191, 0.12);
 }
 
 .partner-card-emblem {
@@ -4109,30 +4109,30 @@ button {
 
 .partner-card-name,
 .sponsor-tile__name {
-  font-size: 16.5px !important;
-  font-weight: 800 !important;
-  color: #023E73 !important;
-  margin: 0 0 4px 0 !important;
-  line-height: 1.3 !important;
+  font-size: 16.5px;
+  font-weight: 800;
+  color: #023E73;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
 }
 
 .partner-card-category {
-  font-size: 12.5px !important;
-  color: #64748b !important;
-  display: block !important;
-  line-height: 1.4 !important;
+  font-size: 12.5px;
+  color: #64748b;
+  display: block;
+  line-height: 1.4;
 }
 
 .partner-card-tier {
-  font-size: 11px !important;
-  font-weight: 700 !important;
-  color: #0477BF !important;
-  background: rgba(4, 119, 191, 0.08) !important;
-  border: 1px solid rgba(4, 119, 191, 0.2) !important;
-  padding: 3px 9px !important;
-  border-radius: 12px !important;
-  letter-spacing: 0.3px !important;
-  align-self: flex-start !important;
+  font-size: 11px;
+  font-weight: 700;
+  color: #0477BF;
+  background: rgba(4, 119, 191, 0.08);
+  border: 1px solid rgba(4, 119, 191, 0.2);
+  padding: 3px 9px;
+  border-radius: 12px;
+  letter-spacing: 0.3px;
+  align-self: flex-start;
 }
 
 /* RESPONSIVE LAYOUTS FOR ALL 4 SECTIONS */
@@ -4140,21 +4140,21 @@ button {
 
   .about-stats-grid,
   .section-stats-bar .grid--4 {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about-objectives-grid,
   .section.bg-light .grid--4 {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about-partners-grid,
   .sponsor-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -4162,21 +4162,21 @@ button {
 
   .about-stats-grid,
   .section-stats-bar .grid--4 {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 
   .about-objectives-grid,
   .section.bg-light .grid--4 {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 
   .about-partners-grid,
   .sponsor-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 
   .gallery-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -4190,18 +4190,18 @@ button {
    ========================================================================== */
 
 .timeline-section-fullwidth {
-  background: linear-gradient(180deg, #f0f7fc 0%, #e8f3fa 100%) !important;
-  color: #000000 !important;
-  padding: 60px 0 !important;
+  background: linear-gradient(180deg, #f0f7fc 0%, #e8f3fa 100%);
+  color: #000000;
+  padding: 60px 0;
   position: relative;
   overflow: hidden;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 .timeline-section-fullwidth::before {
-  display: none !important;
+  display: none;
 }
 
 .timeline-container-fluid {
@@ -4212,44 +4212,44 @@ button {
 }
 
 .timeline-section-fullwidth .section-eyebrow {
-  color: #0f172a !important;
+  color: #0f172a;
   font-weight: 800;
   letter-spacing: 2px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  text-align: left !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-align: left;
 }
 
 .timeline-section-fullwidth .section-main-title {
-  color: #000000 !important;
-  font-size: var(--title-h2) !important;
-  font-weight: 700 !important;
+  color: #000000;
+  font-size: var(--title-h2);
+  font-weight: 700;
   letter-spacing: -0.5px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  text-align: left !important;
-  margin: 0 0 6px 0 !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-align: left;
+  margin: 0 0 6px 0;
 }
 
 .timeline-section-fullwidth .title-highlight-blue {
-  color: #000000 !important;
-  font-weight: 700 !important;
+  color: #000000;
+  font-weight: 700;
 }
 
 .timeline-section-fullwidth .section-desc,
 .timeline-section-fullwidth p {
-  color: #1e293b !important;
+  color: #1e293b;
   font-size: 14.5px;
   line-height: 1.55;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  text-align: left !important;
-  margin: 0 0 16px 0 !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-align: left;
+  margin: 0 0 16px 0;
 }
 
 .timeline-section-fullwidth .title-zigzag {
-  display: none !important;
+  display: none;
 }
 
 .timeline-interactive-mount {
-  margin-top: 0 !important;
+  margin-top: 0;
 }
 
 /* Timeline Overall Wrapper (Spacious Layout) */
@@ -4267,7 +4267,7 @@ button {
   background: #ffffff;
   border: 1px solid rgba(4, 119, 191, 0.16);
   border-radius: 20px;
-  box-shadow: 0 10px 30px -5px rgba(2, 62, 115, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.8) inset !important;
+  box-shadow: 0 10px 30px -5px rgba(2, 62, 115, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
   display: grid;
   grid-template-columns: 350px 1fr;
   align-items: stretch;
@@ -4277,7 +4277,7 @@ button {
 }
 
 .timeline-master-showcase-card:hover {
-  box-shadow: 0 14px 36px -6px rgba(2, 62, 115, 0.1) !important;
+  box-shadow: 0 14px 36px -6px rgba(2, 62, 115, 0.1);
 }
 
 /* Left Host Stage (Exhibition Pavilion & Mascot Podium) */
@@ -4310,7 +4310,7 @@ button {
   background: #ffffff;
   border: 1px solid #bae6fd;
   border-radius: 20px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.8px;
@@ -4319,16 +4319,16 @@ button {
 }
 
 .stage-host-year-callout {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 22px;
   font-weight: 900;
-  color: #0f172a !important;
+  color: #0f172a;
   margin: 4px 0 0;
   line-height: 1.1;
 }
 
 .stage-host-label {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 12px;
   font-weight: 600;
   color: #64748b;
@@ -4377,11 +4377,11 @@ button {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 20px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 10.5px;
   font-weight: 700;
-  color: #0f172a !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  color: #0f172a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .host-dot-blue {
@@ -4426,13 +4426,13 @@ button {
   background: #ffffff;
   border: 1.5px solid #0477BF;
   border-radius: 20px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #0f172a !important;
-  box-shadow: none !important;
+  color: #0f172a;
+  box-shadow: none;
 }
 
 .timeline-milestone-pill .live-pulse-dot {
@@ -4440,11 +4440,11 @@ button {
 }
 
 .timeline-stage-counter {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 1.1px;
-  color: #0f172a !important;
+  color: #0f172a;
   text-transform: uppercase;
 }
 
@@ -4456,7 +4456,7 @@ button {
   padding: 4px 12px;
   border-radius: 20px;
   border: 1px solid #e2e8f0;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 .timeline-ctrl-btn {
@@ -4472,7 +4472,7 @@ button {
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 .timeline-ctrl-btn:hover {
@@ -4487,7 +4487,7 @@ button {
 }
 
 .timeline-autoplay-status {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 9.5px;
   font-weight: 800;
   letter-spacing: 0.9px;
@@ -4511,10 +4511,10 @@ button {
 }
 
 .timeline-spotlight-year {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 19px;
   font-weight: 900;
-  color: #0477BF !important;
+  color: #0477BF;
   letter-spacing: -0.3px;
 }
 
@@ -4524,19 +4524,19 @@ button {
 }
 
 .timeline-spotlight-tagline {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 11.5px;
   font-weight: 800;
-  color: #0f172a !important;
+  color: #0f172a;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .timeline-spotlight-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: clamp(19px, 1.8vw, 22px);
   font-weight: 900;
-  color: #0f172a !important;
+  color: #0f172a;
   margin: 0 0 2px;
   letter-spacing: -0.3px;
   line-height: 1.25;
@@ -4544,10 +4544,10 @@ button {
 }
 
 .timeline-spotlight-text {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 14px;
   line-height: 1.55;
-  color: #1e293b !important;
+  color: #1e293b;
   margin: 0;
   max-width: 100%;
   text-align: left;
@@ -4569,7 +4569,7 @@ button {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 .timeline-stat-icon-wrap {
@@ -4582,7 +4582,7 @@ button {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 .timeline-stat-icon {
@@ -4597,26 +4597,26 @@ button {
 }
 
 .timeline-stat-text .stat-label {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 9px;
   font-weight: 800;
   letter-spacing: 0.9px;
   text-transform: uppercase;
-  color: #0477BF !important;
+  color: #0477BF;
 }
 
 .timeline-stat-text .stat-val {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 14px;
   font-weight: 900;
-  color: #0f172a !important;
+  color: #0f172a;
   line-height: 1.2;
 }
 
 .timeline-stat-text .stat-sub {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 11px;
-  color: #475569 !important;
+  color: #475569;
   font-weight: 600;
 }
 
@@ -4632,7 +4632,7 @@ button {
 }
 
 .highlights-header-label {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 9px;
   font-weight: 800;
   letter-spacing: 0.9px;
@@ -4649,22 +4649,22 @@ button {
 }
 
 .timeline-highlight-pill {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 11.5px;
   font-weight: 700;
-  color: #0f172a !important;
+  color: #0f172a;
   background: #ffffff;
   border: 1px solid #cbd5e1;
   padding: 5px 12px;
   border-radius: 6px;
   white-space: nowrap;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
   display: inline-flex;
   align-items: center;
 }
 
 .pill-sparkle-blue {
-  color: #0477BF !important;
+  color: #0477BF;
   font-weight: 800;
   margin-right: 5px;
   font-size: 11px;
@@ -4675,14 +4675,14 @@ button {
   background: #e2e8f0;
   width: calc(100% + 56px);
   margin: auto -28px 0;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 .timeline-progress-fill {
   height: 100%;
   background: #0477BF;
   transition: width 0.05s linear;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 /* ==========================================================================
@@ -4697,7 +4697,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 /* Horizontal Line running across full screen (100vw edge-to-edge bleed) */
@@ -4754,7 +4754,7 @@ button {
   border: 1px solid #cbd5e1;
   border-radius: 9999px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
   transition: all 0.25s ease;
   min-width: 95px;
 }
@@ -4762,18 +4762,18 @@ button {
 .timeline-year-pill-btn:hover {
   border-color: #0477BF;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(4, 119, 191, 0.15) !important;
+  box-shadow: 0 4px 12px rgba(4, 119, 191, 0.15);
 }
 
 .timeline-year-pill-btn:hover .year-pill-number {
-  color: #0477BF !important;
+  color: #0477BF;
 }
 
 .timeline-year-pill-btn.is-active {
-  background: #0477BF !important;
-  border: 1px solid #0477BF !important;
+  background: #0477BF;
+  border: 1px solid #0477BF;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(4, 119, 191, 0.3) !important;
+  box-shadow: 0 6px 16px rgba(4, 119, 191, 0.3);
 }
 
 .timeline-year-pill-btn.is-passed {
@@ -4782,27 +4782,27 @@ button {
 }
 
 .year-pill-number {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 15px;
   font-weight: 600;
-  color: #0f172a !important;
+  color: #0f172a;
   line-height: 1;
   letter-spacing: -0.2px;
   transition: color 0.2s ease;
 }
 
 .timeline-year-pill-btn.is-active .year-pill-number {
-  color: #ffffff !important;
+  color: #ffffff;
   font-weight: 700;
 }
 
 .timeline-year-pill-btn.is-passed .year-pill-number {
-  color: #0477BF !important;
+  color: #0477BF;
 }
 
 /* 3. CONTINUOUS EVOLUTION TICKER - HIDDEN AS REQUESTED */
 .timeline-continuous-loop-wrap {
-  display: none !important;
+  display: none;
 }
 
 /* Responsive Rules */
@@ -5045,11 +5045,11 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: transparent !important;
-  padding: 0 !important;
+  background: transparent;
+  padding: 0;
   border-radius: 0;
-  box-shadow: none !important;
-  border: none !important;
+  box-shadow: none;
+  border: none;
   transform: translateY(2px);
   transition: transform 0.25s ease;
 }
@@ -5060,7 +5060,7 @@ button {
 
 .exhibz-header.is-sticky .site-brand-wrap {
   transform: translateY(1px);
-  padding: 0 !important;
+  padding: 0;
 }
 
 .header-actions {
@@ -5075,7 +5075,7 @@ button {
   justify-content: center;
   padding: 10px 20px;
   background: linear-gradient(135deg, #0477BF, #069DBF);
-  color: #ffffff !important;
+  color: #ffffff;
   font-family: var(--font-heading), sans-serif;
   font-size: 12.5px;
   font-weight: 700;
@@ -5090,7 +5090,7 @@ button {
 .btn-header-visitor:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(4, 119, 191, 0.5);
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .btn-header-exhibitor {
@@ -5100,7 +5100,7 @@ button {
   padding: 9px 19px;
   background: #F0F7FC;
   border: 1.5px solid #0477BF;
-  color: #0477BF !important;
+  color: #0477BF;
   font-family: var(--font-heading), sans-serif;
   font-size: 12.5px;
   font-weight: 700;
@@ -5113,7 +5113,7 @@ button {
 
 .btn-header-exhibitor:hover {
   background: #0477BF;
-  color: #ffffff !important;
+  color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(4, 119, 191, 0.35);
 }
@@ -5593,7 +5593,7 @@ button {
   .mascot-stage {
     flex-direction: column;
     gap: 14px;
-    width: 100% !important;
+    width: 100%;
   }
 
   .mascot-speech-bubble,
@@ -5726,7 +5726,7 @@ button {
 
 .hero-subquote-bold,
 .hero-subquote-text strong {
-  font-weight: 700 !important;
+  font-weight: 700;
   font-style: normal;
   color: #ffffff;
   letter-spacing: 0.3px;
@@ -5743,7 +5743,7 @@ button {
 .btn-hero-visitor {
   padding: 10.5px 22px;
   background: linear-gradient(135deg, #0477BF 0%, #069DBF 100%);
-  color: #ffffff !important;
+  color: #ffffff;
   font-family: var(--font-heading), sans-serif;
   font-weight: 800;
   font-size: 12.5px;
@@ -5761,7 +5761,7 @@ button {
 .btn-hero-visitor:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(6, 157, 191, 0.6);
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .btn-hero-visitor .btn-arrow {
@@ -5777,7 +5777,7 @@ button {
   padding: 9.5px 20px;
   background: rgba(255, 255, 255, 0.12);
   border: 1.5px solid #ffffff;
-  color: #ffffff !important;
+  color: #ffffff;
   font-family: var(--font-heading), sans-serif;
   font-weight: 800;
   font-size: 12.5px;
@@ -5792,7 +5792,7 @@ button {
 .btn-hero-exhibitor:hover {
   background: #3BBF8F;
   border-color: #3BBF8F;
-  color: #023E73 !important;
+  color: #023E73;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(59, 191, 143, 0.45);
 }
@@ -5838,11 +5838,11 @@ button {
 /* FOLD 2: WHITE (Countdown Section 3.3) ------------------------------------ */
 .countdown-section-wrap.fold-white,
 .fold-white {
-  background: #ffffff !important;
-  color: #4b5563 !important;
-  padding: 60px 0 !important;
-  min-height: auto !important;
-  height: auto !important;
+  background: #ffffff;
+  color: #4b5563;
+  padding: 60px 0;
+  min-height: auto;
+  height: auto;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
   position: relative;
@@ -5877,9 +5877,10 @@ button {
     radial-gradient(ellipse 45% 55% at 8% 120%, rgba(5, 150, 105, 0.45) 0%, transparent 60%),
     linear-gradient(135deg, #022c22 0%, #064e3b 22%, #047857 52%, #059669 80%, #10b981 100%);
   padding: 52px 0 56px;
-  border-top: 2px solid rgba(52, 211, 153, 0.4);
-  border-bottom: 2px solid rgba(52, 211, 153, 0.35);
-  box-shadow: 0 16px 48px rgba(2, 44, 34, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  border-top: none;
+  border-bottom: none;
+  border: none;
+  box-shadow: 0 16px 48px rgba(2, 44, 34, 0.32);
   overflow: hidden;
 }
 
@@ -5896,9 +5897,9 @@ button {
 .timer-fullview-container {
   position: relative;
   z-index: 2;
-  max-width: 100% !important;
-  width: 100% !important;
-  padding: 0 4vw !important;
+  max-width: 100%;
+  width: 100%;
+  padding: 0 4vw;
 }
 
 .timer-fullview-wrapper {
@@ -5922,12 +5923,12 @@ button {
 }
 
 .timer-fullview-section .timer-header-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 14px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2.4px;
-  color: #ffffff !important;
+  color: #ffffff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
@@ -5945,10 +5946,12 @@ button {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.95);
   }
+
   70% {
     transform: scale(1.2);
     box-shadow: 0 0 0 11px rgba(52, 211, 153, 0);
   }
+
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(52, 211, 153, 0);
@@ -5965,10 +5968,10 @@ button {
   border: 1.5px solid rgba(167, 243, 208, 0.55);
   border-radius: 24px;
   padding: 7px 18px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 13px;
   font-weight: 700;
-  color: #ffffff !important;
+  color: #ffffff;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
   transition: all 0.25s ease;
 }
@@ -5981,7 +5984,7 @@ button {
 }
 
 .timer-fullview-section .timer-header-badge svg {
-  color: #6ee7b7 !important;
+  color: #6ee7b7;
 }
 
 .timer-fullview-body {
@@ -5994,59 +5997,54 @@ button {
 
 /* Full-Screen Centered Layout: Expands across entire container */
 .timer-fullview-section .odometer-centered-layout {
-  width: 100% !important;
-  max-width: 100% !important;
-  justify-content: center !important;
-  margin: 0 !important;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  margin: 0;
 }
 
 /* Hide small side flanks in full-screen timer mode */
 .timer-fullview-section .odometer-side-flank {
-  display: none !important;
+  display: none;
 }
 
 /* Full-Screen Board: Justified edge-to-edge layout matching header */
 .timer-fullview-section .odometer-board {
-  width: 100% !important;
-  max-width: 1400px !important;
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: space-between !important;
-  align-items: flex-start !important;
-  gap: 0 !important;
-  margin: 0 auto !important;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+  margin: 0 auto;
 }
 
 /* 4 Uniform Luxury Frosted Glass Countdown Modules */
 .timer-fullview-section .odometer-group {
   position: relative;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 285px !important;
-  height: 200px !important;
-  background: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.28) !important;
-  border-radius: 22px !important;
-  box-shadow:
-    0 16px 40px rgba(0, 0, 0, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
-  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1) !important;
-  flex-shrink: 0 !important;
-  padding: 16px 12px 14px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 285px;
+  height: 200px;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  border-radius: 22px;
+  box-shadow: none;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  flex-shrink: 0;
+  padding: 16px 12px 14px;
 }
 
 .timer-fullview-section .odometer-group:hover {
-  transform: translateY(-4px) !important;
-  background: rgba(255, 255, 255, 0.16) !important;
-  border-color: rgba(52, 211, 153, 0.7) !important;
-  box-shadow:
-    0 24px 52px rgba(0, 0, 0, 0.4),
-    0 0 32px rgba(52, 211, 153, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.45) !important;
+  transform: translateY(-4px);
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 /* Base separator hidden elsewhere */
@@ -6056,7 +6054,7 @@ button {
 
 /* Perfectly centered separator element between modules */
 .timer-fullview-section .odometer-separator {
-  display: flex !important;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex: 1 1 0;
@@ -6065,7 +6063,7 @@ button {
 }
 
 .timer-fullview-section .odometer-separator span {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 46px;
   font-weight: 900;
   color: #34d399;
@@ -6077,72 +6075,53 @@ button {
   transform: translateY(-8px);
 }
 
-/* Split-Flap Realistic Drum Digit Slots */
+/* Digit Slots Card without border or outline */
 .timer-fullview-section .odometer-slots-row {
   position: relative;
-  background: #ffffff !important;
-  border: 2.5px solid #34d399 !important;
-  border-radius: 14px !important;
-  box-shadow:
-    0 10px 24px rgba(2, 44, 34, 0.35),
-    0 0 18px rgba(52, 211, 153, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+  border: none;
+  border-radius: 14px;
   overflow: hidden;
   transition: all 0.25s ease;
 }
 
-/* Split-Flap Center Groove Line across digits */
+/* Strike border removed */
 .timer-fullview-section .odometer-slot::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 1.5px;
-  background: rgba(2, 44, 34, 0.25);
-  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
-  z-index: 5;
-  pointer-events: none;
+  display: none;
 }
 
-/* Split-flap top/bottom drum bevel */
+/* Bevel overlay strike gradient removed */
 .timer-fullview-section .odometer-slot-overlay {
-  background: linear-gradient(180deg,
-    rgba(255, 255, 255, 0.7) 0%,
-    rgba(255, 255, 255, 0) 48%,
-    rgba(2, 44, 34, 0.12) 50%,
-    rgba(255, 255, 255, 0) 52%,
-    rgba(52, 211, 153, 0.08) 100%) !important;
+  display: none;
 }
 
 /* 3-digit DAYS slot sizing to fit perfectly inside uniform module */
 .timer-fullview-section .odometer-group[data-unit="days"] .odometer-slot {
-  width: 70px !important;
-  height: 104px !important;
+  width: 70px;
+  height: 104px;
 }
 
 .timer-fullview-section .odometer-group[data-unit="days"] .odometer-digit {
-  font-size: 64px !important;
+  font-size: 64px;
 }
 
 /* 2-digit HOURS, MINUTES, SECONDS slot sizing */
 .timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-slot {
-  width: 84px !important;
-  height: 104px !important;
+  width: 84px;
+  height: 104px;
 }
 
 .timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-digit {
-  font-size: 70px !important;
+  font-size: 70px;
 }
 
 .timer-fullview-section .odometer-slot:not(:last-child) {
-  border-right: 2px solid rgba(5, 150, 105, 0.3) !important;
-  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.95) !important;
+  border-right: none;
+  box-shadow: none;
 }
 
 .timer-fullview-section .odometer-digit {
-  font-weight: 900 !important;
-  color: #022c22 !important;
+  font-weight: 900;
+  color: white;
   letter-spacing: -1.5px;
   text-shadow: none;
 }
@@ -6152,15 +6131,15 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(6, 78, 59, 0.45) !important;
-  border: 1px solid rgba(52, 211, 153, 0.4) !important;
-  padding: 4px 18px !important;
-  border-radius: 20px !important;
-  font-size: 12px !important;
-  font-weight: 800 !important;
-  letter-spacing: 2.5px !important;
-  margin-top: 12px !important;
-  color: #6ee7b7 !important;
+  background: rgba(6, 78, 59, 0.45);
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  padding: 4px 18px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-top: 12px;
+  color: #6ee7b7;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -6168,22 +6147,11 @@ button {
 
 /* Event Highlights Ribbon below timer */
 .timer-fullview-ribbon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(167, 243, 208, 0.35);
-  border-radius: 30px;
-  padding: 8px 24px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  margin-top: 4px;
+  display: none;
 }
 
 .ribbon-chip {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: #ffffff;
@@ -6223,32 +6191,32 @@ button {
 
 .countdown-section-wrap {
   position: relative;
-  padding: 22px 0 54px !important;
-  background: #ffffff !important;
+  padding: 22px 0 54px;
+  background: #ffffff;
   /* Pure white background as requested */
-  border-top: none !important;
+  border-top: none;
   border-bottom: 1px solid #e2e8f0;
 }
 
 .countdown-showcase-card {
   position: relative;
   background: transparent;
-  border: none !important;
+  border: none;
   border-radius: 0;
-  padding: 0 !important;
-  box-shadow: none !important;
+  padding: 0;
+  box-shadow: none;
   max-width: 1240px;
   margin: 0 auto;
   text-align: left;
 }
 
 .countdown-showcase-card:hover {
-  box-shadow: none !important;
-  border: none !important;
+  box-shadow: none;
+  border: none;
 }
 
 .card-ambient-glow {
-  display: none !important;
+  display: none;
 }
 
 /* 2-Column Grid Layout: Column 1 (Left Info & CTAs) + Column 2 (Right Timer Panel & Features Stack) */
@@ -6278,22 +6246,22 @@ button {
   background: #f0f7fc;
   border: 1px solid #bae6fd;
   border-radius: 20px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.9px;
   text-transform: uppercase;
-  color: #023E73 !important;
+  color: #023E73;
   align-self: flex-start;
-  box-shadow: none !important;
+  box-shadow: none;
   margin: 0;
 }
 
 .countdown-main-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: var(--title-h2) !important;
-  font-weight: 700 !important;
-  color: #000000 !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: var(--title-h2);
+  font-weight: 700;
+  color: #000000;
   margin: 0;
   line-height: 1.22;
   letter-spacing: -0.5px;
@@ -6311,32 +6279,34 @@ button {
 }
 
 .countdown-sub-lead {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 14.5px;
   line-height: 1.6;
-  color: #000000 !important;
+  color: #000000;
   max-width: 560px;
   margin: 0;
   text-align: left;
 }
 
 .countdown-sub-lead strong {
-  color: #000000 !important;
+  color: #000000;
   font-weight: 700;
 }
 
-/* Event Details 3-Column Horizontal Grid Strip */
+/* Event Details 2-Column Horizontal Grid Strip (Integrated into Right Column Header) */
 .countdown-details-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0;
   width: 100%;
-  margin: 2px 0 0;
+  margin: 0;
   background: #ffffff;
-  border: 1.5px solid #e2e8f0;
-  border-radius: 12px;
+  border: none;
+  border-bottom: 1.5px solid rgba(4, 119, 191, 0.16);
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(2, 62, 115, 0.03);
+  box-shadow: none;
+  flex-shrink: 0;
 }
 
 .countdown-detail-card {
@@ -6344,16 +6314,16 @@ button {
   flex-direction: column;
   justify-content: center;
   gap: 6px;
-  padding: 11px 14px;
+  padding: 13px 18px;
   background: #ffffff;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
   transition: background 0.2s ease;
 }
 
 .countdown-detail-card:not(:last-child) {
-  border-right: 1px solid #e2e8f0 !important;
+  border-right: 1.5px solid rgba(4, 119, 191, 0.14);
 }
 
 .countdown-detail-card:hover {
@@ -6388,17 +6358,17 @@ button {
 }
 
 .detail-card-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 12.5px;
   font-weight: 800;
-  color: #000000 !important;
+  color: #000000;
   line-height: 1.3;
 }
 
 .detail-card-sub {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 11px;
-  color: #000000 !important;
+  color: #000000;
   font-weight: 600;
   line-height: 1.35;
 }
@@ -6433,18 +6403,19 @@ button {
 .countdown-bottom-visual {
   position: relative;
   width: 100%;
-  height: 265px;
+  flex: 1 1 0;
+  min-height: 0;
   border-radius: 16px;
   overflow: hidden;
   border: 1.5px solid #e2e8f0;
   box-shadow: 0 4px 16px rgba(2, 62, 115, 0.08);
-  margin-top: 2px;
+  margin-top: 0;
   background: #022E54;
 }
 
 .countdown-bottom-img {
-  width: 100% !important;
-  height: 100% !important;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center 30%;
   display: block;
@@ -6481,7 +6452,7 @@ button {
   border: 1px solid rgba(56, 189, 248, 0.45);
   padding: 4px 11px;
   border-radius: 20px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 11px;
   font-weight: 700;
   color: #e0f2fe;
@@ -6498,9 +6469,9 @@ button {
 .countdown-actions-group {
   position: relative;
   z-index: 3;
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-start;
   gap: 14px;
@@ -6512,41 +6483,41 @@ button {
 .btn-countdown-primary,
 #countdown-register-btn {
   padding: 12.5px 18px;
-  background: #023E73 !important;
-  color: #ffffff !important;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  background: #023E73;
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-weight: 800;
   font-size: 11.5px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   transition: all 0.25s ease;
   text-decoration: none;
-  border: 1.5px solid rgba(56, 189, 248, 0.45) !important;
-  white-space: nowrap !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.45);
+  white-space: nowrap;
   flex: 1 1 0;
   width: auto;
 }
 
 .btn-countdown-primary:hover,
 #countdown-register-btn:hover {
-  background: #0477BF !important;
-  border-color: #38bdf8 !important;
+  background: #0477BF;
+  border-color: #38bdf8;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(4, 119, 191, 0.45) !important;
-  color: #ffffff !important;
+  box-shadow: 0 6px 18px rgba(4, 119, 191, 0.45);
+  color: #ffffff;
 }
 
 .btn-countdown-primary .btn-arrow,
 #countdown-register-btn .btn-arrow {
   transition: transform 0.25s ease;
   font-weight: 700;
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .btn-countdown-primary:hover .btn-arrow,
@@ -6557,35 +6528,35 @@ button {
 .btn-countdown-secondary,
 #countdown-exhibitor-btn {
   padding: 12.5px 18px;
-  background: rgba(255, 255, 255, 0.96) !important;
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
-  color: #023E73 !important;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  color: #023E73;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-weight: 800;
   font-size: 11.5px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: all 0.25s ease;
   text-decoration: none;
-  white-space: nowrap !important;
+  white-space: nowrap;
   flex: 1 1 0;
   width: auto;
 }
 
 .btn-countdown-secondary:hover,
 #countdown-exhibitor-btn:hover {
-  background: #ffffff !important;
-  border-color: #ffffff !important;
-  color: #0477BF !important;
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #0477BF;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
 /* ==========================================================================
@@ -6594,7 +6565,7 @@ button {
 .countdown-right-col {
   display: flex;
   flex-direction: column;
-  gap: 0 !important;
+  gap: 0;
   height: 100%;
   background: #ffffff;
   border: 2px solid rgba(4, 119, 191, 0.28);
@@ -6614,18 +6585,18 @@ button {
    ========================================================================== */
 .countdown-timer-panel {
   background: #e8f8f0;
-  border: none !important;
-  border-radius: 0 !important;
-  border-bottom: 1.5px solid rgba(59, 191, 143, 0.25) !important;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1.5px solid rgba(59, 191, 143, 0.25);
   padding: 16px 22px 14px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  flex-shrink: 0 !important;
+  flex-shrink: 0;
   transition: all 0.25s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 .countdown-timer-panel-header {
@@ -6644,12 +6615,12 @@ button {
 }
 
 .timer-header-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 11.5px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: #065f46 !important;
+  color: #065f46;
 }
 
 .timer-header-badge {
@@ -6660,7 +6631,7 @@ button {
   border: 1px solid rgba(59, 191, 143, 0.45);
   border-radius: 20px;
   padding: 3px 11px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 11px;
   font-weight: 700;
   color: #047857;
@@ -6703,13 +6674,13 @@ button {
 
 /* Centered Timer Layout with Left and Right Symmetrical Design Flanks */
 .odometer-centered-layout {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
-  gap: 12px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 12px;
   position: relative;
-  margin: 2px 0 0 0 !important;
+  margin: 2px 0 0 0;
 }
 
 .odometer-side-flank {
@@ -6778,14 +6749,14 @@ button {
 }
 
 .odometer-board {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: flex-start !important;
-  justify-content: center !important;
-  gap: 12px !important;
-  width: auto !important;
-  margin: 0 !important;
-  flex-shrink: 0 !important;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  width: auto;
+  margin: 0;
+  flex-shrink: 0;
 }
 
 .odometer-group {
@@ -6798,15 +6769,10 @@ button {
 .odometer-slots-row {
   display: inline-flex;
   align-items: center;
-  gap: 0 !important;
+  gap: 0;
   border-radius: 9px;
   overflow: hidden;
-  background: #ffffff;
   border: 1.5px solid #3BBF8F;
-  box-shadow:
-    0 3px 10px rgba(59, 191, 143, 0.12),
-    0 1px 3px rgba(0, 0, 0, 0.04),
-    inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
 /* Compact, Balanced Odometer Digit Slot */
@@ -6814,10 +6780,10 @@ button {
   position: relative;
   width: 32px;
   height: 48px;
-  border-radius: 0 !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -6827,8 +6793,8 @@ button {
 
 /* Subtle mechanical divider slit between digits in the same group */
 .odometer-slot:not(:last-child) {
-  border-right: 1px solid rgba(59, 191, 143, 0.25) !important;
-  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.8) !important;
+  border-right: 1px solid rgba(59, 191, 143, 0.25);
+  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.8);
 }
 
 /* Centered Numerals with Refined Font Size */
@@ -6838,7 +6804,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 28px;
   font-weight: 800;
   color: #064e3b;
@@ -6898,7 +6864,7 @@ button {
 
 /* Group Sub-Label (DAYS, HOURS, MINUTES, SECONDS) */
 .odometer-group-label {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
@@ -6913,92 +6879,92 @@ button {
    — Compact, refined layout with tighter vertical rhythm
    ========================================================================== */
 .countdown-features-stack {
-  display: grid !important;
-  grid-template-rows: repeat(3, 1fr) !important;
-  gap: 0 !important;
-  flex: 1 1 auto !important;
-  height: 100% !important;
-  min-height: 0 !important;
-  background: #ffffff !important;
-  border: none !important;
-  border-radius: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 0 1 auto;
+  height: auto;
+  min-height: 0;
+  background: #ffffff;
+  border: none;
+  border-radius: 0;
   overflow: hidden;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .countdown-feature-box {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  gap: 8px;
-  padding: 22px 28px;
-  min-height: 0 !important;
-  box-sizing: border-box !important;
-  background: #ffffff !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 22px;
+  min-height: 0;
+  box-sizing: border-box;
+  background: #ffffff;
   position: relative;
   overflow: hidden;
   cursor: default;
-  border-radius: 0 !important;
-  border: none !important;
-  border-bottom: 1px solid rgba(4, 119, 191, 0.12) !important;
-  box-shadow: none !important;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(4, 119, 191, 0.12);
+  box-shadow: none;
   transition: background 0.2s ease;
 }
 
 .countdown-feature-box:last-child {
-  border-bottom: none !important;
+  border-bottom: none;
 }
 
 .countdown-feature-box:hover {
   background: inherit;
-  transform: none !important;
+  transform: none;
 }
 
 /* 2nd Card (Networking): Light Blue theme matching royal blue (#0477BF) */
 .countdown-feature-box.countdown-feature-box--royal {
-  background: #eef7fa !important;
-  border-top: none !important;
-  border-bottom: 1px solid rgba(4, 119, 191, 0.12) !important;
+  background: #eef7fa;
+  border-top: none;
+  border-bottom: 1px solid rgba(4, 119, 191, 0.12);
 }
 
 .countdown-feature-box.countdown-feature-box--royal:hover {
-  background: #eef7fa !important;
+  background: #eef7fa;
 }
 
 .countdown-feature-box.countdown-feature-box--royal .feature-box-stat {
-  background: rgba(255, 255, 255, 0.92) !important;
-  border: 1px solid rgba(4, 119, 191, 0.2) !important;
-  color: #023E73 !important;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(4, 119, 191, 0.2);
+  color: #023E73;
 }
 
 .countdown-feature-box.countdown-feature-box--royal:hover .feature-box-stat {
-  background: rgba(255, 255, 255, 0.92) !important;
-  border-color: rgba(4, 119, 191, 0.2) !important;
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(4, 119, 191, 0.2);
 }
 
 .countdown-feature-box.countdown-feature-box--royal .feature-box-badge {
-  color: #0477BF !important;
+  color: #0477BF;
   font-weight: 700;
 }
 
 .countdown-feature-box.countdown-feature-box--royal .feature-box-body h4 {
-  color: #022E54 !important;
+  color: #022E54;
 }
 
 .countdown-feature-box.countdown-feature-box--royal .feature-box-pills .feature-pill {
-  color: #023E73 !important;
+  color: #023E73;
 }
 
 /* 3rd Card (Infrastructure): Clean White theme */
 .countdown-feature-box.countdown-feature-box--cyan,
 .countdown-features-stack .countdown-feature-box:last-child {
-  background: #ffffff !important;
-  border-bottom: none !important;
+  background: #ffffff;
+  border-bottom: none;
 }
 
 .countdown-feature-box.countdown-feature-box--cyan:hover,
 .countdown-features-stack .countdown-feature-box:last-child:hover {
-  background: #ffffff !important;
+  background: #ffffff;
 }
 
 /* Feature Box Top Row — tighter alignment */
@@ -7016,21 +6982,21 @@ button {
   border-radius: 6px;
   flex-shrink: 0;
   transition: transform 0.25s ease;
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 .feature-box-icon svg {
-  color: #000000 !important;
-  width: 15px !important;
-  height: 15px !important;
+  color: #000000;
+  width: 15px;
+  height: 15px;
 }
 
 .countdown-feature-box:hover .feature-box-icon {
-  transform: none !important;
+  transform: none;
 }
 
 .feature-box-badge {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.7px;
@@ -7039,7 +7005,7 @@ button {
 
 .feature-box-stat {
   margin-left: auto;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 10px;
   font-weight: 400;
   color: #0f172a;
@@ -7105,22 +7071,22 @@ button {
 }
 
 .feature-box-body h4 {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: 20px !important;
-  font-weight: 600 !important;
-  color: #000000 !important;
-  margin: 0 !important;
-  line-height: 1.3 !important;
-  letter-spacing: -0.2px !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
   transition: color 0.2s ease;
   white-space: nowrap;
 }
 
 .feature-box-body p {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 11px;
   line-height: 1.4;
-  color: #000000 !important;
+  color: #000000;
   margin: 0;
 }
 
@@ -7134,10 +7100,10 @@ button {
 }
 
 .feature-pill {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 10px;
   font-weight: 400;
-  color: #000000 !important;
+  color: #000000;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
@@ -7151,8 +7117,8 @@ button {
 }
 
 .countdown-feature-box:hover .feature-pill {
-  background: transparent !important;
-  border-color: transparent !important;
+  background: transparent;
+  border-color: transparent;
 }
 
 /* ==========================================================================
@@ -7160,35 +7126,35 @@ button {
    ========================================================================== */
 @media (max-width: 1320px) {
   .timer-fullview-section .odometer-group {
-    width: 240px !important;
-    height: 180px !important;
-    padding: 14px 10px !important;
+    width: 240px;
+    height: 180px;
+    padding: 14px 10px;
   }
 
   .timer-fullview-section .odometer-group[data-unit="days"] .odometer-slot {
-    width: 58px !important;
-    height: 90px !important;
+    width: 58px;
+    height: 90px;
   }
 
   .timer-fullview-section .odometer-group[data-unit="days"] .odometer-digit {
-    font-size: 52px !important;
+    font-size: 52px;
   }
 
   .timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-slot {
-    width: 70px !important;
-    height: 90px !important;
+    width: 70px;
+    height: 90px;
   }
 
   .timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-digit {
-    font-size: 58px !important;
+    font-size: 58px;
   }
 
   .timer-fullview-section .odometer-separator {
-    height: 180px !important;
+    height: 180px;
   }
 
   .timer-fullview-section .odometer-separator span {
-    font-size: 38px !important;
+    font-size: 38px;
   }
 }
 
@@ -7198,44 +7164,44 @@ button {
   }
 
   .timer-fullview-section .odometer-group {
-    width: 175px !important;
-    height: 150px !important;
-    padding: 12px 6px !important;
-    border-radius: 16px !important;
+    width: 175px;
+    height: 150px;
+    padding: 12px 6px;
+    border-radius: 16px;
   }
 
   .timer-fullview-section .odometer-group[data-unit="days"] .odometer-slot {
-    width: 42px !important;
-    height: 72px !important;
+    width: 42px;
+    height: 72px;
   }
 
   .timer-fullview-section .odometer-group[data-unit="days"] .odometer-digit {
-    font-size: 38px !important;
+    font-size: 38px;
   }
 
   .timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-slot {
-    width: 54px !important;
-    height: 72px !important;
+    width: 54px;
+    height: 72px;
   }
 
   .timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-digit {
-    font-size: 44px !important;
+    font-size: 44px;
   }
 
   .timer-fullview-section .odometer-separator {
-    height: 150px !important;
-    min-width: 14px !important;
+    height: 150px;
+    min-width: 14px;
   }
 
   .timer-fullview-section .odometer-separator span {
-    font-size: 28px !important;
+    font-size: 28px;
   }
 
   .timer-fullview-section .odometer-group-label {
-    font-size: 10px !important;
-    padding: 3px 12px !important;
-    margin-top: 8px !important;
-    letter-spacing: 1.5px !important;
+    font-size: 10px;
+    padding: 3px 12px;
+    margin-top: 8px;
+    letter-spacing: 1.5px;
   }
 
   .timer-fullview-ribbon {
@@ -7270,56 +7236,56 @@ button {
   }
 
   .timer-fullview-section .odometer-board {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 12px !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
   }
 
   .timer-fullview-section .odometer-group {
-    width: calc(50% - 10px) !important;
-    min-width: 135px !important;
-    height: 130px !important;
-    padding: 10px 4px !important;
+    width: calc(50% - 10px);
+    min-width: 135px;
+    height: 130px;
+    padding: 10px 4px;
   }
 
   .timer-fullview-section .odometer-group[data-unit="days"] .odometer-slot {
-    width: 34px !important;
-    height: 54px !important;
+    width: 34px;
+    height: 54px;
   }
 
   .timer-fullview-section .odometer-group[data-unit="days"] .odometer-digit {
-    font-size: 30px !important;
+    font-size: 30px;
   }
 
   .timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-slot {
-    width: 44px !important;
-    height: 54px !important;
+    width: 44px;
+    height: 54px;
   }
 
   .timer-fullview-section .odometer-group:not([data-unit="days"]) .odometer-digit {
-    font-size: 34px !important;
+    font-size: 34px;
   }
 
   .timer-fullview-section .odometer-separator {
-    display: none !important;
+    display: none;
   }
 
   .timer-fullview-section .odometer-group-label {
-    font-size: 9.5px !important;
-    padding: 2px 10px !important;
-    letter-spacing: 1.2px !important;
-    margin-top: 6px !important;
+    font-size: 9.5px;
+    padding: 2px 10px;
+    letter-spacing: 1.2px;
+    margin-top: 6px;
   }
 
   .timer-fullview-ribbon {
-    display: none !important;
+    display: none;
   }
 }
 
 @media (max-width: 576px) {
   .countdown-actions-group {
-    flex-wrap: wrap !important;
+    flex-wrap: wrap;
   }
 
   .countdown-details-grid {
@@ -7335,16 +7301,16 @@ button {
   }
 
   .countdown-detail-card:not(:last-child) {
-    border-right: none !important;
-    border-bottom: 1px solid #e2e8f0 !important;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
   }
 
   .btn-countdown-primary,
   #countdown-register-btn,
   .btn-countdown-secondary,
   #countdown-exhibitor-btn {
-    width: 100% !important;
-    justify-content: center !important;
+    width: 100%;
+    justify-content: center;
   }
 
   .timer-fullview-section {
@@ -7352,57 +7318,57 @@ button {
   }
 
   .timer-fullview-section .odometer-slot {
-    width: 28px !important;
-    height: 44px !important;
+    width: 28px;
+    height: 44px;
   }
 
   .timer-fullview-section .odometer-digit {
-    font-size: 24px !important;
+    font-size: 24px;
   }
 
   .timer-fullview-section .odometer-separator {
-    height: 44px !important;
-    min-width: 10px !important;
+    height: 44px;
+    min-width: 10px;
   }
 
   .timer-fullview-section .odometer-separator span {
-    font-size: 20px !important;
+    font-size: 20px;
   }
 
   .timer-fullview-section .odometer-group-label {
-    font-size: 9px !important;
-    letter-spacing: 1.2px !important;
-    margin-top: 6px !important;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    margin-top: 6px;
   }
 
   .odometer-side-flank {
-    display: none !important;
+    display: none;
   }
 
   .odometer-board {
-    width: 100% !important;
-    justify-content: space-between !important;
-    gap: 8px !important;
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
   }
 
   .odometer-slots-row {
-    gap: 0 !important;
-    border-radius: 7px !important;
+    gap: 0;
+    border-radius: 7px;
   }
 
   .odometer-slot {
-    width: 26px !important;
-    height: 42px !important;
-    border-radius: 0 !important;
+    width: 26px;
+    height: 42px;
+    border-radius: 0;
   }
 
   .odometer-digit {
-    font-size: 24px !important;
+    font-size: 24px;
   }
 
   .odometer-group-label {
-    font-size: 8.5px !important;
-    letter-spacing: 1px !important;
+    font-size: 8.5px;
+    letter-spacing: 1px;
   }
 
   .feature-box-top {
@@ -7421,19 +7387,19 @@ button {
 .timeline-section-fullwidth,
 .section-legacy.fold-light-primary,
 .fold-light-primary {
-  background: linear-gradient(180deg, #F0F7FC 0%, #E8F3FA 100%) !important;
+  background: linear-gradient(180deg, #F0F7FC 0%, #E8F3FA 100%);
   border-top: 1px solid rgba(4, 119, 191, 0.14);
   border-bottom: 1px solid rgba(4, 119, 191, 0.14);
-  padding: 60px 0 !important;
-  min-height: auto !important;
-  height: auto !important;
+  padding: 60px 0;
+  min-height: auto;
+  height: auto;
   position: relative;
   overflow: hidden;
 }
 
 .timeline-header-compact {
-  margin-bottom: 32px !important;
-  text-align: left !important;
+  margin-bottom: 32px;
+  text-align: left;
   width: 100%;
 }
 
@@ -7462,36 +7428,36 @@ button {
 }
 
 .timeline-eyebrow-text {
-  font-size: 11px !important;
-  letter-spacing: 1.5px !important;
+  font-size: 11px;
+  letter-spacing: 1.5px;
   display: inline-block;
-  color: #000000 !important;
+  color: #000000;
   font-weight: 800;
-  text-align: left !important;
-  margin: 0 !important;
+  text-align: left;
+  margin: 0;
 }
 
 .timeline-section-fullwidth .section-eyebrow,
 .fold-light-primary .section-eyebrow {
-  font-size: 11px !important;
-  letter-spacing: 1.5px !important;
-  margin-bottom: 5px !important;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
   display: inline-block;
-  color: #000000 !important;
+  color: #000000;
   font-weight: 800;
-  text-align: left !important;
+  text-align: left;
 }
 
 .timeline-section-fullwidth .section-main-title,
 .fold-light-primary .section-main-title,
 .timeline-main-title {
-  font-size: var(--title-h2) !important;
-  line-height: 1.24 !important;
-  margin: 0 !important;
-  letter-spacing: -0.5px !important;
-  color: #000000 !important;
-  font-weight: 700 !important;
-  text-align: left !important;
+  font-size: var(--title-h2);
+  line-height: 1.24;
+  margin: 0;
+  letter-spacing: -0.5px;
+  color: #000000;
+  font-weight: 700;
+  text-align: left;
 }
 
 .timeline-title-br {
@@ -7499,28 +7465,28 @@ button {
 }
 
 .timeline-header-desc {
-  font-size: 14.5px !important;
-  line-height: 1.65 !important;
-  color: #334155 !important;
-  margin: 0 !important;
-  max-width: 100% !important;
-  text-align: left !important;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #334155;
+  margin: 0;
+  max-width: 100%;
+  text-align: left;
 }
 
 .timeline-section-fullwidth .title-highlight-blue {
-  color: #000000 !important;
-  font-weight: 700 !important;
+  color: #000000;
+  font-weight: 700;
 }
 
 .timeline-section-fullwidth .title-zigzag {
-  display: none !important;
+  display: none;
 }
 
 .timeline-section-fullwidth .section-desc {
-  font-size: 14.5px !important;
-  line-height: 1.65 !important;
-  color: #334155 !important;
-  text-align: left !important;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #334155;
+  text-align: left;
 }
 
 @media (max-width: 991px) {
@@ -7554,20 +7520,20 @@ button {
 .legacy-body-text {
   font-size: 16px;
   line-height: 1.78;
-  color: #1e3a5f !important;
+  color: #1e3a5f;
   margin-bottom: 20px;
 }
 
 .legacy-quote-highlight {
-  background: #ffffff !important;
-  border-left: 4px solid #0477BF !important;
+  background: #ffffff;
+  border-left: 4px solid #0477BF;
   padding: 18px 24px;
   font-style: italic;
   font-size: 15.5px;
-  color: #023E73 !important;
+  color: #023E73;
   margin-bottom: 28px;
   border-radius: 0 10px 10px 0;
-  box-shadow: 0 6px 20px rgba(4, 119, 191, 0.08) !important;
+  box-shadow: 0 6px 20px rgba(4, 119, 191, 0.08);
 }
 
 .legacy-visual-card {
@@ -7603,11 +7569,11 @@ button {
 }
 
 .legacy-year {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 15px;
   font-weight: 800;
-  color: #0477BF !important;
-  background: rgba(4, 119, 191, 0.12) !important;
+  color: #0477BF;
+  background: rgba(4, 119, 191, 0.12);
   padding: 6px 12px;
   border-radius: 6px;
   white-space: nowrap;
@@ -7616,13 +7582,13 @@ button {
 .legacy-desc strong {
   display: block;
   font-size: 14.5px;
-  color: #000000 !important;
+  color: #000000;
   margin-bottom: 3px;
 }
 
 .legacy-desc span {
   font-size: 13.5px;
-  color: #000000 !important;
+  color: #000000;
   line-height: 1.45;
 }
 
@@ -7638,10 +7604,10 @@ button {
    ========================================================================== */
 .section-benefits.fold-benefits-staples,
 .fold-benefits-staples {
-  background: linear-gradient(180deg, #EDF7F4 0%, #E6F3EF 100%) !important;
+  background: linear-gradient(180deg, #EDF7F4 0%, #E6F3EF 100%);
   border-top: 1px solid rgba(59, 191, 143, 0.22);
   border-bottom: 1px solid rgba(59, 191, 143, 0.22);
-  padding: 60px 0 !important;
+  padding: 60px 0;
   position: relative;
   overflow: hidden;
 }
@@ -7681,34 +7647,34 @@ button {
 }
 
 .benefits-eyebrow-text {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #166534 !important;
+  color: #166534;
 }
 
 .benefits-main-title {
-  font-family: 'Inter', sans-serif !important;
-  font-size: var(--title-h2) !important;
-  font-weight: 700 !important;
-  color: #000000 !important;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--title-h2);
+  font-weight: 700;
+  color: #000000;
   margin: 0 0 10px;
   letter-spacing: -0.5px;
   line-height: 1.22;
 }
 
 .title-highlight-teal {
-  color: #000000 !important;
-  font-weight: 700 !important;
+  color: #000000;
+  font-weight: 700;
 }
 
 .benefits-sub-desc {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   line-height: 1.6;
-  color: #000000 !important;
+  color: #000000;
   margin: 0;
   max-width: 660px;
 }
@@ -7764,8 +7730,8 @@ button {
 .slider-nav-btn:disabled {
   opacity: 0.38;
   cursor: not-allowed;
-  transform: none !important;
-  box-shadow: none !important;
+  transform: none;
+  box-shadow: none;
 }
 
 .btn-view-all-top {
@@ -7779,7 +7745,7 @@ button {
   background: #ffffff;
   border: 1.5px solid #288065;
   color: #166534;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 12.5px;
   font-weight: 800;
   letter-spacing: 0.8px;
@@ -7958,7 +7924,7 @@ button {
 }
 
 .scallop-badge-sub {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 8px;
   font-weight: 800;
   letter-spacing: 0.7px;
@@ -7969,10 +7935,10 @@ button {
 }
 
 .scallop-badge-value {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 11.5px;
   font-weight: 900;
-  color: #000000 !important;
+  color: #000000;
   text-align: left;
 }
 
@@ -7983,10 +7949,10 @@ button {
   left: 10px;
   z-index: 2;
   background: linear-gradient(135deg, #069DBF 0%, #3BBF8F 100%);
-  color: #ffffff !important;
+  color: #ffffff;
   padding: 4px 11px;
   border-radius: 16px;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 11px;
   font-weight: 800;
   display: inline-flex;
@@ -8014,10 +7980,10 @@ button {
 }
 
 .staple-card-title {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   font-weight: 800;
-  color: #000000 !important;
+  color: #000000;
   margin: 0 0 10px;
   line-height: 1.25;
   min-height: 38px;
@@ -8056,11 +8022,11 @@ button {
 
 .staple-accordion-header-btn--discover .staple-triad-label,
 .staple-triad-label.label--discover {
-  color: #0477BF !important;
+  color: #0477BF;
 }
 
 .accordion-chevron-toggle.chevron--discover {
-  color: #0477BF !important;
+  color: #0477BF;
 }
 
 .staple-accordion-inner.inner--discover {
@@ -8083,11 +8049,11 @@ button {
 
 .staple-accordion-header-btn--connect .staple-triad-label,
 .staple-triad-label.label--connect {
-  color: #023E73 !important;
+  color: #023E73;
 }
 
 .accordion-chevron-toggle.chevron--connect {
-  color: #023E73 !important;
+  color: #023E73;
 }
 
 .staple-accordion-inner.inner--connect {
@@ -8110,11 +8076,11 @@ button {
 
 .staple-accordion-header-btn--grow .staple-triad-label,
 .staple-triad-label.label--grow {
-  color: #166534 !important;
+  color: #166534;
 }
 
 .accordion-chevron-toggle.chevron--grow {
-  color: #166534 !important;
+  color: #166534;
 }
 
 .staple-accordion-inner.inner--grow {
@@ -8138,7 +8104,7 @@ button {
 }
 
 .staple-triad-label {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.9px;
@@ -8174,10 +8140,10 @@ button {
 }
 
 .staple-triad-text {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 11.5px;
   line-height: 1.45;
-  color: #1e293b !important;
+  color: #1e293b;
   margin: 0;
 }
 
@@ -8213,8 +8179,8 @@ button {
   border-radius: 7px;
   background: #f0f7fc;
   border: 1px solid #bae6fd;
-  color: #023E73 !important;
-  font-family: 'Inter', sans-serif !important;
+  color: #023E73;
+  font-family: 'Inter', sans-serif;
   font-weight: 800;
   font-size: 11px;
   text-transform: uppercase;
@@ -8226,7 +8192,7 @@ button {
 .staple-card-action-btn:hover {
   background: #0477BF;
   border-color: #0477BF;
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .action-btn-arrow {
@@ -8236,7 +8202,7 @@ button {
 
 .staple-card-action-btn:hover .action-btn-arrow {
   transform: translateX(4px);
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 /* 4. CONCLUDING HIGHLIGHT QUOTE */
@@ -8251,16 +8217,16 @@ button {
 }
 
 .benefits-conclusion-quote {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(15px, 1.7vw, 17.5px);
   font-weight: 700;
   line-height: 1.5;
-  color: #000000 !important;
+  color: #000000;
   margin: 0;
 }
 
 .benefits-conclusion-quote .highlight-text {
-  color: #166534 !important;
+  color: #166534;
   font-weight: 800;
 }
 
@@ -8289,10 +8255,10 @@ button {
    ========================================================================== */
 .section-events.fold-events-boutiques,
 .fold-events-boutiques {
-  background: #ffffff !important;
+  background: #ffffff;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
-  padding: 60px 0 !important;
+  padding: 60px 0;
   position: relative;
   overflow: hidden;
 }
@@ -8332,29 +8298,29 @@ button {
 }
 
 .events-eyebrow-text {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #0477BF !important;
+  color: #0477BF;
 }
 
 .events-main-title {
-  font-family: 'Inter', sans-serif !important;
-  font-size: var(--title-h2) !important;
-  font-weight: 700 !important;
-  color: #000000 !important;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--title-h2);
+  font-weight: 700;
+  color: #000000;
   margin: 0 0 10px;
   letter-spacing: -0.5px;
   line-height: 1.22;
 }
 
 .events-sub-desc {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   line-height: 1.6;
-  color: #000000 !important;
+  color: #000000;
   margin: 0;
   max-width: 660px;
 }
@@ -8401,7 +8367,7 @@ button {
 .events-nav-btn:hover {
   background: linear-gradient(135deg, #023E73 0%, #0477BF 100%);
   border-color: #023E73;
-  color: #ffffff !important;
+  color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(4, 119, 191, 0.35);
 }
@@ -8416,8 +8382,8 @@ button {
   border-radius: 999px;
   background: #ffffff;
   border: 1.5px solid #0477BF;
-  color: #023E73 !important;
-  font-family: 'Inter', sans-serif !important;
+  color: #023E73;
+  font-family: 'Inter', sans-serif;
   font-size: 12.5px;
   font-weight: 800;
   letter-spacing: 0.8px;
@@ -8439,14 +8405,14 @@ button {
 .btn-events-view-all:hover {
   background: linear-gradient(135deg, #023E73 0%, #0477BF 100%);
   border-color: #023E73;
-  color: #ffffff !important;
+  color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(4, 119, 191, 0.35);
 }
 
 .btn-events-view-all:hover .events-view-all-icon {
   transform: translate(2px, -2px);
-  stroke: #ffffff !important;
+  stroke: #ffffff;
 }
 
 /* 3. THREE PANORAMIC HORIZONTAL BOUTIQUE BANNERS (Exact match to Reference Screenshot) */
@@ -8555,22 +8521,22 @@ button {
 .panorama-badge-pill {
   display: inline-flex;
   align-items: center;
-  background: rgba(0, 0, 0, 0.32) !important;
+  background: rgba(0, 0, 0, 0.32);
   backdrop-filter: blur(4px);
   padding: 4px 12px;
   border-radius: 999px;
   width: fit-content;
-  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28);
   margin-bottom: 2px;
 }
 
 .panorama-badge-pill span {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.9px;
   text-transform: uppercase;
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 /* 1. TITLE: Bold, prominent, crisp white heading */
@@ -8580,14 +8546,14 @@ section .event-panorama-banner h3,
 section .event-panorama-banner .panorama-banner-title,
 #events-section .event-panorama-banner h3,
 #events-section .event-panorama-banner .panorama-banner-title {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(23px, 2.5vw, 29px);
   font-weight: 700;
-  color: #ffffff !important;
+  color: #ffffff;
   margin: 0;
   line-height: 1.25;
   letter-spacing: -0.3px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* 2. SUBTITLE: Date & Venue strip with distinct soft sky tone & icons */
@@ -8608,24 +8574,24 @@ section .event-panorama-banner .panorama-banner-title,
 .event-panorama-banner .panorama-meta-item span,
 section .event-panorama-banner .panorama-meta-item,
 #events-section .event-panorama-banner .panorama-meta-item {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: #bae6fd !important;
+  color: #bae6fd;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   line-height: 1.3;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .panorama-meta-icon {
-  color: #38bdf8 !important;
+  color: #38bdf8;
   flex-shrink: 0;
 }
 
 .panorama-meta-sep {
-  color: rgba(186, 230, 253, 0.45) !important;
+  color: rgba(186, 230, 253, 0.45);
   font-size: 11px;
 }
 
@@ -8636,13 +8602,13 @@ section .event-panorama-banner p,
 section .event-panorama-banner .panorama-banner-excerpt,
 #events-section .event-panorama-banner p,
 #events-section .event-panorama-banner .panorama-banner-excerpt {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 13.5px;
   font-weight: 400;
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.82) !important;
+  color: rgba(255, 255, 255, 0.82);
   margin: 2px 0 0 0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   letter-spacing: 0.1px;
 }
 
@@ -8682,34 +8648,34 @@ section .event-panorama-banner .panorama-banner-excerpt,
 /* Stamp colors matching each theme */
 .banner-theme-navy .stamp-center-circle,
 .banner-theme-teal .stamp-center-circle {
-  fill: #023E73 !important;
+  fill: #023E73;
 }
 
 .banner-theme-navy .stamp-circular-text,
 .banner-theme-teal .stamp-circular-text {
-  fill: #023E73 !important;
+  fill: #023E73;
 }
 
 .banner-theme-green .stamp-center-circle,
 .banner-theme-orange .stamp-center-circle {
-  fill: #166534 !important;
+  fill: #166534;
 }
 
 .banner-theme-green .stamp-circular-text,
 .banner-theme-orange .stamp-circular-text {
-  fill: #166534 !important;
+  fill: #166534;
 }
 
 .banner-theme-cyan .stamp-center-circle {
-  fill: #023E73 !important;
+  fill: #023E73;
 }
 
 .banner-theme-cyan .stamp-circular-text {
-  fill: #023E73 !important;
+  fill: #023E73;
 }
 
 .stamp-arrow-path {
-  stroke: #ffffff !important;
+  stroke: #ffffff;
 }
 
 .event-stamp-svg {
@@ -8723,7 +8689,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
 }
 
 .stamp-circular-text {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 8.2px;
   font-weight: 900;
   letter-spacing: 1.8px;
@@ -8788,7 +8754,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
    ========================================================================== */
 .gallery-section-header {
   margin-bottom: 32px;
-  text-align: left !important;
+  text-align: left;
 }
 
 .gallery-eyebrow-wrapper {
@@ -8797,7 +8763,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
   justify-content: flex-start;
   gap: 10px;
   margin-bottom: 8px;
-  text-align: left !important;
+  text-align: left;
 }
 
 .gallery-accent-dash {
@@ -8809,24 +8775,24 @@ section .event-panorama-banner .panorama-banner-excerpt,
 }
 
 .gallery-title-styled {
-  font-family: 'Inter', sans-serif !important;
-  font-size: var(--title-h2) !important;
-  font-weight: 700 !important;
-  color: #000000 !important;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--title-h2);
+  font-weight: 700;
+  color: #000000;
   letter-spacing: -0.5px;
   line-height: 1.22;
   margin: 0 0 12px;
-  text-align: left !important;
+  text-align: left;
 }
 
 .gallery-lead-desc {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   line-height: 1.6;
-  color: #475569 !important;
-  margin: 0 0 0 0 !important;
+  color: #475569;
+  margin: 0 0 0 0;
   max-width: 760px;
-  text-align: left !important;
+  text-align: left;
 }
 
 /* Category Filter Bar Row (Clean Tabs on Left, Explore Button on Right) */
@@ -8838,7 +8804,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
   gap: 20px;
   flex-wrap: wrap;
   margin-bottom: 28px;
-  border-bottom: none !important;
+  border-bottom: none;
   padding-bottom: 0;
 }
 
@@ -8851,17 +8817,17 @@ section .event-panorama-banner .panorama-banner-excerpt,
 }
 
 .gallery-filter-tab {
-  background: transparent !important;
-  border: none !important;
-  border-bottom: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
+  background: transparent;
+  border: none;
+  border-bottom: none;
+  border-radius: 0;
+  box-shadow: none;
   padding: 8px 4px;
   position: relative;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 14.5px;
   font-weight: 500;
-  color: #64748B !important;
+  color: #64748B;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -8871,13 +8837,13 @@ section .event-panorama-banner .panorama-banner-excerpt,
 }
 
 .gallery-filter-tab:hover {
-  color: #0477BF !important;
+  color: #0477BF;
 }
 
 .gallery-filter-tab.is-active {
-  color: #023E73 !important;
+  color: #023E73;
   font-weight: 700;
-  border-bottom: none !important;
+  border-bottom: none;
 }
 
 /* Clean, subtle tab count */
@@ -8906,8 +8872,8 @@ section .event-panorama-banner .panorama-banner-excerpt,
 .gallery-btn-header-right {
   margin-left: auto;
   margin-bottom: 0;
-  padding: 11px 22px !important;
-  font-size: 12.5px !important;
+  padding: 11px 22px;
+  font-size: 12.5px;
 }
 
 /* Backward compatibility for gallery-filter-pill */
@@ -8918,20 +8884,20 @@ section .event-panorama-banner .panorama-banner-excerpt,
   gap: 20px;
   flex-wrap: wrap;
   margin-bottom: 28px;
-  border-bottom: none !important;
+  border-bottom: none;
 }
 
 .gallery-filter-pill {
-  background: transparent !important;
-  border: none !important;
-  border-bottom: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
+  background: transparent;
+  border: none;
+  border-bottom: none;
+  border-radius: 0;
+  box-shadow: none;
   padding: 8px 4px;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 14.5px;
   font-weight: 500;
-  color: #64748B !important;
+  color: #64748B;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -8940,17 +8906,17 @@ section .event-panorama-banner .panorama-banner-excerpt,
 }
 
 .gallery-filter-pill:hover {
-  color: #0477BF !important;
-  transform: none !important;
-  box-shadow: none !important;
+  color: #0477BF;
+  transform: none;
+  box-shadow: none;
 }
 
 .gallery-filter-pill.is-active {
-  color: #023E73 !important;
+  color: #023E73;
   font-weight: 700;
-  background: transparent !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
 }
 
 .gallery-pill-count {
@@ -9057,7 +9023,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
 }
 
 .ambient-badge-year {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 11px;
   font-weight: 800;
   color: #ffffff;
@@ -9075,9 +9041,9 @@ section .event-panorama-banner .panorama-banner-excerpt,
   background: linear-gradient(180deg,
       rgba(2, 28, 55, 0.40) 0%,
       rgba(2, 38, 74, 0.72) 42%,
-      rgba(1, 18, 38, 0.94) 100%) !important;
-  backdrop-filter: blur(5px) saturate(125%) !important;
-  -webkit-backdrop-filter: blur(5px) saturate(125%) !important;
+      rgba(1, 18, 38, 0.94) 100%);
+  backdrop-filter: blur(5px) saturate(125%);
+  -webkit-backdrop-filter: blur(5px) saturate(125%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -9093,9 +9059,9 @@ section .event-panorama-banner .panorama-banner-excerpt,
 
 .gallery-hierarchical-tile:hover .gallery-tile-hover-overlay,
 .gallery-hierarchical-tile:focus-visible .gallery-tile-hover-overlay {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: translateY(0) !important;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .hover-overlay-top {
@@ -9106,40 +9072,40 @@ section .event-panorama-banner .panorama-banner-excerpt,
 }
 
 .hover-category-badge {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   padding: 3.5px 10px;
   border-radius: 6px;
-  color: #ffffff !important;
+  color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 .badge-theme-blue {
-  background: #0477BF !important;
+  background: #0477BF;
   box-shadow: 0 2px 8px rgba(4, 119, 191, 0.4);
 }
 
 .badge-theme-green {
-  background: #00A86B !important;
+  background: #00A86B;
   box-shadow: 0 2px 8px rgba(0, 168, 107, 0.4);
 }
 
 .badge-theme-cyan {
-  background: #069DBF !important;
+  background: #069DBF;
   box-shadow: 0 2px 8px rgba(6, 157, 191, 0.4);
 }
 
 .hover-year-pill {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.6px;
-  color: #ffffff !important;
-  background: rgba(255, 255, 255, 0.16) !important;
-  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   backdrop-filter: blur(4px);
   padding: 3px 9px;
   border-radius: 999px;
@@ -9156,21 +9122,21 @@ section .event-panorama-banner .panorama-banner-excerpt,
 .gallery-tile-hover-overlay .hover-photo-title,
 .gallery-hierarchical-tile:hover .hover-photo-title,
 .section .gallery-tile-hover-overlay h3.hover-photo-title {
-  font-family: 'Inter', sans-serif !important;
-  font-size: clamp(17px, 1.6vw, 21px) !important;
-  font-weight: 700 !important;
-  line-height: 1.28 !important;
-  color: #ffffff !important;
-  margin: 0 0 6px 0 !important;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(17px, 1.6vw, 21px);
+  font-weight: 700;
+  line-height: 1.28;
+  color: #ffffff;
+  margin: 0 0 6px 0;
   letter-spacing: -0.3px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .gallery-tile--hero .hover-photo-title,
 .gallery-tile--hero .gallery-tile-hover-overlay .hover-photo-title {
-  font-size: clamp(20px, 2.1vw, 26px) !important;
-  line-height: 1.25 !important;
-  margin-bottom: 8px !important;
+  font-size: clamp(20px, 2.1vw, 26px);
+  line-height: 1.25;
+  margin-bottom: 8px;
 }
 
 /* 2. HOVER CAPTION: Clearly differentiated softer regular text */
@@ -9178,19 +9144,19 @@ section .event-panorama-banner .panorama-banner-excerpt,
 .gallery-tile-hover-overlay .hover-photo-caption,
 .gallery-hierarchical-tile:hover .hover-photo-caption,
 .section .gallery-tile-hover-overlay p.hover-photo-caption {
-  font-family: 'Inter', sans-serif !important;
-  font-size: 13px !important;
-  line-height: 1.5 !important;
-  color: rgba(226, 232, 240, 0.88) !important;
-  font-weight: 400 !important;
-  margin: 0 0 10px 0 !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(226, 232, 240, 0.88);
+  font-weight: 400;
+  margin: 0 0 10px 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   letter-spacing: 0.1px;
 }
 
 .gallery-tile--hero .hover-photo-caption {
-  font-size: 14px !important;
-  line-height: 1.6 !important;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 /* Compact Tile Overrides to ensure zero text collision */
@@ -9201,16 +9167,16 @@ section .event-panorama-banner .panorama-banner-excerpt,
 
 .gallery-tile--compact-1 .hover-photo-title,
 .gallery-tile--compact-2 .hover-photo-title {
-  font-size: 15px !important;
-  line-height: 1.25 !important;
-  margin-bottom: 4px !important;
+  font-size: 15px;
+  line-height: 1.25;
+  margin-bottom: 4px;
 }
 
 .gallery-tile--compact-1 .hover-photo-caption,
 .gallery-tile--compact-2 .hover-photo-caption {
-  font-size: 11.5px !important;
-  line-height: 1.4 !important;
-  margin-bottom: 6px !important;
+  font-size: 11.5px;
+  line-height: 1.4;
+  margin-bottom: 6px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -9239,17 +9205,17 @@ section .event-panorama-banner .panorama-banner-excerpt,
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: 'Inter', sans-serif !important;
-  font-size: 11.5px !important;
-  font-weight: 700 !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: #38bdf8 !important;
+  color: #38bdf8;
   transition: all 0.2s ease;
 }
 
 .hover-btn-arrow {
-  stroke: #38bdf8 !important;
+  stroke: #38bdf8;
   transition: transform 0.25s ease;
 }
 
@@ -9261,21 +9227,21 @@ section .event-panorama-banner .panorama-banner-excerpt,
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15) !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff !important;
+  color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   transition: all 0.2s ease;
 }
 
 .gallery-hierarchical-tile:hover .hover-zoom-icon {
-  background: rgba(56, 189, 248, 0.25) !important;
-  border-color: #38bdf8 !important;
-  color: #ffffff !important;
+  background: rgba(56, 189, 248, 0.25);
+  border-color: #38bdf8;
+  color: #ffffff;
   transform: scale(1.08);
 }
 
@@ -9288,8 +9254,8 @@ section .event-panorama-banner .panorama-banner-excerpt,
   padding: 14px 28px;
   border-radius: 999px;
   background: linear-gradient(135deg, #023E73 0%, #0477BF 100%);
-  color: #ffffff !important;
-  font-family: 'Inter', sans-serif !important;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
   font-size: 13.5px;
   font-weight: 800;
   letter-spacing: 0.6px;
@@ -9304,7 +9270,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
   background: linear-gradient(135deg, #011E3D 0%, #023E73 100%);
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(2, 62, 115, 0.35);
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .btn-gallery-arrow {
@@ -9355,8 +9321,8 @@ section .event-panorama-banner .panorama-banner-excerpt,
   }
 
   .gallery-hierarchical-tile {
-    grid-column: span 1 !important;
-    grid-row: span 1 !important;
+    grid-column: span 1;
+    grid-row: span 1;
     height: 250px;
   }
 
@@ -9396,11 +9362,11 @@ section .event-panorama-banner .panorama-banner-excerpt,
   position: relative;
   background: radial-gradient(circle at 18% 50%, rgba(4, 119, 191, 0.45) 0%, transparent 55%),
     radial-gradient(circle at 85% 20%, rgba(59, 191, 143, 0.22) 0%, transparent 45%),
-    linear-gradient(135deg, #011E3D 0%, #023E73 45%, #03528A 80%, #0477BF 100%) !important;
+    linear-gradient(135deg, #011E3D 0%, #023E73 45%, #03528A 80%, #0477BF 100%);
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-  border-bottom: none !important;
-  padding: 60px 0 !important;
-  color: #ffffff !important;
+  border-bottom: none;
+  padding: 60px 0;
+  color: #ffffff;
   overflow: hidden;
 }
 
@@ -9627,8 +9593,8 @@ section .event-panorama-banner .panorama-banner-excerpt,
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
-  color: #ffffff !important;
-  font-family: 'Inter', sans-serif !important;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -9649,7 +9615,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
 .cta-full-content {
   position: relative;
   z-index: 2;
-  text-align: left !important;
+  text-align: left;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -9664,8 +9630,8 @@ section .event-panorama-banner .panorama-banner-excerpt,
   border-radius: 999px;
   background: rgba(59, 191, 143, 0.14);
   border: 1px solid rgba(59, 191, 143, 0.35);
-  color: #3BBF8F !important;
-  font-family: 'Inter', sans-serif !important;
+  color: #3BBF8F;
+  font-family: 'Inter', sans-serif;
   font-size: 11.5px;
   font-weight: 800;
   letter-spacing: 1px;
@@ -9673,27 +9639,27 @@ section .event-panorama-banner .panorama-banner-excerpt,
 }
 
 .cta-full-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: var(--title-h2) !important;
-  font-weight: 700 !important;
-  color: #ffffff !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: var(--title-h2);
+  font-weight: 700;
+  color: #ffffff;
   margin: 0;
   letter-spacing: -0.5px;
   line-height: 1.22;
-  text-align: left !important;
+  text-align: left;
 }
 
 .cta-title-gradient {
-  color: #ffffff !important;
-  background: none !important;
-  -webkit-text-fill-color: #ffffff !important;
+  color: #ffffff;
+  background: none;
+  -webkit-text-fill-color: #ffffff;
 }
 
 .cta-lead-subtitle {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 15.5px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.88) !important;
+  color: rgba(255, 255, 255, 0.88);
   margin: 0 0 6px 0;
   max-width: 680px;
 }
@@ -9722,7 +9688,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
 
 .cta-track-card--visitor,
 .cta-track-card--exhibitor {
-  border-left: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .track-card-badge-row {
@@ -9733,7 +9699,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
 }
 
 .track-badge {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.8px;
@@ -9744,36 +9710,36 @@ section .event-panorama-banner .panorama-banner-excerpt,
 
 .badge--visitor {
   background: rgba(6, 157, 191, 0.22);
-  color: #67e8f9 !important;
+  color: #67e8f9;
   border: 1px solid rgba(6, 157, 191, 0.4);
 }
 
 .badge--exhibitor {
   background: rgba(59, 191, 143, 0.22);
-  color: #6ee7b7 !important;
+  color: #6ee7b7;
   border: 1px solid rgba(59, 191, 143, 0.4);
 }
 
 .track-perk-pill {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 11.5px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.7);
 }
 
 .track-card-heading {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 800;
-  color: #ffffff !important;
+  color: #ffffff;
   margin: 0;
 }
 
 .track-card-desc {
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 13.5px;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.82) !important;
+  color: rgba(255, 255, 255, 0.82);
   margin: 0;
   flex: 1;
 }
@@ -9785,7 +9751,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
   height: 44px;
   padding: 0 18px;
   border-radius: 10px;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.5px;
@@ -9796,14 +9762,14 @@ section .event-panorama-banner .panorama-banner-excerpt,
 }
 
 .cta-track-btn--visitor {
-  background: #ffffff !important;
-  color: #023E73 !important;
+  background: #ffffff;
+  color: #023E73;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
 }
 
 .cta-track-btn--exhibitor {
-  background: #3BBF8F !important;
-  color: #0A2119 !important;
+  background: #3BBF8F;
+  color: #0A2119;
 }
 
 .cta-track-arrow {
@@ -9822,7 +9788,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
   flex-wrap: wrap;
   margin-top: 6px;
   padding-top: 14px;
-  border-top: none !important;
+  border-top: none;
   width: 100%;
 }
 
@@ -9830,10 +9796,10 @@ section .event-panorama-banner .panorama-banner-excerpt,
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Inter', sans-serif !important;
+  font-family: 'Inter', sans-serif;
   font-size: 12.5px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.88) !important;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 /* Responsive CTA */
@@ -9867,11 +9833,11 @@ section .event-panorama-banner .panorama-banner-excerpt,
   .cta-full-content {
     order: 2;
     align-items: center;
-    text-align: center !important;
+    text-align: center;
   }
 
   .cta-full-title {
-    text-align: center !important;
+    text-align: center;
   }
 
   .cta-cards-duo {
@@ -10155,19 +10121,19 @@ section .event-panorama-banner .panorama-banner-excerpt,
 
 
 .text-mint {
-  color: #3BBF8F !important;
+  color: #3BBF8F;
 }
 
 .text-turquoise {
-  color: #069DBF !important;
+  color: #069DBF;
 }
 
 .text-royal {
-  color: #0477BF !important;
+  color: #0477BF;
 }
 
 .text-navy {
-  color: #023E73 !important;
+  color: #023E73;
 }
 
 /* ==========================================================================
@@ -10274,7 +10240,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
 .legacy-year,
 .timeline-year-badge,
 .countdown-venue-pill strong {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* Headings across all typography modules unified to Inter */
@@ -10313,7 +10279,7 @@ section .event-panorama-banner .panorama-banner-excerpt,
 .stall-title,
 .stat-card__number,
 .ctc-title {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -10338,8 +10304,8 @@ section:not(.hero-area),
 .home-gallery-section,
 .home-sponsors-section,
 .exhibz-cta {
-  padding-top: 60px !important;
-  padding-bottom: 60px !important;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /* 3. UNIVERSAL FONT COLOR SYSTEM */
@@ -10361,7 +10327,7 @@ body,
 .upcoming-events-section,
 .home-gallery-section,
 .home-sponsors-section {
-  color: #000000 !important;
+  color: #000000;
 }
 
 /* Headings in Light / Default Sections: Solid Black (Excluding dark panorama banners and gallery hover overlays) */
@@ -10390,7 +10356,7 @@ body,
 .ctc-title,
 .single-intro-text .ts-title,
 .schedule-slot-title {
-  color: #000000 !important;
+  color: #000000;
 }
 
 /* Eyebrows & Metadata in Light Sections: Solid Black */
@@ -10403,7 +10369,7 @@ body,
 .detail-card-sub,
 .timeline-stat-text .stat-sub,
 .stage-host-label {
-  color: #000000 !important;
+  color: #000000;
 }
 
 /* Paragraphs & Body Descriptions in Light Sections: Solid Black (Excluding dark panorama banners and gallery hover overlays) */
@@ -10419,7 +10385,7 @@ body,
 .about-article p,
 .legacy-body-text,
 .timeline-highlight-pill {
-  color: #000000 !important;
+  color: #000000;
 }
 
 /* B. DARK BACKGROUND SECTIONS: FONT COLOR WHITE ONLY */
@@ -10440,29 +10406,29 @@ body,
 .gallery-tile-hover-overlay h3,
 .hover-photo-title,
 .hover-year-pill {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 /* Gallery Hover Overlay Contrast & Text Visibility Guarantee */
 .gallery-tile-hover-overlay .hover-photo-title,
 .gallery-hierarchical-tile:hover .hover-photo-title,
 .section-gallery .hover-photo-title {
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .gallery-tile-hover-overlay .hover-photo-caption,
 .gallery-hierarchical-tile:hover .hover-photo-caption,
 .section-gallery .hover-photo-caption {
-  color: rgba(226, 232, 240, 0.88) !important;
-  font-weight: 400 !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+  color: rgba(226, 232, 240, 0.88);
+  font-weight: 400;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .gallery-tile-hover-overlay .hover-view-btn,
 .gallery-tile-hover-overlay .hover-view-btn span {
-  color: #38bdf8 !important;
+  color: #38bdf8;
 }
 
 .fold-dark h1,
@@ -10483,7 +10449,7 @@ body,
 .cta-full-title,
 .page-banner__title,
 .footer-col-title {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .hero-description,
@@ -10496,32 +10462,32 @@ body,
 .footer-brand-bio,
 .footer-bottom-address,
 .footer-bottom-copyright {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 /* C. WHITE CARDS INSIDE DARK SECTIONS: MAINTAIN SOLID BLACK TEXT */
 .fold-primary-dark .audience-benefit-card,
 .audience-benefit-card {
-  background: #ffffff !important;
+  background: #ffffff;
 }
 
 .audience-benefit-card .audience-card-role,
 .fold-primary-dark .audience-card-role {
-  color: #000000 !important;
+  color: #000000;
 }
 
 .audience-benefit-card .triad-item,
 .audience-benefit-card .triad-item p,
 .fold-primary-dark .triad-item,
 .fold-primary-dark .triad-item p {
-  color: #000000 !important;
+  color: #000000;
 }
 
 /* D. BRAND ACCENT HIGHLIGHTS (Non-heading elements only) */
 .pill-sparkle-blue,
 .timeline-spotlight-year,
 .feature-pill .pill-sparkle {
-  color: #0477BF !important;
+  color: #0477BF;
 }
 
 .text-mint,
@@ -10530,11 +10496,11 @@ body,
 .role-highlight--exhibitor,
 .timer-header-title,
 .mini-sub-label {
-  color: #3BBF8F !important;
+  color: #3BBF8F;
 }
 
 .role-highlight--visitor {
-  color: #069DBF !important;
+  color: #069DBF;
 }
 
 /* ==========================================================================
@@ -10585,27 +10551,27 @@ body,
 .gallery-eyebrow-wrapper span,
 .countdown-eyebrow-row .section-eyebrow,
 .cta-eyebrow-chip span {
-  font-size: var(--title-eyebrow) !important;
-  font-weight: 600 !important;
-  letter-spacing: 1.8px !important;
-  text-transform: uppercase !important;
-  line-height: 1 !important;
+  font-size: var(--title-eyebrow);
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  line-height: 1;
 }
 
 .countdown-eyebrow-row {
-  display: inline-flex !important;
-  align-items: center !important;
+  display: inline-flex;
+  align-items: center;
   gap: 10px;
   margin-bottom: 12px;
 }
 
 .countdown-eyebrow-row .section-eyebrow,
 .countdown-eyebrow-text {
-  margin: 0 !important;
-  padding: 0 !important;
-  line-height: 1 !important;
-  display: inline-flex !important;
-  align-items: center !important;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
 }
 
 .countdown-accent-dash {
@@ -10620,18 +10586,18 @@ body,
 /* ── 1. H1 — HERO / BANNER TITLE (Single color solid white, weight 700) ────── */
 .banner-title,
 .hero-area h1 {
-  font-size: var(--title-h1) !important;
-  font-weight: 700 !important;
-  line-height: 1.15 !important;
-  color: #ffffff !important;
+  font-size: var(--title-h1);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
 }
 
 .banner-title *,
 .hero-area h1 * {
-  color: #ffffff !important;
-  background: none !important;
-  -webkit-text-fill-color: #ffffff !important;
-  font-weight: 700 !important;
+  color: #ffffff;
+  background: none;
+  -webkit-text-fill-color: #ffffff;
+  font-weight: 700;
 }
 
 /* ── 2. H2 — ALL SECTION MAIN TITLES (exact same size & sentence case) ─────── */
@@ -10657,11 +10623,11 @@ body,
 #gallery-preview .gallery-title-styled,
 #registration-cta .cta-full-title,
 #countdown .countdown-main-title {
-  font-size: var(--title-h2) !important;
-  font-weight: 700 !important;
-  line-height: 1.22 !important;
-  letter-spacing: -0.5px !important;
-  text-transform: none !important;
+  font-size: var(--title-h2);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.5px;
+  text-transform: none;
   /* Sentence case: first letter only caps */
 }
 
@@ -10681,7 +10647,7 @@ body,
 .events-page-title,
 .redirect-card-title,
 .registration-showcase-title {
-  color: #000000 !important;
+  color: #000000;
 }
 
 .section-main-title *,
@@ -10698,11 +10664,11 @@ body,
 .events-page-title *,
 .redirect-card-title *,
 .registration-showcase-title * {
-  color: #000000 !important;
-  background: none !important;
-  -webkit-background-clip: unset !important;
-  -webkit-text-fill-color: #000000 !important;
-  font-weight: 700 !important;
+  color: #000000;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #000000;
+  font-weight: 700;
 }
 
 /* Dark sections: 100% Solid White (#ffffff) for title and all children */
@@ -10712,7 +10678,7 @@ body,
 .fold-primary-dark h1,
 .fold-primary-dark h2,
 .fold-primary-dark .section-main-title {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .cta-full-title *,
@@ -10721,11 +10687,11 @@ body,
 .fold-primary-dark h1 *,
 .fold-primary-dark h2 *,
 .fold-primary-dark .section-main-title * {
-  color: #ffffff !important;
-  background: none !important;
-  -webkit-background-clip: unset !important;
-  -webkit-text-fill-color: #ffffff !important;
-  font-weight: 700 !important;
+  color: #ffffff;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #ffffff;
+  font-weight: 700;
 }
 
 /* ── 3. H3 — THIRD TITLE / CARD TITLES & SUB-HEADINGS (weight 700) ─────────── */
@@ -10738,10 +10704,10 @@ body,
 .track-card-heading,
 .objective-card-title,
 .ctc-title {
-  font-size: var(--title-h3) !important;
-  font-weight: 700 !important;
-  line-height: 1.3 !important;
-  letter-spacing: -0.3px !important;
+  font-size: var(--title-h3);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
 }
 
 /* ── 4. PARAGRAPH / BODY COPY — uniform 15px / 400 everywhere ──────────────── */
@@ -10763,9 +10729,9 @@ p,
 .track-card-desc,
 .gallery-lead-desc,
 .section-desc {
-  font-size: var(--para-size) !important;
-  font-weight: 400 !important;
-  line-height: var(--para-lh) !important;
+  font-size: var(--para-size);
+  font-weight: 400;
+  line-height: var(--para-lh);
 }
 
 /* ── 5. KILL HEAVY WEIGHTS GLOBALLY (non-titles) ────────────────────────────── */
@@ -10814,7 +10780,7 @@ p,
 .timer-header-title,
 .odometer-group-label,
 .mini-sub-label {
-  font-weight: 400 !important;
+  font-weight: 400;
 }
 
 /* Section-eyebrow labels stay uppercase but 400 weight */
@@ -10822,7 +10788,7 @@ p,
 .benefits-eyebrow-text,
 .events-eyebrow-text,
 .gallery-eyebrow-wrapper span {
-  font-weight: 400 !important;
+  font-weight: 400;
 }
 
 /* Badge / chip labels: keep 400 */
@@ -10830,7 +10796,7 @@ p,
 .staple-triad-chip,
 .track-badge,
 .hover-category-badge {
-  font-weight: 400 !important;
+  font-weight: 400;
   letter-spacing: 0.5px;
 }
 
@@ -10858,26 +10824,26 @@ p,
 #cta-exhibitor-register-btn,
 #btn-header-gallery,
 #btn-events-view-all-top {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  height: var(--btn-height) !important;
-  min-height: var(--btn-height) !important;
-  padding: var(--btn-pad) !important;
-  font-size: var(--btn-fsize) !important;
-  font-weight: 500 !important;
-  border-radius: var(--btn-radius) !important;
-  text-decoration: none !important;
-  text-transform: none !important;
-  letter-spacing: 0.2px !important;
-  line-height: 1 !important;
-  white-space: nowrap !important;
-  gap: 8px !important;
-  position: relative !important;
-  overflow: hidden !important;
-  z-index: 1 !important;
-  cursor: pointer !important;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--btn-height);
+  min-height: var(--btn-height);
+  padding: var(--btn-pad);
+  font-size: var(--btn-fsize);
+  font-weight: 500;
+  border-radius: var(--btn-radius);
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  white-space: nowrap;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 /* Ensure button label, span and arrow icons stay above the sliding color layer */
@@ -10900,9 +10866,9 @@ p,
 #countdown-exhibitor-btn>*,
 #cta-visitor-register-btn>*,
 #cta-exhibitor-register-btn>* {
-  position: relative !important;
-  z-index: 2 !important;
-  transition: transform 0.25s ease !important;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.25s ease;
 }
 
 /* ── LEFT-TO-RIGHT COLOR SLIDE PSEUDO-ELEMENT ──────────────────────────────── */
@@ -10925,17 +10891,17 @@ p,
 #countdown-exhibitor-btn::before,
 #cta-visitor-register-btn::before,
 #cta-exhibitor-register-btn::before {
-  content: "" !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  border-radius: inherit !important;
-  transform: scaleX(0) !important;
-  transform-origin: left center !important;
-  transition: transform 0.38s cubic-bezier(0.25, 1, 0.5, 1) !important;
-  z-index: 1 !important;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.38s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1;
 }
 
 .btn:hover::before,
@@ -10957,7 +10923,7 @@ p,
 #countdown-exhibitor-btn:hover::before,
 #cta-visitor-register-btn:hover::before,
 #cta-exhibitor-register-btn:hover::before {
-  transform: scaleX(1) !important;
+  transform: scaleX(1);
 }
 
 .btn:hover,
@@ -10973,14 +10939,14 @@ p,
 .btn-gallery-explore-all:hover,
 .btn-events-view-all:hover,
 .btn-view-all-top:hover {
-  transform: translateY(-2px) !important;
+  transform: translateY(-2px);
 }
 
 .btn:hover .btn-arrow,
 .btn-hero-visitor:hover .btn-arrow,
 .btn-countdown-primary:hover .btn-arrow,
 .cta-track-btn:hover .cta-track-arrow {
-  transform: translateX(4px) !important;
+  transform: translateX(4px);
 }
 
 /* ── 7. PRIMARY BUTTON — VIBRANT COLORFUL GREEN (#00A86B) ──────────────────── */
@@ -10990,10 +10956,10 @@ p,
 #countdown-register-btn,
 .btn-header-visitor,
 #cta-visitor-register-btn {
-  background: var(--clr-primary) !important;
-  color: #ffffff !important;
-  border: 1.5px solid var(--clr-primary) !important;
-  box-shadow: 0 4px 14px rgba(0, 168, 107, 0.35) !important;
+  background: var(--clr-primary);
+  color: #ffffff;
+  border: 1.5px solid var(--clr-primary);
+  box-shadow: 0 4px 14px rgba(0, 168, 107, 0.35);
 }
 
 .btn-hero-visitor::before,
@@ -11002,7 +10968,7 @@ p,
 #countdown-register-btn::before,
 .btn-header-visitor::before,
 #cta-visitor-register-btn::before {
-  background: var(--clr-primary-slide) !important;
+  background: var(--clr-primary-slide);
 }
 
 .btn-hero-visitor:hover,
@@ -11011,8 +10977,8 @@ p,
 #countdown-register-btn:hover,
 .btn-header-visitor:hover,
 #cta-visitor-register-btn:hover {
-  box-shadow: 0 8px 22px rgba(0, 168, 107, 0.45) !important;
-  border-color: var(--clr-primary-slide) !important;
+  box-shadow: 0 8px 22px rgba(0, 168, 107, 0.45);
+  border-color: var(--clr-primary-slide);
 }
 
 /* ── 8a. SECONDARY — DARK SECTIONS → WHITE BUTTON ──────────────────────────── */
@@ -11023,10 +10989,10 @@ p,
 .cta-track-btn--visitor,
 .cta-track-btn--exhibitor,
 #cta-exhibitor-register-btn {
-  background: #ffffff !important;
-  color: #0f172a !important;
-  border: 1.5px solid #ffffff !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18) !important;
+  background: #ffffff;
+  color: #0f172a;
+  border: 1.5px solid #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
 }
 
 .btn-hero-exhibitor::before,
@@ -11036,7 +11002,7 @@ p,
 .cta-track-btn--visitor::before,
 .cta-track-btn--exhibitor::before,
 #cta-exhibitor-register-btn::before {
-  background: #e2e8f0 !important;
+  background: #e2e8f0;
 }
 
 .btn-hero-exhibitor:hover,
@@ -11046,9 +11012,9 @@ p,
 .cta-track-btn--visitor:hover,
 .cta-track-btn--exhibitor:hover,
 #cta-exhibitor-register-btn:hover {
-  background: #ffffff !important;
-  border-color: #cbd5e1 !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28) !important;
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
 }
 
 /* ── 8b. SECONDARY — LIGHT SECTIONS → BLACK BUTTON ─────────────────────────── */
@@ -11058,10 +11024,10 @@ p,
 .btn-view-all-top,
 #btn-header-gallery,
 #btn-events-view-all-top {
-  background: #0f172a !important;
-  color: #ffffff !important;
-  border: 1.5px solid #0f172a !important;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.22) !important;
+  background: #0f172a;
+  color: #ffffff;
+  border: 1.5px solid #0f172a;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.22);
 }
 
 .btn-header-exhibitor::before,
@@ -11070,7 +11036,7 @@ p,
 .btn-view-all-top::before,
 #btn-header-gallery::before,
 #btn-events-view-all-top::before {
-  background: #1e293b !important;
+  background: #1e293b;
 }
 
 .btn-header-exhibitor:hover,
@@ -11079,9 +11045,9 @@ p,
 .btn-view-all-top:hover,
 #btn-header-gallery:hover,
 #btn-events-view-all-top:hover {
-  background: #0f172a !important;
-  border-color: #1e293b !important;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.32) !important;
+  background: #0f172a;
+  border-color: #1e293b;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.32);
 }
 
 /* Fix colours for elements inside buttons that override text color */
@@ -11089,14 +11055,14 @@ p,
 #hero-exhibitor-btn *,
 .btn-countdown-secondary *,
 #countdown-exhibitor-btn * {
-  color: #0f172a !important;
+  color: #0f172a;
 }
 
 /* Buttons that were previously pill/rounded — flatten to rectangular 8px */
 .btn-events-view-all,
 .btn-view-all-top,
 .btn-gallery-explore-all {
-  border-radius: var(--btn-radius) !important;
+  border-radius: var(--btn-radius);
 }
 
 /* Override the countdown flex-1 width rule so buttons are natural width again */
@@ -11104,8 +11070,8 @@ p,
 .btn-countdown-secondary,
 #countdown-register-btn,
 #countdown-exhibitor-btn {
-  flex: 0 0 auto !important;
-  width: auto !important;
+  flex: 0 0 auto;
+  width: auto;
 }
 
 /* ── 9. UNIFORM SECTION PADDING ─────────────────────────────────────────────── */
@@ -11120,8 +11086,8 @@ p,
 .section-gallery,
 .cta-full-section,
 .section-legacy {
-  padding-top: var(--section-pad) !important;
-  padding-bottom: var(--section-pad) !important;
+  padding-top: var(--section-pad);
+  padding-bottom: var(--section-pad);
 }
 
 /* ── 10. UNIFORM COLUMN / GRID GAPS ─────────────────────────────────────────── */
@@ -11133,7 +11099,7 @@ p,
 .gallery-hierarchical-grid,
 .badge-selection-grid,
 .stall-selection-grid {
-  gap: var(--grid-gap) !important;
+  gap: var(--grid-gap);
 }
 
 /* ── MOBILE OVERRIDES ────────────────────────────────────────────────────────── */
@@ -11150,35 +11116,35 @@ p,
   .section-gallery,
   .cta-full-section,
   .section-legacy {
-    padding-top: 44px !important;
-    padding-bottom: 44px !important;
+    padding-top: 44px;
+    padding-bottom: 44px;
   }
 
   /* Stack countdown 2-col on mobile */
   .countdown-2col-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 
   /* Stack CTA grid on mobile */
   .cta-section-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 
   /* Stack CTA duo on mobile */
   .cta-cards-duo {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 
   /* Buttons: allow wrapping on mobile, full width where needed */
   .hero-cta-buttons {
-    flex-direction: column !important;
-    align-items: flex-start !important;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero-cta-buttons .btn-hero-visitor,
   .hero-cta-buttons .btn-hero-exhibitor {
-    width: 100% !important;
-    justify-content: center !important;
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -11186,14 +11152,14 @@ p,
 /* Ensures first card aligns flush with the container title on all screens */
 @media (min-width: 681px) {
   .benefits-cards-track.is-slider-mode {
-    padding-left: max(20px, calc((100% - 1200px) / 2)) !important;
-    scroll-padding-left: max(20px, calc((100% - 1200px) / 2)) !important;
+    padding-left: max(20px, calc((100% - 1200px) / 2));
+    scroll-padding-left: max(20px, calc((100% - 1200px) / 2));
   }
 }
 
 @media (max-width: 680px) {
   .benefits-cards-track.is-slider-mode {
-    padding-left: 20px !important;
-    scroll-padding-left: 20px !important;
+    padding-left: 20px;
+    scroll-padding-left: 20px;
   }
 }

@@ -103,15 +103,6 @@ export default function HomePage() {
             <div className="timer-fullview-body">
               <Countdown target="2027-02-06T09:00:00+05:30" />
             </div>
-            <div className="timer-fullview-ribbon" role="region" aria-label="Event Highlights">
-              <span className="ribbon-chip"><span className="ribbon-sparkle">✦</span> 300+ Stalls</span>
-              <span className="ribbon-divider" aria-hidden="true">•</span>
-              <span className="ribbon-chip"><span className="ribbon-sparkle">✦</span> 10k+ Expected Visitors</span>
-              <span className="ribbon-divider" aria-hidden="true">•</span>
-              <span className="ribbon-chip"><span className="ribbon-sparkle">✦</span> 10,000+ sq.m Exhibition Floor</span>
-              <span className="ribbon-divider" aria-hidden="true">•</span>
-              <span className="ribbon-chip"><span className="ribbon-sparkle">✦</span> Halls 2, 3 &amp; 3A</span>
-            </div>
           </div>
         </div>
       </section>
@@ -139,29 +130,6 @@ export default function HomePage() {
                 <p className="countdown-sub-lead">
                   Whether you&apos;re advancing your practice or taking your first steps into dentistry, every new discovery opens the door to greater possibilities. Explore innovations, exchange ideas and connect with a community that shares your passion for dentistry.
                 </p>
-
-                {/* Event Details 2-Column Horizontal Grid */}
-                <div className="countdown-details-grid" role="region" aria-label="Event Schedule & Venue">
-                  <div className="countdown-detail-card countdown-detail-card--access">
-                    <div className="detail-card-icon detail-card-icon--access" aria-hidden="true">
-                      <Icon name="ticket" size={16} />
-                    </div>
-                    <div className="detail-card-info">
-                      <strong className="detail-card-title">Free visitor access</strong>
-                      <span className="detail-card-sub">For dentists &amp; dental students</span>
-                    </div>
-                  </div>
-
-                  <div className="countdown-detail-card">
-                    <div className="detail-card-icon" aria-hidden="true">
-                      <Icon name="calendar" size={16} />
-                    </div>
-                    <div className="detail-card-info">
-                      <strong className="detail-card-title">Feb 6 – 7, 2027</strong>
-                      <span className="detail-card-sub">09:00 AM – 06:00 PM</span>
-                    </div>
-                  </div>
-                </div>
 
                 {/* Expo Floor Live Preview Banner with Action Buttons Overlaid on the Image Bottom */}
                 <div className="countdown-bottom-visual" role="region" aria-label="Chennai Trade Centre Exhibition Hall & Registration">
@@ -201,8 +169,31 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Column 2: 3 Integrated Feature Highlight Cards */}
+              {/* Column 2: Event Details & 3 Integrated Feature Highlight Cards */}
               <div className="countdown-right-col">
+                {/* Event Details 2-Column Horizontal Grid */}
+                <div className="countdown-details-grid" role="region" aria-label="Event Schedule & Venue">
+                  <div className="countdown-detail-card countdown-detail-card--access">
+                    <div className="detail-card-icon detail-card-icon--access" aria-hidden="true">
+                      <Icon name="ticket" size={16} />
+                    </div>
+                    <div className="detail-card-info">
+                      <strong className="detail-card-title">Free visitor access</strong>
+                      <span className="detail-card-sub">For dentists &amp; dental students</span>
+                    </div>
+                  </div>
+
+                  <div className="countdown-detail-card">
+                    <div className="detail-card-icon" aria-hidden="true">
+                      <Icon name="calendar" size={16} />
+                    </div>
+                    <div className="detail-card-info">
+                      <strong className="detail-card-title">Feb 6 – 7, 2027</strong>
+                      <span className="detail-card-sub">09:00 AM – 06:00 PM</span>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="countdown-features-stack">
                   <div className="countdown-feature-box countdown-feature-box--navy">
                     <div className="feature-box-top">
