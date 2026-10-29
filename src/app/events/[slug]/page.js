@@ -63,36 +63,77 @@ export default async function EventPage({ params }) {
               ))}
             </ul>
 
-            <h3 className="mt-md">Sessions</h3>
-            <ol className="timeline">
-              {event.sessions.map((s) => {
-                const sp = getSpeaker(s.speaker);
-                return (
-                  <li key={s.title}>
-                    <span className="timeline__time">{s.time}</span>
-                    <div>
-                      <strong>{s.title}</strong>
-                      {sp && <span>with {sp.name}</span>}
-                    </div>
-                  </li>
-                );
-              })}
-            </ol>
+            {event.sessions && event.sessions.length > 0 && (
+              <>
+                <h3 className="mt-md">Sessions</h3>
+                <ol className="timeline">
+                  {event.sessions.map((s, idx) => {
+                    const sp = s.speaker ? getSpeaker(s.speaker) : null;
+                    return (
+                      <li key={s.title || idx}>
+                        <span className="timeline__time">{s.time}</span>
+                        <div>
+                          <strong>{s.title}</strong>
+                          {sp ? <span>with {sp.name}</span> : s.speaker ? <span>with {s.speaker}</span> : null}
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ol>
+              </>
+            )}
 
-            <h3 className="mt-md">Speakers</h3>
-            <div className="mini-speakers">
-              {event.speakers.map((id) => {
-                const sp = getSpeaker(id);
-                return (
-                  <div className="mini-speaker" key={id}>
-                    <Image src={sp.image} alt={sp.name} width={72} height={72} />
-                    <div>
-                      <strong>{sp.name}</strong>
-                      <span>{sp.role}</span>
-                    </div>
-                  </div>
-                );
-              })}
+            {event.speakers && event.speakers.length > 0 && (
+              <>
+                <h3 className="mt-md">Speakers</h3>
+                <div className="mini-speakers">
+                  {event.speakers.map((id) => {
+                    const sp = getSpeaker(id);
+                    if (!sp) return null;
+                    return (
+                      <div className="mini-speaker" key={id}>
+                        <Image src={sp.image} alt={sp.name} width={72} height={72} />
+                        <div>
+                          <strong>{sp.name}</strong>
+                          <span>{sp.role}</span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </>
+            )}
+
+            {/* Official Brochure Download Box */}
+            <div className="event-modal-brochure-card" style={{ marginTop: "32px", marginBottom: "32px" }}>
+              <div className="brochure-card-left">
+                <div className="brochure-pdf-icon-badge" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                    <polyline points="10 9 9 9 8 9" />
+                  </svg>
+                  <span className="pdf-tag-text">PDF</span>
+                </div>
+                <div className="brochure-card-info">
+                  <div className="brochure-format-tag">Official Publication · PDF Document</div>
+                  <h4 className="brochure-card-title">Download Official Edition Brochure &amp; Floor Layout</h4>
+                  <p className="brochure-card-sub">
+                    Official prospectus including CTC Hall layout, exhibitor stall booking guide, and scientific schedules.
+                  </p>
+                </div>
+              </div>
+              <a
+                href={event.brochureUrl || "/brochures/dental-show-brochure.pdf"}
+                download="Dental-Show-Official-Brochure.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-download-brochure-pdf"
+              >
+                <span>Download PDF</span>
+              </a>
             </div>
 
             <div className="event-pager">

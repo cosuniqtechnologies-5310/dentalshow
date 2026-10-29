@@ -309,25 +309,10 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          SECTION 3.7: GALLERY PREVIEW (Hierarchical Grid with Hover Reveals)
+          SECTION 3.7: GALLERY PREVIEW (Full-Bleed Showcase Slider)
           ============================================================ */}
-      <section className="section section-gallery font-modern fold-light-primary" id="gallery-preview">
-        <div className="container">
-          <div className="gallery-section-header text-left mb-40">
-            <div className="gallery-eyebrow-wrapper">
-              <span className="gallery-accent-dash" aria-hidden="true" />
-              <span className="section-eyebrow">PHOTO &amp; VIDEO HIGHLIGHTS</span>
-            </div>
-            <h2 className="section-main-title gallery-title-styled">
-              Gallery preview
-            </h2>
-            <p className="max-w-700 text-muted gallery-lead-desc">
-              Moments That Bring Us Together. Revisit the people, clinical breakthroughs and celebrated memories that make every Dental Show special.
-            </p>
-          </div>
-
-          <GalleryHierarchicalPreview />
-        </div>
+      <section className="section section-gallery font-modern fold-gallery-showcase" id="gallery-preview">
+        <GalleryHierarchicalPreview />
       </section>
 
       {/* ============================================================
