@@ -449,7 +449,7 @@ export default function AboutPage() {
       {/* ------------------------------------------------------------------ */}
       {/* SECTION 6: MR. DENTALSHOW MASCOT AMBASSADOR FEATURE */}
       {/* ------------------------------------------------------------------ */}
-      <section className="section about-mascot-section fold-primary-dark bg-gradient-dark text-white">
+      <section className="section about-mascot-section fold-primary-dark bg-gradient-dark">
         <div className="container split align-items-center">
           <div className="split__content text-white">
             <div className="ambassador-badge-pill">

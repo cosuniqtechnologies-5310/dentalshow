@@ -49,10 +49,12 @@ export default function GalleryHierarchicalPreview() {
       ? allMoments
       : allMoments.filter((item) => item.category === activeFilter);
 
-  // Smooth carousel scroll by exactly one card width (330px + 22px gap)
+  // Smooth carousel scroll by card width
   const scroll = (direction) => {
     if (!trackRef.current) return;
-    const scrollAmount = direction === "left" ? -352 : 352;
+    const cardEl = trackRef.current.querySelector(".gallery-clean-card");
+    const step = cardEl ? cardEl.offsetWidth + 22 : 422;
+    const scrollAmount = direction === "left" ? -step : step;
     trackRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
 
@@ -69,8 +71,10 @@ export default function GalleryHierarchicalPreview() {
     if (!el) return;
 
     if (activeFilter === "All" && filteredItems.length > 3) {
-      // Offset by half a card (165px) so previous card peeks on left and next peeks on right
-      el.scrollTo({ left: 165, behavior: "instant" });
+      // Offset so previous card peeks on left and next peeks on right
+      const cardEl = el.querySelector(".gallery-clean-card");
+      const offset = cardEl ? Math.round(cardEl.offsetWidth * 0.42) : 170;
+      el.scrollTo({ left: offset, behavior: "instant" });
     } else {
       el.scrollTo({ left: 0, behavior: "smooth" });
     }
@@ -269,61 +273,70 @@ export default function GalleryHierarchicalPreview() {
                 role="button"
                 aria-label={`Open photo preview: ${item.title}`}
               >
-                {/* Full-Bleed Card Background Photo */}
+                {/* 1. Rectangle Landscape Image Container (16:9 Full View) */}
                 <div className="clean-card-img-container">
                   <Image
                     src={item.src}
                     alt={item.title}
                     fill
-                    sizes="(max-width: 768px) 300px, 340px"
+                    sizes="(max-width: 768px) 320px, 420px"
                     className="clean-card-img"
                     priority={index < 4}
                   />
-                  {/* Deep High-Contrast Vignette for 100% Font Visibility */}
-                  <div className="clean-card-gradient-overlay" aria-hidden="true" />
+
+                  {/* Floating Top Badges (Category & Year) */}
+                  <div className="clean-card-top-bar">
+                    <span className={`clean-card-badge ${theme.badgeClass}`}>
+                      <Icon name={theme.icon} size={11} className="badge-cat-icon" />
+                      <span>{theme.shortTag}</span>
+                    </span>
+
+                    <span className="clean-card-year-badge">
+                      <Icon name="calendar" size={11} className="badge-cal-icon" />
+                      <span>{item.year}</span>
+                    </span>
+                  </div>
                 </div>
 
-                {/* Floating Top Badges (Category & Year) */}
-                <div className="clean-card-top-bar">
-                  <span className={`clean-card-badge ${theme.badgeClass}`}>
-                    <Icon name={theme.icon} size={11} className="badge-cat-icon" />
-                    <span>{theme.shortTag}</span>
-                  </span>
-
-                  <span className="clean-card-year-badge">
-                    <Icon name="calendar" size={11} className="badge-cal-icon" />
-                    <span>{item.year}</span>
-                  </span>
-                </div>
-
-                {/* Floating Bottom Info (Crystal-Clear High-Contrast White Font) */}
+                {/* 2. Dedicated High-Contrast Content Area Below Photo (100% Font Visibility) */}
                 <div className="clean-card-bottom-bar">
                   <div className="clean-card-text">
-                    <span className="clean-card-location-tag">
-                      <span className="location-sparkle">✦</span>
-                      <span>{theme.location}</span>
-                    </span>
+                    <div className="clean-card-location-row">
+                      <span className="clean-card-location-tag">
+                        <span className="location-sparkle">✦</span>
+                        <span>{theme.location}</span>
+                      </span>
+                      <span className="clean-card-hd-badge">16:9 FULL VIEW</span>
+                    </div>
 
                     <h3 className="clean-card-title">{item.title}</h3>
 
                     <p className="clean-card-caption">{item.caption}</p>
                   </div>
 
-                  {/* Circular Action Arrow */}
-                  <div className="clean-card-arrow-circle" title="View Fullscreen in Lightbox">
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="clean-arrow-svg"
-                    >
-                      <path d="M7 17L17 7M7 7h10v10" />
-                    </svg>
+                  {/* Circular Action Arrow & Tap Hint */}
+                  <div className="clean-card-footer">
+                    <span className="clean-card-action-text">
+                      <span>View Fullscreen</span>
+                      <span className="clean-card-action-dot">●</span>
+                      <span className="clean-card-action-sub">HD Gallery</span>
+                    </span>
+
+                    <div className="clean-card-arrow-circle" title="View Fullscreen in Lightbox">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="clean-arrow-svg"
+                      >
+                        <path d="M7 17L17 7M7 7h10v10" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </article>

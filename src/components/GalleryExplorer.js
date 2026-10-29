@@ -100,7 +100,7 @@ export default function GalleryExplorer() {
         </div>
       </div>
 
-      {/* Gallery Items Grid */}
+      {/* Gallery Items Grid - Clean Photo-First ("Only Show Image") */}
       {items.length === 0 ? (
         <div className="gallery-empty-state">
           <p>No photos found for the selected year and category combination.</p>
@@ -122,9 +122,9 @@ export default function GalleryExplorer() {
               type="button"
               key={item.id}
               className="gallery-item pop-in"
-              style={{ animationDelay: `${i * 40}ms` }}
+              style={{ animationDelay: `${i * 35}ms` }}
               onClick={() => setLightbox(i)}
-              aria-label={`Open ${item.title}`}
+              aria-label={`View photo in full view: ${item.title}`}
             >
               <div className="gallery-img-box">
                 <Image
@@ -133,36 +133,23 @@ export default function GalleryExplorer() {
                   width={item.width || 800}
                   height={item.height || 600}
                   className="gallery-thumb"
+                  loading={i < 6 ? "eager" : "lazy"}
                 />
+
+                {/* Floating Top Badges (Year & Category) */}
                 <div className="gallery-item-badges">
                   <span className="badge-year">
                     <Icon name="calendar" size={11} className="badge-year-icon" />
-                    {item.year}
+                    <span>{item.year}</span>
                   </span>
                   <span className="badge-cat">{item.category}</span>
                 </div>
+
+                {/* Sleek Minimal Hover Overlay: Full View Action Pill */}
                 <div className="gallery-item__overlay">
-                  <div className="gallery-item__icon">
-                    <Icon name="search" size={20} />
-                  </div>
-                  <div className="gallery-item__text">
-                    <span className="gallery-overlay-hint">Click to enlarge</span>
-                    <strong className="gallery-item__title">{item.title}</strong>
-                    <span className="gallery-item__caption">{item.caption}</span>
-                  </div>
-                </div>
-              </div>
-              <div className="gallery-card-footer">
-                <div className="gallery-card-footer__body">
-                  <h3 className="gallery-card-footer__title">{item.title}</h3>
-                  <div className="gallery-card-footer__meta">
-                    <span className="gallery-card-footer__tag">
-                      <span className="gallery-tag-dot" />
-                      {item.category}
-                    </span>
-                    <span className="gallery-card-footer__action">
-                      View Photo <Icon name="arrowUpRight" size={13} />
-                    </span>
+                  <div className="gallery-clean-zoom-pill">
+                    <Icon name="expand" size={16} />
+                    <span>View Fullscreen &amp; Details</span>
                   </div>
                 </div>
               </div>
@@ -171,7 +158,7 @@ export default function GalleryExplorer() {
         </div>
       )}
 
-      {/* Lightbox Modal */}
+      {/* Deluxe Lightbox Modal: Full View, Proper Space & Additional Things */}
       {current && (
         <div
           className="gallery-lightbox"
@@ -181,50 +168,107 @@ export default function GalleryExplorer() {
           onClick={close}
         >
           <div className="gallery-lightbox__inner" onClick={(e) => e.stopPropagation()}>
-            <button
-              type="button"
-              className="gallery-lightbox__close"
-              aria-label="Close"
-              onClick={close}
-            >
-              <Icon name="close" size={26} />
-            </button>
-            {items.length > 1 && (
-              <>
-                <button
-                  type="button"
-                  className="gallery-lightbox__nav prev"
-                  aria-label="Previous"
-                  onClick={prev}
-                >
-                  ‹
-                </button>
-                <button
-                  type="button"
-                  className="gallery-lightbox__nav next"
-                  aria-label="Next"
-                  onClick={next}
-                >
-                  ›
-                </button>
-              </>
-            )}
-            <div className="gallery-lightbox__media">
-              <Image
-                src={current.src}
-                alt={current.title}
-                width={current.width || 1200}
-                height={current.height || 896}
-                className="gallery-lightbox__img"
-              />
-            </div>
-            <div className="gallery-lightbox__caption">
-              <div className="lightbox-meta">
-                <span className="lightbox-year-badge">{current.year} Dental Show</span>
-                <span className="lightbox-category-badge">{current.category}</span>
+            {/* 1. Header Bar: Counter, Category, Year, Esc Hint & Close */}
+            <div className="gallery-lightbox__header">
+              <div className="gallery-lightbox__meta-group">
+                <span className="lightbox-count-badge">
+                  Photo {lightbox + 1} of {items.length}
+                </span>
+                <span className="lightbox-cat-badge">{current.category}</span>
+                <span className="lightbox-year-badge">
+                  <Icon name="calendar" size={12} />
+                  <span>{current.year} Dental Show</span>
+                </span>
               </div>
-              <h4>{current.title}</h4>
-              <p>{current.caption}</p>
+
+              <div className="gallery-lightbox__header-right">
+                <span className="lightbox-esc-hint">Esc to close</span>
+                <button
+                  type="button"
+                  className="gallery-lightbox__close-btn"
+                  aria-label="Close photo preview"
+                  title="Close (Esc)"
+                  onClick={close}
+                >
+                  <Icon name="close" size={20} />
+                </button>
+              </div>
+            </div>
+
+            {/* 2. Media Stage: Full View Image with Proper Room and Navigation Controls */}
+            <div className="gallery-lightbox__stage">
+              {items.length > 1 && (
+                <>
+                  <button
+                    type="button"
+                    className="gallery-lightbox__nav-btn prev"
+                    aria-label="Previous photo (Left arrow key)"
+                    title="Previous (←)"
+                    onClick={prev}
+                  >
+                    <Icon name="chevronLeft" size={24} />
+                  </button>
+                  <button
+                    type="button"
+                    className="gallery-lightbox__nav-btn next"
+                    aria-label="Next photo (Right arrow key)"
+                    title="Next (→)"
+                    onClick={next}
+                  >
+                    <Icon name="chevronRight" size={24} />
+                  </button>
+                </>
+              )}
+
+              <div className="gallery-lightbox__img-stage-box">
+                <Image
+                  src={current.src}
+                  alt={current.title}
+                  width={current.width || 1920}
+                  height={current.height || 1080}
+                  className="gallery-lightbox__stage-img"
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* 3. Details Container: Proper Space, Typography & Additional Features */}
+            <div className="gallery-lightbox__details-box">
+              <div className="gallery-lightbox__details-top">
+                <div className="gallery-lightbox__location-pill">
+                  <span className="location-sparkle">✦</span>
+                  <span>Chennai Trade Centre · Landmark Exposition</span>
+                </div>
+                <span className="gallery-lightbox__aspect-tag">16:9 Full View HD</span>
+              </div>
+
+              <h3 className="gallery-lightbox__main-title">{current.title}</h3>
+              <p className="gallery-lightbox__main-desc">{current.caption}</p>
+
+              {/* Additional Bar: Navigation Hotkeys & Open High-Res Action */}
+              <div className="gallery-lightbox__additional-bar">
+                <div className="gallery-lightbox__shortcuts">
+                  <span className="shortcut-key">←</span>
+                  <span className="shortcut-key">→</span>
+                  <span className="shortcut-text">Navigate photos</span>
+                  <span className="shortcut-dot">•</span>
+                  <span className="shortcut-key">Esc</span>
+                  <span className="shortcut-text">Close</span>
+                </div>
+
+                <div className="gallery-lightbox__actions">
+                  <a
+                    href={current.src}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="gallery-lightbox__btn-open-res"
+                    title="Open original high-resolution photo in new tab"
+                  >
+                    <span>View Original HD</span>
+                    <Icon name="arrowUpRight" size={14} />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

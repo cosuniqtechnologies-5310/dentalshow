@@ -69,11 +69,11 @@ export default function BeaverMascot({ size = 310, className = "", showCards = t
                 />
               </div>
               <div className="chatbox-identity-text">
-                <span className="chatbox-name">Mr. Dentalshow</span>
-                <span className="chatbox-tagline">Official Mascot</span>
+                <span className="chatbox-name" style={{ color: "#023E73" }}>Mr. Dentalshow</span>
+                <span className="chatbox-tagline" style={{ color: "#0d8258" }}>Official Mascot</span>
               </div>
             </div>
-            <span className="chatbox-live-badge">
+            <span className="chatbox-live-badge" style={{ color: "#0d8258" }}>
               <span className="live-pulse-dot" aria-hidden="true" />
               <span>LIVE</span>
             </span>
@@ -81,14 +81,14 @@ export default function BeaverMascot({ size = 310, className = "", showCards = t
 
           {/* Dialogue Message */}
           <div className="chatbox-speech-content">
-            <p className="chatbox-speech-text">
-              “See you at <strong>Chennai Trade Centre</strong>! Feb 6–7, 2027”
+            <p className="chatbox-speech-text" style={{ color: "#1e293b" }}>
+              “See you at <strong style={{ color: "#023E73" }}>Chennai Trade Centre</strong>! Feb 6–7, 2027”
             </p>
           </div>
 
           {/* Venue & Hall Tag */}
           <div className="chatbox-venue-row">
-            <span className="chatbox-venue-pill">
+            <span className="chatbox-venue-pill" style={{ color: "#0369a1" }}>
               <span className="chatbox-pin-dot" aria-hidden="true">📍</span>
               <span>New Halls 2, 3 &amp; 3A · CTC</span>
             </span>
