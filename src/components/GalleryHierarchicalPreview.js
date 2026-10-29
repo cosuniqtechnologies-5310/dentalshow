@@ -13,14 +13,35 @@ export default function GalleryHierarchicalPreview() {
   const [canScrollRight, setCanScrollRight] = useState(true);
   const trackRef = useRef(null);
 
-  // 6 authentic moments from the dental show gallery: 2 Keynotes, 2 Workshops, 2 Networking
-  const allMoments = galleryItems.slice(0, 6);
+  // Real authentic moments from the Dental Show gallery
+  const allMoments = galleryItems.slice(0, 16);
 
   const categories = [
-    { label: "All Moments", value: "All", count: 6 },
-    { label: "Keynotes", value: "Keynotes & Conferences", count: 2, icon: "mic" },
-    { label: "Workshops", value: "Workshops", count: 2, icon: "flask" },
-    { label: "Networking", value: "Networking", count: 2, icon: "handshake" },
+    { label: "All Highlights", value: "All", count: allMoments.length },
+    {
+      label: "Exhibition Floor",
+      value: "Exhibition Floor",
+      count: allMoments.filter((item) => item.category === "Exhibition Floor").length,
+      icon: "store",
+    },
+    {
+      label: "Instruments & Tech",
+      value: "Instruments & Technology",
+      count: allMoments.filter((item) => item.category === "Instruments & Technology").length,
+      icon: "sparkle",
+    },
+    {
+      label: "Venue & Entry",
+      value: "Registration & Venue",
+      count: allMoments.filter((item) => item.category === "Registration & Venue").length,
+      icon: "pin",
+    },
+    {
+      label: "Trade & Networking",
+      value: "Trade & Networking",
+      count: allMoments.filter((item) => item.category === "Trade & Networking").length,
+      icon: "handshake",
+    },
   ];
 
   const filteredItems =

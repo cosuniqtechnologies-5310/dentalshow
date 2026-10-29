@@ -21,7 +21,7 @@ const stagesData = [
       "Direct Manufacturer Warranties",
       "Special Expo Offers",
     ],
-    previewImage: "/images/gallery-conference-1.jpg",
+    previewImage: "/images/dental-show-images/vlcsnap-2026-10-29-00h42m36s862.png",
     previewCaption: "Over 4,500 active dental clinicians attend annually to upgrade their operatory capabilities.",
     accentColor: "#023E73",
   },
@@ -40,7 +40,7 @@ const stagesData = [
       "Biocompatible Ceramics",
       "Analog-to-Digital Shift",
     ],
-    previewImage: "/images/gallery-workshop-1.jpg",
+    previewImage: "/images/dental-show-images/vlcsnap-2026-10-29-00h42m18s269.png",
     previewCaption: "Showcasing next-generation 5-axis dry and wet milling machines alongside biocompatible resins.",
     accentColor: "#0477BF",
   },
@@ -59,7 +59,7 @@ const stagesData = [
       "Senior Mentorship",
       "Startup Clinic Advisory",
     ],
-    previewImage: "/images/gallery-networking-1.jpg",
+    previewImage: "/images/dental-show-images/vlcsnap-2026-10-29-00h42m43s621.png",
     previewCaption: "Nurturing the future of South Indian dentistry with subsidized educational certifications.",
     accentColor: "#069DBF",
   },
@@ -78,7 +78,7 @@ const stagesData = [
       "TNDTMA Governance",
       "B2B Matchmaking",
     ],
-    previewImage: "/images/gallery-exhibition-1.jpg",
+    previewImage: "/images/dental-show-images/vlcsnap-2026-10-29-00h42m51s996.png",
     previewCaption: "Connecting 250+ global brands with trusted regional distributors and service engineers.",
     accentColor: "#00A86B",
   },
@@ -97,7 +97,7 @@ const stagesData = [
       "Research Paper Grants",
       "Faculty Development",
     ],
-    previewImage: "/images/hero-stage.jpg",
+    previewImage: "/images/dental-show-images/vlcsnap-2026-10-29-00h41m12s751.png",
     previewCaption: "Facilitating institutional memorandums and technology transfer to university dental faculties.",
     accentColor: "#008756",
   },
@@ -147,7 +147,7 @@ export default function InteractiveStagesAccordion() {
                 <div className="stage-active-topbar">
                   <div className="stage-active-title-group">
                     <span className="stage-active-num">{stage.num}.</span>
-                    <h3 className="stage-active-heading">
+                    <h3 className="stage-active-heading" style={{ color: "#ffffff" }}>
                       {stage.title} <span className="stage-active-year">({stage.pillarSubtitle})</span>
                     </h3>
                   </div>
@@ -166,14 +166,14 @@ export default function InteractiveStagesAccordion() {
                 {/* Tag Pills matching Screenshot 2 */}
                 <div className="stage-active-tags-row">
                   {stage.tags.map((tag, tIdx) => (
-                    <span key={tIdx} className="stage-active-tag-pill">
+                    <span key={tIdx} className="stage-active-tag-pill" style={{ color: "#ffffff" }}>
                       {tag}
                     </span>
                   ))}
                 </div>
 
                 {/* Narrative Text */}
-                <p className="stage-active-story">{stage.story}</p>
+                <p className="stage-active-story" style={{ color: "rgba(255, 255, 255, 0.95)" }}>{stage.story}</p>
 
                 {/* Visual Preview Box embedded inside active card matching Screenshot 2 */}
                 <div className="stage-active-preview-card">

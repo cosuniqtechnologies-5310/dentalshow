@@ -6,6 +6,7 @@ import Icon from "@/components/Icon";
 import BeaverMascot from "@/components/BeaverMascot";
 import InteractiveStagesAccordion from "@/components/InteractiveStagesAccordion";
 import InteractiveTimeline from "@/components/InteractiveTimeline";
+import TrustedPartnersShowcase from "@/components/TrustedPartnersShowcase";
 
 export const metadata = {
   title: "About Us | TNDTMA & Dental Show 2027",
@@ -44,17 +45,6 @@ const objectives = [
   },
 ];
 
-const partnersData = [
-  { name: "NexGen Dental", category: "Dental Implants & Prosthetics", type: "Platinum Partner" },
-  { name: "Orthova Systems", category: "Orthodontic & Clear Aligners", type: "Technology Partner" },
-  { name: "SmileLab India", category: "CAD/CAM Digital Solutions", type: "Clinical Partner" },
-  { name: "Implantis Global", category: "Surgical & Bio-Materials", type: "Premier Partner" },
-  { name: "DentaCloud", category: "AI & Practice Management", type: "Digital Partner" },
-  { name: "LuminaRay Imaging", category: "3D CBCT & Diagnostic Systems", type: "Imaging Partner" },
-  { name: "BioCrown Ceramics", category: "Restorative Aesthetic Ceramics", type: "Materials Partner" },
-  { name: "ScanPro 3D", category: "Intraoral Scanning & Milling", type: "Equipment Partner" },
-];
-
 export default function AboutPage() {
   return (
     <>
@@ -77,8 +67,8 @@ export default function AboutPage() {
             <div className="split-media-wrapper">
               <div className="split-img-back-card">
                 <Image
-                  src="/images/gallery-conference-1.jpg"
-                  alt="Dental Show Conference Gathering"
+                  src="/images/dental-show-images/vlcsnap-2026-10-29-00h42m51s996.png"
+                  alt="Dental Show Exhibition & Trade Floor"
                   width={440}
                   height={540}
                   priority
@@ -88,8 +78,8 @@ export default function AboutPage() {
 
               <div className="split-img-front-card">
                 <Image
-                  src="/images/gallery-exhibition-1.jpg"
-                  alt="Dental Show Exhibition & Innovation Expo"
+                  src="/images/dental-show-images/vlcsnap-2026-10-29-00h42m12s093.png"
+                  alt="Dental Show Operatory Chairs & Technology"
                   width={340}
                   height={340}
                   className="split-img-front"
@@ -459,21 +449,23 @@ export default function AboutPage() {
       {/* ------------------------------------------------------------------ */}
       {/* SECTION 6: MR. DENTALSHOW MASCOT AMBASSADOR FEATURE */}
       {/* ------------------------------------------------------------------ */}
-      <section className="section about-mascot-section bg-gradient-dark text-white">
+      <section className="section about-mascot-section fold-primary-dark bg-gradient-dark text-white">
         <div className="container split align-items-center">
           <div className="split__content text-white">
             <div className="ambassador-badge-pill">
               <span className="ambassador-pulse" />
               <span>MEET OUR AMBASSADOR</span>
             </div>
-            <h2 className="section-main-title text-white">Meet Mr. Dentalshow &mdash; Official Mascot</h2>
+            <h2 className="section-main-title text-white" style={{ color: "#ffffff" }}>
+              Meet Mr. Dentalshow &mdash; Official Mascot
+            </h2>
             <div className="title-zigzag" style={{ margin: "0 0 20px 0" }} />
-            <p className="about-mascot-desc">
+            <p className="about-mascot-desc text-white" style={{ color: "rgba(255, 255, 255, 0.95)" }}>
               Why the beaver? Nature&apos;s greatest builders possess teeth that never stop growing,
               naturally reinforced with iron, making them an enduring symbol of dental strength,
               persistence, and meticulous precision!
             </p>
-            <p className="about-mascot-desc">
+            <p className="about-mascot-desc text-white" style={{ color: "rgba(255, 255, 255, 0.95)" }}>
               Our friendly mascot, Mr. Dentalshow, welcomes thousands of clinicians, students, and exhibitors
               to Chennai Trade Centre, embodying the spirit: <em>&ldquo;See. Touch. Feel. Experience.&rdquo;</em>
             </p>
@@ -494,33 +486,16 @@ export default function AboutPage() {
       </section>
 
       {/* ------------------------------------------------------------------ */}
-      {/* SECTION 7: TRUSTED DENTAL PARTNERS */}
+      {/* SECTION 7: TRUSTED DENTAL PARTNERS & INDUSTRY COLLABORATORS */}
       {/* ------------------------------------------------------------------ */}
-      <section className="section about-partners-section">
+      <section className="section about-partners-section font-modern" id="partners">
         <div className="container">
           <SectionTitle
             eyebrow="INDUSTRY COLLABORATORS"
             title="Trusted Dental Partners"
-            subtitle="Working alongside renowned medical manufacturers and clinical bodies to shape South India's premier dental exposition."
+            subtitle="Working alongside renowned medical manufacturers, diagnostic pioneers, and clinical bodies to shape South India's premier dental exposition."
           />
-          <div className="about-partners-grid mt-lg">
-            {partnersData.map((p, idx) => (
-              <div
-                key={p.name}
-                className="about-partner-card pop-in"
-                style={{ animationDelay: `${idx * 60}ms` }}
-              >
-                <div className="partner-card-emblem">
-                  <Icon name="tooth" size={20} />
-                </div>
-                <div className="partner-card-info">
-                  <h4 className="partner-card-name">{p.name}</h4>
-                  <span className="partner-card-category">{p.category}</span>
-                </div>
-                <span className="partner-card-tier">{p.type}</span>
-              </div>
-            ))}
-          </div>
+          <TrustedPartnersShowcase />
         </div>
       </section>
     </>

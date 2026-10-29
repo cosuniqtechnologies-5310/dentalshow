@@ -157,8 +157,8 @@ export default function HomePage() {
                 {/* Expo Floor Live Preview Banner with Action Buttons Overlaid on the Image Bottom */}
                 <div className="countdown-bottom-visual" role="region" aria-label="Chennai Trade Centre Exhibition Hall & Registration">
                   <Image
-                    src="/images/gallery-exhibition-1.jpg"
-                    alt="Chennai Trade Centre Dental Exhibition Floor"
+                    src="/images/dental-show-images/vlcsnap-2026-10-29-00h40m41s322.png"
+                    alt="Chennai Trade Centre Dental Exhibition Hall"
                     width={580}
                     height={265}
                     className="countdown-bottom-img"

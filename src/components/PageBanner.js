@@ -20,7 +20,7 @@ export default function PageBanner({
   title,
   crumbs = [],
   subtitle,
-  image = "/images/hero-stage.jpg",
+  image = "/images/dental-show-images/vlcsnap-2026-10-29-00h40m41s322.png",
   showMascot = true,
   mascotQuote,
   mascotBadge = "Official Mascot",
