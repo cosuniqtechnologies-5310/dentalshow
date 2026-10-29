@@ -6,7 +6,7 @@ import Link from "next/link";
 import Icon from "./Icon";
 
 export default function EventDetailModal({ event, onClose }) {
-  const [selectedPhoto, setSelectedPhoto] = useState(event?.image || "");
+  const [userSelectedPhoto, setUserSelectedPhoto] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -34,6 +34,7 @@ export default function EventDetailModal({ event, onClose }) {
 
   const isUpcoming = event.category === "Upcoming" || event.status === "Upcoming";
   const galleryImages = event.gallery && event.gallery.length > 0 ? event.gallery : [event.image];
+  const selectedPhoto = (userSelectedPhoto && galleryImages.includes(userSelectedPhoto)) ? userSelectedPhoto : (event.image || galleryImages[0] || "");
 
   const handleFormChange = (e) => {
     const { name, value } = e.target;
@@ -114,7 +115,7 @@ export default function EventDetailModal({ event, onClose }) {
                       role="tab"
                       aria-selected={isSelected}
                       className={`event-modal-thumb-btn ${isSelected ? "is-active" : ""}`}
-                      onClick={() => setSelectedPhoto(imgSrc)}
+                      onClick={() => setUserSelectedPhoto(imgSrc)}
                       title={`Photo ${idx + 1}`}
                     >
                       <Image

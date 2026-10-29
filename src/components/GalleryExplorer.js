@@ -182,7 +182,7 @@ export default function GalleryExplorer() {
               </div>
 
               <div className="gallery-lightbox__header-right">
-                <span className="lightbox-esc-hint">Esc to close</span>
+                <span className="lightbox-esc-hint" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}>Esc to close</span>
                 <button
                   type="button"
                   className="gallery-lightbox__close-btn"
@@ -242,18 +242,31 @@ export default function GalleryExplorer() {
                 <span className="gallery-lightbox__aspect-tag">16:9 Full View HD</span>
               </div>
 
-              <h3 className="gallery-lightbox__main-title">{current.title}</h3>
-              <p className="gallery-lightbox__main-desc">{current.caption}</p>
+              <h3
+                className="gallery-lightbox__main-title"
+                style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}
+              >
+                {current.title}
+              </h3>
+              <p
+                className="gallery-lightbox__main-desc"
+                style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}
+              >
+                {current.caption}
+              </p>
 
               {/* Additional Bar: Navigation Hotkeys & Open High-Res Action */}
               <div className="gallery-lightbox__additional-bar">
-                <div className="gallery-lightbox__shortcuts">
-                  <span className="shortcut-key">←</span>
-                  <span className="shortcut-key">→</span>
-                  <span className="shortcut-text">Navigate photos</span>
-                  <span className="shortcut-dot">•</span>
-                  <span className="shortcut-key">Esc</span>
-                  <span className="shortcut-text">Close</span>
+                <div
+                  className="gallery-lightbox__shortcuts"
+                  style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}
+                >
+                  <span className="shortcut-key" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}>←</span>
+                  <span className="shortcut-key" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}>→</span>
+                  <span className="shortcut-text" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}>Navigate photos</span>
+                  <span className="shortcut-dot" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}>•</span>
+                  <span className="shortcut-key" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}>Esc</span>
+                  <span className="shortcut-text" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}>Close</span>
                 </div>
 
                 <div className="gallery-lightbox__actions">

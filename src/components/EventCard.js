@@ -4,6 +4,7 @@ import Icon from "./Icon";
 
 export default function EventCard({ event, onSelect }) {
   const isUpcoming = event.category === "Upcoming" || event.status === "Upcoming";
+  const imageSrc = event.image || "/images/dental-show-images/vlcsnap-2026-10-29-00h40m41s322.png";
 
   const handleCardClick = (e) => {
     if (onSelect) {
@@ -37,7 +38,7 @@ export default function EventCard({ event, onSelect }) {
           aria-label={`Open ${event.title} in popup`}
         >
           <Image
-            src={event.image}
+            src={imageSrc}
             alt={event.title}
             fill
             sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
@@ -52,7 +53,7 @@ export default function EventCard({ event, onSelect }) {
       ) : (
         <Link href={`/events/${event.slug}`} className="event-card__media" aria-label={event.title}>
           <Image
-            src={event.image}
+            src={imageSrc}
             alt={event.title}
             fill
             sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"

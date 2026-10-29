@@ -4515,8 +4515,10 @@ button {
 .lightbox-esc-hint {
   font-family: 'Inter', sans-serif;
   font-size: 11px;
-  color: #94a3b8;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   font-weight: 500;
+  opacity: 0.85;
 }
 
 .gallery-lightbox__close-btn {
@@ -4649,23 +4651,30 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.gallery-lightbox__main-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 1.35;
-  color: #ffffff;
-  margin: 0;
+.gallery-lightbox__main-title,
+h3.gallery-lightbox__main-title,
+.section h3.gallery-lightbox__main-title {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  margin: 0 !important;
   letter-spacing: -0.2px;
 }
 
-.gallery-lightbox__main-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 14.5px;
-  line-height: 1.6;
-  color: #cbd5e1;
-  margin: 0;
+.gallery-lightbox__main-desc,
+p.gallery-lightbox__main-desc,
+.section p.gallery-lightbox__main-desc {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14.5px !important;
+  line-height: 1.6 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  margin: 0 !important;
   max-width: 880px;
+  opacity: 0.95;
 }
 
 /* Additional Bar */
@@ -4686,7 +4695,15 @@ button {
   gap: 6px;
   font-family: 'Inter', sans-serif;
   font-size: 12px;
-  color: #94a3b8;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.gallery-lightbox__shortcuts span,
+.gallery-lightbox__shortcuts .shortcut-text,
+.gallery-lightbox__shortcuts .shortcut-dot {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 .shortcut-key {
@@ -4697,7 +4714,8 @@ button {
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   font-size: 11px;
   font-weight: 700;
   line-height: 1;
@@ -13538,7 +13556,7 @@ body,
 /* Headings in Light / Default Sections: Solid Black (Excluding dark panorama banners, mascot sections and gallery hover overlays) */
 .section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section):not(.about-mascot-section):not(.bg-gradient-dark) h1:not(.panorama-banner-title),
 .section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section):not(.about-mascot-section):not(.bg-gradient-dark) h2:not(.panorama-banner-title):not(.text-white),
-.section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section):not(.about-mascot-section):not(.bg-gradient-dark) h3:not(.panorama-banner-title):not(.hover-photo-title):not(.clean-card-title):not(.text-white),
+.section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section):not(.about-mascot-section):not(.bg-gradient-dark) h3:not(.panorama-banner-title):not(.hover-photo-title):not(.clean-card-title):not(.text-white):not(.gallery-lightbox__main-title),
 .section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section):not(.about-mascot-section):not(.bg-gradient-dark) h4:not(.partners-cta-title):not(.text-white),
 .section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section):not(.about-mascot-section):not(.bg-gradient-dark) h5,
 .section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section):not(.about-mascot-section):not(.bg-gradient-dark) h6,
@@ -13578,7 +13596,7 @@ body,
 }
 
 /* Paragraphs & Body Descriptions in Light Sections: Solid Black (Excluding dark panorama banners, mascot sections, active accordion cards and gallery hover overlays) */
-.section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section):not(.about-mascot-section):not(.bg-gradient-dark):not(.about-stages-section) p:not(.panorama-banner-excerpt):not(.hover-photo-caption):not(.about-mascot-desc):not(.stage-active-story):not(.partners-cta-desc):not(.text-white),
+.section:not(.fold-primary-dark):not(.fold-dark):not(.cta-full-section):not(.about-mascot-section):not(.bg-gradient-dark):not(.about-stages-section) p:not(.panorama-banner-excerpt):not(.hover-photo-caption):not(.about-mascot-desc):not(.stage-active-story):not(.partners-cta-desc):not(.text-white):not(.gallery-lightbox__main-desc),
 .fold-white p:not(.panorama-banner-excerpt):not(.hover-photo-caption),
 .section-desc,
 .countdown-sub-lead,
@@ -13613,8 +13631,17 @@ body,
 .panorama-badge-pill span,
 .gallery-tile-hover-overlay h3,
 .hover-photo-title,
-.hover-year-pill {
-  color: #ffffff;
+.hover-year-pill,
+.gallery-lightbox,
+.gallery-lightbox h3,
+.gallery-lightbox p,
+.gallery-lightbox span,
+.gallery-lightbox__main-title,
+.gallery-lightbox__main-desc,
+.gallery-lightbox__shortcuts,
+.gallery-lightbox__shortcuts * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 /* Gallery Hover Overlay Contrast & Text Visibility Guarantee */
@@ -16184,4 +16211,21 @@ p,
   .split-badge-val {
     font-size: 20px;
   }
+}
+
+/* ==========================================================================
+   GALLERY LIGHTBOX: CRISP 100% PURE WHITE TEXT VISIBILITY GUARANTEE
+   ========================================================================== */
+.gallery-lightbox .gallery-lightbox__main-title,
+.gallery-lightbox h3,
+.gallery-lightbox__main-desc,
+.gallery-lightbox p,
+.gallery-lightbox__shortcuts,
+.gallery-lightbox__shortcuts *,
+.gallery-lightbox .shortcut-key,
+.gallery-lightbox .shortcut-text,
+.gallery-lightbox .shortcut-dot,
+.gallery-lightbox .lightbox-esc-hint {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
