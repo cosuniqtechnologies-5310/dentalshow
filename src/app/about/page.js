@@ -2,17 +2,89 @@ import Image from "next/image";
 import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
 import SectionTitle from "@/components/SectionTitle";
-import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 import BeaverMascot from "@/components/BeaverMascot";
 import InteractiveTimeline from "@/components/InteractiveTimeline";
-import { site, sponsors } from "@/data/site";
+import { site } from "@/data/site";
 
 export const metadata = {
-  title: "About Us | TNDTMA & Dental Show 2027",
+  title: "About Us | Our Journey. Our Community. Our Future. | Dental Show 2027",
   description:
-    "Discover the history, objectives, and purpose of TNDTMA (Tamil Nadu Dental Trade & Manufacturers Association) and the story of Dental Show.",
+    "What began as a vision to strengthen the dental trade around 2000 has grown into a journey of bringing the dental community closer through TNDTMA and Dental Show.",
 };
+
+const erasRoadmap = [
+  {
+    stage: "01",
+    totalStages: "05",
+    eraName: "ORIGIN ERA",
+    year: "Around 2000",
+    tagline: "UNITING THE DENTAL COMMUNITY",
+    title: "A Shared Vision for Tamil Nadu",
+    story:
+      "Around 2000, dental trade leaders envisioned a united community to strengthen Tamil Nadu's dental industry, bridge technology gaps, and help practitioners access quality equipment.",
+    impactTitle: "FOUNDING IMPACT",
+    impacts: ["A United Trade Community", "Dental Leaders United"],
+    prioritiesTitle: "FOUNDING IDEAS & PRIORITIES",
+    priorities: ["Trade Unity", "Shared Progress", "Practitioner Support"],
+  },
+  {
+    stage: "02",
+    totalStages: "05",
+    eraName: "HISTORIC BEGINNING",
+    year: "2005",
+    tagline: "TNDTMA AND THE FIRST DENTAL SHOW",
+    title: "A Vision Becomes Reality",
+    story:
+      "TNDTMA was registered in 2005, marking a significant step towards a united dental trade community. That same year, the first Dental Show brought the shared vision to life, creating a platform for connection, discovery and progress.",
+    impactTitle: "MILESTONE IMPACT",
+    impacts: ["TNDTMA Registered", "First Dental Show Held"],
+    prioritiesTitle: "KEY FOCUS & ACHIEVEMENTS",
+    priorities: ["First Dental Show", "Dental Trade Unity"],
+  },
+  {
+    stage: "03",
+    totalStages: "05",
+    eraName: "A DECADE OF PROGRESS",
+    year: "2015",
+    tagline: "BUILDING ON A SHARED VISION",
+    title: "A Growing Platform for Dentistry",
+    story:
+      "Dental Show continued its journey of bringing the dental trade community together. Building on the vision established in its early years, the event created opportunities for industry connections, product discovery and the exchange of ideas across the dental ecosystem.",
+    impactTitle: "MILESTONE IMPACT",
+    impacts: ["A Growing Community", "Connecting Dental Professionals"],
+    prioritiesTitle: "KEY FOCUS & ACHIEVEMENTS",
+    priorities: ["Community Connections", "Product Discovery"],
+  },
+  {
+    stage: "04",
+    totalStages: "05",
+    eraName: "TWO DECADES OF IMPACT",
+    year: "2025",
+    tagline: "CELEBRATING TWO DECADES OF DENTAL SHOW",
+    title: "Two Decades of Connecting Dentistry",
+    story:
+      "Celebrating two decades of journey, Dental Show continues to bring the dental community together through innovation, professional connections and shared learning. Its legacy reflects a continuing commitment to supporting dental professionals and inspiring the next generation of dentistry.",
+    impactTitle: "MILESTONE IMPACT",
+    impacts: ["Two Decades of Progress", "A Growing Dental Community"],
+    prioritiesTitle: "KEY FOCUS & ACHIEVEMENTS",
+    priorities: ["Legacy & Growth", "Future Dentists", "Dental Innovation"],
+  },
+  {
+    stage: "05",
+    totalStages: "05",
+    eraName: "THE FUTURE CHAPTER",
+    year: "2027",
+    tagline: "CHENNAI TRADE CENTRE · 6–7 FEBRUARY",
+    title: "Dental Show 2027: Discover What's Next",
+    story:
+      "Bringing the dental community together on 6–7 February 2027 at Chennai Trade Centre, Dental Show invites dentists, students and industry professionals to discover innovations, exchange ideas and explore new possibilities for the future of dentistry.",
+    impactTitle: "THE DENTAL SHOW EXPERIENCE",
+    impacts: ["A Community of Possibilities", "Discover. Connect. Grow."],
+    prioritiesTitle: "WHAT AWAITS YOU",
+    priorities: ["Dental Innovations", "Professional Connections", "Learning & Discovery"],
+  },
+];
 
 const objectives = [
   {
@@ -42,34 +114,6 @@ const objectives = [
     icon: "pin",
     title: "Hands-on Education & Mentorship",
     text: "Bridge the gap between dental academia and real-world clinical excellence through certified workshops and masterclasses.",
-  },
-];
-
-const timelineMilestones = [
-  {
-    year: "Around 2000",
-    title: "A Vision Born",
-    text: "A forward-thinking group of dental trade leaders envisioned a united body to strengthen Tamil Nadu's dental trade ecosystem and support clinical practitioners.",
-  },
-  {
-    year: "2005",
-    title: "Milestone Achieved: First Dental Show",
-    text: "Official formation of TNDTMA and the triumphant launch of the very first Dental Show in 2005, making state-of-the-art equipment accessible to local dentists.",
-  },
-  {
-    year: "2015",
-    title: "Scale at Chennai Trade Centre",
-    text: "Dental Show expanded into Chennai Trade Centre, establishing itself as the undisputed premier annual gathering for dental professionals across South India.",
-  },
-  {
-    year: "2025",
-    title: "20th Anniversary Landmark",
-    text: "Celebrated two decades of pioneering service with 180+ exhibitors, over 4,800 delegates, and the Student Dental Excellence initiative.",
-  },
-  {
-    year: "2027",
-    title: "Dental Show 2027: The Grand Chapter",
-    text: "Taking place at Chennai Trade Centre New Halls 2, 3 & 3A. One community. Countless possibilities. A future we build together.",
   },
 ];
 
@@ -118,64 +162,161 @@ const partnersData = [
 export default function AboutPage() {
   return (
     <>
+      {/* 1. Page Banner with Dr. Beaver Mascot */}
       <PageBanner
-        title="About Us"
+        title="Our Journey. Our Community. Our Future."
         crumbs={[{ label: "About Us" }]}
-        subtitle="A vision born around 2000. A milestone achieved in 2005. A future shaped by innovation."
+        subtitle="A vision that began with trade. A future we build together."
+        mascotQuote="Celebrating 20 Years of Dental Excellence!"
+        editionBadge="20th Milestone Edition · 2005–2027"
       />
 
-      {/* Legacy & History Section */}
-      <section className="section font-academic">
-        <div className="container split">
-          <Reveal className="split__media">
-            <div className="about-media-box">
-              <Image
-                src="/images/gallery-conference-2.jpg"
-                alt="TNDTMA Dental Show Inaugural Stage"
-                fill
-                sizes="(max-width: 900px) 100vw, 50vw"
-                className="about-img"
-              />
-              <div className="about-stat-overlay">
-                <strong>2005</strong>
-                <span>First Dental Show in Tamil Nadu</span>
+      {/* 2. Genesis & Manifesto Section */}
+      <section className="section about-manifesto-section font-modern">
+        <div className="container">
+          <div className="about-manifesto-card">
+            <span className="manifesto-header-badge">
+              <Icon name="star" size={13} />
+              <span>OUR JOURNEY · OUR COMMUNITY · OUR FUTURE</span>
+            </span>
+
+            <h2 className="manifesto-main-title">
+              A vision that began with trade.<br />
+              A future we build together.
+            </h2>
+
+            <p className="manifesto-lead-p">
+              What began as a vision to strengthen the dental trade around 2000 has grown into a journey of bringing the dental community closer. Through TNDTMA, Dental Show continues to connect professionals, inspire future dentists and bring dental innovations within reach. In 2027, the journey continues—with new discoveries, meaningful connections and possibilities for the future of dentistry.
+            </p>
+
+            <div className="manifesto-pillars-grid">
+              <div className="manifesto-pillar-item">
+                <div className="pillar-icon-row">
+                  <div className="pillar-icon-pod">01</div>
+                  <h3 className="pillar-title">Trade Unity &amp; Trust</h3>
+                </div>
+                <p className="pillar-desc">
+                  Uniting manufacturers, dealers, and clinical practitioners across Tamil Nadu under an ethical, transparent trade umbrella.
+                </p>
+              </div>
+
+              <div className="manifesto-pillar-item">
+                <div className="pillar-icon-row">
+                  <div className="pillar-icon-pod">02</div>
+                  <h3 className="pillar-title">Accessible Innovation</h3>
+                </div>
+                <p className="pillar-desc">
+                  Bringing digital CAD/CAM, intraoral scanning, 3D CBCT, and advanced biomaterials directly to local operatory practices.
+                </p>
+              </div>
+
+              <div className="manifesto-pillar-item">
+                <div className="pillar-icon-row">
+                  <div className="pillar-icon-pod">03</div>
+                  <h3 className="pillar-title">Empowering Future Dentists</h3>
+                </div>
+                <p className="pillar-desc">
+                  Inspiring undergraduate and postgraduate students with certified masterclasses, live demos, and hands-on clinical training.
+                </p>
               </div>
             </div>
-          </Reveal>
 
-          <Reveal delay={100} className="split__content">
-            <span className="section-eyebrow">OUR LEGACY &amp; HISTORY</span>
-            <h2 className="section-main-title">A vision born around 2000. A milestone in 2005.</h2>
-            <div className="title-zigzag" style={{ margin: "0 0 20px 0" }} />
-
-            <p>
-              What began as a vision to strengthen Tamil Nadu’s dental trade grew into the formation of{" "}
-              <strong>TNDTMA (Tamil Nadu Dental Trade & Manufacturers Association)</strong> and the
-              launch of the first Dental Show in 2005.
-            </p>
-            <p>
-              At the heart of this journey was a larger dream: to make the latest advancements in dental
-              technology accessible to aspiring dentists across the state, opening doors to new
-              possibilities in learning, practice and patient care.
-            </p>
-            <p>
-              Because the future of dentistry should not just be imagined—it should be experienced,
-              explored and made accessible to every aspiring dentist.
-            </p>
-
-            <div className="about-cta-btns mt-md">
+            <div className="manifesto-cta-row">
               <Link href="/visitor-registration" className="btn btn--primary">
-                Register as Visitor
+                <span>Register as Visitor (Free Pass)</span>
+                <Icon name="arrow" size={15} />
               </Link>
               <Link href="/exhibitor-registration" className="btn btn--ghost">
-                Register as Exhibitor
+                <span>Book Exhibitor Stall</span>
+              </Link>
+              <Link href="/contact" className="btn btn--ghost">
+                <span>Contact TNDTMA Secretariat</span>
               </Link>
             </div>
-          </Reveal>
+          </div>
         </div>
       </section>
 
-      {/* Stats Counter */}
+      {/* 3. 5-Era Story Roadmap Grid */}
+      <section className="section journey-roadmap-section font-modern" id="five-eras">
+        <div className="container">
+          <SectionTitle
+            eyebrow="FIVE HISTORIC ERAS (2000–2027)"
+            title="Our Journey: Stage by Stage"
+            subtitle="Explore how a shared vision around 2000 evolved into South India's largest landmark dental convention."
+          />
+
+          <div className="journey-roadmap-grid">
+            {erasRoadmap.map((era, idx) => (
+              <article key={era.year} className={`journey-era-card journey-card--${idx}`}>
+                <div className="journey-card-header">
+                  <span className="journey-era-pill">{era.eraName}</span>
+                  <span className="journey-stage-step">STAGE {era.stage} OF {era.totalStages}</span>
+                </div>
+
+                <div className="journey-year-hero">{era.year}</div>
+                <div className="journey-card-tagline">{era.tagline}</div>
+                <h3 className="journey-card-title">{era.title}</h3>
+                <p className="journey-card-story">{era.story}</p>
+
+                <div className="journey-card-impact-box">
+                  <div className="journey-impact-title">{era.impactTitle}</div>
+                  <ul className="journey-impact-list">
+                    {era.impacts.map((item, i) => (
+                      <li key={i}>
+                        <span className="journey-check">✓</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <div className="journey-priorities-title">{era.prioritiesTitle}</div>
+                  <div className="journey-priorities-row">
+                    {era.priorities.map((p, i) => (
+                      <span key={i} className="journey-priority-pill">
+                        <span className="journey-priority-sparkle">✦</span>
+                        <span>{p}</span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Interactive Timeline & Ambassador */}
+      <section className="section section-legacy font-modern timeline-section-fullwidth" id="timeline">
+        <div className="container">
+          <div className="timeline-header-compact text-left">
+            <div className="timeline-header-grid">
+              <div className="timeline-header-col-left">
+                <div className="timeline-eyebrow-row">
+                  <span className="timeline-accent-dash" aria-hidden="true" />
+                  <span className="section-eyebrow timeline-eyebrow-text">INTERACTIVE TIMELINE &amp; AMBASSADOR</span>
+                </div>
+                <h2 className="section-main-title timeline-main-title">
+                  Experience Two Decades of Momentum
+                </h2>
+              </div>
+              <div className="timeline-header-col-right">
+                <p className="section-desc timeline-header-desc">
+                  Step through each era with Dr. Beaver, our official mascot guide. Watch the auto-cycling timeline or select any milestone year to relive the breakthroughs that shaped modern dentistry.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="timeline-interactive-mount">
+            <InteractiveTimeline />
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Stats Counter */}
       <section className="section-stats-bar about-stats-section">
         <div className="container">
           <div className="about-stats-grid">
@@ -199,12 +340,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Objectives & Purpose */}
+      {/* 6. Objectives & Purpose */}
       <section className="section about-objectives-section bg-light">
         <div className="container">
           <SectionTitle
             eyebrow="ASSOCIATION PURPOSE"
-            title="Our Objectives & Core Purpose"
+            title="Our Objectives &amp; Core Purpose"
             subtitle="TNDTMA is committed to fostering a progressive, high-quality, and ethical dental trade that elevates clinical patient care."
           />
 
@@ -234,22 +375,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Historical Timeline */}
-      <section className="section timeline-section-fullwidth" id="timeline">
-        <div className="container">
-          <SectionTitle
-            eyebrow="MILESTONES"
-            title="Our Journey of Two Decades"
-            subtitle="From initial concept around 2000 to South India's largest dental spectacle in 2027."
-          />
-
-          <div className="timeline-interactive-mount mt-lg">
-            <InteractiveTimeline />
-          </div>
-        </div>
-      </section>
-
-      {/* Beaver Mascot Feature */}
+      {/* 7. Beaver Mascot Ambassador Feature */}
       <section className="section about-mascot-section bg-gradient-dark text-white">
         <div className="container split align-items-center">
           <div className="split__content text-white">
@@ -270,10 +396,11 @@ export default function AboutPage() {
             </p>
             <div className="mascot-cta-row mt-md">
               <Link href="/events" className="btn btn--primary">
-                Discover Programme <Icon name="arrow" size={16} />
+                <span>Discover Programme</span>
+                <Icon name="arrow" size={16} />
               </Link>
               <Link href="/visitor-registration" className="btn btn--outline-light">
-                Meet Mascot at CTC
+                <span>Meet Mascot at CTC</span>
               </Link>
             </div>
           </div>
@@ -283,7 +410,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Sponsors & Partners */}
+      {/* 8. Sponsors & Partners */}
       <section className="section about-partners-section">
         <div className="container">
           <SectionTitle

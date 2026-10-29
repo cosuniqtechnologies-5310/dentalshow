@@ -39,7 +39,7 @@ const defaultMilestones = [
     statDesc: "First Dental Show Held",
     focusLabel: "KEY FOCUS & ACHIEVEMENTS",
     icon: "store",
-    highlights: ["First Dental Show", "Dental Trade Unity", "Community Connection"],
+    highlights: ["First Dental Show", "Dental Trade Unity"],
   },
   {
     year: "2015",
@@ -57,7 +57,7 @@ const defaultMilestones = [
     statDesc: "Connecting Dental Professionals",
     focusLabel: "KEY FOCUS & ACHIEVEMENTS",
     icon: "tooth",
-    highlights: ["Community Connections", "Product Discovery", "Industry Collaboration"],
+    highlights: ["Community Connections", "Product Discovery"],
   },
   {
     year: "2025",
