@@ -111,8 +111,8 @@ export default function BeaverMascot({ size = 310, className = "" }) {
             <span className="info-badge-dot" aria-hidden="true" />
             <span className="info-badge-tag">Expo highlights</span>
           </div>
-          <div className="info-badge-title">250+ Brands</div>
-          <div className="info-badge-stats">1000+ products, 6000+ Visitors</div>
+          <div className="info-badge-title">300+ Stalls</div>
+          <div className="info-badge-stats">1000+ Dental Product Ranges</div>
         </div>
       </div>
     </div>

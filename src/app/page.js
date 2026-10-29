@@ -70,6 +70,29 @@ export default function HomePage() {
                       <span>Register as an exhibitor</span>
                     </Link>
                   </div>
+
+                  {/* 3 Metric & Highlight Cards in Hero Banner */}
+                  <div className="hero-metrics-cards-row">
+                    <div className="hero-metric-card">
+                      <span className="hero-metric-num">1000+</span>
+                      <span className="hero-metric-label">Dental product ranges</span>
+                    </div>
+
+                    <div className="hero-metric-card">
+                      <span className="hero-metric-num">300+</span>
+                      <span className="hero-metric-label">Stalls</span>
+                    </div>
+
+                    <div className="hero-metric-card hero-metric-card--offers">
+                      <div className="hero-metric-tag">
+                        <span className="hero-metric-dot" aria-hidden="true" />
+                        <span>EXPO HIGHLIGHT</span>
+                      </div>
+                      <div className="hero-metric-offer-text">
+                        New product launch and special offers
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -363,7 +386,7 @@ export default function HomePage() {
                 <div className="cta-mascot-img-wrap">
                   <Image
                     src="/images/dental-show-mascot-new.png"
-                    alt="Dental Show 2027 Mascot - Dr. Beaver"
+                    alt="Dental Show 2027 Mascot - Mr. Dentalshow"
                     width={340}
                     height={480}
                     className="cta-mascot-img"

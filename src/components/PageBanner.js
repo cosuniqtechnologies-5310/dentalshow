@@ -180,11 +180,11 @@ export default function PageBanner({
                   <SparkleStar className="b-sparkle-4" size={16} color="#ffffff" />
                 </div>
 
-                {/* Speech Bubble from Mascot - Safely Positioned to the Left of Dr. Beaver */}
-                <div className="banner-mascot-bubble" role="note" aria-label={`Dr. Beaver: ${quote}`}>
+                {/* Speech Bubble from Mascot - Safely Positioned to the Left of Mr. Dentalshow */}
+                <div className="banner-mascot-bubble" role="note" aria-label={`Mr. Dentalshow: ${quote}`}>
                   <div className="banner-bubble-header">
                     <span className="live-pulse-dot" aria-hidden="true" />
-                    <span className="banner-bubble-badge">Dr. Beaver</span>
+                    <span className="banner-bubble-badge">Mr. Dentalshow</span>
                   </div>
                   <p className="banner-bubble-text">“{quote}”</p>
                   <div className="banner-bubble-tail" aria-hidden="true">
@@ -199,7 +199,7 @@ export default function PageBanner({
                 <div className="banner-mascot-character">
                   <Image
                     src="/images/dental-show-mascot-new.png"
-                    alt="Dental Show Official Mascot Dr. Beaver"
+                    alt="Dental Show Official Mascot Mr. Dentalshow"
                     width={185}
                     height={262}
                     priority
@@ -211,7 +211,7 @@ export default function PageBanner({
                 {/* Docked Mascot Credential Pill */}
                 <div className="banner-mascot-tag-pill">
                   <span className="mascot-tag-dot" aria-hidden="true" />
-                  <span className="mascot-tag-text">{mascotBadge} · Dr. Beaver</span>
+                  <span className="mascot-tag-text">{mascotBadge} · Mr. Dentalshow</span>
                 </div>
               </div>
             </div>

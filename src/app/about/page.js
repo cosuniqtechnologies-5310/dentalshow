@@ -4,8 +4,8 @@ import PageBanner from "@/components/PageBanner";
 import SectionTitle from "@/components/SectionTitle";
 import Icon from "@/components/Icon";
 import BeaverMascot from "@/components/BeaverMascot";
+import InteractiveStagesAccordion from "@/components/InteractiveStagesAccordion";
 import InteractiveTimeline from "@/components/InteractiveTimeline";
-import { site } from "@/data/site";
 
 export const metadata = {
   title: "About Us | TNDTMA & Dental Show 2027",
@@ -13,138 +13,34 @@ export const metadata = {
     "What began as a vision to strengthen the dental trade around 2000 has grown into a journey of bringing the dental community closer through TNDTMA and Dental Show.",
 };
 
-const erasRoadmap = [
-  {
-    stage: "01",
-    totalStages: "05",
-    eraName: "ORIGIN ERA",
-    year: "Around 2000",
-    tagline: "UNITING THE DENTAL COMMUNITY",
-    title: "A Shared Vision for Tamil Nadu",
-    story:
-      "Around 2000, dental trade leaders envisioned a united community to strengthen Tamil Nadu's dental industry, bridge technology gaps, and help practitioners access quality equipment.",
-    impactTitle: "FOUNDING IMPACT",
-    impacts: ["A United Trade Community", "Dental Leaders United"],
-    prioritiesTitle: "FOUNDING IDEAS & PRIORITIES",
-    priorities: ["Trade Unity", "Shared Progress", "Practitioner Support"],
-  },
-  {
-    stage: "02",
-    totalStages: "05",
-    eraName: "HISTORIC BEGINNING",
-    year: "2005",
-    tagline: "TNDTMA AND THE FIRST DENTAL SHOW",
-    title: "A Vision Becomes Reality",
-    story:
-      "TNDTMA was registered in 2005, marking a significant step towards a united dental trade community. That same year, the first Dental Show brought the shared vision to life, creating a platform for connection, discovery and progress.",
-    impactTitle: "MILESTONE IMPACT",
-    impacts: ["TNDTMA Registered", "First Dental Show Held"],
-    prioritiesTitle: "KEY FOCUS & ACHIEVEMENTS",
-    priorities: ["First Dental Show", "Dental Trade Unity"],
-  },
-  {
-    stage: "03",
-    totalStages: "05",
-    eraName: "A DECADE OF PROGRESS",
-    year: "2015",
-    tagline: "BUILDING ON A SHARED VISION",
-    title: "A Growing Platform for Dentistry",
-    story:
-      "Dental Show continued its journey of bringing the dental trade community together. Building on the vision established in its early years, the event created opportunities for industry connections, product discovery and the exchange of ideas across the dental ecosystem.",
-    impactTitle: "MILESTONE IMPACT",
-    impacts: ["A Growing Community", "Connecting Dental Professionals"],
-    prioritiesTitle: "KEY FOCUS & ACHIEVEMENTS",
-    priorities: ["Community Connections", "Product Discovery"],
-  },
-  {
-    stage: "04",
-    totalStages: "05",
-    eraName: "TWO DECADES OF IMPACT",
-    year: "2025",
-    tagline: "CELEBRATING TWO DECADES OF DENTAL SHOW",
-    title: "Two Decades of Connecting Dentistry",
-    story:
-      "Celebrating two decades of journey, Dental Show continues to bring the dental community together through innovation, professional connections and shared learning. Its legacy reflects a continuing commitment to supporting dental professionals and inspiring the next generation of dentistry.",
-    impactTitle: "MILESTONE IMPACT",
-    impacts: ["Two Decades of Progress", "A Growing Dental Community"],
-    prioritiesTitle: "KEY FOCUS & ACHIEVEMENTS",
-    priorities: ["Legacy & Growth", "Future Dentists", "Dental Innovation"],
-  },
-  {
-    stage: "05",
-    totalStages: "05",
-    eraName: "THE FUTURE CHAPTER",
-    year: "2027",
-    tagline: "CHENNAI TRADE CENTRE · 6–7 FEBRUARY",
-    title: "Dental Show 2027: Discover What's Next",
-    story:
-      "Bringing the dental community together on 6–7 February 2027 at Chennai Trade Centre, Dental Show invites dentists, students and industry professionals to discover innovations, exchange ideas and explore new possibilities for the future of dentistry.",
-    impactTitle: "THE DENTAL SHOW EXPERIENCE",
-    impacts: ["A Community of Possibilities", "Discover. Connect. Grow."],
-    prioritiesTitle: "WHAT AWAITS YOU",
-    priorities: ["Dental Innovations", "Professional Connections", "Learning & Discovery"],
-  },
-];
-
 const objectives = [
   {
     num: "01",
-    tag: "INNOVATION",
+    tag: "ETHICAL TRADE",
     icon: "sparkle",
-    title: "Accessible Dental Innovation",
-    text: "Make the latest advancements in dental technology, digital workflows, and materials accessible to aspiring dentists across Tamil Nadu.",
+    title: "Supply Integrity & Verified Warranties",
+    text: "Enforcing strict standards so every handpiece, biomaterial, and operatory system carries verified manufacturer warranties and direct after-sales service.",
   },
   {
     num: "02",
-    tag: "COMMUNITY",
+    tag: "DISTRIBUTION",
     icon: "users",
-    title: "Unite the Dental Community",
-    text: "Provide an open platform where clinicians, students, dealers, technicians, and manufacturers collaborate to shape modern dentistry.",
+    title: "Statewide District Dealer Network",
+    text: "Uniting authorized suppliers across all 38 districts of Tamil Nadu to ensure rapid doorstep delivery, maintenance, and emergency clinic repairs.",
   },
   {
     num: "03",
-    tag: "ETHICS & TRUST",
+    tag: "CLINICAL CDE",
     icon: "star",
-    title: "Strengthen Ethical Trade",
-    text: "Foster trust, transparent partnerships, and highest quality standards across the dental supply chain through TNDTMA stewardship.",
+    title: "Subsidized Education & CDE Credits",
+    text: "Partnering with certified dental academies to conduct high-yield, hands-on clinical masterclasses that award recognized continuing education credits.",
   },
   {
     num: "04",
-    tag: "EDUCATION",
+    tag: "INCUBATION",
     icon: "pin",
-    title: "Hands-on Education & Mentorship",
-    text: "Bridge the gap between dental academia and real-world clinical excellence through certified workshops and masterclasses.",
-  },
-];
-
-const stats = [
-  {
-    value: "20+",
-    label: "Years of Legacy",
-    period: "2005 – 2027",
-    icon: "calendar",
-    highlight: "TNDTMA Milestone",
-  },
-  {
-    value: "250+",
-    label: "Expected Exhibitors",
-    period: "Global Brands",
-    icon: "store",
-    highlight: "Industry Innovators",
-  },
-  {
-    value: "6,000+",
-    label: "Dental Professionals",
-    period: "Clinicians & Specialists",
-    icon: "users",
-    highlight: "South India Gathering",
-  },
-  {
-    value: "10,000+",
-    label: "Sq. Meters Expo Area",
-    period: "New Halls 2, 3 & 3A",
-    icon: "expand",
-    highlight: "Chennai Trade Centre",
+    title: "New Clinic Incubation & Practice Grants",
+    text: "Providing freshly graduated BDS and MDS clinicians with specialized equipment financing guidance, startup bundles, and expert operatory layout advisory.",
   },
 ];
 
@@ -162,7 +58,7 @@ const partnersData = [
 export default function AboutPage() {
   return (
     <>
-      {/* 1. Page Banner with Dr. Beaver Mascot */}
+      {/* 1. Page Banner with Mr. Dentalshow Mascot */}
       <PageBanner
         title="About Us"
         crumbs={[{ label: "About Us" }]}
@@ -171,124 +67,364 @@ export default function AboutPage() {
         editionBadge="20th Milestone Edition · 2005–2027"
       />
 
-      {/* 2. Genesis & Manifesto Section */}
-      <section className="section about-manifesto-section font-modern">
-        <div className="container">
-          <div className="about-manifesto-card">
-            <span className="manifesto-header-badge">
-              <Icon name="star" size={13} />
-              <span>OUR JOURNEY · OUR COMMUNITY · OUR FUTURE</span>
-            </span>
-
-            <h2 className="manifesto-main-title">
-              A vision that began with trade.<br />
-              A future we build together.
-            </h2>
-
-            <p className="manifesto-lead-p">
-              What began as a vision to strengthen the dental trade around 2000 has grown into a journey of bringing the dental community closer. Through TNDTMA, Dental Show continues to connect professionals, inspire future dentists and bring dental innovations within reach. In 2027, the journey continues—with new discoveries, meaningful connections and possibilities for the future of dentistry.
-            </p>
-
-            <div className="manifesto-pillars-grid">
-              <div className="manifesto-pillar-item">
-                <div className="pillar-icon-row">
-                  <div className="pillar-icon-pod">01</div>
-                  <h3 className="pillar-title">Trade Unity &amp; Trust</h3>
-                </div>
-                <p className="pillar-desc">
-                  Uniting manufacturers, dealers, and clinical practitioners across Tamil Nadu under an ethical, transparent trade umbrella.
-                </p>
+      {/* ------------------------------------------------------------------ */}
+      {/* SECTION 1 (SCREENSHOT 3 STYLE): SPLIT HERO STORY & OVERLAPPING PHOTOS */}
+      {/* ------------------------------------------------------------------ */}
+      <section className="section about-split-story font-modern" id="about-genesis">
+        <div className="about-theme-container">
+          <div className="split-story-grid">
+            {/* Left Column: Overlapping Photos with Theme Floating Circular Badge */}
+            <div className="split-media-wrapper">
+              <div className="split-img-back-card">
+                <Image
+                  src="/images/gallery-conference-1.jpg"
+                  alt="Dental Show Conference Gathering"
+                  width={440}
+                  height={540}
+                  priority
+                  className="split-img-back"
+                />
               </div>
 
-              <div className="manifesto-pillar-item">
-                <div className="pillar-icon-row">
-                  <div className="pillar-icon-pod">02</div>
-                  <h3 className="pillar-title">Accessible Innovation</h3>
-                </div>
-                <p className="pillar-desc">
-                  Bringing digital CAD/CAM, intraoral scanning, 3D CBCT, and advanced biomaterials directly to local operatory practices.
-                </p>
+              <div className="split-img-front-card">
+                <Image
+                  src="/images/gallery-exhibition-1.jpg"
+                  alt="Dental Show Exhibition & Innovation Expo"
+                  width={340}
+                  height={340}
+                  className="split-img-front"
+                />
               </div>
 
-              <div className="manifesto-pillar-item">
-                <div className="pillar-icon-row">
-                  <div className="pillar-icon-pod">03</div>
-                  <h3 className="pillar-title">Empowering Future Dentists</h3>
-                </div>
-                <p className="pillar-desc">
-                  Inspiring undergraduate and postgraduate students with certified masterclasses, live demos, and hands-on clinical training.
-                </p>
+              {/* Floating Circular Badge Adopting Theme Gradient */}
+              <div className="split-badge-circle">
+                <span className="split-badge-val">20+</span>
+                <span className="split-badge-sub">Years Legacy</span>
               </div>
             </div>
 
-            <div className="manifesto-cta-row">
-              <Link href="/visitor-registration" className="btn btn--primary">
-                <span>Register as Visitor (Free Pass)</span>
-                <Icon name="arrow" size={15} />
-              </Link>
-              <Link href="/exhibitor-registration" className="btn btn--ghost">
-                <span>Book Exhibitor Stall</span>
-              </Link>
-              <Link href="/contact" className="btn btn--ghost">
-                <span>Contact TNDTMA Secretariat</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+            {/* Right Column: Eyebrow Pill, Theme Headline, Lead, 3 Feature Rows */}
+            <div className="about-split-content">
+              <div className="split-eyebrow-pill">
+                <span className="split-eyebrow-dot" />
+                <span className="split-eyebrow-text">FOUNDING VISION · ESTABLISHED IN TAMIL NADU</span>
+              </div>
 
-      {/* 3. 5-Era Story Roadmap Grid */}
-      <section className="section journey-roadmap-section font-modern" id="five-eras">
-        <div className="container">
-          <SectionTitle
-            eyebrow="FIVE HISTORIC ERAS (2000–2027)"
-            title="Our Journey: Stage by Stage"
-            subtitle="Explore how a shared vision around 2000 evolved into South India's largest landmark dental convention."
-          />
+              <h2 className="split-main-title">
+                A Vision Born to Elevate Dental Healthcare Across South India.
+              </h2>
 
-          <div className="journey-roadmap-grid">
-            {erasRoadmap.map((era, idx) => (
-              <article key={era.year} className={`journey-era-card journey-card--${idx}`}>
-                <div className="journey-card-header">
-                  <span className="journey-era-pill">{era.eraName}</span>
-                  <span className="journey-stage-step">STAGE {era.stage} OF {era.totalStages}</span>
-                </div>
+              <p className="split-lead-p">
+                At the turn of the millennium, Tamil Nadu&apos;s dental community faced a critical challenge:
+                advanced clinical technologies were hard to procure, imported supplies carried steep markups,
+                and practitioners lacked direct access to authorized equipment makers. To bridge this divide,
+                pioneer dental trade leaders joined hands to establish TNDTMA. What began as an effort to organize
+                the trade has transformed into South India&apos;s most influential dental movement—uniting technology,
+                clinical mentorship, and professional growth.
+              </p>
 
-                <div className="journey-year-hero">{era.year}</div>
-                <div className="journey-card-tagline">{era.tagline}</div>
-                <h3 className="journey-card-title">{era.title}</h3>
-                <p className="journey-card-story">{era.story}</p>
-
-                <div className="journey-card-impact-box">
-                  <div className="journey-impact-title">{era.impactTitle}</div>
-                  <ul className="journey-impact-list">
-                    {era.impacts.map((item, i) => (
-                      <li key={i}>
-                        <span className="journey-check">✓</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <div className="journey-priorities-title">{era.prioritiesTitle}</div>
-                  <div className="journey-priorities-row">
-                    {era.priorities.map((p, i) => (
-                      <span key={i} className="journey-priority-pill">
-                        <span className="journey-priority-sparkle">✦</span>
-                        <span>{p}</span>
-                      </span>
-                    ))}
+              {/* 3 Circular Icon Feature Rows with Theme Colors */}
+              <div className="split-features-list">
+                <div className="split-feature-item">
+                  <div className="split-feature-icon-pod pod-navy">
+                    <Icon name="store" size={20} />
+                  </div>
+                  <div className="split-feature-info">
+                    <h3 className="split-feature-title">Direct Manufacturer Access</h3>
+                    <p className="split-feature-desc">
+                      Connecting clinics from Chennai to Coimbatore and Madurai directly with global equipment makers,
+                      removing multi-layered markups and guaranteeing authentic CE/FDA certifications.
+                    </p>
                   </div>
                 </div>
-              </article>
-            ))}
+
+                <div className="split-feature-item">
+                  <div className="split-feature-icon-pod pod-royal">
+                    <Icon name="handshake" size={20} />
+                  </div>
+                  <div className="split-feature-info">
+                    <h3 className="split-feature-title">Standardized Local Service</h3>
+                    <p className="split-feature-desc">
+                      Ensuring operatory chairs, digital autoclaves, intraoral sensors, and CAD/CAM units are
+                      supported by trained local biomedical engineers and prompt spare parts availability.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="split-feature-item">
+                  <div className="split-feature-icon-pod pod-emerald">
+                    <Icon name="sparkle" size={20} />
+                  </div>
+                  <div className="split-feature-info">
+                    <h3 className="split-feature-title">Bridging Clinical Academia</h3>
+                    <p className="split-feature-desc">
+                      Collaborating with premier dental universities so that graduating scholars gain hands-on
+                      proficiency with cutting-edge equipment before beginning private clinical practice.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom 4-Column Stat Counter Bar with Theme Color Accents */}
+          <div className="split-stats-bar">
+            <div className="split-stat-item">
+              <span className="split-stat-num num-navy">20+</span>
+              <span className="split-stat-lbl">Years Of Experience</span>
+            </div>
+            <div className="split-stat-item">
+              <span className="split-stat-num num-royal">250+</span>
+              <span className="split-stat-lbl">Exhibiting Brands</span>
+            </div>
+            <div className="split-stat-item">
+              <span className="split-stat-num num-emerald">6,000+</span>
+              <span className="split-stat-lbl">Dental Professionals</span>
+            </div>
+            <div className="split-stat-item">
+              <span className="split-stat-num num-turquoise">10,000+</span>
+              <span className="split-stat-lbl">Sq. Meters Expo Area</span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 4. Interactive Timeline & Ambassador */}
+      {/* ------------------------------------------------------------------ */}
+      {/* SECTION 2 (SCREENSHOT 4 STYLE): HORIZONTAL PROCESS & MILESTONES (FULL SCREEN) */}
+      {/* ------------------------------------------------------------------ */}
+      <section className="about-process-section full-screen-process font-modern" id="process-flow">
+        <div className="process-fullscreen-wrap">
+          <div className="process-flow-grid">
+            {/* Left Header Column */}
+            <div className="process-left-col">
+              <div>
+                <div className="process-eyebrow-pill">
+                  <span className="process-eyebrow-dot" />
+                  <span>OUR PROCESS · HISTORIC ERAS</span>
+                </div>
+                <h2 className="process-title">
+                  From insight<br />to impact<span className="process-title-dot">.</span>
+                </h2>
+                <p className="process-desc">
+                  A community-centered journey powered by innovation and dental trade unity across
+                  Tamil Nadu.
+                </p>
+              </div>
+
+              <div>
+                <a href="#historic-stages" className="process-link">
+                  <span>Explore Community</span>
+                  <span className="process-link-arrow">→</span>
+                </a>
+              </div>
+            </div>
+
+            {/* 01: Around 2000 */}
+            <div className="process-step-col">
+              <span className="process-step-num num-c1">01</span>
+              <div className="process-step-accent-bar bar-c1" />
+              <h3 className="process-step-year">Around 2000</h3>
+              <span className="process-era-pill pill-navy">ORIGIN ERA</span>
+              <p className="process-step-text">
+                Pioneer dental trade leaders recognize the urgent need for a unified state body to
+                eliminate supply bottlenecks and support local practitioners.
+              </p>
+              <span className="process-step-tag">✓ Trade Unity Formed</span>
+            </div>
+
+            {/* 02: 2005 */}
+            <div className="process-step-col">
+              <span className="process-step-num num-c2">02</span>
+              <div className="process-step-accent-bar bar-c2" />
+              <h3 className="process-step-year">2005</h3>
+              <span className="process-era-pill pill-royal">HISTORIC BEGINNING</span>
+              <p className="process-step-text">
+                TNDTMA is officially registered under the Tamil Nadu Societies Act. That same year,
+                the first landmark Dental Show debuts in Chennai.
+              </p>
+              <span className="process-step-tag">✓ TNDTMA Registered</span>
+            </div>
+
+            {/* 03: 2015 */}
+            <div className="process-step-col">
+              <span className="process-step-num num-c3">03</span>
+              <div className="process-step-accent-bar bar-c3" />
+              <h3 className="process-step-year">2015</h3>
+              <span className="process-era-pill pill-turquoise">DECADE OF PROGRESS</span>
+              <p className="process-step-text">
+                Dental Show expands into South India&apos;s premier B2B expo, introducing live surgical
+                workshops, digital radiography, and hands-on masterclasses.
+              </p>
+              <span className="process-step-tag">✓ Digital CAD/CAM Era</span>
+            </div>
+
+            {/* 04: 2025 */}
+            <div className="process-step-col">
+              <span className="process-step-num num-c4">04</span>
+              <div className="process-step-accent-bar bar-c4" />
+              <h3 className="process-step-year">2025</h3>
+              <span className="process-era-pill pill-emerald">TWO DECADES IMPACT</span>
+              <p className="process-step-text">
+                Celebrating 20 editions of trust, empowering over 6,000 dental delegates annually and
+                establishing Chennai as South India&apos;s dental innovation capital.
+              </p>
+              <span className="process-step-tag">✓ 6,000+ Delegates</span>
+            </div>
+
+            {/* 05: 2027 */}
+            <div className="process-step-col">
+              <span className="process-step-num num-c5">05</span>
+              <div className="process-step-accent-bar bar-c5" />
+              <h3 className="process-step-year">2027</h3>
+              <span className="process-era-pill pill-mint">THE NEXT CHAPTER</span>
+              <p className="process-step-text">
+                The landmark 20th Milestone Edition at Chennai Trade Centre (6–7 Feb 2027)—unveiling AI
+                diagnostics, 3D biomaterials, and next-gen prosthetics.
+              </p>
+              <span className="process-step-tag">✓ CTC · 6–7 Feb 2027</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------------ */}
+      {/* SECTION 3 (SCREENSHOT 1 STYLE): TRUST SECTION + MODERN CARDS STACK */}
+      {/* ------------------------------------------------------------------ */}
+      <section className="section about-trust-section font-modern" id="association-purpose">
+        <div className="about-theme-container">
+          <div className="trust-section-grid">
+            {/* Left Content Column Matching Screenshot 1 with Balanced Height */}
+            <div className="trust-left-content">
+              <div className="trust-eyebrow-pill">
+                <span className="trust-eyebrow-dot" />
+                <span>ESTABLISHED 2005 · TNDTMA COMMUNITY</span>
+              </div>
+
+              <h2 className="trust-headline">
+                Trusted by<br />
+                <span className="trust-headline-highlight">6,000+ Dental Leaders</span>
+              </h2>
+
+              <p className="trust-lead-desc">
+                Backing private dental clinics, hospital departments, and educational institutions with
+                transparent equipment pricing, verified warranties, and ethical trade governance.
+              </p>
+
+              {/* Overlapping Avatars + Social Proof Meta */}
+              <div className="trust-social-proof">
+                <div className="trust-avatars-row">
+                  <div className="trust-avatar-item">
+                    <Image
+                      src="/images/speaker-1.jpg"
+                      alt="Dental Show Leader"
+                      width={44}
+                      height={44}
+                      className="trust-avatar-img"
+                    />
+                  </div>
+                  <div className="trust-avatar-item">
+                    <Image
+                      src="/images/speaker-2.jpg"
+                      alt="Dental Show Leader"
+                      width={44}
+                      height={44}
+                      className="trust-avatar-img"
+                    />
+                  </div>
+                  <div className="trust-avatar-item">
+                    <Image
+                      src="/images/speaker-3.jpg"
+                      alt="Dental Show Leader"
+                      width={44}
+                      height={44}
+                      className="trust-avatar-img"
+                    />
+                  </div>
+                  <div className="trust-avatar-item">
+                    <Image
+                      src="/images/speaker-4.jpg"
+                      alt="Dental Show Leader"
+                      width={44}
+                      height={44}
+                      className="trust-avatar-img"
+                    />
+                  </div>
+                </div>
+
+                <div className="trust-social-meta">
+                  <div className="trust-stars-row">
+                    <span className="star-icon">★</span>
+                    <span className="star-icon">★</span>
+                    <span className="star-icon">★</span>
+                    <span className="star-icon">★</span>
+                    <span className="star-icon">★</span>
+                    <span className="star-rating-score">4.9 / 5</span>
+                  </div>
+                  <span className="trust-rating-sub">6,000+ Verified Dental Delegates</span>
+                </div>
+              </div>
+
+              {/* 3 Quick Metrics with Theme Colors */}
+              <div className="trust-metrics-row">
+                <div className="trust-metric-item">
+                  <span className="trust-metric-num metric-navy">20+</span>
+                  <span className="trust-metric-lbl">Years Legacy</span>
+                </div>
+                <div className="trust-metric-item">
+                  <span className="trust-metric-num metric-royal">250+</span>
+                  <span className="trust-metric-lbl">Exhibiting Brands</span>
+                </div>
+                <div className="trust-metric-item">
+                  <span className="trust-metric-num metric-emerald">4.9 ★</span>
+                  <span className="trust-metric-lbl">Positive Rating</span>
+                </div>
+              </div>
+
+              {/* Credential Seal */}
+              <div className="trust-credential-footer">
+                <span className="trust-check-badge">✓</span>
+                <span>Official state dental trade association registered under TN Societies Act</span>
+              </div>
+            </div>
+
+            {/* Vertical Divider Line */}
+            <div className="trust-divider-bar" aria-hidden="true" />
+
+            {/* Right Stack of Modern Cards (Screenshot 1 Balanced Layout) */}
+            <div className="trust-cards-stack">
+              {objectives.map((obj, idx) => (
+                <article key={obj.num} className="trust-card">
+                  <div className={`trust-card-icon-pod pod-card-${idx}`}>
+                    <Icon name={obj.icon} size={20} />
+                  </div>
+
+                  <div className="trust-card-body">
+                    <h3 className="trust-card-title">{obj.title}</h3>
+                    <p className="trust-card-desc">{obj.text}</p>
+                  </div>
+
+                  <div className="trust-card-arrow-btn" aria-hidden="true">
+                    <span>→</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------------ */}
+      {/* SECTION 4 (SCREENSHOT 2 STYLE): INTERACTIVE EXPANDABLE ACCORDION */}
+      {/* ------------------------------------------------------------------ */}
+      <section className="section about-stages-section font-modern" id="historic-stages">
+        <div className="about-theme-container">
+          <InteractiveStagesAccordion />
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------------ */}
+      {/* SECTION 5: PANORAMIC TIMELINE & MASCOT PODIUM */}
+      {/* ------------------------------------------------------------------ */}
       <section className="section section-legacy font-modern timeline-section-fullwidth" id="timeline">
         <div className="container">
           <div className="timeline-header-compact text-left">
@@ -296,7 +432,9 @@ export default function AboutPage() {
               <div className="timeline-header-col-left">
                 <div className="timeline-eyebrow-row">
                   <span className="timeline-accent-dash" aria-hidden="true" />
-                  <span className="section-eyebrow timeline-eyebrow-text">INTERACTIVE TIMELINE &amp; AMBASSADOR</span>
+                  <span className="section-eyebrow timeline-eyebrow-text">
+                    PANORAMIC TIMELINE &amp; AMBASSADOR
+                  </span>
                 </div>
                 <h2 className="section-main-title timeline-main-title">
                   Experience Two Decades of Momentum
@@ -304,7 +442,9 @@ export default function AboutPage() {
               </div>
               <div className="timeline-header-col-right">
                 <p className="section-desc timeline-header-desc">
-                  Step through each era with Dr. Beaver, our official mascot guide. Watch the auto-cycling timeline or select any milestone year to relive the breakthroughs that shaped modern dentistry.
+                  Step through each era with Mr. Dentalshow, our official mascot guide. Watch the
+                  auto-cycling timeline or select any milestone year to relive the breakthroughs that
+                  shaped modern dentistry.
                 </p>
               </div>
             </div>
@@ -316,66 +456,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 5. Stats Counter */}
-      <section className="section-stats-bar about-stats-section">
-        <div className="container">
-          <div className="about-stats-grid">
-            {stats.map((s, idx) => (
-              <div key={idx} className="about-stat-card pop-in" style={{ animationDelay: `${idx * 80}ms` }}>
-                <div className="about-stat-card__top">
-                  <div className="about-stat-card__icon-pod">
-                    <Icon name={s.icon} size={24} />
-                  </div>
-                  <span className="about-stat-card__badge">{s.period}</span>
-                </div>
-                <div className="about-stat-card__number-wrap">
-                  <span className="about-stat-card__number">{s.value}</span>
-                  <span className="about-stat-card__line" />
-                </div>
-                <h3 className="about-stat-card__label">{s.label}</h3>
-                <p className="about-stat-card__sub">{s.highlight}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Objectives & Purpose */}
-      <section className="section about-objectives-section bg-light">
-        <div className="container">
-          <SectionTitle
-            eyebrow="ASSOCIATION PURPOSE"
-            title="Our Objectives &amp; Core Purpose"
-            subtitle="TNDTMA is committed to fostering a progressive, high-quality, and ethical dental trade that elevates clinical patient care."
-          />
-
-          <div className="about-objectives-grid mt-lg">
-            {objectives.map((obj, i) => (
-              <div className="about-objective-card pop-in" style={{ animationDelay: `${i * 100}ms` }} key={obj.title}>
-                <div className="objective-card-header">
-                  <div className="objective-icon-pod">
-                    <Icon name={obj.icon} size={26} />
-                  </div>
-                  <div className="objective-meta-pod">
-                    <span className="objective-num">{obj.num}</span>
-                    <span className="objective-tag">{obj.tag}</span>
-                  </div>
-                </div>
-                <h3 className="objective-card-title">{obj.title}</h3>
-                <p className="objective-card-text">{obj.text}</p>
-                <div className="objective-card-footer">
-                  <span className="objective-pillar-badge">
-                    <Icon name="check" size={14} className="objective-check" />
-                    TNDTMA Strategic Pillar
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Beaver Mascot Ambassador Feature */}
+      {/* ------------------------------------------------------------------ */}
+      {/* SECTION 6: MR. DENTALSHOW MASCOT AMBASSADOR FEATURE */}
+      {/* ------------------------------------------------------------------ */}
       <section className="section about-mascot-section bg-gradient-dark text-white">
         <div className="container split align-items-center">
           <div className="split__content text-white">
@@ -383,16 +466,16 @@ export default function AboutPage() {
               <span className="ambassador-pulse" />
               <span>MEET OUR AMBASSADOR</span>
             </div>
-            <h2 className="section-main-title text-white">The beaver mascot of Dental Show</h2>
+            <h2 className="section-main-title text-white">Meet Mr. Dentalshow &mdash; Official Mascot</h2>
             <div className="title-zigzag" style={{ margin: "0 0 20px 0" }} />
             <p className="about-mascot-desc">
-              Why the beaver? Nature’s greatest builders possess teeth that never stop growing,
+              Why the beaver? Nature&apos;s greatest builders possess teeth that never stop growing,
               naturally reinforced with iron, making them an enduring symbol of dental strength,
               persistence, and meticulous precision!
             </p>
             <p className="about-mascot-desc">
-              Our friendly Beaver Mascot welcomes thousands of clinicians, students, and exhibitors to
-              Chennai Trade Centre, embodying the spirit: <em>“See. Touch. Feel. Experience.”</em>
+              Our friendly mascot, Mr. Dentalshow, welcomes thousands of clinicians, students, and exhibitors
+              to Chennai Trade Centre, embodying the spirit: <em>&ldquo;See. Touch. Feel. Experience.&rdquo;</em>
             </p>
             <div className="mascot-cta-row mt-md">
               <Link href="/events" className="btn btn--primary">
@@ -410,7 +493,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 8. Sponsors & Partners */}
+      {/* ------------------------------------------------------------------ */}
+      {/* SECTION 7: TRUSTED DENTAL PARTNERS */}
+      {/* ------------------------------------------------------------------ */}
       <section className="section about-partners-section">
         <div className="container">
           <SectionTitle
@@ -420,7 +505,11 @@ export default function AboutPage() {
           />
           <div className="about-partners-grid mt-lg">
             {partnersData.map((p, idx) => (
-              <div key={p.name} className="about-partner-card pop-in" style={{ animationDelay: `${idx * 60}ms` }}>
+              <div
+                key={p.name}
+                className="about-partner-card pop-in"
+                style={{ animationDelay: `${idx * 60}ms` }}
+              >
                 <div className="partner-card-emblem">
                   <Icon name="tooth" size={20} />
                 </div>
