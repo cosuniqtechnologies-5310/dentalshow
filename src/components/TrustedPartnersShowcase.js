@@ -241,9 +241,20 @@ export default function TrustedPartnersShowcase() {
           <div className="partners-cta-icon-box" aria-hidden="true">
             <Icon name="handshake" size={26} />
           </div>
-          <div className="partners-cta-text-group">
-            <h4 className="partners-cta-title">Showcase Your Brand at Dental Show 2027</h4>
-            <p className="partners-cta-desc">
+          <div className="partners-cta-text-group" style={{ color: "#ffffff" }}>
+            <h4
+              className="partners-cta-title text-white"
+              style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}
+            >
+              Showcase Your Brand at Dental Show 2027
+            </h4>
+            <p
+              className="partners-cta-desc text-white"
+              style={{
+                color: "rgba(255, 255, 255, 0.95)",
+                WebkitTextFillColor: "rgba(255, 255, 255, 0.95)",
+              }}
+            >
               Join 250+ leading dental equipment manufacturers, laboratories, and traders across 10,000+ sq. meters at Chennai Trade Centre.
             </p>
           </div>

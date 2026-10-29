@@ -26,11 +26,11 @@ export default function Footer() {
           <div className="footer-nav-col">
             <h4 className="footer-col-title">Explore</h4>
             <ul className="footer-col-links">
-              <li><Link href="/">Home &amp; Countdown</Link></li>
-              <li><Link href="/about">About TNDTMA</Link></li>
-              <li><Link href="/#legacy">Our Legacy &amp; Timeline</Link></li>
-              <li><Link href="/#benefits">Who Benefits</Link></li>
-              <li><Link href="/gallery">Central Expo Gallery</Link></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/events">Events</Link></li>
+              <li><Link href="/gallery">Gallery</Link></li>
+              <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -39,10 +39,7 @@ export default function Footer() {
             <h4 className="footer-col-title">Participation</h4>
             <ul className="footer-col-links">
               <li><Link href="/visitor-registration">Visitor Registration</Link></li>
-              <li><Link href="/exhibitor-registration">Exhibitor Stall Booking</Link></li>
-              <li><Link href="/student-registration">Student Delegations</Link></li>
-              <li><Link href="/visitor-registration#faq">Visitor FAQ &amp; Badge</Link></li>
-              <li><Link href="/exhibitor-registration#stalls">Hall 2, 3 &amp; 3A Layout</Link></li>
+              <li><Link href="/exhibitor-registration">Exhibitor Registration</Link></li>
             </ul>
           </div>
 
@@ -51,10 +48,8 @@ export default function Footer() {
             <h4 className="footer-col-title">Legal</h4>
             <ul className="footer-col-links">
               <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-              <li><Link href="/terms-and-conditions">Terms of Use</Link></li>
-              <li><Link href="/disclaimer">Acceptance Policy</Link></li>
-              <li><Link href="/security">Security &amp; Badging</Link></li>
-              <li><Link href="/cookies">Cookie Preferences</Link></li>
+              <li><Link href="/terms-and-conditions">Terms &amp; Conditions</Link></li>
+              <li><Link href="/disclaimer">Disclaimer</Link></li>
             </ul>
           </div>
 

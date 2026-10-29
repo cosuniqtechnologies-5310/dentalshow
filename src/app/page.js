@@ -24,7 +24,7 @@ export default function HomePage() {
           <div className="container">
             <div className="row align-items-center hero-main-row">
               {/* Left Column: Text & Registration Actions */}
-              <div className="col-lg-7 hero-content-col">
+              <div className="col-lg-6 hero-content-col">
                 <div className="banner-content-wrap">
                   {/* Non-repeating Authority Eyebrow */}
                   <div className="hero-badge-row">
@@ -70,35 +70,12 @@ export default function HomePage() {
                       <span>Register as an exhibitor</span>
                     </Link>
                   </div>
-
-                  {/* 3 Metric & Highlight Cards in Hero Banner */}
-                  <div className="hero-metrics-cards-row">
-                    <div className="hero-metric-card">
-                      <span className="hero-metric-num">1000+</span>
-                      <span className="hero-metric-label">Dental product ranges</span>
-                    </div>
-
-                    <div className="hero-metric-card">
-                      <span className="hero-metric-num">300+</span>
-                      <span className="hero-metric-label">Stalls</span>
-                    </div>
-
-                    <div className="hero-metric-card hero-metric-card--offers">
-                      <div className="hero-metric-tag">
-                        <span className="hero-metric-dot" aria-hidden="true" />
-                        <span>EXPO HIGHLIGHT</span>
-                      </div>
-                      <div className="hero-metric-offer-text">
-                        New product launch and special offers
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
 
-              {/* Right Column: Hero Banner Features Beaver Mascot */}
-              <div className="col-lg-5 hero-mascot-col">
-                <BeaverMascot size={310} />
+              {/* Right Column: Hero Banner Features Beaver Mascot with 3 Orbiting Cards & New Chat Box */}
+              <div className="col-lg-6 hero-mascot-col">
+                <BeaverMascot size={320} />
               </div>
             </div>
           </div>

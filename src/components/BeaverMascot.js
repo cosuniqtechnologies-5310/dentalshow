@@ -22,7 +22,7 @@ export function SparkleStar({ className = "", size = 20, color = "#ffffff" }) {
   );
 }
 
-export default function BeaverMascot({ size = 310, className = "" }) {
+export default function BeaverMascot({ size = 310, className = "", showCards = true }) {
   const width = typeof size === "number" ? size : 310;
   const height = Math.round(width * (1920 / 1359));
 
@@ -30,7 +30,7 @@ export default function BeaverMascot({ size = 310, className = "" }) {
     <div
       className={`beaver-mascot-wrapper ${className}`}
       role="img"
-      aria-label="Dental Show 2027 Mascot - See, Touch, Feel, Experience"
+      aria-label="Dental Show 2027 Mascot Mr. Dentalshow - See, Touch, Feel, Experience"
     >
       <div className="mascot-stage" style={{ width, maxWidth: "100%" }}>
         {/* Soft atmospheric spotlight behind character */}
@@ -54,41 +54,44 @@ export default function BeaverMascot({ size = 310, className = "" }) {
           <span className="glitter-dust dust-5" />
         </div>
 
-        {/* SPEECH BUBBLE: Floating cleanly near Mascot Right Hand (waving hand) */}
-        <div className="mascot-speech-bubble" aria-label="Mascot Right Hand Details">
-          <div className="speech-badge-pill">
-            <span className="live-pulse-dot" aria-hidden="true" />
-            <span>6th &amp; 7th Feb 2027 (Sat &amp; Sun)</span>
+        {/* BRAND NEW CONVERSATIONAL CHAT BOX: Floating cleanly above waving hand */}
+        <div className="mascot-chatbox mascot-chatbox--modern" role="status" aria-label="Mr. Dentalshow Mascot Dialogue">
+          {/* Header: Avatar + Identity + Live Edition */}
+          <div className="chatbox-header-row">
+            <div className="chatbox-identity">
+              <div className="chatbox-mascot-avatar" aria-hidden="true">
+                <Image
+                  src="/images/dental-show-mascot-new.png"
+                  alt="Mr. Dentalshow"
+                  width={28}
+                  height={28}
+                  className="chatbox-mascot-img"
+                />
+              </div>
+              <div className="chatbox-identity-text">
+                <span className="chatbox-name">Mr. Dentalshow</span>
+                <span className="chatbox-tagline">Official Mascot</span>
+              </div>
+            </div>
+            <span className="chatbox-live-badge">
+              <span className="live-pulse-dot" aria-hidden="true" />
+              <span>LIVE</span>
+            </span>
           </div>
-          <p className="speech-quote speech-venue">Chennai Trade Centre</p>
-          <span className="speech-sub">New Hall 2, 3 &amp; 3A</span>
 
-          {/* Curved tail pointing toward beaver's cheerful face */}
-          <div className="speech-tail-right" aria-hidden="true">
-            <svg
-              width="20"
-              height="18"
-              viewBox="0 0 20 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 2 C6 5, 13 10, 20 16 C13 13, 6 7, 0 6 Z"
-                fill="#ffffff"
-              />
-              <path
-                d="M0 2 C6 5, 13 10, 20 16"
-                stroke="#069DBF"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-              />
-              <path
-                d="M20 16 C13 13, 6 7, 0 6"
-                stroke="#069DBF"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-              />
-            </svg>
+          {/* Dialogue Message */}
+          <div className="chatbox-speech-content">
+            <p className="chatbox-speech-text">
+              “See you at <strong>Chennai Trade Centre</strong>! Feb 6–7, 2027”
+            </p>
+          </div>
+
+          {/* Venue & Hall Tag */}
+          <div className="chatbox-venue-row">
+            <span className="chatbox-venue-pill">
+              <span className="chatbox-pin-dot" aria-hidden="true">📍</span>
+              <span>New Halls 2, 3 &amp; 3A · CTC</span>
+            </span>
           </div>
         </div>
 
@@ -96,7 +99,7 @@ export default function BeaverMascot({ size = 310, className = "" }) {
         <div className="mascot-character-core">
           <Image
             src="/images/dental-show-mascot-new.png"
-            alt="Dental Show 2027 Beaver Mascot"
+            alt="Dental Show 2027 Mascot Mr. Dentalshow"
             width={width}
             height={height}
             priority
@@ -105,17 +108,84 @@ export default function BeaverMascot({ size = 310, className = "" }) {
           <div className="mascot-pedestal-shadow" aria-hidden="true" />
         </div>
 
-        {/* FLOATING INFO BADGE - Docked cleanly near Mascot Left Hand (thumbs-up hand) */}
-        <div className="mascot-info-badge" aria-label="Mascot Left Hand Highlights">
-          <div className="info-badge-head">
-            <span className="info-badge-dot" aria-hidden="true" />
-            <span className="info-badge-tag">Expo highlights</span>
+        {/* 3 DISTINCT CARDS ORBITING AROUND THE MASCOT */}
+        {showCards && (
+          <div className="mascot-orbit-cards-group" aria-label="Expo Highlights and Scale">
+            {/* Card 1: Top-Right — 1000+ Dental Product Ranges */}
+            <div
+              className="mascot-orbit-card mascot-orbit-card--1"
+              aria-label="1000+ Dental Product Ranges"
+            >
+              <div className="orbit-card-inner">
+                <div className="orbit-card-num-row">
+                  <span className="orbit-card-num">1000+</span>
+                  <span className="orbit-card-icon" aria-hidden="true">
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                      <line x1="12" y1="22.08" x2="12" y2="12" />
+                    </svg>
+                  </span>
+                </div>
+                <span className="orbit-card-label">Dental product ranges</span>
+              </div>
+            </div>
+
+            {/* Card 2: Mid/Bottom-Right — 300+ Stalls */}
+            <div
+              className="mascot-orbit-card mascot-orbit-card--2"
+              aria-label="300+ Stalls"
+            >
+              <div className="orbit-card-inner">
+                <div className="orbit-card-num-row">
+                  <span className="orbit-card-num">300+</span>
+                  <span className="orbit-card-icon" aria-hidden="true">
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                      <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                  </span>
+                </div>
+                <span className="orbit-card-label">Stalls</span>
+              </div>
+            </div>
+
+            {/* Card 3: Bottom-Left — New product launch and special offers */}
+            <div
+              className="mascot-orbit-card mascot-orbit-card--3"
+              aria-label="Expo Highlight - New product launch and special offers"
+            >
+              <div className="orbit-card-inner">
+                <div className="orbit-card-tag">
+                  <span className="orbit-card-dot" aria-hidden="true" />
+                  <span>EXPO HIGHLIGHT</span>
+                </div>
+                <div className="orbit-card-offer-text">
+                  New product launch and special offers
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="info-badge-title">300+ Stalls</div>
-          <div className="info-badge-stats">1000+ Dental Product Ranges</div>
-        </div>
+        )}
       </div>
     </div>
   );
 }
-

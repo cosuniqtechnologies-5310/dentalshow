@@ -47,11 +47,8 @@ export const footerLinks = {
     { label: "Contact us", href: "/contact" },
   ],
   registration: [
-    { label: "Visitor registration", href: "/visitor-registration" },
-    { label: "Exhibitor registration", href: "/exhibitor-registration" },
-    { label: "Stall Layout & Plans", href: "/exhibitor-registration#stall-types" },
-    { label: "Scientific Sessions", href: "/events" },
-    { label: "Venue & CTC Location", href: "/contact#venue" },
+    { label: "Visitor Registration", href: "/visitor-registration" },
+    { label: "Exhibitor Registration", href: "/exhibitor-registration" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy-policy" },
