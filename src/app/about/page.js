@@ -8,7 +8,7 @@ import InteractiveTimeline from "@/components/InteractiveTimeline";
 import { site } from "@/data/site";
 
 export const metadata = {
-  title: "About Us | Our Journey. Our Community. Our Future. | Dental Show 2027",
+  title: "About Us | TNDTMA & Dental Show 2027",
   description:
     "What began as a vision to strengthen the dental trade around 2000 has grown into a journey of bringing the dental community closer through TNDTMA and Dental Show.",
 };
@@ -164,7 +164,7 @@ export default function AboutPage() {
     <>
       {/* 1. Page Banner with Dr. Beaver Mascot */}
       <PageBanner
-        title="Our Journey. Our Community. Our Future."
+        title="About Us"
         crumbs={[{ label: "About Us" }]}
         subtitle="A vision that began with trade. A future we build together."
         mascotQuote="Celebrating 20 Years of Dental Excellence!"
