@@ -693,49 +693,56 @@ function getStandaloneScript(prefix) {
 
   // 7. OFFLINE / FILE PROTOCOL IMAGE AUTO-REPAIR
   function initImageFixer() {
-    if (typeof window === "undefined" || window.location.protocol !== "file:") return;
+    if (
+      typeof window === "undefined" ||
+      window.location.protocol !== "file:"
+    ) return;
+
+    var prefix = "${prefix}";
+
     function fixImg(img) {
       if (!img || img.dataset.relFixed) return;
+
       var src = img.getAttribute("src");
       if (src && src.startsWith("/images/")) {
-        img.src = "${prefix}" + src.slice(1);
-        img.dataset.relFixed = "true";
+        img.src = prefix + src.slice(1);
       }
+
       var srcset = img.getAttribute("srcset");
       if (srcset && srcset.indexOf("/images/") !== -1) {
-        img.setAttribute("srcset", srcset.split("/images/").join("${prefix}images/"));
+        img.setAttribute(
+          "srcset",
+          srcset.split("/images/").join(prefix + "images/")
+        );
       }
+
+      img.dataset.relFixed = "true";
     }
 
     document.querySelectorAll("img").forEach(fixImg);
 
     if (typeof MutationObserver !== "undefined") {
-      var mo = new MutationObserver(function (mutations) {
-        mutations.forEach(function (m) {
-          m.addedNodes.forEach(function (node) {
-            if (node.nodeType === 1) {
-              if (node.tagName === "IMG") fixImg(node);
-              else if (node.querySelectorAll) node.querySelectorAll("img").forEach(fixImg);
+      var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+          mutation.addedNodes.forEach(function (node) {
+            if (node.nodeType !== 1) return;
+
+            if (node.tagName === "IMG") {
+              fixImg(node);
+            }
+
+            if (node.querySelectorAll) {
+              node.querySelectorAll("img").forEach(fixImg);
             }
           });
         });
       });
-      mo.observe(document.body, { childList: true, subtree: true });
-    }
 
-    window.addEventListener("error", function (e) {
-      if (e.target && e.target.tagName === "IMG") {
-        var img = e.target;
-        if (!img.dataset.failRecovered) {
-          img.dataset.failRecovered = "true";
-          var cur = img.getAttribute("src") || img.src;
-          if (cur && cur.indexOf("images/") !== -1) {
-            var idx = cur.indexOf("images/");
-            img.src = "${prefix}" + cur.substring(idx);
-          }
-        }
-      }
-    }, true);
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    }
   }
 
   function initAll() {
