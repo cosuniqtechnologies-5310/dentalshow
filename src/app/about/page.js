@@ -54,6 +54,7 @@ export default function AboutPage() {
         subtitle="A vision that began with trade. A future we build together."
         mascotQuote="Celebrating 20 Years of Dental Excellence!"
         editionBadge="20th Milestone Edition · 2005–2027"
+        image="/images/chennai-trade-centre-venue.jpg"
       />
 
       {/* ------------------------------------------------------------------ */}
@@ -66,9 +67,9 @@ export default function AboutPage() {
             <div className="split-media-wrapper">
               <div className="split-img-back-card">
                 <Image
-                  src="/images/dental-show-images/vlcsnap-2026-10-29-00h42m51s996.png"
-                  alt="Dental Show Exhibition & Trade Floor"
-                  width={440}
+                  src="/images/chennai-trade-centre-venue.jpg"
+                  alt="Chennai Trade Centre New Hall 2, 3 & 3A - Dental Show Venue"
+                  width={460}
                   height={540}
                   priority
                   className="split-img-back"
@@ -77,8 +78,8 @@ export default function AboutPage() {
 
               <div className="split-img-front-card">
                 <Image
-                  src="/images/dental-show-images/vlcsnap-2026-10-29-00h42m12s093.png"
-                  alt="Dental Show Operatory Chairs & Technology"
+                  src="/images/dental-show-images/vlcsnap-2026-10-29-00h41m55s011.png"
+                  alt="Dental Show Registration Counters & Delegates"
                   width={340}
                   height={340}
                   className="split-img-front"
