@@ -15,8 +15,8 @@ export default function GalleryPage() {
         crumbs={[{ label: "Gallery" }]}
         subtitle="Moments That Bring Us Together. Revisit the people, experiences and memories that make every Dental Show special."
       />
-      <section className="section">
-        <div className="container">
+      <section className="section section-gallery-page">
+        <div className="container container-gallery-wide">
           <SectionTitle
             eyebrow="PHOTO & VIDEO ARCHIVE"
             title="Moments That Bring Us Together"

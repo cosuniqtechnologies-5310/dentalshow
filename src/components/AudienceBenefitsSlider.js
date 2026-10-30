@@ -47,7 +47,7 @@ const defaultAudienceGroups = [
     role: "For Manufacturers & Brands",
     category: "INDUSTRY LEADERSHIP",
     badgeLabel: "SCALE",
-    badgeValue: "250+ Brands",
+    badgeValue: "300+ Stalls",
     image: "/images/dental-show-images/vlcsnap-2026-10-29-00h42m12s093.png",
     pillLabel: "Brands",
     discover: "Understand market needs and emerging industry trends.",

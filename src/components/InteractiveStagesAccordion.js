@@ -79,7 +79,7 @@ const stagesData = [
       "B2B Matchmaking",
     ],
     previewImage: "/images/dental-show-images/vlcsnap-2026-10-29-00h42m51s996.png",
-    previewCaption: "Connecting 250+ global brands with trusted regional distributors and service engineers.",
+    previewCaption: "Connecting 300+ stalls and global brands with trusted regional distributors and service engineers.",
     accentColor: "#00A86B",
   },
   {

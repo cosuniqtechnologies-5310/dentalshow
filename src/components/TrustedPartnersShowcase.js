@@ -255,7 +255,7 @@ export default function TrustedPartnersShowcase() {
                 WebkitTextFillColor: "rgba(255, 255, 255, 0.95)",
               }}
             >
-              Join 250+ leading dental equipment manufacturers, laboratories, and traders across 10,000+ sq. meters at Chennai Trade Centre.
+              Join 300+ leading dental equipment manufacturers, laboratories, and traders across 10,000+ sq. meters at Chennai Trade Centre.
             </p>
           </div>
         </div>

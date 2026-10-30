@@ -6,7 +6,6 @@ import Icon from "@/components/Icon";
 import BeaverMascot from "@/components/BeaverMascot";
 import InteractiveStagesAccordion from "@/components/InteractiveStagesAccordion";
 import InteractiveTimeline from "@/components/InteractiveTimeline";
-import TrustedPartnersShowcase from "@/components/TrustedPartnersShowcase";
 
 export const metadata = {
   title: "About Us | TNDTMA & Dental Show 2027",
@@ -87,10 +86,10 @@ export default function AboutPage() {
               </div>
 
               {/* Floating Circular Badge Adopting Theme Gradient */}
-              <div className="split-badge-circle">
+              {/* <div className="split-badge-circle">
                 <span className="split-badge-val">20+</span>
                 <span className="split-badge-sub">Years Legacy</span>
-              </div>
+              </div> */}
             </div>
 
             {/* Right Column: Eyebrow Pill, Theme Headline, Lead, 3 Feature Rows */}
@@ -160,15 +159,15 @@ export default function AboutPage() {
           {/* Bottom 4-Column Stat Counter Bar with Theme Color Accents */}
           <div className="split-stats-bar">
             <div className="split-stat-item">
-              <span className="split-stat-num num-navy">20+</span>
-              <span className="split-stat-lbl">Years Of Experience</span>
+              <span className="split-stat-num num-navy">13+</span>
+              <span className="split-stat-lbl">Years Legacy</span>
             </div>
             <div className="split-stat-item">
-              <span className="split-stat-num num-royal">250+</span>
-              <span className="split-stat-lbl">Exhibiting Brands</span>
+              <span className="split-stat-num num-royal">300+</span>
+              <span className="split-stat-lbl">Stalls &amp; Brands</span>
             </div>
             <div className="split-stat-item">
-              <span className="split-stat-num num-emerald">6,000+</span>
+              <span className="split-stat-num num-emerald">10,000+</span>
               <span className="split-stat-lbl">Dental Professionals</span>
             </div>
             <div className="split-stat-item">
@@ -255,10 +254,10 @@ export default function AboutPage() {
               <h3 className="process-step-year">2025</h3>
               <span className="process-era-pill pill-emerald">TWO DECADES OF IMPACT</span>
               <p className="process-step-text">
-                Celebrating 20 editions of trust, empowering over 6,000 dental delegates annually and
+                Celebrating two decades of trust, empowering over 10,000 dental delegates annually and
                 establishing Chennai as South India&apos;s dental innovation capital.
               </p>
-              <span className="process-step-tag">✓ 6,000+ Delegates</span>
+              <span className="process-step-tag">✓ 10,000+ Delegates</span>
             </div>
 
             {/* 05: 2027 */}
@@ -292,7 +291,7 @@ export default function AboutPage() {
 
               <h2 className="trust-headline">
                 Trusted by<br />
-                <span className="trust-headline-highlight">6,000+ Dental Leaders</span>
+                <span className="trust-headline-highlight">10,000+ Dental Leaders</span>
               </h2>
 
               <p className="trust-lead-desc">
@@ -350,7 +349,7 @@ export default function AboutPage() {
                     <span className="star-icon">★</span>
                     <span className="star-rating-score">4.9 / 5</span>
                   </div>
-                  <span className="trust-rating-sub">6,000+ Verified Dental Delegates</span>
+                  <span className="trust-rating-sub">10,000+ Verified Dental Delegates</span>
                 </div>
               </div>
 
@@ -361,12 +360,8 @@ export default function AboutPage() {
                   <span className="trust-metric-lbl">Years Legacy</span>
                 </div>
                 <div className="trust-metric-item">
-                  <span className="trust-metric-num metric-royal">250+</span>
-                  <span className="trust-metric-lbl">Exhibiting Brands</span>
-                </div>
-                <div className="trust-metric-item">
-                  <span className="trust-metric-num metric-emerald">4.9 ★</span>
-                  <span className="trust-metric-lbl">Positive Rating</span>
+                  <span className="trust-metric-num metric-royal">300+</span>
+                  <span className="trust-metric-lbl">Stalls &amp; Brands</span>
                 </div>
               </div>
 
@@ -456,10 +451,9 @@ export default function AboutPage() {
               <span className="ambassador-pulse" />
               <span>MEET OUR AMBASSADOR</span>
             </div>
-            <h2 className="section-main-title text-white" style={{ color: "#ffffff" }}>
+            <h2 className="section-main-title text-white mascot-section-title" style={{ color: "#ffffff" }}>
               Meet Mr. Dentalshow &mdash; Official Mascot
             </h2>
-            <div className="title-zigzag" style={{ margin: "0 0 20px 0" }} />
             <p className="about-mascot-desc text-white" style={{ color: "rgba(255, 255, 255, 0.95)" }}>
               Why the beaver? Nature&apos;s greatest builders possess teeth that never stop growing,
               naturally reinforced with iron, making them an enduring symbol of dental strength,
@@ -480,24 +474,11 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="split__media center">
-            <BeaverMascot size={330} />
+            <BeaverMascot size={330} showCards={false} showChatbox={false} />
           </div>
         </div>
       </section>
 
-      {/* ------------------------------------------------------------------ */}
-      {/* SECTION 7: TRUSTED DENTAL PARTNERS & INDUSTRY COLLABORATORS */}
-      {/* ------------------------------------------------------------------ */}
-      <section className="section about-partners-section font-modern" id="partners">
-        <div className="container">
-          <SectionTitle
-            eyebrow="INDUSTRY COLLABORATORS"
-            title="Trusted Dental Partners"
-            subtitle="Working alongside renowned medical manufacturers, diagnostic pioneers, and clinical bodies to shape South India's premier dental exposition."
-          />
-          <TrustedPartnersShowcase />
-        </div>
-      </section>
     </>
   );
 }

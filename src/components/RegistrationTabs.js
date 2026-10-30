@@ -96,8 +96,8 @@ export default function RegistrationTabs() {
               <h3 className="registration-role-title">Register as a Visitor</h3>
 
               <p className="registration-role-desc">
-                Gain complimentary access to South India&apos;s largest dental exhibition. Connect with 250+
-                global brands, discover revolutionary CAD/CAM equipment, and attend hands-on clinical masterclasses.
+                Gain complimentary access to South India&apos;s largest dental exhibition. Connect with 300+
+                stalls and global brands, discover revolutionary CAD/CAM equipment, and attend hands-on clinical masterclasses.
               </p>
 
               <ul className="registration-perks-list perks-blue">
@@ -111,7 +111,7 @@ export default function RegistrationTabs() {
                 </li>
                 <li>
                   <span className="perk-icon-wrap icon-blue"><Icon name="check" size={16} /></span>
-                  <span><strong>Network with 6,000+ peers</strong>, surgeons, specialists &amp; dental technicians</span>
+                  <span><strong>Network with 10,000+ peers</strong>, surgeons, specialists &amp; dental technicians</span>
                 </li>
                 <li>
                   <span className="perk-icon-wrap icon-blue"><Icon name="check" size={16} /></span>
@@ -159,7 +159,7 @@ export default function RegistrationTabs() {
                 </li>
                 <li>
                   <span className="perk-icon-wrap icon-green"><Icon name="check" size={16} /></span>
-                  <span><strong>Direct commercial access to 6,000+ active dental buyers</strong> &amp; clinic owners</span>
+                  <span><strong>Direct commercial access to 10,000+ active dental buyers</strong> &amp; clinic owners</span>
                 </li>
                 <li>
                   <span className="perk-icon-wrap icon-green"><Icon name="check" size={16} /></span>
@@ -192,7 +192,7 @@ export default function RegistrationTabs() {
               <div className="registration-animal-bubble bubble-green">
                 <span className="bubble-kicker">OFFICIAL TRADE HOST</span>
                 <p className="bubble-text">“Expand Your Market Reach”</p>
-                <span className="bubble-sub">Connect With 6,000+ Trade Delegates</span>
+                <span className="bubble-sub">Connect With 10,000+ Trade Delegates</span>
                 <div className="bubble-tail-down" aria-hidden="true" />
               </div>
 
@@ -211,7 +211,7 @@ export default function RegistrationTabs() {
               {/* Status Badge */}
               <div className="registration-animal-tag tag-green">
                 <span className="tag-pulse pulse-green" />
-                <span>10,000+ sq.m · 250+ Global Brands</span>
+                <span>10,000+ sq.m · 300+ Stalls &amp; Brands</span>
               </div>
             </div>
           </div>

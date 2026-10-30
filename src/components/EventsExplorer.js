@@ -15,11 +15,10 @@ export default function EventsExplorer() {
   const searchInputId = useId();
 
   const filterTabs = [
-    { label: "All Editions (2005–2027)", value: "All" },
+    { label: "All Editions (2013–2027)", value: "All" },
     { label: "★ Upcoming 2027", value: "Upcoming" },
     { label: "2020–2026", value: "2020-2026" },
-    { label: "2010–2019", value: "2010-2019" },
-    { label: "2005–2009", value: "2005-2009" },
+    { label: "2013–2019", value: "2013-2019" },
   ];
 
   const getEraMatch = (eventYear, tabValue) => {
@@ -27,8 +26,7 @@ export default function EventsExplorer() {
     if (tabValue === "All") return true;
     if (tabValue === "Upcoming") return yr === 2027;
     if (tabValue === "2020-2026") return yr >= 2020 && yr <= 2026;
-    if (tabValue === "2010-2019") return yr >= 2010 && yr <= 2019;
-    if (tabValue === "2005-2009") return yr >= 2005 && yr <= 2009;
+    if (tabValue === "2013-2019") return yr >= 2013 && yr <= 2019;
     return true;
   };
 
@@ -112,7 +110,7 @@ export default function EventsExplorer() {
             <input
               id={searchInputId}
               type="text"
-              placeholder="Search 2005–2027 by year, topic or CTC hall..."
+              placeholder="Search 2013–2027 by year, topic or CTC hall..."
               value={search}
               onChange={handleSearchChange}
               className="events-search-input"

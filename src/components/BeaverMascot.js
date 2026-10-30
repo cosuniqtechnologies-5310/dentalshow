@@ -22,9 +22,10 @@ export function SparkleStar({ className = "", size = 20, color = "#ffffff" }) {
   );
 }
 
-export default function BeaverMascot({ size = 310, className = "", showCards = true }) {
+export default function BeaverMascot({ size = 310, className = "", showCards = true, showChatbox = undefined }) {
   const width = typeof size === "number" ? size : 310;
   const height = Math.round(width * (1920 / 1359));
+  const displayChatbox = showChatbox !== undefined ? showChatbox : showCards;
 
   return (
     <div
@@ -55,45 +56,47 @@ export default function BeaverMascot({ size = 310, className = "", showCards = t
         </div>
 
         {/* BRAND NEW CONVERSATIONAL CHAT BOX: Floating cleanly above waving hand */}
-        <div className="mascot-chatbox mascot-chatbox--modern" role="status" aria-label="Mr. Dentalshow Mascot Dialogue">
-          {/* Header: Avatar + Identity + Live Edition */}
-          <div className="chatbox-header-row">
-            <div className="chatbox-identity">
-              <div className="chatbox-mascot-avatar" aria-hidden="true">
-                <Image
-                  src="/images/dental-show-mascot-new.png"
-                  alt="Mr. Dentalshow"
-                  width={28}
-                  height={28}
-                  className="chatbox-mascot-img"
-                />
+        {displayChatbox && (
+          <div className="mascot-chatbox mascot-chatbox--modern" role="status" aria-label="Mr. Dentalshow Mascot Dialogue">
+            {/* Header: Avatar + Identity + Live Edition */}
+            <div className="chatbox-header-row">
+              <div className="chatbox-identity">
+                <div className="chatbox-mascot-avatar" aria-hidden="true">
+                  <Image
+                    src="/images/dental-show-mascot-new.png"
+                    alt="Mr. Dentalshow"
+                    width={28}
+                    height={28}
+                    className="chatbox-mascot-img"
+                  />
+                </div>
+                <div className="chatbox-identity-text">
+                  <span className="chatbox-name" style={{ color: "#023E73" }}>Mr. Dentalshow</span>
+                  <span className="chatbox-tagline" style={{ color: "#0d8258" }}>Official Mascot</span>
+                </div>
               </div>
-              <div className="chatbox-identity-text">
-                <span className="chatbox-name" style={{ color: "#023E73" }}>Mr. Dentalshow</span>
-                <span className="chatbox-tagline" style={{ color: "#0d8258" }}>Official Mascot</span>
-              </div>
+              <span className="chatbox-live-badge" style={{ color: "#0d8258" }}>
+                <span className="live-pulse-dot" aria-hidden="true" />
+                <span>LIVE</span>
+              </span>
             </div>
-            <span className="chatbox-live-badge" style={{ color: "#0d8258" }}>
-              <span className="live-pulse-dot" aria-hidden="true" />
-              <span>LIVE</span>
-            </span>
-          </div>
 
-          {/* Dialogue Message */}
-          <div className="chatbox-speech-content">
-            <p className="chatbox-speech-text" style={{ color: "#1e293b" }}>
-              “See you at <strong style={{ color: "#023E73" }}>Chennai Trade Centre</strong>! Feb 6–7, 2027”
-            </p>
-          </div>
+            {/* Dialogue Message */}
+            <div className="chatbox-speech-content">
+              <p className="chatbox-speech-text" style={{ color: "#1e293b" }}>
+                “See you at <strong style={{ color: "#023E73" }}>Chennai Trade Centre</strong>! Feb 6–7, 2027”
+              </p>
+            </div>
 
-          {/* Venue & Hall Tag */}
-          <div className="chatbox-venue-row">
-            <span className="chatbox-venue-pill" style={{ color: "#0369a1" }}>
-              <span className="chatbox-pin-dot" aria-hidden="true">📍</span>
-              <span>New Halls 2, 3 &amp; 3A · CTC</span>
-            </span>
+            {/* Venue & Hall Tag */}
+            <div className="chatbox-venue-row">
+              <span className="chatbox-venue-pill" style={{ color: "#0369a1" }}>
+                <span className="chatbox-pin-dot" aria-hidden="true">📍</span>
+                <span>New Halls 2, 3 &amp; 3A · CTC</span>
+              </span>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* CENTER: Free-standing Beaver Doctor - 100% Unobstructed Face & Body */}
         <div className="mascot-character-core">

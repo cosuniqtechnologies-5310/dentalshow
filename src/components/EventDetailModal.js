@@ -156,7 +156,7 @@ export default function EventDetailModal({ event, onClose }) {
               <div className="modal-meta-icon"><Icon name="users" size={18} /></div>
               <div className="modal-meta-info">
                 <span className="modal-meta-label">Participation</span>
-                <strong>{isUpcoming ? "6,000+ Registered Delegates" : `${event.seats.toLocaleString()}+ Clinical Visitors`}</strong>
+                <strong>{isUpcoming ? "10,000+ Registered Delegates" : `${event.seats.toLocaleString()}+ Clinical Visitors`}</strong>
                 <span className="modal-meta-sub">{event.price}</span>
               </div>
             </div>

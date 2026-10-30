@@ -22,7 +22,7 @@ export const events = [
     ],
     brochureUrl: "/brochures/dental-show-brochure.pdf",
     price: "Free Visitor Registration",
-    seats: 6000,
+    seats: 10000,
     excerpt:
       "Bringing dentists, dental students, manufacturers, traders and the wider dental community together to discover innovations, experience new possibilities and build meaningful connections.",
     description: [
@@ -31,7 +31,7 @@ export const events = [
       "Experience live equipment demonstrations, touch the newest CAD/CAM scanners and restorative biomaterials, and establish lifelong partnerships that elevate clinical care."
     ],
     highlights: [
-      "250+ Leading Global & Indian Exhibitors",
+      "300+ Leading Global & Indian Exhibitors",
       "Chennai Trade Centre New Halls 2, 3 & 3A (Over 10,000 sq.m expo floor)",
       "Live clinical demonstrations & hands-on certified workshops",
       "Official Beaver Mascot welcome & interactive attendee zones",
@@ -580,166 +580,6 @@ export const events = [
     sessions: [
       { time: "10:00 AM", title: "Tooth Preparation for All-Ceramic Restorations", speaker: "Prosthodontic Faculty" },
       { time: "02:00 PM", title: "Modern Dental Chair Maintenance & Safety", speaker: "Technical Panel" },
-    ],
-  },
-  {
-    slug: "dental-show-2011",
-    year: "2011",
-    title: "Dental Show 2011 (Guided Implant Surgery & Rotary Endo)",
-    status: "Past",
-    category: "Past",
-    badge: "Past Event",
-    date: "2011-02-12",
-    dateLabel: "12th & 13th February 2011",
-    time: "09:30 AM – 05:30 PM",
-    venue: "Chennai Trade Centre, Nandambakkam",
-    city: "Chennai, Tamil Nadu",
-    image: "/images/dental-show-images/vlcsnap-2026-10-29-00h42m21s347.png",
-    gallery: [
-      "/images/dental-show-images/vlcsnap-2026-10-29-00h42m21s347.png",
-      "/images/dental-show-images/vlcsnap-2026-10-29-00h42m30s640.png",
-    ],
-    brochureUrl: "/brochures/dental-show-brochure.pdf",
-    price: "Concluded",
-    seats: 2800,
-    excerpt:
-      "Accelerating the adoption of titanium implants and NiTi rotary endodontic instrumentation across clinic practices.",
-    description: [
-      "Held at Chennai Trade Centre, this edition helped general dentists transition from manual hand files to rotary endodontics with precision speed reduction handpieces.",
-      "Over 2,800 clinicians explored early implant kits and surgical motors."
-    ],
-    highlights: [
-      "90+ Exhibitors from India and overseas",
-      "First dedicated Rotary Endo hands-on training zones",
-      "2,800+ attendees"
-    ],
-    ctaText: "View Archive",
-    ctaLink: "/gallery",
-    secondaryCtaText: "Contact Secretariat",
-    secondaryCtaLink: "/contact",
-    sessions: [
-      { time: "09:30 AM", title: "Transitioning to Rotary Endodontics with Safety", speaker: "Endodontic Faculty" },
-      { time: "02:00 PM", title: "Basic Surgical Principles in Implantology", speaker: "Implant Lead" },
-    ],
-  },
-  {
-    slug: "dental-show-2009",
-    year: "2009",
-    title: "Dental Show 2009 (Expanding Clinical Horizons)",
-    status: "Past",
-    category: "Past",
-    badge: "Past Event",
-    date: "2009-02-14",
-    dateLabel: "14th & 15th February 2009",
-    time: "09:30 AM – 05:30 PM",
-    venue: "Chennai Trade Centre, Nandambakkam",
-    city: "Chennai, Tamil Nadu",
-    image: "/images/dental-show-images/vlcsnap-2026-10-29-00h42m24s083.png",
-    gallery: [
-      "/images/dental-show-images/vlcsnap-2026-10-29-00h42m24s083.png",
-      "/images/dental-show-images/vlcsnap-2026-10-29-00h42m35s141.png",
-    ],
-    brochureUrl: "/brochures/dental-show-brochure.pdf",
-    price: "Concluded",
-    seats: 2500,
-    excerpt:
-      "Strengthening trade collaboration across South India with direct manufacturer-clinician interactions.",
-    description: [
-      "Dental Show 2009 expanded its reach across all dental colleges in Tamil Nadu, offering student delegations dedicated scientific tracks and equipment demonstrations."
-    ],
-    highlights: [
-      "80+ Dental Manufacturers and Importers",
-      "Expanded student delegate scientific programs",
-      "Over 2,500 clinical attendees"
-    ],
-    ctaText: "View Photos",
-    ctaLink: "/gallery",
-    secondaryCtaText: "Contact Secretariat",
-    secondaryCtaLink: "/contact",
-    sessions: [
-      { time: "10:00 AM", title: "Restorative Dentistry in General Practice", speaker: "Faculty Panel" },
-      { time: "02:00 PM", title: "Inaugural Student Quiz & Poster Sessions", speaker: "Academic Leads" },
-    ],
-  },
-  {
-    slug: "dental-show-2007",
-    year: "2007",
-    title: "Dental Show 2007 (Technology Transfer & Dealer Growth)",
-    status: "Past",
-    category: "Past",
-    badge: "Past Event",
-    date: "2007-02-10",
-    dateLabel: "10th & 11th February 2007",
-    time: "09:30 AM – 05:30 PM",
-    venue: "Chennai Trade Centre, Nandambakkam",
-    city: "Chennai, Tamil Nadu",
-    image: "/images/dental-show-images/vlcsnap-2026-10-29-00h42m25s430.png",
-    gallery: [
-      "/images/dental-show-images/vlcsnap-2026-10-29-00h42m25s430.png",
-      "/images/dental-show-images/vlcsnap-2026-10-29-00h42m33s475.png",
-    ],
-    brochureUrl: "/brochures/dental-show-brochure.pdf",
-    price: "Concluded",
-    seats: 2100,
-    excerpt:
-      "The 2nd flagship convention by TNDTMA, establishing an enduring biennial tradition of dental exhibitions in Tamil Nadu.",
-    description: [
-      "Building on the massive success of the 2005 launch, Dental Show 2007 doubled in scale, bringing cutting-edge dental materials and autoclaves to over 2,100 clinicians."
-    ],
-    highlights: [
-      "70+ Dental Trade Stalls",
-      "Formalization of TNDTMA Member Benefits",
-      "Over 2,100 registered attendees"
-    ],
-    ctaText: "View Archive",
-    ctaLink: "/gallery",
-    secondaryCtaText: "Contact Secretariat",
-    secondaryCtaLink: "/contact",
-    sessions: [
-      { time: "10:00 AM", title: "Evolution of Light-Curing Composites", speaker: "Materials Panel" },
-      { time: "02:30 PM", title: "Clinic Management & Equipment Longevity", speaker: "Trade Committee" },
-    ],
-  },
-  {
-    slug: "dental-show-2005",
-    year: "2005",
-    title: "Dental Show 2005 (The Historic Inaugural Edition)",
-    status: "Past",
-    category: "Past",
-    badge: "Historic 1st Edition • Foundation",
-    date: "2005-02-12",
-    dateLabel: "12th & 13th February 2005",
-    time: "09:00 AM – 06:00 PM",
-    venue: "Inaugural Convention Grounds, Chennai",
-    city: "Chennai, Tamil Nadu",
-    image: "/images/dental-show-images/vlcsnap-2026-10-29-00h39m04s120.png",
-    gallery: [
-      "/images/dental-show-images/vlcsnap-2026-10-29-00h39m04s120.png",
-      "/images/dental-show-images/vlcsnap-2026-10-29-00h41m55s011.png",
-      "/images/dental-show-images/vlcsnap-2026-10-29-00h40m36s010.png",
-    ],
-    brochureUrl: "/brochures/dental-show-brochure.pdf",
-    price: "Historic Concluded",
-    seats: 1800,
-    excerpt:
-      "The very first Dental Show in Tamil Nadu, born from a vision established around 2000 and officially registered under TNDTMA.",
-    description: [
-      "What began as a shared dream around 2000 to unite Tamil Nadu's fragmented dental trade became historic reality in 2005 with the formation of TNDTMA and the inaugural Dental Show.",
-      "Over 1,800 pioneering dentists and 50 trade stalls gathered for the first time under one roof, establishing the benchmark for all South Asian dental exhibitions to follow."
-    ],
-    highlights: [
-      "First Ever Dental Show in Tamil Nadu",
-      "Registration of TNDTMA Association in 2005",
-      "50+ Foundation Trade Stalls & 1,800 Pioneering Dentists",
-      "Sparked two decades of continuous clinical excellence"
-    ],
-    ctaText: "View Historic Story",
-    ctaLink: "/about",
-    secondaryCtaText: "Contact Secretariat",
-    secondaryCtaLink: "/contact",
-    sessions: [
-      { time: "09:00 AM", title: "Grand Inaugural Opening Ceremony of TNDTMA", speaker: "Founding Dental Show Leaders" },
-      { time: "02:00 PM", title: "The Future of Dental Trade in Tamil Nadu", speaker: "First Trade Council" },
     ],
   },
 ];

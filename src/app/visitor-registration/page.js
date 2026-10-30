@@ -34,7 +34,7 @@ export default function VisitorRegistrationPage() {
       icon: "sparkle",
       tag: "EXPO FLOOR",
       theme: "green",
-      title: "250+ Global Brands & Live Demos",
+      title: "300+ Stalls, Brands & Live Demos",
       text: "Hands-on experience with intraoral scanners, 3D printers, CBCT, and advanced biomaterials.",
     },
     {
@@ -42,7 +42,7 @@ export default function VisitorRegistrationPage() {
       tag: "COMMUNITY",
       theme: "sky",
       title: "Community & Networking",
-      text: "Connect with 6,000+ dental colleagues, professors, and pioneering industry leaders.",
+      text: "Connect with 10,000+ dental colleagues, professors, and pioneering industry leaders.",
     },
     {
       icon: "star",
@@ -191,7 +191,7 @@ export default function VisitorRegistrationPage() {
                   </div>
                   <div className="badge-check-item">
                     <span className="badge-check-icon badge-check-icon--blue">✓</span>
-                    <span>250+ Brands, Live Demos &amp; Exhibition Stalls</span>
+                    <span>300+ Stalls, Brands &amp; Live Demos</span>
                   </div>
                   <div className="badge-check-item">
                     <span className="badge-check-icon badge-check-icon--blue">✓</span>

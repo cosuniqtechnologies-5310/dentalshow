@@ -10,7 +10,7 @@ function resolveMascotQuote(title, customQuote) {
   if (t.includes("event")) return "50+ Clinical Masterclasses & Hands-on Labs!";
   if (t.includes("gallery")) return "Relive 20 Years of Cherished Memories!";
   if (t.includes("visitor")) return "Free entry for registered dental delegates!";
-  if (t.includes("exhibitor")) return "Connect with 6,000+ clinicians & trade buyers!";
+  if (t.includes("exhibitor")) return "Connect with 10,000+ clinicians & trade buyers!";
   if (t.includes("student")) return "Empowering the next generation of dentists!";
   if (t.includes("terms") || t.includes("privacy")) return "Clear, trusted policies for all participants.";
   return "See. Touch. Feel. Experience.";
