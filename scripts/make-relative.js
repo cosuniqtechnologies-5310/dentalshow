@@ -693,6 +693,7 @@ function getStandaloneScript(prefix) {
 
   // 7. OFFLINE / FILE PROTOCOL IMAGE AUTO-REPAIR
   function initImageFixer() {
+    if (typeof window === "undefined" || window.location.protocol !== "file:") return;
     function fixImg(img) {
       if (!img || img.dataset.relFixed) return;
       var src = img.getAttribute("src");
@@ -702,7 +703,7 @@ function getStandaloneScript(prefix) {
       }
       var srcset = img.getAttribute("srcset");
       if (srcset && srcset.indexOf("/images/") !== -1) {
-        img.setAttribute("srcset", srcset.replace(/(^|\s|,)\/images\//g, "$1${prefix}images/"));
+        img.setAttribute("srcset", srcset.split("/images/").join("${prefix}images/"));
       }
     }
 
@@ -773,7 +774,7 @@ function processHtmlFile(filePath) {
   html = html.replace(/href=["']\/icon\.png["']/g, `href="${prefix}icon.png"`);
   html = html.replace(/href=["']\/apple-icon\.png["']/g, `href="${prefix}apple-icon.png"`);
   html = html.replace(/srcset=["']([^"']*)["']/g, (match, val) => {
-    return `srcset="${val.replace(/(^|\s|,)\/images\//g, `$1${prefix}images/`).replace(/(^|\s|,)\/_next\//g, `$1${prefix}_next/`)}"`;
+    return `srcset="${val.split('/images/').join(`${prefix}images/`).split('/_next/').join(`${prefix}_next/`)}"`;
   });
 
   // 2. Internal navigation links for offline browsing

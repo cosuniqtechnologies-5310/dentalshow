@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/make-relative.js",
+    "build": "next build",
+    "build:offline": "next build && node scripts/make-relative.js",
     "start": "next start",
     "lint": "eslint"
   },

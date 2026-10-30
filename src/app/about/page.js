@@ -157,18 +157,18 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Bottom 4-Column Stat Counter Bar with Theme Color Accents */}
+          {/* Bottom 4-Column Stat Counter Bar (One Line, No Borders/Cards, Matching Image 1) */}
           <div className="split-stats-bar">
             <div className="split-stat-item">
-              <span className="split-stat-num num-navy">13+</span>
-              <span className="split-stat-lbl">Years Legacy</span>
+              <span className="split-stat-num num-navy">20+</span>
+              <span className="split-stat-lbl">Years Of Experience</span>
             </div>
             <div className="split-stat-item">
-              <span className="split-stat-num num-royal">300+</span>
-              <span className="split-stat-lbl">Stalls &amp; Brands</span>
+              <span className="split-stat-num num-royal">250+</span>
+              <span className="split-stat-lbl">Exhibiting Brands</span>
             </div>
             <div className="split-stat-item">
-              <span className="split-stat-num num-emerald">10,000+</span>
+              <span className="split-stat-num num-emerald">6,000+</span>
               <span className="split-stat-lbl">Dental Professionals</span>
             </div>
             <div className="split-stat-item">
