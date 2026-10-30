@@ -18,7 +18,7 @@ export default function IntroVideoSection() {
                 <Icon name="mic" size={44} strokeWidth={1.5} />
               </span>
               <h3 className="ts-title">Great Speakers</h3>
-              <p>How you transform your business as technology, consumer, habits industry dynamic</p>
+              <p>Discover insights from renowned clinical pioneers, dental educators, and keynote industry speakers.</p>
               <span className="count-number">01</span>
             </div>
 
@@ -27,7 +27,7 @@ export default function IntroVideoSection() {
                 <Icon name="users" size={44} strokeWidth={1.5} />
               </span>
               <h3 className="ts-title">New People</h3>
-              <p>How you transform your business as technology, consumer, habits industry dynamic</p>
+              <p>Connect with thousands of clinicians, dental laboratory owners, and fellow practitioners.</p>
               <span className="count-number">03</span>
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function IntroVideoSection() {
                 <Icon name="handshake" size={44} strokeWidth={1.5} />
               </span>
               <h3 className="ts-title">Networking</h3>
-              <p>How you transform your business as technology, consumer, habits industry dynamic</p>
+              <p>Foster strategic B2B trade partnerships with leading equipment manufacturers and distributors.</p>
               <span className="count-number">02</span>
             </div>
 
@@ -70,7 +70,7 @@ export default function IntroVideoSection() {
                 <Icon name="sparkle" size={44} strokeWidth={1.5} />
               </span>
               <h3 className="ts-title">Have Fun</h3>
-              <p>How you transform your business as technology, consumer, habits industry dynamic</p>
+              <p>Celebrate two decades of dental innovation with hands-on demonstrations and mascot experiences.</p>
               <span className="count-number">04</span>
             </div>
           </div>

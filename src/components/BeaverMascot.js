@@ -179,7 +179,7 @@ export default function BeaverMascot({ size = 310, className = "", showCards = t
                   <span>EXPO HIGHLIGHT</span>
                 </div>
                 <div className="orbit-card-offer-text">
-                  New product launch and special offers
+                  New product launches &amp; special offers
                 </div>
               </div>
             </div>

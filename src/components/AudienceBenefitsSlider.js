@@ -20,7 +20,7 @@ const defaultAudienceGroups = [
   },
   {
     id: "students",
-    role: "For Dental Students & Aspiring Dentists",
+    role: "For Dental Students",
     category: "ACADEMIA & FUTURE",
     badgeLabel: "LEARN",
     badgeValue: "Mentorship",
@@ -56,7 +56,7 @@ const defaultAudienceGroups = [
   },
   {
     id: "technicians",
-    role: "For Dental Technicians, Laboratories & Institutions",
+    role: "For Dental Technicians & Labs",
     category: "DIGITAL WORKFLOW",
     badgeLabel: "LABS",
     badgeValue: "CAD/CAM",
@@ -68,9 +68,7 @@ const defaultAudienceGroups = [
   },
 ];
 
-function AudienceCard({ group }) {
-  const [activeItem, setActiveItem] = useState(null);
-
+function AudienceCard({ group, activeKey, onToggleKey }) {
   const triadItems = [
     {
       key: "discover",
@@ -88,10 +86,6 @@ function AudienceCard({ group }) {
       text: group.grow,
     },
   ];
-
-  const handleToggle = (key) => {
-    setActiveItem((prev) => (prev === key ? null : key));
-  };
 
   return (
     <article className="benefit-staple-card" id={`audience-card-${group.id}`}>
@@ -121,7 +115,7 @@ function AudienceCard({ group }) {
       {/* Bottom Card Content: Cover Title + Discover, Connect, Grow Accordion */}
       <div className="staple-card-body">
         {/* Cover Title */}
-        <h3 className="staple-card-title">{group.role}</h3>
+        <h3 className="staple-card-title" title={group.role}>{group.role}</h3>
 
         {/* Triads Accordion: Discover, Connect, Grow (Full Color Fill) */}
         <div
@@ -130,7 +124,7 @@ function AudienceCard({ group }) {
           aria-label={`${group.role} benefit highlights`}
         >
           {triadItems.map((item) => {
-            const isOpen = activeItem === item.key;
+            const isOpen = activeKey === item.key;
             return (
               <div
                 key={item.key}
@@ -139,7 +133,7 @@ function AudienceCard({ group }) {
                 <button
                   type="button"
                   className={`staple-accordion-header-btn staple-accordion-header-btn--${item.key} ${isOpen ? "is-open" : ""}`}
-                  onClick={() => handleToggle(item.key)}
+                  onClick={() => onToggleKey(item.key)}
                   aria-expanded={isOpen}
                   aria-controls={`accordion-content-${group.id}-${item.key}`}
                 >
@@ -187,7 +181,20 @@ function AudienceCard({ group }) {
             id={`btn-explore-${group.id}`}
           >
             <span>Explore Role Benefits</span>
-            <span className="action-btn-arrow" aria-hidden="true">→</span>
+            <span className="action-btn-arrow" aria-hidden="true">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </span>
           </Link>
         </div>
       </div>
@@ -200,6 +207,11 @@ export default function AudienceBenefitsSlider({ audienceGroups = defaultAudienc
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
   const [isViewAll, setIsViewAll] = useState(false);
+  const [activeKey, setActiveKey] = useState(null);
+
+  const handleToggleKey = (key) => {
+    setActiveKey((prev) => (prev === key ? null : key));
+  };
 
   const checkScrollState = () => {
     if (!sliderRef.current) return;
@@ -347,7 +359,12 @@ export default function AudienceBenefitsSlider({ audienceGroups = defaultAudienc
         tabIndex={0}
       >
         {audienceGroups.map((group) => (
-          <AudienceCard key={group.id} group={group} />
+          <AudienceCard
+            key={group.id}
+            group={group}
+            activeKey={activeKey}
+            onToggleKey={handleToggleKey}
+          />
         ))}
       </div>
     </div>

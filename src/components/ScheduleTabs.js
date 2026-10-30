@@ -21,8 +21,8 @@ export default function ScheduleTabs() {
             </h2>
             <div className="title-zigzag" aria-hidden="true" />
             <p className="schedule-intro-text">
-              World is committed to making participation in the event a harassment free experience for everyone,
-              regardless of level of experience, gender, gender identity and expression
+              TNDTMA is committed to making participation in the event a harassment-free experience for everyone,
+              regardless of level of experience, gender, gender identity, and expression.
             </p>
           </div>
         </div>

@@ -15,13 +15,23 @@ export function Logo({ light = false }) {
       aria-label={`${site.name} home`}
     >
       <div className="site-brand-wrap">
+        {/* Light Theme Logo: Dark Navy "Dental" on white/light headers */}
         <Image
           src="/images/logos/logo.png"
           alt="Dental Show 2027 Logo"
           width={240}
           height={80}
           priority
-          className="exhibz-logo__img"
+          className="exhibz-logo__img exhibz-logo__img--light"
+        />
+        {/* Dark Theme Logo: Crisp White "Dental" on dark headers / mobile dark mode */}
+        <Image
+          src="/images/logos/dental_show_2027_logo_dark_header.png"
+          alt="Dental Show 2027 Logo"
+          width={240}
+          height={80}
+          priority
+          className="exhibz-logo__img exhibz-logo__img--dark"
         />
       </div>
     </Link>
@@ -95,14 +105,14 @@ export default function Header() {
               className="btn-header-visitor"
               onClick={() => setOpen(false)}
             >
-              Visitor registration
+              <span>Visitor registration</span>
             </Link>
             <Link
               href="/exhibitor-registration"
               className="btn-header-exhibitor"
               onClick={() => setOpen(false)}
             >
-              Exhibitor registration
+              <span>Exhibitor registration</span>
             </Link>
           </div>
         </nav>

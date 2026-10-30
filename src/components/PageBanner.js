@@ -24,7 +24,6 @@ export default function PageBanner({
   showMascot = true,
   mascotQuote,
   mascotBadge = "Official Mascot",
-  editionBadge = "20th Milestone Edition",
   showMeta = true,
 }) {
   const quote = resolveMascotQuote(title, mascotQuote);
@@ -95,13 +94,6 @@ export default function PageBanner({
                   </span>
                 ))}
               </nav>
-
-              {editionBadge && (
-                <div className="banner-milestone-pill">
-                  <span className="milestone-sparkle" aria-hidden="true">✦</span>
-                  <span>{editionBadge}</span>
-                </div>
-              )}
             </div>
 
             <h1 className="page-banner__title">{title}</h1>
@@ -144,22 +136,6 @@ export default function PageBanner({
                     <circle cx="12" cy="10" r="3" />
                   </svg>
                   <span>Chennai Trade Centre (CTC)</span>
-                </div>
-                <div className="banner-meta-chip banner-meta-chip--highlight">
-                  <svg
-                    width="13"
-                    height="13"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  <span>Hall 2, 3 &amp; 3A · 250+ Brands</span>
                 </div>
               </div>
             )}

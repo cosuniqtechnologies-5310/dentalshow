@@ -51,7 +51,7 @@ const stagesData = [
     title: "Postgraduates & Aspiring Dentists",
     tagline: "ACADEMIC EXCELLENCE & CAREER LAUNCHPAD",
     story:
-      "Providing student-friendly registration packages, live clinical masterclasses with renowned faculties, and realistic consultation guidance for setting up new clinical operatory practices.",
+      "Providing student-friendly registration packages, live clinical masterclasses with renowned faculty members, and realistic consultation guidance for setting up new clinical operatory practices.",
     tags: [
       "Pillar 03 of 05",
       "BDS & MDS Workshops",

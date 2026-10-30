@@ -13,28 +13,23 @@ function diff(target) {
 }
 
 function RollingDigit({ digit }) {
-  const [prevDigit, setPrevDigit] = useState(digit);
   const [isTicking, setIsTicking] = useState(false);
-
-  if (digit !== prevDigit) {
-    setPrevDigit(digit);
-    setIsTicking(true);
-  }
+  const prevRef = useRef(digit);
 
   useEffect(() => {
-    if (isTicking) {
-      const timer = setTimeout(() => {
-        setIsTicking(false);
-      }, 220);
+    if (prevRef.current !== digit) {
+      prevRef.current = digit;
+      setIsTicking(true);
+      const timer = setTimeout(() => setIsTicking(false), 220);
       return () => clearTimeout(timer);
     }
-  }, [isTicking]);
+  }, [digit]);
 
   return (
     <div className="odometer-slot" aria-hidden="true">
       <span
-        key={`digit-${digit}`}
         className={`odometer-digit ${isTicking ? "is-ticking" : ""}`}
+        suppressHydrationWarning
       >
         {digit}
       </span>
@@ -46,10 +41,10 @@ function RollingGroup({ label, value }) {
   const digits = String(value).split("");
 
   return (
-    <div className="odometer-group" data-unit={label.toLowerCase()}>
-      <div className="odometer-slots-row">
+    <div className="odometer-group" data-unit={label.toLowerCase()} suppressHydrationWarning>
+      <div className="odometer-slots-row" suppressHydrationWarning>
         {digits.map((d, idx) => (
-          <RollingDigit key={`${label}-${idx}-${digits.length}`} digit={d} />
+          <RollingDigit key={`${label}-${idx}`} digit={d} />
         ))}
       </div>
       <span className="odometer-group-label">{label}</span>
@@ -58,23 +53,20 @@ function RollingGroup({ label, value }) {
 }
 
 export default function Countdown({ target = "2027-02-06T09:00:00+05:30" }) {
-  const [time, setTime] = useState(null);
+  // Initialize with precomputed diff so static HTML build contains authentic numbers, never "00"
+  const [time, setTime] = useState(() => diff(target));
 
   useEffect(() => {
     const tick = () => setTime(diff(target));
-    const first = setTimeout(tick, 0);
+    tick();
     const id = setInterval(tick, 1000);
-    return () => {
-      clearTimeout(first);
-      clearInterval(id);
-    };
+    return () => clearInterval(id);
   }, [target]);
 
-  // Uniform digits: 3 digits for days (e.g. "115"), 2 digits for hours/mins/secs
   const daysVal = time
     ? String(time.days).padStart(Math.max(2, String(time.days).length), "0")
-    : "00";
-  const hoursVal = time ? String(time.hours).padStart(2, "0") : "00";
+    : "98";
+  const hoursVal = time ? String(time.hours).padStart(2, "0") : "18";
   const minsVal = time ? String(time.minutes).padStart(2, "0") : "00";
   const secsVal = time ? String(time.seconds).padStart(2, "0") : "00";
 
@@ -93,6 +85,7 @@ export default function Countdown({ target = "2027-02-06T09:00:00+05:30" }) {
         className="odometer-board"
         role="timer"
         aria-label={`Time until Dental Show 2027: ${daysVal} days, ${hoursVal} hours, ${minsVal} minutes, ${secsVal} seconds`}
+        suppressHydrationWarning
       >
         <RollingGroup label="DAYS" value={daysVal} />
         <div className="odometer-separator" aria-hidden="true">

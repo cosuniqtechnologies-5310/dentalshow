@@ -66,8 +66,9 @@ export default function HomePage() {
                       href="/exhibitor-registration"
                       className="btn btn-hero-exhibitor"
                       id="hero-exhibitor-btn"
+                      style={{ color: "#023E73", WebkitTextFillColor: "#023E73", background: "#ffffff" }}
                     >
-                      <span>Register as an exhibitor</span>
+                      <span style={{ color: "#023E73", WebkitTextFillColor: "#023E73" }}>Register as an exhibitor</span>
                     </Link>
                   </div>
                 </div>
@@ -161,8 +162,9 @@ export default function HomePage() {
                         href="/exhibitor-registration"
                         className="btn btn-countdown-secondary"
                         id="countdown-exhibitor-btn"
+                        style={{ color: "#023E73", WebkitTextFillColor: "#023E73", background: "#ffffff" }}
                       >
-                        <span>Exhibitor registration</span>
+                        <span style={{ color: "#023E73", WebkitTextFillColor: "#023E73" }}>Exhibitor registration</span>
                       </Link>
                     </div>
                   </div>

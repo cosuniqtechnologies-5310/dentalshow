@@ -3,7 +3,7 @@ import { site } from "@/data/site";
 
 export const metadata = {
   title: "Disclaimer",
-  description: "Important information about the content, speakers, schedule and external links on the DentalShow website.",
+  description: "Important information about the content, speakers, schedule and external links on the Dental Show website.",
 };
 
 const sections = [
@@ -18,7 +18,7 @@ const sections = [
     id: "no-professional-advice",
     title: "No clinical or professional advice",
     paragraphs: [
-      "Content presented at or in connection with DentalShow, including talks, workshops and exhibitor materials, represents the views of the individual presenters. It is not clinical, legal or financial advice and should not replace your own professional judgement.",
+      "Content presented at or in connection with Dental Show, including talks, workshops and exhibitor materials, represents the views of the individual presenters. It is not clinical, legal or financial advice and should not replace your own professional judgement.",
     ],
   },
   {
@@ -32,7 +32,7 @@ const sections = [
     id: "exhibitors-sponsors",
     title: "Exhibitors and sponsors",
     paragraphs: [
-      "Products and services shown by exhibitors and sponsors are their own responsibility. Inclusion in the programme or expo does not constitute an endorsement by DentalShow.",
+      "Products and services shown by exhibitors and sponsors are their own responsibility. Inclusion in the programme or expo does not constitute an endorsement by Dental Show.",
     ],
   },
   {

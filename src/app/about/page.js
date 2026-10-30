@@ -253,7 +253,7 @@ export default function AboutPage() {
               <span className="process-step-num num-c4">04</span>
               <div className="process-step-accent-bar bar-c4" />
               <h3 className="process-step-year">2025</h3>
-              <span className="process-era-pill pill-emerald">TWO DECADES IMPACT</span>
+              <span className="process-era-pill pill-emerald">TWO DECADES OF IMPACT</span>
               <p className="process-step-text">
                 Celebrating 20 editions of trust, empowering over 6,000 dental delegates annually and
                 establishing Chennai as South India&apos;s dental innovation capital.
@@ -467,7 +467,7 @@ export default function AboutPage() {
             </p>
             <p className="about-mascot-desc text-white" style={{ color: "rgba(255, 255, 255, 0.95)" }}>
               Our friendly mascot, Mr. Dentalshow, welcomes thousands of clinicians, students, and exhibitors
-              to Chennai Trade Centre, embodying the spirit: <em>&ldquo;See. Touch. Feel. Experience.&rdquo;</em>
+              to Chennai Trade Centre, embodying the spirit: <em>“See. Touch. Feel. Experience.”</em>
             </p>
             <div className="mascot-cta-row mt-md">
               <Link href="/events" className="btn btn--primary">

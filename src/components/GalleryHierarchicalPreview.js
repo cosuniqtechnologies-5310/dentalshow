@@ -1,146 +1,38 @@
 "use client";
 
-import { useState, useRef, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Icon from "./Icon";
 import { galleryItems } from "@/data/gallery";
 
+// Divide authentic photos into two distinct rows of 15 unique moments each
+const row1Items = galleryItems.slice(0, 15);
+const row2Items = galleryItems.slice(15, 30);
+
+// Combined unique collection for lightbox carousel browsing
+const allModalItems = [...row1Items, ...row2Items];
+const TOTAL_PHOTOS = allModalItems.length;
+
 export default function GalleryHierarchicalPreview() {
-  const [activeFilter, setActiveFilter] = useState("All");
   const [lightboxIndex, setLightboxIndex] = useState(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(true);
-  const [canScrollRight, setCanScrollRight] = useState(true);
-  const trackRef = useRef(null);
 
-  // Real authentic moments from the Dental Show gallery
-  const allMoments = galleryItems.slice(0, 16);
-
-  const categories = [
-    { label: "All Highlights", value: "All", count: allMoments.length },
-    {
-      label: "Exhibition Floor",
-      value: "Exhibition Floor",
-      count: allMoments.filter((item) => item.category === "Exhibition Floor").length,
-      icon: "store",
-    },
-    {
-      label: "Instruments & Tech",
-      value: "Instruments & Technology",
-      count: allMoments.filter((item) => item.category === "Instruments & Technology").length,
-      icon: "sparkle",
-    },
-    {
-      label: "Venue & Entry",
-      value: "Registration & Venue",
-      count: allMoments.filter((item) => item.category === "Registration & Venue").length,
-      icon: "pin",
-    },
-    {
-      label: "Trade & Networking",
-      value: "Trade & Networking",
-      count: allMoments.filter((item) => item.category === "Trade & Networking").length,
-      icon: "handshake",
-    },
-  ];
-
-  const filteredItems =
-    activeFilter === "All"
-      ? allMoments
-      : allMoments.filter((item) => item.category === activeFilter);
-
-  // Smooth carousel scroll by card width
-  const scroll = (direction) => {
-    if (!trackRef.current) return;
-    const cardEl = trackRef.current.querySelector(".gallery-clean-card");
-    const step = cardEl ? cardEl.offsetWidth + 22 : 422;
-    const scrollAmount = direction === "left" ? -step : step;
-    trackRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  const openLightbox = (item) => {
+    const idx = allModalItems.findIndex((it) => it.id === item.id);
+    setLightboxIndex(idx !== -1 ? idx : 0);
   };
 
-  const handleScroll = () => {
-    if (!trackRef.current) return;
-    const { scrollLeft, scrollWidth, clientWidth } = trackRef.current;
-    setCanScrollLeft(scrollLeft > 10);
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
-  };
-
-  // On mount or filter change: set initial scroll so left shows half slide & right shows half slide
-  useEffect(() => {
-    const el = trackRef.current;
-    if (!el) return;
-
-    if (activeFilter === "All" && filteredItems.length > 3) {
-      // Offset so previous card peeks on left and next peeks on right
-      const cardEl = el.querySelector(".gallery-clean-card");
-      const offset = cardEl ? Math.round(cardEl.offsetWidth * 0.42) : 170;
-      el.scrollTo({ left: offset, behavior: "instant" });
-    } else {
-      el.scrollTo({ left: 0, behavior: "smooth" });
-    }
-
-    handleScroll();
-    el.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("resize", handleScroll);
-    return () => {
-      el.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
-    };
-  }, [activeFilter, filteredItems.length]);
-
-  const getThemeMeta = (category) => {
-    if (category.includes("Keynotes")) {
-      return {
-        badgeClass: "badge-glass-blue",
-        icon: "mic",
-        shortTag: "Keynote Conference",
-        location: "Auditorium Hall",
-      };
-    }
-    if (category.includes("Workshops")) {
-      return {
-        badgeClass: "badge-glass-green",
-        icon: "flask",
-        shortTag: "Clinical Workshop",
-        location: "Hands-on Training Lab",
-      };
-    }
-    if (category.includes("Exhibition")) {
-      return {
-        badgeClass: "badge-glass-amber",
-        icon: "store",
-        shortTag: "Exhibition Floor",
-        location: "Central Trade Pavilions",
-      };
-    }
-    if (category.includes("Networking")) {
-      return {
-        badgeClass: "badge-glass-purple",
-        icon: "handshake",
-        shortTag: "Networking & Gala",
-        location: "Grand Ballroom & Lounge",
-      };
-    }
-    return {
-      badgeClass: "badge-glass-blue",
-      icon: "mic",
-      shortTag: category,
-      location: "Chennai Trade Centre",
-    };
-  };
-
-  // Lightbox handlers
   const closeLightbox = useCallback(() => setLightboxIndex(null), []);
   const nextPhoto = useCallback(() => {
     setLightboxIndex((prev) =>
-      prev === null ? null : (prev + 1) % filteredItems.length
+      prev === null ? null : (prev + 1) % TOTAL_PHOTOS
     );
-  }, [filteredItems.length]);
+  }, []);
   const prevPhoto = useCallback(() => {
     setLightboxIndex((prev) =>
-      prev === null ? null : (prev - 1 + filteredItems.length) % filteredItems.length
+      prev === null ? null : (prev - 1 + TOTAL_PHOTOS) % TOTAL_PHOTOS
     );
-  }, [filteredItems.length]);
+  }, []);
 
   useEffect(() => {
     if (lightboxIndex === null) return;
@@ -157,13 +49,12 @@ export default function GalleryHierarchicalPreview() {
     };
   }, [lightboxIndex, closeLightbox, nextPhoto, prevPhoto]);
 
-  const activePhoto = lightboxIndex !== null ? filteredItems[lightboxIndex] : null;
+  const activePhoto = lightboxIndex !== null ? allModalItems[lightboxIndex] : null;
 
   return (
     <div className="gallery-showcase-section">
       {/* 1. Header (Inside Container for Perfect Alignment with Site Grid) */}
       <div className="container">
-        {/* Row 1: Eyebrow, Title & Subtitle on Left + Explore Central Expo Gallery CTA on Right */}
         <div className="gallery-header-top-row">
           <div className="gallery-header-text">
             <div className="gallery-eyebrow-row">
@@ -189,159 +80,99 @@ export default function GalleryHierarchicalPreview() {
             </Link>
           </div>
         </div>
-
-        {/* Row 2: Full-Width Unified Tab Bar with Navigation Arrows Inside at the End */}
-        <div className="gallery-unified-tab-bar" role="toolbar" aria-label="Category filters and navigation">
-          {/* Category Filter Chips on Left */}
-          <div className="gallery-tab-items" role="tablist" aria-label="Category filters">
-            {categories.map((cat) => {
-              const isActive = activeFilter === cat.value;
-              return (
-                <button
-                  key={cat.value}
-                  type="button"
-                  role="tab"
-                  aria-selected={isActive}
-                  className={`gallery-category-chip ${isActive ? "is-active" : ""}`}
-                  onClick={() => {
-                    setActiveFilter(cat.value);
-                    setLightboxIndex(null);
-                  }}
-                >
-                  {cat.icon && <Icon name={cat.icon} size={13} className="chip-icon" />}
-                  <span className="chip-label">{cat.label}</span>
-                  <span className="chip-count">{cat.count}</span>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Navigation Arrows INSIDE the Tab Bar at the End */}
-          <div className="gallery-tab-end-arrows" aria-label="Gallery carousel navigation">
-            <button
-              type="button"
-              className={`gallery-nav-arrow-btn ${!canScrollLeft ? "is-disabled" : ""}`}
-              onClick={() => scroll("left")}
-              aria-label="Previous moments"
-              disabled={!canScrollLeft}
-              title="Previous moments"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M15 18l-6-6 6-6" />
-              </svg>
-            </button>
-            <button
-              type="button"
-              className={`gallery-nav-arrow-btn ${!canScrollRight ? "is-disabled" : ""}`}
-              onClick={() => scroll("right")}
-              aria-label="Next moments"
-              disabled={!canScrollRight}
-              title="Next moments"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
 
-      {/* 2. Full-Screen Horizontal Cards Track (Shows half slide on left & half slide on right, NO scrollbar) */}
-      <div className="gallery-slider-fullbleed">
-        <div
-          ref={trackRef}
-          className="gallery-cards-track"
-          role="region"
-          aria-label="Gallery moments cards carousel"
-          tabIndex={0}
-        >
-          {filteredItems.map((item, index) => {
-            const theme = getThemeMeta(item.category);
-
-            return (
-              <article
-                key={item.id}
-                className="gallery-clean-card"
-                onClick={() => setLightboxIndex(index)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    setLightboxIndex(index);
-                  }
-                }}
-                tabIndex={0}
-                role="button"
-                aria-label={`Open photo preview: ${item.title}`}
-              >
-                {/* 1. Rectangle Landscape Image Container (16:9 Full View) */}
-                <div className="clean-card-img-container">
+      {/* 2. Dual-Row Continuous Infinite Marquee (Image Only, No Hover Effects) */}
+      <div className="gallery-marquee-wrapper" aria-label="Continuous gallery preview stream">
+        {/* TOP ROW: Continuously scrolls right to left */}
+        <div className="gallery-marquee-row">
+          <div className="gallery-marquee-track gallery-marquee-track--left">
+            <div className="gallery-marquee-group">
+              {row1Items.map((item, idx) => (
+                <button
+                  key={`top-g1-${item.id}-${idx}`}
+                  type="button"
+                  className="gallery-marquee-card"
+                  onClick={() => openLightbox(item)}
+                  aria-label={item.title}
+                >
                   <Image
                     src={item.src}
                     alt={item.title}
                     fill
-                    sizes="(max-width: 768px) 320px, 420px"
-                    className="clean-card-img"
-                    priority={index < 4}
+                    sizes="(max-width: 768px) 260px, 350px"
+                    className="gallery-marquee-img"
+                    priority={idx < 4}
                   />
+                </button>
+              ))}
+            </div>
+            <div className="gallery-marquee-group" aria-hidden="true">
+              {row1Items.map((item, idx) => (
+                <button
+                  key={`top-g2-${item.id}-${idx}`}
+                  type="button"
+                  tabIndex={-1}
+                  className="gallery-marquee-card"
+                  onClick={() => openLightbox(item)}
+                  aria-label={item.title}
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 260px, 350px"
+                    className="gallery-marquee-img"
+                  />
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
 
-                  {/* Floating Top Badges (Category & Year) */}
-                  <div className="clean-card-top-bar">
-                    <span className={`clean-card-badge ${theme.badgeClass}`}>
-                      <Icon name={theme.icon} size={11} className="badge-cat-icon" />
-                      <span>{theme.shortTag}</span>
-                    </span>
-
-                    <span className="clean-card-year-badge">
-                      <Icon name="calendar" size={11} className="badge-cal-icon" />
-                      <span>{item.year}</span>
-                    </span>
-                  </div>
-                </div>
-
-                {/* 2. Dedicated High-Contrast Content Area Below Photo (100% Font Visibility) */}
-                <div className="clean-card-bottom-bar">
-                  <div className="clean-card-text">
-                    <div className="clean-card-location-row">
-                      <span className="clean-card-location-tag">
-                        <span className="location-sparkle">✦</span>
-                        <span>{theme.location}</span>
-                      </span>
-                      <span className="clean-card-hd-badge">16:9 FULL VIEW</span>
-                    </div>
-
-                    <h3 className="clean-card-title">{item.title}</h3>
-
-                    <p className="clean-card-caption">{item.caption}</p>
-                  </div>
-
-                  {/* Circular Action Arrow & Tap Hint */}
-                  <div className="clean-card-footer">
-                    <span className="clean-card-action-text">
-                      <span>View Fullscreen</span>
-                      <span className="clean-card-action-dot">●</span>
-                      <span className="clean-card-action-sub">HD Gallery</span>
-                    </span>
-
-                    <div className="clean-card-arrow-circle" title="View Fullscreen in Lightbox">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="clean-arrow-svg"
-                      >
-                        <path d="M7 17L17 7M7 7h10v10" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            );
-          })}
+        {/* BOTTOM ROW: Continuously scrolls left to right */}
+        <div className="gallery-marquee-row">
+          <div className="gallery-marquee-track gallery-marquee-track--right">
+            <div className="gallery-marquee-group">
+              {row2Items.map((item, idx) => (
+                <button
+                  key={`bottom-g1-${item.id}-${idx}`}
+                  type="button"
+                  className="gallery-marquee-card"
+                  onClick={() => openLightbox(item)}
+                  aria-label={item.title}
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 260px, 350px"
+                    className="gallery-marquee-img"
+                  />
+                </button>
+              ))}
+            </div>
+            <div className="gallery-marquee-group" aria-hidden="true">
+              {row2Items.map((item, idx) => (
+                <button
+                  key={`bottom-g2-${item.id}-${idx}`}
+                  type="button"
+                  tabIndex={-1}
+                  className="gallery-marquee-card"
+                  onClick={() => openLightbox(item)}
+                  aria-label={item.title}
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 260px, 350px"
+                    className="gallery-marquee-img"
+                  />
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
@@ -362,7 +193,7 @@ export default function GalleryHierarchicalPreview() {
             <div className="lightbox-dialog-header">
               <div className="lightbox-header-meta">
                 <span className="lightbox-count-badge">
-                  Highlight {lightboxIndex + 1} of {filteredItems.length}
+                  Photo {lightboxIndex + 1} of {allModalItems.length}
                 </span>
                 <span className="lightbox-cat-badge">{activePhoto.category}</span>
                 <span className="lightbox-year-badge">
@@ -384,7 +215,7 @@ export default function GalleryHierarchicalPreview() {
 
             {/* Media Box */}
             <div className="lightbox-dialog-media">
-              {filteredItems.length > 1 && (
+              {allModalItems.length > 1 && (
                 <>
                   <button
                     type="button"
@@ -409,8 +240,8 @@ export default function GalleryHierarchicalPreview() {
                 <Image
                   src={activePhoto.src}
                   alt={activePhoto.title}
-                  width={activePhoto.width || 1200}
-                  height={activePhoto.height || 896}
+                  width={activePhoto.width || 1920}
+                  height={activePhoto.height || 1080}
                   className="lightbox-main-img"
                   priority
                 />
@@ -420,8 +251,12 @@ export default function GalleryHierarchicalPreview() {
             {/* Lightbox Footer */}
             <div className="lightbox-dialog-footer">
               <div className="lightbox-footer-content">
-                <h3 className="lightbox-footer-title">{activePhoto.title}</h3>
-                <p className="lightbox-footer-caption">{activePhoto.caption}</p>
+                <h3 className="lightbox-footer-title" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}>
+                  {activePhoto.title}
+                </h3>
+                <p className="lightbox-footer-caption" style={{ color: "#ffffff", WebkitTextFillColor: "#ffffff" }}>
+                  {activePhoto.caption}
+                </p>
               </div>
 
               <Link

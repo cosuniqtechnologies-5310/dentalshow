@@ -15,7 +15,7 @@ export default function GalleryExplorer() {
     const matchCategory = selectedCategory === "All" || item.category === selectedCategory;
     return matchYear && matchCategory;
   });
-
+  
   const close = useCallback(() => setLightbox(null), []);
   const next = useCallback(
     () => setLightbox((i) => (i === null ? i : (i + 1) % items.length)),

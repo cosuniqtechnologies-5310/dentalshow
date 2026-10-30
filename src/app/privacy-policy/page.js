@@ -3,7 +3,7 @@ import { site } from "@/data/site";
 
 export const metadata = {
   title: "Privacy Policy",
-  description: "How DentalShow collects, uses and protects your personal information.",
+  description: "How Dental Show collects, uses and protects your personal information.",
 };
 
 const sections = [

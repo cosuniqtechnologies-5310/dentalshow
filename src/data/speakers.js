@@ -97,8 +97,8 @@ export const getSpeaker = (id) =>
   speakers.find((s) => s.id === id) || {
     id,
     name: "David Robert",
-    role: "Chief Architecture",
-    org: "Exhibz",
+    role: "Chief Architect",
+    org: "Dental Show",
     image: "/images/speakers/speaker1.jpg",
     bio: "Keynote presenter and technology fellow.",
   };
