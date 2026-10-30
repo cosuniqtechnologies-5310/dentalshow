@@ -18,8 +18,10 @@ export const site = {
   registrationUrls: {
     visitor: "/visitor-registration",
     exhibitor: "/exhibitor-registration",
-    visitorExternal: "https://registration.dentalshow.in/visitor",
-    exhibitorExternal: "https://registration.dentalshow.in/exhibitor",
+    visitorExternal: "https://organiser.eventgrid.softwaller.in/f/vst27",
+    exhibitorExternal: "https://organiser.eventgrid.softwaller.in/f/exh27",
+    visitorIframe: "https://organiser.eventgrid.softwaller.in/f/vst27",
+    exhibitorIframe: "https://organiser.eventgrid.softwaller.in/f/exh27",
   },
   social: [
     { label: "Facebook", href: "https://facebook.com/dentalshowtndtma", icon: "facebook" },

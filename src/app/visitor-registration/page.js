@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
@@ -10,18 +9,6 @@ import { SparkleStar } from "@/components/BeaverMascot";
 import { site } from "@/data/site";
 
 export default function VisitorRegistrationPage() {
-  const [redirecting, setRedirecting] = useState(false);
-  const [selectedBadge, setSelectedBadge] = useState("trade");
-
-  const handleExternalRedirect = (e) => {
-    e.preventDefault();
-    setRedirecting(true);
-    setTimeout(() => {
-      window.open("https://registration.dentalshow.in/visitor", "_blank", "noopener,noreferrer");
-      setRedirecting(false);
-    }, 1200);
-  };
-
   const visitorBenefits = [
     {
       icon: "ticket",
@@ -141,131 +128,70 @@ export default function VisitorRegistrationPage() {
         subtitle="Dental Show 2027 • 6th & 7th February 2027 • Chennai Trade Centre New Hall 2, 3 & 3A"
       />
 
-      {/* 1. Portal & Pass Selection Card (White Section) */}
+      {/* 1. Official Visitor Iframe Form (Desktop & Mobile Optimized) */}
       <section className="section section-visitor-portal font-modern fold-white" id="portal-select">
         <div className="container">
-          <div className="registration-redirect-card pop-in">
-            <div className="redirect-card-header">
-              <div className="portal-badge-pill">
-                <span className="live-indicator" aria-hidden="true" />
-                <span>OFFICIAL VISITOR PORTAL</span>
+          <div className="registration-iframe-card pop-in">
+            <div className="iframe-card-header">
+              <div className="iframe-header-left">
+                <div className="portal-badge-pill">
+                  <span className="live-indicator" aria-hidden="true" />
+                  <span>OFFICIAL ONLINE REGISTRATION</span>
+                </div>
+                <h2 className="iframe-card-title">Dental Show 2027 Visitor Pass Form</h2>
+                <p className="iframe-card-desc">
+                  Register online for complimentary 2-day pass entry across Hall 2, 3 &amp; 3A. Your verified digital QR entry pass will be generated instantly.
+                </p>
               </div>
-              <h2 className="redirect-card-title">Dental Show 2027 Visitor Pass Portal</h2>
-              <p className="redirect-card-desc">
-                Visitor registration is hosted on our secure ticketing partner platform. Register today
-                to receive your instant digital entry badge.
-              </p>
-            </div>
-
-            <div className="badge-selection-grid">
-              {/* Option 1: Trade Visitor Pass (FREE) - LEFT SIDE BLUE */}
-              <div
-                className={`badge-option-card badge-option-card--trade ${selectedBadge === "trade" ? "is-selected" : ""}`}
-                onClick={() => setSelectedBadge("trade")}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setSelectedBadge("trade"); }}
-              >
-                <div className="badge-card-top">
-                  <div className="badge-card-header-left">
-                    <div className="badge-option-radio">
-                      <span className={`radio-dot radio-dot--blue ${selectedBadge === "trade" ? "active" : ""}`} />
-                    </div>
-                    <div>
-                      <h3 className="badge-option-name badge-option-name--blue">Trade Visitor Pass</h3>
-                      <p className="badge-option-role">Dentists, Students, Technicians, Dealers &amp; Traders</p>
-                    </div>
-                  </div>
-                  <span className="badge-option-perk badge-option-perk--blue">Full 2-Day Access</span>
-                </div>
-
-                <div className="badge-option-price-row">
-                  <span className="badge-option-price badge-option-price--blue">FREE</span>
-                  <span className="badge-price-note">(Online Pre-Registration)</span>
-                </div>
-
-                <div className="badge-checklist">
-                  <div className="badge-check-item">
-                    <span className="badge-check-icon badge-check-icon--blue">✓</span>
-                    <span>Free Access to all 3 halls (Hall 2, 3 &amp; 3A)</span>
-                  </div>
-                  <div className="badge-check-item">
-                    <span className="badge-check-icon badge-check-icon--blue">✓</span>
-                    <span>300+ Stalls, Brands &amp; Live Demos</span>
-                  </div>
-                  <div className="badge-check-item">
-                    <span className="badge-check-icon badge-check-icon--blue">✓</span>
-                    <span>Instant WhatsApp &amp; Email Digital QR Badge</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Option 2: VIP Delegate & Masterclass Pass - RIGHT SIDE GREEN */}
-              <div
-                className={`badge-option-card badge-option-card--vip ${selectedBadge === "vip" ? "is-selected" : ""}`}
-                onClick={() => setSelectedBadge("vip")}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") setSelectedBadge("vip"); }}
-              >
-                <div className="badge-card-top">
-                  <div className="badge-card-header-left">
-                    <div className="badge-option-radio">
-                      <span className={`radio-dot radio-dot--green ${selectedBadge === "vip" ? "active" : ""}`} />
-                    </div>
-                    <div>
-                      <h3 className="badge-option-name badge-option-name--green">VIP Delegate &amp; Masterclass Pass</h3>
-                      <p className="badge-option-role">Includes hands-on CME workshops &amp; scientific sessions</p>
-                    </div>
-                  </div>
-                  <span className="badge-option-perk badge-option-perk--green">VIP Lounge + Kit</span>
-                </div>
-
-                <div className="badge-option-price-row">
-                  <span className="badge-option-price badge-option-price--green">₹1,500</span>
-                  <span className="badge-price-note">/ Delegate</span>
-                </div>
-
-                <div className="badge-checklist">
-                  <div className="badge-check-item">
-                    <span className="badge-check-icon badge-check-icon--green">✓</span>
-                    <span>Priority Fast-Track Entry &amp; VIP Delegate Lounge Access</span>
-                  </div>
-                  <div className="badge-check-item">
-                    <span className="badge-check-icon badge-check-icon--green">✓</span>
-                    <span>Full Access to Hands-On Workshops &amp; CME Masterclasses</span>
-                  </div>
-                  <div className="badge-check-item">
-                    <span className="badge-check-icon badge-check-icon--green">✓</span>
-                    <span>Official Certificate of Participation + Delegate Kit</span>
-                  </div>
-                </div>
+              <div className="iframe-header-actions">
+                <a
+                  href="https://organiser.eventgrid.softwaller.in/f/vst27"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-iframe-fallback"
+                  title="Open full form in a new tab"
+                >
+                  <span>Open in New Tab</span>
+                  <Icon name="arrowUpRight" size={15} />
+                </a>
               </div>
             </div>
 
-            <div className="redirect-action-box">
-              <a
-                href={site.registrationUrls.visitorExternal}
-                onClick={handleExternalRedirect}
-                className="btn btn--primary btn-large-redirect"
-                id="btn-visitor-redirect"
-              >
-                {redirecting ? (
-                  <span>Connecting to Registration Portal...</span>
-                ) : (
-                  <>
-                    <span>Proceed to External Registration Platform</span>
-                    <Icon name="arrow" size={20} />
-                  </>
-                )}
-              </a>
+            {/* Pass Highlights Quick Strip */}
+            <div className="iframe-pass-quick-strip">
+              <div className="quick-strip-badge">
+                <span className="quick-strip-dot green" />
+                <span><strong>Complimentary Entry:</strong> Access to all 3 halls (Hall 2, 3 &amp; 3A) · 300+ Brands</span>
+              </div>
+              <div className="quick-strip-badge">
+                <span className="quick-strip-dot blue" />
+                <span><strong>Touchless QR Pass:</strong> Instant delivery via WhatsApp &amp; Email</span>
+              </div>
+            </div>
 
-              <p className="redirect-notice-small">
-                <Icon name="shield" size={15} />
-                <span>
-                  100% Secure SSL Redirect to <code>registration.dentalshow.in/visitor</code> · Badge issuance takes under 60 seconds.
-                </span>
-              </p>
+            {/* Responsive Iframe Container */}
+            <div className="iframe-embed-wrapper">
+              <iframe
+                src="https://organiser.eventgrid.softwaller.in/f/vst27"
+                width="100%"
+                height="900"
+                style={{ border: 0 }}
+                title="Registration form"
+                loading="lazy"
+                className="registration-form-iframe"
+              />
+            </div>
+
+            {/* Trust & Assistance Strip */}
+            <div className="iframe-card-footer">
+              <div className="iframe-footer-col">
+                <Icon name="shield" size={16} />
+                <span>Official EventGrid Partner Platform · 256-Bit SSL Encrypted</span>
+              </div>
+              <div className="iframe-footer-col">
+                <Icon name="scan" size={16} />
+                <span>Fast-track contactless entry at Chennai Trade Centre</span>
+              </div>
             </div>
           </div>
         </div>

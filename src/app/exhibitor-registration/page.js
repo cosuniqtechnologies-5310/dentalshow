@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
@@ -10,18 +9,6 @@ import { SparkleStar } from "@/components/BeaverMascot";
 import { site } from "@/data/site";
 
 export default function ExhibitorRegistrationPage() {
-  const [redirecting, setRedirecting] = useState(false);
-  const [selectedBooth, setSelectedBooth] = useState("shell");
-
-  const handleExternalRedirect = (e) => {
-    e.preventDefault();
-    setRedirecting(true);
-    setTimeout(() => {
-      window.open("https://registration.dentalshow.in/exhibitor", "_blank", "noopener,noreferrer");
-      setRedirecting(false);
-    }, 1000);
-  };
-
   const boothTypes = [
     {
       id: "shell",
@@ -151,97 +138,115 @@ export default function ExhibitorRegistrationPage() {
         subtitle="Dental Show 2027 • Chennai Trade Centre New Hall 2, 3 & 3A • 6th & 7th February 2027"
       />
 
-      {/* 1. Stall Category Selection & External Booking Portal (WHITE SECTION) */}
+      {/* 1. Official Exhibitor Booking Iframe Form (Desktop & Mobile Optimized) */}
       <section className="section section-exhibitor-portal font-modern fold-white" id="stall-portal">
         <div className="container">
-          <div className="registration-redirect-card pop-in">
-            <div className="redirect-card-header">
-              <div className="portal-badge-pill exhibitor-pill">
-                <span className="live-indicator" aria-hidden="true" />
-                <span>OFFICIAL EXHIBITOR BOOKING PORTAL</span>
+          <div className="registration-iframe-card pop-in">
+            <div className="iframe-card-header">
+              <div className="iframe-header-left">
+                <div className="portal-badge-pill exhibitor-pill">
+                  <span className="live-indicator" aria-hidden="true" />
+                  <span>OFFICIAL EXHIBITOR PORTAL</span>
+                </div>
+                <h2 className="iframe-card-title">Reserve Your Stall at Dental Show 2027</h2>
+                <p className="iframe-card-desc">
+                  Complete the stall booking enquiry form below. The TNDTMA Secretariat will confirm booth availability and provide layout coordination.
+                </p>
               </div>
-              <h2 className="redirect-card-title">Reserve your stall at Dental Show 2027</h2>
-              <p className="redirect-card-desc">
-                Exhibitor stall allocation, interactive 3D floor plan selection, and contract management
-                are managed via our secure exhibitor portal.
-              </p>
-            </div>
-
-            {/* Booth Types Selector (3 Themed Cards: Blue, Green, Navy) */}
-            <div className="stall-options-container">
-              <h3 className="stall-options-heading">Select Desired Stall Category:</h3>
-              <div className="stall-selection-grid stall-selection-grid--3col">
-                {boothTypes.map((b) => {
-                  const isSelected = selectedBooth === b.id;
-                  return (
-                    <div
-                      key={b.id}
-                      className={`stall-card stall-card--${b.theme} ${isSelected ? "is-selected" : ""}`}
-                      onClick={() => setSelectedBooth(b.id)}
-                      role="button"
-                      tabIndex={0}
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter" || e.key === " ") setSelectedBooth(b.id);
-                      }}
-                    >
-                      {b.popular && (
-                        <span className={`stall-popular-badge stall-badge--${b.theme}`}>
-                          Most Popular
-                        </span>
-                      )}
-                      <div className="stall-header">
-                        <span className={`radio-dot radio-dot--${b.theme} ${isSelected ? "active" : ""}`} />
-                        <div>
-                          <h4 className={`stall-title stall-title--${b.theme}`}>{b.name}</h4>
-                          <span className={`stall-size-tag tag--${b.theme}`}>{b.size}</span>
-                        </div>
-                      </div>
-
-                      <p className="stall-desc">{b.desc}</p>
-
-                      <div className="stall-perks-list">
-                        {b.perks.map((perk, i) => (
-                          <div key={i} className="stall-perk-item">
-                            <span className={`stall-check-icon check--${b.theme}`}>✓</span>
-                            <span>{perk}</span>
-                          </div>
-                        ))}
-                      </div>
-
-                      <div className="stall-ideal">
-                        <strong>Best for:</strong> {b.idealFor}
-                      </div>
-                    </div>
-                  );
-                })}
+              <div className="iframe-header-actions">
+                <a
+                  href="https://organiser.eventgrid.softwaller.in/f/exh27"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-iframe-fallback btn-iframe-fallback--exhibitor"
+                  title="Open full booking form in a new tab"
+                >
+                  <span>Open in New Tab</span>
+                  <Icon name="arrowUpRight" size={15} />
+                </a>
               </div>
             </div>
 
-            {/* Redirect Action CTA */}
-            <div className="redirect-action-box mt-md">
-              <a
-                href={site.registrationUrls.exhibitorExternal}
-                onClick={handleExternalRedirect}
-                className="btn btn--primary btn-large-redirect"
-                id="btn-exhibitor-redirect"
-              >
-                {redirecting ? (
-                  <span>Accessing Floorplan Portal...</span>
-                ) : (
-                  <>
-                    <span>Proceed to External Exhibitor Booking Portal</span>
-                    <Icon name="arrow" size={20} />
-                  </>
+            {/* Quick Strip */}
+            <div className="iframe-pass-quick-strip">
+              <div className="quick-strip-badge">
+                <span className="quick-strip-dot blue" />
+                <span><strong>Chennai Trade Centre:</strong> New Hall 2, 3 &amp; 3A · 10,000+ sq.m Exhibition Area</span>
+              </div>
+              <div className="quick-strip-badge">
+                <span className="quick-strip-dot green" />
+                <span><strong>B2B Footfall:</strong> 10,000+ Dental Surgeons, Dealers &amp; Clinical Decision Makers</span>
+              </div>
+            </div>
+
+            {/* Responsive Iframe Container */}
+            <div className="iframe-embed-wrapper">
+              <iframe
+                src="https://organiser.eventgrid.softwaller.in/f/exh27"
+                width="100%"
+                height="900"
+                style={{ border: 0 }}
+                title="Registration form"
+                loading="lazy"
+                className="registration-form-iframe"
+              />
+            </div>
+
+            {/* Trust & Assistance Strip */}
+            <div className="iframe-card-footer">
+              <div className="iframe-footer-col">
+                <Icon name="shield" size={16} />
+                <span>Official TNDTMA Organiser Secretariat · 256-Bit SSL Encrypted</span>
+              </div>
+              <div className="iframe-footer-col">
+                <Icon name="cube" size={16} />
+                <span>Direct Stall Allotment &amp; Custom Pavilion Enquiries</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Available Stall Categories & Specifications */}
+      <section className="section section-stall-types font-modern fold-light" id="stall-categories">
+        <div className="container">
+          <SectionTitle
+            eyebrow="EXHIBITION FORMATS"
+            title="Available Stall Categories &amp; Specifications"
+            subtitle="Choose the booth structure that best showcases your equipment, technology, and clinical innovations."
+          />
+
+          <div className="stall-selection-grid stall-selection-grid--3col mt-md">
+            {boothTypes.map((b) => (
+              <div key={b.id} className={`stall-card stall-card--${b.theme} stall-card--static`}>
+                {b.popular && (
+                  <span className={`stall-popular-badge stall-badge--${b.theme}`}>
+                    Most Popular
+                  </span>
                 )}
-              </a>
+                <div className="stall-header">
+                  <div>
+                    <h4 className={`stall-title stall-title--${b.theme}`}>{b.name}</h4>
+                    <span className={`stall-size-tag tag--${b.theme}`}>{b.size}</span>
+                  </div>
+                </div>
 
-              <p className="redirect-notice-small">
-                <Icon name="shield" size={15} />
-                <span>
-                  100% Secure SSL Redirect to <code>registration.dentalshow.in/exhibitor</code> · Select available stall numbers on the live interactive floor map.
-                </span>
-              </p>
-            </div>
+                <p className="stall-desc">{b.desc}</p>
+
+                <div className="stall-perks-list">
+                  {b.perks.map((perk, i) => (
+                    <div key={i} className="stall-perk-item">
+                      <span className={`stall-check-icon check--${b.theme}`}>✓</span>
+                      <span>{perk}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="stall-ideal">
+                  <strong>Best for:</strong> {b.idealFor}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
