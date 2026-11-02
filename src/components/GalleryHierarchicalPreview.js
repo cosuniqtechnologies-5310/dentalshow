@@ -16,6 +16,7 @@ const TOTAL_PHOTOS = allModalItems.length;
 
 export default function GalleryHierarchicalPreview() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
+  const [isPaused, setIsPaused] = useState(false);
 
   const openLightbox = (item) => {
     const idx = allModalItems.findIndex((it) => it.id === item.id);
@@ -82,8 +83,18 @@ export default function GalleryHierarchicalPreview() {
         </div>
       </div>
 
-      {/* 2. Dual-Row Continuous Infinite Marquee (Image Only, No Hover Effects) */}
-      <div className="gallery-marquee-wrapper" aria-label="Continuous gallery preview stream">
+      {/* 2. Dual-Row Continuous Infinite Marquee (Image Only, Hover & Touch to Pause) */}
+      <div
+        className={`gallery-marquee-wrapper ${isPaused ? "is-paused" : ""}`}
+        aria-label="Continuous gallery preview stream"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => {
+          setTimeout(() => setIsPaused(false), 1200);
+        }}
+        onTouchCancel={() => setIsPaused(false)}
+      >
         {/* TOP ROW: Continuously scrolls right to left */}
         <div className="gallery-marquee-row">
           <div className="gallery-marquee-track gallery-marquee-track--left">

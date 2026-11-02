@@ -12692,6 +12692,20 @@ section .event-panorama-banner .panorama-banner-excerpt,
   animation: galleryMarqueeScrollRight 52s linear infinite;
 }
 
+/* Pause continuous infinite marquee on hover, tap/touch (:active), and keyboard focus */
+.gallery-marquee-wrapper:hover .gallery-marquee-track,
+.gallery-marquee-wrapper:active .gallery-marquee-track,
+.gallery-marquee-wrapper:focus-within .gallery-marquee-track,
+.gallery-marquee-wrapper.is-paused .gallery-marquee-track,
+.gallery-marquee-row:hover .gallery-marquee-track,
+.gallery-marquee-row:active .gallery-marquee-track,
+.gallery-marquee-track:hover,
+.gallery-marquee-track:active,
+.gallery-marquee-card:hover,
+.gallery-marquee-card:active {
+  animation-play-state: paused !important;
+}
+
 @keyframes galleryMarqueeScrollLeft {
   0% {
     transform: translateX(0);
