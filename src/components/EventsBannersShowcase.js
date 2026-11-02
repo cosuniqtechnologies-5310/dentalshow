@@ -7,7 +7,7 @@ import Icon from "@/components/Icon";
 const defaultBanners = [
   {
     id: "ds-2027",
-    title: "Dental Show 2027 (Flagship Edition)",
+    title: "Dental Show 2027",
     statusBadge: "UPCOMING FLAGSHIP EXPO",
     dateVenue: "6th & 7th February 2027 • Chennai Trade Centre New Halls 2, 3 & 3A",
     highlight: "300+ Stalls & Brands • 10,000+ Trade Delegates • Free Visitor Pass Access",
@@ -20,7 +20,7 @@ const defaultBanners = [
   },
   {
     id: "ds-2026",
-    title: "Dental Show 2026 (AI & Next-Gen Dentistry Edition)",
+    title: "Dental Show 2026",
     statusBadge: "SOUTH INDIA'S BIGGEST DENTAL EXPO",
     dateVenue: "15th & 16th August 2026 • Chennai Trade Centre, Nandambakkam",
     highlight: "210+ Exhibitors & Global Brands • 5,400+ Clinical Attendees • AI Diagnostics",
@@ -33,7 +33,7 @@ const defaultBanners = [
   },
   {
     id: "ds-2024",
-    title: "Dental Show 2024 (Intraoral Scanning & CAD/CAM Expo)",
+    title: "Dental Show 2024",
     statusBadge: "DIGITAL DENTISTRY EXPO",
     dateVenue: "15th & 16th August 2024 • Chennai Trade Centre, Nandambakkam",
     highlight: "160+ Exhibitors • 4,300+ Delegates • Live CAD/CAM & Intraoral Demos",
