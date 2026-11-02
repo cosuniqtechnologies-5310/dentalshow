@@ -149,9 +149,10 @@ export default function VisitorRegistrationPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-iframe-fallback"
-                  title="Open full form in a new tab"
+                  title="Open official visitor registration form in new tab"
                 >
-                  <span>Open in New Tab</span>
+                  <Icon name="ticket" size={16} />
+                  <span>Register Online</span>
                   <Icon name="arrowUpRight" size={15} />
                 </a>
               </div>
@@ -169,17 +170,47 @@ export default function VisitorRegistrationPage() {
               </div>
             </div>
 
-            {/* Responsive Iframe Container */}
-            <div className="iframe-embed-wrapper">
-              <iframe
-                src="https://organiser.eventgrid.softwaller.in/f/vst27"
-                width="100%"
-                height="900"
-                style={{ border: 0 }}
-                title="Registration form"
-                loading="lazy"
-                className="registration-form-iframe"
-              />
+            {/* High-Visibility Official Registration CTA Panel */}
+            <div className="registration-action-hero">
+              <div className="action-hero-content">
+                <div className="action-hero-badge">
+                  <Icon name="sparkle" size={15} />
+                  <span>Instant QR Entry Pass · 100% Free Entry</span>
+                </div>
+                <h3 className="action-hero-title">Get Your Free 2-Day Visitor Pass</h3>
+                <p className="action-hero-desc">
+                  Register online to receive your verified digital QR entry badge for Chennai Trade Centre New Hall 2, 3 &amp; 3A. Passes are generated instantly and delivered via WhatsApp &amp; Email.
+                </p>
+
+                <div className="action-hero-perks">
+                  <div className="action-perk-item">
+                    <span className="perk-check-icon"><Icon name="check" size={14} /></span>
+                    <span>Complimentary access to all 3 halls (Hall 2, 3 &amp; 3A)</span>
+                  </div>
+                  <div className="action-perk-item">
+                    <span className="perk-check-icon"><Icon name="check" size={14} /></span>
+                    <span>300+ Brands, live equipment demos &amp; masterclasses</span>
+                  </div>
+                  <div className="action-perk-item">
+                    <span className="perk-check-icon"><Icon name="check" size={14} /></span>
+                    <span>Fast-track touchless QR badge scan at express turnstiles</span>
+                  </div>
+                </div>
+
+                <div className="action-hero-cta-wrap">
+                  <a
+                    href="https://organiser.eventgrid.softwaller.in/f/vst27"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-portal-cta btn-portal-cta--visitor"
+                  >
+                    <Icon name="ticket" size={20} />
+                    <span>Register for Free Visitor Pass</span>
+                    <Icon name="arrowUpRight" size={18} />
+                  </a>
+                  <span className="action-hero-hint">✓ 100% Free Entry · Takes less than 1 minute · Opens secure official portal</span>
+                </div>
+              </div>
             </div>
 
             {/* Trust & Assistance Strip */}
@@ -336,7 +367,7 @@ export default function VisitorRegistrationPage() {
                   <Icon name="phone" size={16} /> <span>{site.mobilePhone}</span>
                 </a>
                 <a
-                  href="https://wa.me/919840012027"
+                  href="https://wa.me/918778002030"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="helpdesk-action-pill helpdesk-action-pill--whatsapp"

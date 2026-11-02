@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Icon from "./Icon";
-import SubscribeForm from "./SubscribeForm";
 import { footerLinks, site } from "@/data/site";
 
 export default function Footer() {
@@ -15,7 +14,7 @@ export default function Footer() {
             <h4 className="footer-col-title">Organiser</h4>
             <div className="footer-org-badge">
               <span className="footer-org-tndtma">TNDTMA</span>
-              <span className="footer-org-desc">Tamil Nadu Dental Trade &amp; Manufacturers Association</span>
+              <span className="footer-org-desc">Tamilnadu Dental Traders and Manufacturers Association</span>
             </div>
             <p className="footer-org-statement">
               Strengthening Tamil Nadu&apos;s dental ecosystem and bringing global CAD/CAM innovations directly to regional clinicians for over two decades.
@@ -67,13 +66,8 @@ export default function Footer() {
               </a>
               <div className="footer-contact-row footer-contact-row--address">
                 <Icon name="pin" size={15} />
-                <span>Chennai Trade Centre (New Halls)</span>
+                <span>New No.2, Mini Street, Kodambakkam, Chennai - 600 024</span>
               </div>
-            </div>
-
-            <div className="footer-mini-subscribe">
-              <span className="mini-sub-label">Subscribe to Bulletins</span>
-              <SubscribeForm compact />
             </div>
           </div>
         </div>
@@ -85,7 +79,7 @@ export default function Footer() {
         <div className="footer-bottom-row">
           <div className="footer-bottom-info">
             <p className="footer-bottom-address">
-              Chennai Trade Centre, Mount Poonamallee High Rd, Nandambakkam, Chennai 600089, India.
+              New No.2, Mini Street, Kodambakkam, Chennai - 600 024, India.
             </p>
             <p className="footer-bottom-copyright">
               © 2027 Dental Show · Organised by TNDTMA. All rights reserved.
