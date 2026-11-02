@@ -145,14 +145,14 @@ export default function VisitorRegistrationPage() {
               </div>
               <div className="iframe-header-actions">
                 <a
-                  href="https://organiser.eventgrid.softwaller.in/f/vst27"
+                  href="https://forms.eventgrid.softwaller.in/f/vst27"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-iframe-fallback"
                   title="Open official visitor registration form in new tab"
                 >
                   <Icon name="ticket" size={16} />
-                  <span>Register Online</span>
+                  <span>Open in New Tab</span>
                   <Icon name="arrowUpRight" size={15} />
                 </a>
               </div>
@@ -170,47 +170,18 @@ export default function VisitorRegistrationPage() {
               </div>
             </div>
 
-            {/* High-Visibility Official Registration CTA Panel */}
-            <div className="registration-action-hero">
-              <div className="action-hero-content">
-                <div className="action-hero-badge">
-                  <Icon name="sparkle" size={15} />
-                  <span>Instant QR Entry Pass · 100% Free Entry</span>
-                </div>
-                <h3 className="action-hero-title">Get Your Free 2-Day Visitor Pass</h3>
-                <p className="action-hero-desc">
-                  Register online to receive your verified digital QR entry badge for Chennai Trade Centre New Hall 2, 3 &amp; 3A. Passes are generated instantly and delivered via WhatsApp &amp; Email.
-                </p>
-
-                <div className="action-hero-perks">
-                  <div className="action-perk-item">
-                    <span className="perk-check-icon"><Icon name="check" size={14} /></span>
-                    <span>Complimentary access to all 3 halls (Hall 2, 3 &amp; 3A)</span>
-                  </div>
-                  <div className="action-perk-item">
-                    <span className="perk-check-icon"><Icon name="check" size={14} /></span>
-                    <span>300+ Brands, live equipment demos &amp; masterclasses</span>
-                  </div>
-                  <div className="action-perk-item">
-                    <span className="perk-check-icon"><Icon name="check" size={14} /></span>
-                    <span>Fast-track touchless QR badge scan at express turnstiles</span>
-                  </div>
-                </div>
-
-                <div className="action-hero-cta-wrap">
-                  <a
-                    href="https://organiser.eventgrid.softwaller.in/f/vst27"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-portal-cta btn-portal-cta--visitor"
-                  >
-                    <Icon name="ticket" size={20} />
-                    <span>Register for Free Visitor Pass</span>
-                    <Icon name="arrowUpRight" size={18} />
-                  </a>
-                  <span className="action-hero-hint">✓ 100% Free Entry · Takes less than 1 minute · Opens secure official portal</span>
-                </div>
-              </div>
+            {/* Embedded Official Visitor Registration Form */}
+            <div className="iframe-embed-wrapper">
+              <iframe
+                src="https://forms.eventgrid.softwaller.in/f/vst27"
+                width="100%"
+                height="850"
+                style={{ border: 0 }}
+                title="Dental Show 2027 Visitor Pass Registration Form"
+                loading="lazy"
+                className="registration-form-iframe"
+                allow="clipboard-write"
+              />
             </div>
 
             {/* Trust & Assistance Strip */}

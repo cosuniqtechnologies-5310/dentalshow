@@ -21,9 +21,9 @@ export const site = {
   registrationUrls: {
     visitor: "/visitor-registration",
     exhibitor: "/exhibitor-registration",
-    visitorExternal: "https://organiser.eventgrid.softwaller.in/f/vst27",
+    visitorExternal: "https://forms.eventgrid.softwaller.in/f/vst27",
     exhibitorExternal: "https://organiser.eventgrid.softwaller.in/f/exh27",
-    visitorIframe: "https://organiser.eventgrid.softwaller.in/f/vst27",
+    visitorIframe: "https://forms.eventgrid.softwaller.in/f/vst27",
     exhibitorIframe: "https://organiser.eventgrid.softwaller.in/f/exh27",
   },
   social: [
