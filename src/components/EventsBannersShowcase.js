@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Icon from "@/components/Icon";
 
@@ -19,30 +19,30 @@ const defaultBanners = [
     ctaLabel: "Register as Visitor",
   },
   {
-    id: "ds-2025",
-    title: "Dental Show 2025 (20th Anniversary Edition)",
-    statusBadge: "20TH ANNIVERSARY LANDMARK",
-    dateVenue: "8th & 9th February 2025 • Chennai Trade Centre, Nandambakkam",
-    highlight: "Over 4,800 Registered Visitors • 180+ Exhibitors • Retrospective Gala",
-    excerpt: "A monumental milestone celebrating 20 years of TNDTMA's dedication to advancing dental technology and clinical excellence across Tamil Nadu.",
-    image: "/images/dental-show-images/vlcsnap-2026-10-29-00h41m12s751.png",
+    id: "ds-2026",
+    title: "Dental Show 2026 (AI & Next-Gen Dentistry Edition)",
+    statusBadge: "SOUTH INDIA'S BIGGEST DENTAL EXPO",
+    dateVenue: "15th & 16th August 2026 • Chennai Trade Centre, Nandambakkam",
+    highlight: "210+ Exhibitors & Global Brands • 5,400+ Clinical Attendees • AI Diagnostics",
+    excerpt: "A forward-looking edition spotlighting artificial intelligence diagnostic tools, robotic-assisted implantology, and next-generation clinical workflows.",
+    image: "/images/dental-show-images/vlcsnap-2026-10-29-00h42m18s269.png",
     link: "/gallery",
     stampText: "• VIEW GALLERY • VIEW GALLERY ",
     themeClass: "banner-theme-green",
-    ctaLabel: "View 2025 Photos",
+    ctaLabel: "View 2026 Photos",
   },
   {
-    id: "ds-2023",
-    title: "Dental Show 2023 (Fraternity Revival Edition)",
-    statusBadge: "POST-PANDEMIC RECONNECT",
-    dateVenue: "11th & 12th February 2023 • Chennai Trade Centre, Nandambakkam",
-    highlight: "Wireless Digital Scanners • 12+ Hands-on Certified Workshops",
-    excerpt: "A triumphant return to in-person connection, highlighting sterilization protocols, touchless ergonomics, and digital impressions.",
-    image: "/images/dental-show-images/vlcsnap-2026-10-29-00h42m51s996.png",
-    link: "/events",
+    id: "ds-2024",
+    title: "Dental Show 2024 (Intraoral Scanning & CAD/CAM Expo)",
+    statusBadge: "DIGITAL DENTISTRY EXPO",
+    dateVenue: "15th & 16th August 2024 • Chennai Trade Centre, Nandambakkam",
+    highlight: "160+ Exhibitors • 4,300+ Delegates • Live CAD/CAM & Intraoral Demos",
+    excerpt: "Spotlighting intraoral scanning accuracy, chairside single-visit restorations, and digital lab communication protocols.",
+    image: "/images/dental-show-images/vlcsnap-2026-10-29-00h42m22s889.png",
+    link: "/gallery",
     stampText: "• EXPLORE RECAP • EXPLORE RECAP ",
     themeClass: "banner-theme-cyan",
-    ctaLabel: "Read Event Story",
+    ctaLabel: "View 2024 Photos",
   },
 ];
 
@@ -113,29 +113,10 @@ function StampBadge({ id = "stamp", text = "• REGISTER NOW • REGISTER NOW " 
 }
 
 export default function EventsBannersShowcase({ banners = defaultBanners }) {
-  const containerRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handlePrev = () => {
-    setActiveIndex((prev) => {
-      const nextIdx = prev > 0 ? prev - 1 : banners.length - 1;
-      const el = document.getElementById(`event-banner-${banners[nextIdx].id}`);
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      return nextIdx;
-    });
-  };
-
-  const handleNext = () => {
-    setActiveIndex((prev) => {
-      const nextIdx = prev < banners.length - 1 ? prev + 1 : 0;
-      const el = document.getElementById(`event-banner-${banners[nextIdx].id}`);
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      return nextIdx;
-    });
-  };
+  const [activeIndex] = useState(0);
 
   return (
-    <div className="events-showcase-wrapper" ref={containerRef}>
+    <div className="events-showcase-wrapper">
       {/* 1. TOP HEADER ROW (Matching Reference Screenshot layout) */}
       <div className="events-showcase-header">
         {/* Left Column: Line accent, Eyebrow, Main Title */}
@@ -154,54 +135,8 @@ export default function EventsBannersShowcase({ banners = defaultBanners }) {
           </p>
         </div>
 
-        {/* Right Column: Slider Navigation Arrows (← / →) + VIEW ALL Button */}
+        {/* Right Column: VIEW ALL Button */}
         <div className="events-header-controls" role="region" aria-label="Events navigation">
-          {/* Circular Previous Button */}
-          <button
-            type="button"
-            className="events-nav-btn events-nav-btn--prev"
-            onClick={handlePrev}
-            aria-label="Previous event banner"
-          >
-            <svg
-              className="events-nav-icon"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          {/* Circular Next Button */}
-          <button
-            type="button"
-            className="events-nav-btn events-nav-btn--next"
-            onClick={handleNext}
-            aria-label="Next event banner"
-          >
-            <svg
-              className="events-nav-icon"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </button>
-
           {/* VIEW ALL Button in Top (Mirroring Reference Screenshot) */}
           <Link
             href="/events"

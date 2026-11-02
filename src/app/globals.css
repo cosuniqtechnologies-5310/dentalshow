@@ -3764,6 +3764,11 @@ button {
   z-index: 2;
   max-width: 1280px;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(24px, 4vw, 48px) !important;
+  padding-right: clamp(24px, 4vw, 48px) !important;
+  box-sizing: border-box;
 }
 
 .page-banner__grid {
@@ -4122,6 +4127,11 @@ button {
     text-align: left !important;
   }
 
+  .page-banner__container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
   .page-banner__grid {
     grid-template-columns: 1fr !important;
     gap: 22px !important;
@@ -4220,6 +4230,11 @@ button {
     margin-top: 74px !important;
     padding: 26px 0 22px !important;
     text-align: left !important;
+  }
+
+  .page-banner__container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .page-banner__title {

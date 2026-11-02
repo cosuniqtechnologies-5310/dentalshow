@@ -17,7 +17,7 @@ export function Logo({ light = false }) {
       <div className="site-brand-wrap">
         {/* Light Theme Logo: Dark Navy "Dental" on white/light headers */}
         <Image
-          src="/images/logos/logo.png"
+          src="/images/logos/dark-header-logo.png"
           alt="Dental Show 2027 Logo"
           width={240}
           height={80}
@@ -26,7 +26,7 @@ export function Logo({ light = false }) {
         />
         {/* Dark Theme Logo: Crisp White "Dental" on dark headers / mobile dark mode */}
         <Image
-          src="/images/logos/dental_show_2027_logo_dark_header.png"
+          src="/images/logos/dental_show_2027_logo.png"
           alt="Dental Show 2027 Logo"
           width={240}
           height={80}
