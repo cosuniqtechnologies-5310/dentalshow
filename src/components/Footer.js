@@ -107,8 +107,8 @@ export default function Footer() {
             <div className="footer-credential-pills">
               <span className="cred-pill">🇮🇳 Tamil Nadu, India</span>
               <span className="cred-pill">TNDTMA Accredited</span>
-              <Link href="/about" className="cred-pill cred-pill--mascot" title="Meet Mr. Dentalshow - Official Dental Show Mascot">
-                <span className="cred-mascot-star">✦</span> Mascot: Mr. Dentalshow
+              <Link href="/about" className="cred-pill cred-pill--mascot" title="Meet Mr. Dentalshow">
+                <span className="cred-mascot-star">✦</span> Mr. Dentalshow
               </Link>
             </div>
           </div>

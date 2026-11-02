@@ -428,7 +428,7 @@ export default function AboutPage() {
               </div>
               <div className="timeline-header-col-right">
                 <p className="section-desc timeline-header-desc">
-                  Step through each era with Mr. Dentalshow, our official mascot guide. Watch the
+                  Step through each era with Mr. Dentalshow, our official ambassador guide. Watch the
                   auto-cycling timeline or select any milestone year to relive the breakthroughs that
                   shaped modern dentistry.
                 </p>
@@ -453,7 +453,7 @@ export default function AboutPage() {
               <span>MEET OUR AMBASSADOR</span>
             </div>
             <h2 className="section-main-title text-white mascot-section-title" style={{ color: "#ffffff" }}>
-              Meet Mr. Dentalshow &mdash; Official Mascot
+              Meet Mr. Dentalshow &mdash; Official Ambassador
             </h2>
             <p className="about-mascot-desc text-white" style={{ color: "rgba(255, 255, 255, 0.95)" }}>
               Why the beaver? Nature&apos;s greatest builders possess teeth that never stop growing,
@@ -461,7 +461,7 @@ export default function AboutPage() {
               persistence, and meticulous precision!
             </p>
             <p className="about-mascot-desc text-white" style={{ color: "rgba(255, 255, 255, 0.95)" }}>
-              Our friendly mascot, Mr. Dentalshow, welcomes thousands of clinicians, students, and exhibitors
+              Our friendly ambassador, Mr. Dentalshow, welcomes thousands of clinicians, students, and exhibitors
               to Chennai Trade Centre, embodying the spirit: <em>“See. Touch. Feel. Experience.”</em>
             </p>
             <div className="mascot-cta-row mt-md">
@@ -470,7 +470,7 @@ export default function AboutPage() {
                 <Icon name="arrow" size={16} />
               </Link>
               <Link href="/visitor-registration" className="btn btn--outline-light">
-                <span>Meet Mascot at CTC</span>
+                <span>Meet Mr. Dentalshow at CTC</span>
               </Link>
             </div>
           </div>

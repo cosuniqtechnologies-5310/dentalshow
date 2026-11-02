@@ -350,7 +350,7 @@ export default function ExhibitorRegistrationPage() {
                 <div className="mascot-ambient-aura" aria-hidden="true" />
                 <Image
                   src="/images/dental-show-mascot-new.png"
-                  alt="Dental Show Mascot - Mr. Dentalshow"
+                  alt="Dental Show - Mr. Dentalshow"
                   width={280}
                   height={396}
                   className="helpdesk-mascot-img"
@@ -358,7 +358,7 @@ export default function ExhibitorRegistrationPage() {
                 />
                 <div className="helpdesk-mascot-pill">
                   <span className="live-pulse-dot" aria-hidden="true" />
-                  <span>Official Mascot · Mr. Dentalshow</span>
+                  <span>Official Guide · Mr. Dentalshow</span>
                 </div>
               </div>
             </div>

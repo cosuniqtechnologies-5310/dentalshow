@@ -70,7 +70,7 @@ export default function IntroVideoSection() {
                 <Icon name="sparkle" size={44} strokeWidth={1.5} />
               </span>
               <h3 className="ts-title">Have Fun</h3>
-              <p>Celebrate two decades of dental innovation with hands-on demonstrations and mascot experiences.</p>
+              <p>Celebrate two decades of dental innovation with hands-on demonstrations and interactive experiences.</p>
               <span className="count-number">04</span>
             </div>
           </div>

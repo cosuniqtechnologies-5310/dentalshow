@@ -107,7 +107,7 @@ export default function ContactPage() {
             </div>
 
             <div className="contact__social-hub">
-              <span className="section-eyebrow" style={{ fontSize: "21px", letterSpacing: "1px" }}>
+              <span className="section-eyebrow" style={{ fontSize: "13px", letterSpacing: "1px" }}>
                 CONNECT ON OFFICIAL SOCIAL MEDIA
               </span>
               <div className="contact__social-list" aria-label="Official Social Channels">
@@ -130,14 +130,14 @@ export default function ContactPage() {
           <Reveal delay={100} className="contact__form">
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "16px", flexWrap: "wrap", gap: "10px" }}>
               <div>
-                <h3 style={{ fontSize: "32px", fontWeight: 800, color: "#023E73", margin: "0 0 4px" }}>
+                <h3 style={{ fontSize: "25px", fontWeight: 800, color: "#023E73", margin: "0 0 4px" }}>
                   Send an Official Message
                 </h3>
                 <p style={{ fontSize: "14px", color: "#64748b", margin: 0 }}>
                   Our secretariat will respond to your inquiry promptly.
                 </p>
               </div>
-              <span style={{ fontSize: "21px", fontWeight: 700, background: "rgba(4, 119, 191, 0.1)", color: "#0477BF", padding: "4px 10px", borderRadius: "14px", textTransform: "uppercase" }}>
+              <span style={{ fontSize: "13px", fontWeight: 700, background: "rgba(4, 119, 191, 0.1)", color: "#0477BF", padding: "4px 10px", borderRadius: "14px", textTransform: "uppercase" }}>
                 24h Response
               </span>
             </div>
@@ -153,7 +153,7 @@ export default function ContactPage() {
             <div className="ctc-venue-flex">
               <div className="ctc-venue-info">
                 <span className="section-eyebrow text-cyan">DIRECTIONS &amp; VENUE LOGISTICS</span>
-                <h3 style={{ fontSize: "36px", fontWeight: 800, color: "#023E73", margin: "8px 0 14px" }}>
+                <h3 style={{ fontSize: "30px", fontWeight: 800, color: "#023E73", margin: "8px 0 14px" }}>
                   Reaching Chennai Trade Centre (CTC)
                 </h3>
                 <p style={{ fontSize: "14.5px", lineHeight: "1.65", color: "#475569", margin: "0 0 20px" }}>

@@ -216,7 +216,7 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
             <div className="stage-host-glow-ring" aria-hidden="true" />
             <Image
               src="/images/dental-show-mascot-new.png"
-              alt="Dental Show Mascot Guide"
+              alt="Dental Show Guide - Mr. Dentalshow"
               width={160}
               height={220}
               priority
@@ -239,9 +239,6 @@ export default function InteractiveTimeline({ milestones = defaultMilestones }) 
               <span className="timeline-stage-kicker-pill">
                 <span className="live-pulse-dot" aria-hidden="true" />
                 <span>{activeMilestone.badge}</span>
-              </span>
-              <span className="timeline-stage-counter">
-                STAGE {activeMilestone.stageNum} OF 0{total}
               </span>
             </div>
 

@@ -21,7 +21,7 @@ export default function HomePage() {
           ============================================================ */}
       <section className="hero-area font-modern fold-dark" id="hero">
         <div className="banner-item">
-          <div className="container">
+          <div className="container hero-container">
             <div className="row align-items-center hero-main-row">
               {/* Left Column: Text & Registration Actions */}
               <div className="col-lg-6 hero-content-col">
@@ -405,7 +405,7 @@ export default function HomePage() {
                 <div className="cta-mascot-img-wrap">
                   <Image
                     src="/images/dental-show-mascot-new.png"
-                    alt="Dental Show 2027 Mascot - Mr. Dentalshow"
+                    alt="Dental Show 2027 - Mr. Dentalshow"
                     width={340}
                     height={480}
                     className="cta-mascot-img"
@@ -416,7 +416,7 @@ export default function HomePage() {
                 {/* Floating Mascot Credential Badge */}
                 <div className="cta-mascot-pill">
                   <span className="mascot-pill-dot" aria-hidden="true" />
-                  <span className="mascot-pill-text">Official Dental Show Mascot</span>
+                  <span className="mascot-pill-text">Mr. Dentalshow</span>
                 </div>
               </div>
             </div>

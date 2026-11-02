@@ -28,7 +28,6 @@ export const site = {
   },
   social: [
     { label: "Facebook", href: "https://facebook.com/dentalshowtndtma", icon: "facebook" },
-    { label: "Twitter", href: "https://twitter.com/dentalshowchennai", icon: "twitter" },
     { label: "Instagram", href: "https://instagram.com/dentalshowchennai", icon: "instagram" },
     { label: "LinkedIn", href: "https://linkedin.com/company/tndtma-dentalshow", icon: "linkedin" },
     { label: "YouTube", href: "https://youtube.com/@tndtmadentalshow", icon: "youtube" },

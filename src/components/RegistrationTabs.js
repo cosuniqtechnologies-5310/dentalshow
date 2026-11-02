@@ -70,7 +70,7 @@ export default function RegistrationTabs() {
               <div className="registration-animal-image-box">
                 <Image
                   src="/images/dental-show-mascot-new.png"
-                  alt="Dental Show Mascot - Visitor Host"
+                  alt="Dental Show - Visitor Host"
                   width={290}
                   height={410}
                   priority
@@ -200,7 +200,7 @@ export default function RegistrationTabs() {
               <div className="registration-animal-image-box">
                 <Image
                   src="/images/dental-show-mascot-new.png"
-                  alt="Dental Show Mascot - Exhibitor Host"
+                  alt="Dental Show - Exhibitor Host"
                   width={290}
                   height={410}
                   priority

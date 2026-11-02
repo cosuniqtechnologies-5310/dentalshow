@@ -91,7 +91,6 @@ export default function SpeakerCard({ speaker, delay = 0 }) {
 
                 <div className="speaker-social-links">
                   <a href="#" aria-label="Facebook"><Icon name="facebook" size={16} /></a>
-                  <a href="#" aria-label="Twitter"><Icon name="twitter" size={16} /></a>
                   <a href="#" aria-label="Instagram"><Icon name="instagram" size={16} /></a>
                   <a href="#" aria-label="LinkedIn"><Icon name="linkedin" size={16} /></a>
                 </div>

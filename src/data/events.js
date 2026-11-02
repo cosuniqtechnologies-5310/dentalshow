@@ -34,7 +34,7 @@ export const events = [
       "300+ Leading Global & Indian Exhibitors",
       "Chennai Trade Centre New Halls 2, 3 & 3A (Over 10,000 sq.m expo floor)",
       "Live clinical demonstrations & hands-on certified workshops",
-      "Official Beaver Mascot welcome & interactive attendee zones",
+      "Official Mr. Dentalshow welcome & interactive attendee zones",
       "Dedicated B2B matchmaking for dental dealers & manufacturers"
     ],
     ctaText: "Register as Visitor",
