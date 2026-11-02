@@ -22,9 +22,9 @@ export const site = {
     visitor: "/visitor-registration",
     exhibitor: "/exhibitor-registration",
     visitorExternal: "https://forms.eventgrid.softwaller.in/f/vst27",
-    exhibitorExternal: "https://organiser.eventgrid.softwaller.in/f/exh27",
+    exhibitorExternal: "https://forms.eventgrid.softwaller.in/f/exh27",
     visitorIframe: "https://forms.eventgrid.softwaller.in/f/vst27",
-    exhibitorIframe: "https://organiser.eventgrid.softwaller.in/f/exh27",
+    exhibitorIframe: "https://forms.eventgrid.softwaller.in/f/exh27",
   },
   social: [
     { label: "Facebook", href: "https://facebook.com/dentalshowtndtma", icon: "facebook" },

@@ -155,14 +155,14 @@ export default function ExhibitorRegistrationPage() {
               </div>
               <div className="iframe-header-actions">
                 <a
-                  href="https://organiser.eventgrid.softwaller.in/f/exh27"
+                  href="https://forms.eventgrid.softwaller.in/f/exh27"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-iframe-fallback btn-iframe-fallback--exhibitor"
                   title="Open official stall booking form in new tab"
                 >
                   <Icon name="cube" size={16} />
-                  <span>Book Stall Online</span>
+                  <span>Open in New Tab</span>
                   <Icon name="arrowUpRight" size={15} />
                 </a>
               </div>
@@ -180,47 +180,18 @@ export default function ExhibitorRegistrationPage() {
               </div>
             </div>
 
-            {/* High-Visibility Official Stall Booking CTA Panel */}
-            <div className="registration-action-hero exhibitor-hero">
-              <div className="action-hero-content">
-                <div className="action-hero-badge exhibitor-badge">
-                  <Icon name="sparkle" size={15} />
-                  <span>Official Exhibitor Enquiry · New Hall 2, 3 &amp; 3A</span>
-                </div>
-                <h3 className="action-hero-title">Reserve Your Exhibition Stall</h3>
-                <p className="action-hero-desc">
-                  Connect directly with 10,000+ dental surgeons, clinic owners, and trade distributors at South India&apos;s largest dental exhibition. Choose from Bare Space and Shell Scheme stalls.
-                </p>
-
-                <div className="action-hero-perks">
-                  <div className="action-perk-item">
-                    <span className="perk-check-icon perk-check--blue"><Icon name="check" size={14} /></span>
-                    <span>Direct allotment &amp; layout coordination by TNDTMA Secretariat</span>
-                  </div>
-                  <div className="action-perk-item">
-                    <span className="perk-check-icon perk-check--blue"><Icon name="check" size={14} /></span>
-                    <span>10,000+ Verified Dental Surgeons, Dealers &amp; Clinical Decision Makers</span>
-                  </div>
-                  <div className="action-perk-item">
-                    <span className="perk-check-icon perk-check--blue"><Icon name="check" size={14} /></span>
-                    <span>Prime Island, Peninsula &amp; Premium Corner pavilion options</span>
-                  </div>
-                </div>
-
-                <div className="action-hero-cta-wrap">
-                  <a
-                    href="https://organiser.eventgrid.softwaller.in/f/exh27"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-portal-cta btn-portal-cta--exhibitor"
-                  >
-                    <Icon name="cube" size={20} />
-                    <span>Open Stall Booking Form</span>
-                    <Icon name="arrowUpRight" size={18} />
-                  </a>
-                  <span className="action-hero-hint">✓ Official TNDTMA Secretariat booking portal · 256-Bit SSL Encrypted</span>
-                </div>
-              </div>
+            {/* Embedded Official Exhibitor Booking Form */}
+            <div className="iframe-embed-wrapper">
+              <iframe
+                src="https://forms.eventgrid.softwaller.in/f/exh27"
+                width="100%"
+                height="850"
+                style={{ border: 0 }}
+                title="Dental Show 2027 Exhibitor Registration"
+                loading="lazy"
+                className="registration-form-iframe"
+                allow="clipboard-write"
+              />
             </div>
 
             {/* Trust & Assistance Strip */}
