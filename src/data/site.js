@@ -27,10 +27,10 @@ export const site = {
     exhibitorIframe: "https://forms.eventgrid.softwaller.in/f/exh27",
   },
   social: [
-    { label: "Facebook", href: "https://facebook.com/dentalshowtndtma", icon: "facebook" },
-    { label: "Instagram", href: "https://instagram.com/dentalshowchennai", icon: "instagram" },
-    { label: "LinkedIn", href: "https://linkedin.com/company/tndtma-dentalshow", icon: "linkedin" },
-    { label: "YouTube", href: "https://youtube.com/@tndtmadentalshow", icon: "youtube" },
+    { label: "Facebook", href: "https://www.facebook.com/dentalshow.in", icon: "facebook" },
+    { label: "Instagram", href: "https://www.instagram.com/dentalshow.in/", icon: "instagram" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/company/dentalshowindia", icon: "linkedin" },
+    { label: "YouTube", href: "https://www.youtube.com/@dentalshow_in", icon: "youtube" },
   ],
 };
 
