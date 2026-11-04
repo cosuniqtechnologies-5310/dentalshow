@@ -8,7 +8,7 @@ import { footerLinks, site } from "@/data/site";
 export default function Footer() {
   const pathname = usePathname();
 
-  if (pathname === "/coming-soon") {
+  if (pathname?.startsWith("/coming-soon")) {
     return null;
   }
   return (

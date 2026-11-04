@@ -18676,6 +18676,25 @@ p,
 /* ==========================================================================
    COMING SOON PAGE - FIT TO SCREEN (NEXT.JS ROUTE: /coming-soon)
    ========================================================================== */
+/* Guarantee global site header, footer, and skip link are hidden on coming soon */
+body:has(.cs-fit-wrapper) .exhibz-header,
+body:has(.cs-fit-wrapper) .footer,
+body:has(.cs-fit-wrapper) .skip-link,
+body:has(.cs-page-wrapper) .exhibz-header,
+body:has(.cs-page-wrapper) .footer,
+body:has(.cs-page-wrapper) .skip-link {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+body:has(.cs-fit-wrapper) {
+  overflow: hidden !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+}
+
 .cs-fit-wrapper {
   position: relative;
   width: 100%;
@@ -19058,25 +19077,25 @@ p,
 /* Sparkle Stars */
 .cs-sparkle {
   position: absolute;
-  z-index: 4;
+  z-index: 1;
   pointer-events: none;
   animation: cs-sparkle-spin 4s ease-in-out infinite;
 }
 
-.cs-sparkle-1 { top: 10%; right: 10%; animation-delay: 0s; }
-.cs-sparkle-2 { top: 45%; left: 5%; animation-delay: 1.2s; }
-.cs-sparkle-3 { bottom: 15%; right: 5%; animation-delay: 2.4s; }
+.cs-sparkle-1 { top: -8px; right: -8px; animation-delay: 0s; }
+.cs-sparkle-2 { top: 48%; left: -10px; animation-delay: 1.2s; }
+.cs-sparkle-3 { bottom: 15%; right: -6px; animation-delay: 2.4s; }
 
 /* Speech Bubble */
 .cs-fit-speech-bubble {
   position: relative;
   background: #ffffff;
   color: #011526;
-  padding: clamp(8px, 1.2vh, 12px) clamp(12px, 1.6vw, 18px);
+  padding: clamp(8px, 1.2vh, 12px) clamp(14px, 1.8vw, 20px);
   border-radius: 16px;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 0 2.5px rgba(59, 191, 143, 0.4);
   text-align: center;
-  z-index: 3;
+  z-index: 5;
   margin-bottom: 6px;
   animation: cs-bubble-float 3.5s ease-in-out infinite;
 }

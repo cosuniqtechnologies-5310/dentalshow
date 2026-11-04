@@ -66,7 +66,7 @@ export default function Header() {
     };
   }, [open]);
 
-  if (pathname === "/coming-soon") {
+  if (pathname?.startsWith("/coming-soon")) {
     return null;
   }
 
