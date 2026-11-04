@@ -66,6 +66,10 @@ export default function Header() {
     };
   }, [open]);
 
+  if (pathname === "/coming-soon") {
+    return null;
+  }
+
   // Section 3.1: Home | About us | Events | Gallery | Contact us
   const navItems = [
     { label: "Home", href: "/" },
